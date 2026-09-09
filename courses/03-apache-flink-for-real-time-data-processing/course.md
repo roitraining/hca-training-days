@@ -114,7 +114,7 @@
 
 ---
 <!-- layout: title-image -->
-# Where Flink Sits in the Ecosystem
+<!-- # Where Flink Sits in the Ecosystem -->
 
 ![Flink pipeline architecture](images/flink-pipeline-architecture.png)
 
@@ -197,7 +197,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 ---
 <!-- layout: title-image -->
-# Event Time vs. Processing Time
+<!-- # Event Time vs. Processing Time -->
 
 ![Event time vs processing time](images/event-time-vs-processing-time.png)
 
@@ -345,7 +345,7 @@ resultStream.sinkTo(
 
 ---
 <!-- layout: title-image -->
-# Common Real-Time Use Cases
+<!-- # Common Real-Time Use Cases -->
 
 ![Flink use cases](images/flink-use-cases.png)
 
