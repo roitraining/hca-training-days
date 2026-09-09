@@ -81,7 +81,7 @@
 
 ---
 <!-- layout: title-image -->
-# LLMs vs. Assistants vs. Agents
+<!-- # LLMs vs. Assistants vs. Agents -->
 
 ![LLM assistant agent](images/llm-assistant-agent.png)
 
@@ -139,13 +139,13 @@
 
 ---
 <!-- layout: title-image -->
-# Modernization Workflow with Agents
+<!-- # Modernization Workflow with Agents -->
 
 ![Modernization agent workflow](images/modernization-agent-workflow.png)
 
 ---
 <!-- layout: title-image -->
-# High-Value Modernization Tasks
+<!-- # High-Value Modernization Tasks -->
 
 ![Agent modernization tasks](images/agent-modernization-tasks.png)
 
@@ -179,7 +179,7 @@
 
 ---
 <!-- layout: title-image -->
-# Workflow, Autonomous, Multi-Agent
+<!-- # Workflow, Autonomous, Multi-Agent -->
 
 ![Modernization agent patterns](images/modernization-agent-patterns.png)
 
@@ -203,19 +203,6 @@
 - Clear coordinator role
 
 ---
-
-# Demo: Agents on a Legacy Slice
-
-**Time:** ~10–12 minutes (instructor-led)
-
-**Demo guide:** [Placeholder — modernization agent demo](https://example.com/hca/demos/agentic-modernization)
-
-- Ask an agent to summarize a legacy module and dependencies
-- Generate a refactor plan with risks and test gaps
-- Draft characterization tests and a small code change
-- Show a multi-step / multi-agent handoff (analyst → implementer → reviewer)
-
----
 <!-- layout: navigation -->
 # Course Roadmap
 
@@ -225,7 +212,7 @@
 
 ---
 <!-- layout: title-image -->
-# Production Guardrails
+<!-- # Production Guardrails -->
 
 ![Agent modernization guardrails](images/agent-modernization-guardrails.png)
 
