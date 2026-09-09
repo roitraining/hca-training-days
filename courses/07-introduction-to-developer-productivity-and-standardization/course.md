@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Use AI coding assistants to ship faster and more consistently** across the team workflow
+- Use AI coding assistants to ship faster and more consistently across the team workflow
 - Identify efficiency challenges across the developer workflow and SDLC
 - Use an AI code assistant to write and complete code more consistently
 - Apply prompting best practices that standardize output quality

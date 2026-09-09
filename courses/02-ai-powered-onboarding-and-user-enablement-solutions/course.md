@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Design AI-enabled onboarding and enablement experiences** that shorten time-to-productivity for employees and customers
+- Design AI-enabled onboarding and enablement experiences that shorten time-to-productivity for employees and customers
 - Identify onboarding and enablement moments where AI adds value
 - Describe common patterns (AI assistants, RAG knowledge bots, guided flows)
 - Recognize how to personalize enablement with AI

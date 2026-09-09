@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Secure web and mobile applications** against common vulnerabilities using sound design, encryption, and testing
+- Secure web and mobile applications against common vulnerabilities using sound design, encryption, and testing
 - Describe the fundamentals of securing web and mobile applications
 - Identify the most common web and mobile vulnerabilities (OWASP Top 10)
 - Explain how encryption protects confidentiality and integrity

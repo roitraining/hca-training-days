@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Apply generative AI across the software engineering workflow** while keeping quality and security intact
+- Apply generative AI across the software engineering workflow while keeping quality and security intact
 - Describe how generative AI applies to the software development workflow
 - Use prompt techniques to generate, document, and test code
 - Compare leading AI coding assistants (Copilot, Gemini Code Assist) and IDE integration

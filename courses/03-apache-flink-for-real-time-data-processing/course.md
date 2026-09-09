@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Explain how Apache Flink enables low-latency stream processing** in a modern data architecture
+- Explain how Apache Flink enables low-latency stream processing in a modern data architecture
 - Explain real-time stream processing and how it differs from batch
 - Describe Flink’s core concepts: streams, state, windows, and event time
 - Contrast DataStream and SQL/Table APIs on the same engine

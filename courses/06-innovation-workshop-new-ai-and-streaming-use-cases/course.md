@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Generate and prioritize GenAI and streaming ideas** that map to real work in your organization
+- Generate and prioritize GenAI and streaming ideas that map to real work in your organization
 - Survey real-world GenAI use cases across industries, including healthcare
 - Explore emerging streaming / real-time data use cases
 - Identify candidate opportunities in attendees’ own workflows

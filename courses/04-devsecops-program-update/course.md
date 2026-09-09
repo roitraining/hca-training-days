@@ -22,7 +22,7 @@
 
 # Course Objectives
 
-- **Frame the current DevSecOps program** against a maturity model and agree near-term priorities
+- Frame the current DevSecOps program against a maturity model and agree near-term priorities
 - Restate the core DevSecOps principles and culture
 - Describe how security integrates into the CI/CD pipeline (“shift left”)
 - Recognize tooling categories across the secure SDLC (SCA, SAST, DAST, IaC scanning)

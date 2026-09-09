@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Apply Google’s Agent Development Kit (ADK)** to define, compose, evaluate, and deploy agents
+- Apply Google’s Agent Development Kit (ADK) to define, compose, evaluate, and deploy agents
 - Describe how ADK compares to other agent frameworks (Gen AI SDK, LangChain)
 - Build a simple agent with tools using ADK
 - Explain multi-agent patterns (parent-child relationships and flows)

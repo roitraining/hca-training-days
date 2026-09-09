@@ -22,7 +22,7 @@
 
 # Course Objectives
 
-- **Lead GenAI initiatives with clarity**—what it is, where value sits, and how to adopt responsibly
+- Lead GenAI initiatives with clarity—what it is, where value sits, and how to adopt responsibly
 - Describe how generative AI transforms business functions and industries
 - Define core GenAI concepts in plain language
 - Identify the layers of the GenAI landscape (apps, agents, platforms, models, infrastructure)

@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Run LLM workloads efficiently** by understanding tokens, estimating usage, and designing for cost control
+- Run LLM workloads efficiently by understanding tokens, estimating usage, and designing for cost control
 - Explain what tokens are and how models are priced by them
 - Estimate token consumption for prompts, context, and outputs
 - Apply techniques to reduce token usage without losing quality

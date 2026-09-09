@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Orient business and IT partners to low-code/no-code**—what to build, where, and how to govern it
+- Orient business and IT partners to low-code/no-code—what to build, where, and how to govern it
 - Define low-code and no-code and distinguish the two
 - Identify use cases well-suited to low-code/no-code delivery
 - Recognize major platform categories (app builders, workflow automation, AI agent builders)

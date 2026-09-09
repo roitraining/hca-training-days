@@ -24,7 +24,7 @@
 
 # Course Objectives
 
-- **Apply agentic AI effectively across the software development lifecycle**—from planning through operations
+- Apply agentic AI effectively across the software development lifecycle—from planning through operations
 - Describe what distinguishes an agentic AI system from a simple prompt-and-response assistant
 - Identify where agentic AI adds value across each phase of the SDLC
 - Recognize common agentic AI tools and patterns used in modern software teams

@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Architect live audio/video delivery** with clear latency, scale, and reliability trade-offs
+- Architect live audio/video delivery with clear latency, scale, and reliability trade-offs
 - Describe the end-to-end live streaming pipeline and contribution options
 - Explain the protocols and trade-offs behind low-latency delivery
 - Identify architectural levers (edge, CDN, encoding, player) that reduce latency

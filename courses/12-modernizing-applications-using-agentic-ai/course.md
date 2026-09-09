@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Apply agentic AI patterns to application modernization** with clear value zones and production guardrails
+- Apply agentic AI patterns to application modernization with clear value zones and production guardrails
 - Describe agentic AI and how it differs from simple code assistants
 - Identify modernization tasks where agents add the most value
 - Recognize agent patterns (workflow, autonomous, multi-agent) for modernization

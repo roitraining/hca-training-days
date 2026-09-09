@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Build practical data literacy** to read, question, and act on data with confidence
+- Build practical data literacy to read, question, and act on data with confidence
 - Describe the building blocks of data literacy: types of data, sources, and quality
 - Interpret charts, dashboards, and statistics without common misreadings
 - Apply a practical framework for asking good questions of data before deciding

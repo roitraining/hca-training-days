@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Apply security and cryptography fundamentals** to defend real networks and operating systems
+- Apply security and cryptography fundamentals to defend real networks and operating systems
 - Describe security foundations (confidentiality, integrity, availability, authentication)
 - Explain applied cryptography: symmetric, asymmetric, and hashing
 - Recognize how security tools incorporate cryptography (VPNs, SSL/TLS, SSH)

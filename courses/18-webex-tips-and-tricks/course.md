@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Get more out of Webex**—meetings, messaging, and collaboration features most users never discover
+- Get more out of Webex—meetings, messaging, and collaboration features most users never discover
 - Navigate key Webex meeting and messaging features with confidence
 - Apply productivity features (scheduling, recordings, breakouts, whiteboarding)
 - Use collaboration and etiquette best practices for better meetings

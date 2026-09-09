@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Orient to the Google Professional Cloud Security Engineer (PCSE) exam**—scope, domains, and how to prepare
+- Orient to the Google Professional Cloud Security Engineer (PCSE) exam—scope, domains, and how to prepare
 - Describe the certification’s scope, format, and exam expectations
 - Summarize the core exam domains and what each tests
 - Identify the highest-yield preparation resources and study path

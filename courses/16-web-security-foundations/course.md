@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Secure a web server platform end to end**—from foundational concepts through OS, network, and application hardening
+- Secure a web server platform end to end—from foundational concepts through OS, network, and application hardening
 - Identify the key areas of web/server security
 - Explain cryptography and PKI fundamentals (symmetric, asymmetric, hashing, certificates)
 - Recognize OS- and network-level hardening practices for web servers

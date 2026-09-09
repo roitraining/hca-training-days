@@ -23,7 +23,7 @@
 
 # Course Objectives
 
-- **Secure workloads on Google Cloud** using the shared responsibility model, IAM, network controls, and monitoring
+- Secure workloads on Google Cloud using the shared responsibility model, IAM, network controls, and monitoring
 - Describe Google Cloud's shared security responsibility model
 - Explain identity and access management with Cloud IAM
 - Recognize network security controls (VPCs, firewalls, VPC Service Controls)
