@@ -225,16 +225,6 @@
 
 ---
 
-# Demo: Building a Secure Network Perimeter
-
-**Time:** ~10 minutes
-
-- Create a VPC with default-deny firewall rules
-- Add a scoped allow rule using a service account tag
-- Walk through a VPC Service Controls perimeter around a Cloud Storage bucket
-
----
-
 # Encryption: On by Default, Configurable by You
 
 - All data at rest is encrypted by default; encryption in transit is standard for Google APIs
