@@ -91,6 +91,10 @@
 
 ![DORA metrics](images/dora-metrics.png)
 
+
+> [!NOTE]
+> DORA-style efficiency measures refer to standard software delivery and operational performance metrics established by the DevOps Research and Assessment (DORA) program (now part of Google Cloud).
+
 ---
 
 # Connecting AI Assist to DORA Outcomes
