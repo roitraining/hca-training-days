@@ -179,6 +179,7 @@
 
 ![Symmetric Encryption](images/asymmetric-encryption.png)
 
+
 ---
 <!-- layout: title-image -->
 # Symmetric + Asymmetric + Hashing
