@@ -109,6 +109,8 @@
 - Not every control matters equally against every threat; prioritize based on who's actually likely to attack you
 - The next slide splits threats by where they originate
 
+![Symmetric Encryption](images/threat-model.png)
+
 ---
 <!-- layout: 2-column -->
 # Internal vs. External Threats
@@ -122,15 +124,6 @@
 - Attackers with no starting access
 - Must breach a perimeter—network, application, or credential
 - Ranges from opportunistic scans to targeted campaigns
-
----
-
-# Setting Up Segment 2
-
-- CIAA gives us the goals; cryptography gives us the tools to achieve them
-- Confidentiality relies on encryption; integrity relies on hashing; authentication relies on both
-- Segment 2 builds the cryptographic building blocks from the ground up
-- We'll close with a live demo of these concepts in action
 
 ---
 <!-- layout: navigation -->
