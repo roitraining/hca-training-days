@@ -75,7 +75,7 @@
 <!-- layout: title-image -->
 # The Meeting Lifecycle
 
-![The meeting lifecycle: Schedule, Join, Present and Collaborate, then Record and Follow Up](images/ch18-meeting-lifecycle.png)
+![The meeting lifecycle: Schedule, Join, Present and Collaborate, then Record and Follow Up](images/ch18-meeting-lifecycle.svg)
 
 ---
 
@@ -99,8 +99,7 @@
 <!-- layout: title-image -->
 # In-Meeting Controls at a Glance
 
-<!-- TODO IMAGE: Screenshot of the Webex in-meeting toolbar highlighting mute, video, reactions, share, record, and breakout controls -->
-![Webex in-meeting controls toolbar](images/ch18-in-meeting-controls-screenshot.png)
+![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/ch18-in-meeting-controls.svg)
 
 ---
 
@@ -172,8 +171,7 @@
 <!-- layout: title-image -->
 # Spaces and Messaging Layout
 
-<!-- TODO IMAGE: Screenshot of a Webex Space showing the message thread, pinned messages, and file panel -->
-![Webex Spaces and messaging layout](images/ch18-spaces-messaging-screenshot.png)
+![Webex Spaces layout: space list, message thread with pins and mentions, and files panel](images/ch18-spaces-messaging.svg)
 
 ---
 
@@ -259,7 +257,7 @@
 <!-- layout: title-image -->
 # Troubleshooting Flow
 
-![Troubleshooting flow: Identify, Isolate, Fix, then Confirm](images/ch18-troubleshooting-flow.png)
+![Troubleshooting flow: Identify, Isolate, Fix, then Confirm](images/ch18-troubleshooting-flow.svg)
 
 ---
 

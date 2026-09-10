@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-8%" y="-6%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1a2332" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f7"/>
+      <stop offset="100%" stop-color="#e4eaf2"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- left: space list -->
+  <g filter="url(#shadow)">
+    <rect x="36" y="40" width="260" height="440" rx="18" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <path d="M36,58 Q36,40 54,40 H278 Q296,40 296,58 V96 H36 Z" fill="#1a73e8"/>
+    <text x="166" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Spaces</text>
+    <rect x="56" y="120" width="220" height="52" rx="10" fill="#e8f0fe"/>
+    <text x="166" y="152" text-anchor="middle" font-size="14" font-weight="600" fill="#1a73e8">Project Alpha</text>
+    <rect x="56" y="186" width="220" height="52" rx="10" fill="#f4f6f8"/>
+    <text x="166" y="218" text-anchor="middle" font-size="14" fill="#5a6a7a">Team Standup</text>
+    <rect x="56" y="252" width="220" height="52" rx="10" fill="#f4f6f8"/>
+    <text x="166" y="284" text-anchor="middle" font-size="14" fill="#5a6a7a">All Hands</text>
+    <rect x="56" y="318" width="220" height="52" rx="10" fill="#f4f6f8"/>
+    <text x="166" y="350" text-anchor="middle" font-size="14" fill="#5a6a7a">1:1 Coaching</text>
+    <rect x="66" y="420" width="200" height="36" rx="10" fill="#e8f0fe"/>
+    <text x="166" y="444" text-anchor="middle" font-size="13" font-weight="700" fill="#1a73e8">Persistent rooms</text>
+  </g>
+
+  <!-- center: messages -->
+  <g filter="url(#shadow)">
+    <rect x="320" y="40" width="520" height="440" rx="18" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M320,58 Q320,40 338,40 H822 Q840,40 840,58 V96 H320 Z" fill="#34a853"/>
+    <text x="580" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Message Thread</text>
+
+    <rect x="348" y="120" width="360" height="56" rx="12" fill="#e6f4ea"/>
+    <text x="368" y="144" font-size="13" font-weight="700" fill="#34a853">Alex</text>
+    <text x="368" y="164" font-size="13" fill="#1a2332">Updated the runbook draft</text>
+
+    <rect x="452" y="192" width="360" height="56" rx="12" fill="#f4f6f8"/>
+    <text x="472" y="216" font-size="13" font-weight="700" fill="#5a6a7a">Jordan</text>
+    <text x="472" y="236" font-size="13" fill="#1a2332">@Sam can you review section 3?</text>
+
+    <rect x="348" y="264" width="360" height="56" rx="12" fill="#e6f4ea"/>
+    <text x="368" y="288" font-size="13" font-weight="700" fill="#34a853">Sam</text>
+    <text x="368" y="308" font-size="13" fill="#1a2332">On it - threading the reply here</text>
+
+    <rect x="348" y="340" width="464" height="48" rx="12" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+    <text x="580" y="370" text-anchor="middle" font-size="14" font-weight="600" fill="#e37400">Pinned: Kickoff agenda and links</text>
+
+    <rect x="348" y="410" width="464" height="44" rx="12" fill="#f4f6f8" stroke="#c5d0dc" stroke-width="2"/>
+    <text x="368" y="438" font-size="13" fill="#5a6a7a">Type a message... use @mentions</text>
+  </g>
+
+  <!-- right: files -->
+  <g filter="url(#shadow)">
+    <rect x="864" y="40" width="300" height="440" rx="18" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <path d="M864,58 Q864,40 882,40 H1146 Q1164,40 1164,58 V96 H864 Z" fill="#ea4335"/>
+    <text x="1014" y="74" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">Files</text>
+    <rect x="888" y="130" width="252" height="64" rx="12" fill="#fce8e6"/>
+    <text x="1014" y="158" text-anchor="middle" font-size="14" font-weight="600" fill="#ea4335">runbook.docx</text>
+    <text x="1014" y="180" text-anchor="middle" font-size="12" fill="#5a6a7a">Co-edit in real time</text>
+    <rect x="888" y="214" width="252" height="64" rx="12" fill="#f4f6f8"/>
+    <text x="1014" y="242" text-anchor="middle" font-size="14" font-weight="600" fill="#1a2332">agenda.pdf</text>
+    <text x="1014" y="264" text-anchor="middle" font-size="12" fill="#5a6a7a">Attached to thread</text>
+    <rect x="888" y="298" width="252" height="64" rx="12" fill="#f4f6f8"/>
+    <text x="1014" y="326" text-anchor="middle" font-size="14" font-weight="600" fill="#1a2332">recording.mp4</text>
+    <text x="1014" y="348" text-anchor="middle" font-size="12" fill="#5a6a7a">From last meeting</text>
+    <rect x="898" y="420" width="232" height="36" rx="10" fill="#fce8e6"/>
+    <text x="1014" y="444" text-anchor="middle" font-size="13" font-weight="700" fill="#ea4335">Searchable library</text>
+  </g>
+</svg>

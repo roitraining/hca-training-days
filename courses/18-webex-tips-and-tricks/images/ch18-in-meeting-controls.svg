@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-8%" y="-6%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1a2332" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f7"/>
+      <stop offset="100%" stop-color="#e4eaf2"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+
+  <!-- meeting stage -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="48" width="1080" height="260" rx="20" fill="#ffffff" stroke="#c5d0dc" stroke-width="2"/>
+    <rect x="100" y="80" width="420" height="196" rx="14" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <text x="310" y="170" text-anchor="middle" font-size="18" font-weight="700" fill="#1a73e8">Active Speaker</text>
+    <text x="310" y="200" text-anchor="middle" font-size="14" fill="#5a6a7a">Video tile</text>
+
+    <rect x="560" y="80" width="240" height="90" rx="12" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+    <text x="680" y="134" text-anchor="middle" font-size="15" font-weight="600" fill="#34a853">Participant</text>
+    <rect x="840" y="80" width="240" height="90" rx="12" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+    <text x="960" y="134" text-anchor="middle" font-size="15" font-weight="600" fill="#34a853">Participant</text>
+    <rect x="560" y="186" width="240" height="90" rx="12" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+    <text x="680" y="240" text-anchor="middle" font-size="15" font-weight="600" fill="#e37400">Screen Share</text>
+    <rect x="840" y="186" width="240" height="90" rx="12" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
+    <text x="960" y="240" text-anchor="middle" font-size="15" font-weight="600" fill="#ea4335">Chat / Polls</text>
+  </g>
+
+  <!-- toolbar -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="350" width="1000" height="120" rx="24" fill="#1a2332"/>
+  </g>
+
+  <!-- toolbar buttons -->
+  <g>
+    <circle cx="180" cy="395" r="26" fill="#1a73e8"/>
+    <text x="180" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Mute</text>
+  </g>
+  <g>
+    <circle cx="330" cy="395" r="26" fill="#34a853"/>
+    <text x="330" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Video</text>
+  </g>
+  <g>
+    <circle cx="480" cy="395" r="26" fill="#f9ab00"/>
+    <text x="480" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">React</text>
+  </g>
+  <g>
+    <circle cx="630" cy="395" r="26" fill="#e37400"/>
+    <text x="630" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Share</text>
+  </g>
+  <g>
+    <circle cx="780" cy="395" r="26" fill="#ea4335"/>
+    <text x="780" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Record</text>
+  </g>
+  <g>
+    <circle cx="930" cy="395" r="26" fill="#7b61ff"/>
+    <text x="930" y="456" text-anchor="middle" font-size="14" font-weight="600" fill="#ffffff">Breakout</text>
+  </g>
+</svg>

@@ -1,25 +1,76 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#0f6da8"/>
+    <filter id="shadow" x="-8%" y="-6%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1a2332" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f7"/>
+      <stop offset="100%" stop-color="#e4eaf2"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
     </marker>
   </defs>
-  <rect x="0" y="0" width="1200" height="520" fill="#ffffff"/>
-  <text x="600" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#003865">Troubleshooting Flow</text>
+  <rect width="1200" height="520" fill="url(#bg)"/>
+  <line x1="306" y1="240" x2="330" y2="240" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="594" y1="240" x2="618" y2="240" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="882" y1="240" x2="906" y2="240" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
 
-  <line x1="288" y1="250" x2="312" y2="250" stroke="#0f6da8" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="568" y1="250" x2="592" y2="250" stroke="#0f6da8" stroke-width="4" marker-end="url(#arrow)"/>
-  <line x1="848" y1="250" x2="872" y2="250" stroke="#0f6da8" stroke-width="4" marker-end="url(#arrow)"/>
+  <g filter="url(#shadow)">
+    <rect x="36" y="48" width="264" height="424" rx="20" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <path d="M36,68 Q36,48 56,48 H280 Q300,48 300,68 V118 H36 Z" fill="#1a73e8"/>
+    <text x="168" y="92" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">1. Identify</text>
+    <circle cx="168" cy="178" r="34" fill="#e8f0fe"/>
+    <text x="168" y="186" text-anchor="middle" font-size="28" font-weight="700" fill="#1a73e8">?</text>
+    <text x="168" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Audio, video, or join?</text>
+    <text x="168" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Just you or everyone?</text>
+    <text x="168" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Started mid-meeting?</text>
+    <text x="168" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- App or browser client?</text>
+    <rect x="66" y="400" width="204" height="40" rx="10" fill="#e8f0fe"/>
+    <text x="168" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#1a73e8">Symptom</text>
+  </g>
 
-  <rect x="40" y="140" width="248" height="220" rx="18" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="164" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#003865">Identify</text>
+  <g filter="url(#shadow)">
+    <rect x="324" y="48" width="264" height="424" rx="20" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M324,68 Q324,48 344,48 H568 Q588,48 588,68 V118 H324 Z" fill="#34a853"/>
+    <text x="456" y="92" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">2. Isolate</text>
+    <circle cx="456" cy="178" r="34" fill="#e6f4ea"/>
+    <circle cx="444" cy="178" r="10" fill="#34a853"/>
+    <circle cx="468" cy="178" r="10" fill="none" stroke="#34a853" stroke-width="3"/>
+    <text x="456" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Mic/speaker selection</text>
+    <text x="456" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- OS privacy permissions</text>
+    <text x="456" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Network vs device</text>
+    <text x="456" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Mute at OS or in-app</text>
+    <rect x="354" y="400" width="204" height="40" rx="10" fill="#e6f4ea"/>
+    <text x="456" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Cause</text>
+  </g>
 
-  <rect x="320" y="140" width="248" height="220" rx="18" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="444" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#003865">Isolate</text>
+  <g filter="url(#shadow)">
+    <rect x="612" y="48" width="264" height="424" rx="20" fill="#ffffff" stroke="#f9ab00" stroke-width="2.5"/>
+    <path d="M612,68 Q612,48 632,48 H856 Q876,48 876,68 V118 H612 Z" fill="#f9ab00"/>
+    <text x="744" y="92" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3. Fix</text>
+    <circle cx="744" cy="178" r="34" fill="#fef7e0"/>
+    <path d="M728,178 h20 M748,168 v20" stroke="#e37400" stroke-width="4" stroke-linecap="round"/>
+    <text x="744" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Switch device or audio</text>
+    <text x="744" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Lower bandwidth mode</text>
+    <text x="744" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Restart app or web fallback</text>
+    <text x="744" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Dial-in / Call Me option</text>
+    <rect x="642" y="400" width="204" height="40" rx="10" fill="#fef7e0"/>
+    <text x="744" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#e37400">Action</text>
+  </g>
 
-  <rect x="600" y="140" width="248" height="220" rx="18" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="724" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#003865">Fix</text>
-
-  <rect x="880" y="140" width="248" height="220" rx="18" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="1004" y="254" text-anchor="middle" font-size="17" font-weight="bold" fill="#003865">Confirm</text>
+  <g filter="url(#shadow)">
+    <rect x="900" y="48" width="264" height="424" rx="20" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <path d="M900,68 Q900,48 920,48 H1144 Q1164,48 1164,68 V118 H900 Z" fill="#ea4335"/>
+    <text x="1032" y="92" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">4. Confirm</text>
+    <circle cx="1032" cy="178" r="34" fill="#fce8e6"/>
+    <circle cx="1032" cy="178" r="16" fill="none" stroke="#ea4335" stroke-width="3"/>
+    <path d="M1024,178 L1030,184 L1042,170" fill="none" stroke="#ea4335" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1032" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Others hear and see you</text>
+    <text x="1032" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- You hear and see others</text>
+    <text x="1032" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Stable for a full minute</text>
+    <text x="1032" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Note what fixed it</text>
+    <rect x="930" y="400" width="204" height="40" rx="10" fill="#fce8e6"/>
+    <text x="1032" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#ea4335">Verified</text>
+  </g>
 </svg>
