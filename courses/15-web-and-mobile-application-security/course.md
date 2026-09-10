@@ -143,6 +143,8 @@
 - We'll walk the web list first, then the mobile-specific list
 - Watch for the categories that show up in both
 
+![OWASP Top 10](images/owasp-image.png)
+
 ---
 <!-- layout: title-image -->
 # OWASP Top 10: Web vs. Mobile
@@ -158,6 +160,10 @@
 - Defense: parameterized queries and prepared statements, strict input validation
 - Still one of the most damaging—and most preventable—vulnerability classes
 
+```java
+String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
+```
+
 ---
 
 # Cross-Site Scripting (XSS)
@@ -166,6 +172,10 @@
 - Lets an attacker run JavaScript in another user's browser session
 - Three types: stored, reflected, and DOM-based
 - Defense: output encoding, Content Security Policy, framework auto-escaping
+
+```html
+<div>Welcome, <%= request.getParameter("name") %></div>
+```
 
 ---
 <!-- layout: 2-column -->
