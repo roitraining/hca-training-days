@@ -177,14 +177,8 @@
 <!-- layout: title-image -->
 # Asymmetric Encryption Illustrated
 
-![Symmetric Encryption](images/asymmetric-encryption.png)
+![Asymmetric Encryption](images/asymmetric-encryption.png)
 
-
----
-<!-- layout: title-image -->
-# Symmetric + Asymmetric + Hashing
-
-![Pipeline: asymmetric key exchange, symmetric data encryption, hashing for integrity, and how they combine in TLS, SSH, and VPN](images/ch17-crypto-pipeline.svg)
 
 ---
 
@@ -194,6 +188,21 @@
 - The same input always produces the same output; any change produces a completely different hash
 - Verifies integrity (has this file or message changed?) and secures stored passwords (with salting)
 - Not encryption—there's no key, and it can't be "decrypted" back to the original
+
+
+---
+<!-- layout: title-image -->
+# Hashing Illustrated
+
+![Hashing](images/hashing.png)
+
+
+---
+<!-- layout: title-image -->
+# Symmetric + Asymmetric + Hashing
+
+![Pipeline: asymmetric key exchange, symmetric data encryption, hashing for integrity, and how they combine in TLS, SSH, and VPN](images/ch17-crypto-pipeline.svg)
+
 
 ---
 <!-- layout: 2-column -->
@@ -221,16 +230,6 @@
 # PKI: Binding Keys to Identity
 
 ![PKI trust chain: Root CA, Intermediate CA, leaf certificate, and client verification via chain validation and CRL/OCSP](images/ch17-pki-overview.svg)
-
----
-
-# Demo: Cryptography in Action
-
-**Time:** ~10 minutes
-
-- Generate a symmetric key and encrypt/decrypt a short message
-- Generate a public/private key pair and sign a file
-- Verify the signature and inspect a real TLS certificate's chain
 
 ---
 <!-- layout: navigation -->
