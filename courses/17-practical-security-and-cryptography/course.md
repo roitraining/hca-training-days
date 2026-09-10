@@ -159,6 +159,12 @@
 - Used inside VPNs, disk encryption, and TLS sessions once a key is established
 
 ---
+<!-- layout: title-image -->
+# Symmetric Encryption Illustrated
+
+![Symmetric Encryption](images/symmetric-encryption.png)
+
+---
 
 # Asymmetric Encryption
 
@@ -168,6 +174,14 @@
 - The public key can be shared freely; the private key never leaves its owner
 
 ---
+
+---
+<!-- layout: title-image -->
+# Asymmetric Encryption Illustrated
+
+![Symmetric Encryption](images/asymmetric-encryption.png)
+
+
 <!-- layout: title-image -->
 # Symmetric + Asymmetric + Hashing
 
