@@ -123,6 +123,12 @@
 - A good hash function is fast to compute but infeasible to reverse
 - Password hashing adds a **salt** so identical passwords don't produce identical hashes
 
+```python
+import hashlib
+print(hashlib.sha256(b"hello").hexdigest())
+# 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824
+```
+
 ---
 <!-- layout: title-image -->
 # How PKI Establishes Trust
