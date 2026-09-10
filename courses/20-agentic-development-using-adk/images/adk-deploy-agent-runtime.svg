@@ -51,15 +51,15 @@
     <text x="456" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Artifact</text>
   </g>
 
-  <!-- 3 Agent Engine -->
+  <!-- 3 Agent Runtime -->
   <g filter="url(#shadow)">
     <rect x="612" y="48" width="264" height="424" rx="20" fill="#ffffff" stroke="#f9ab00" stroke-width="2.5"/>
     <path d="M612,68 Q612,48 632,48 H856 Q876,48 876,68 V118 H612 Z" fill="#f9ab00"/>
-    <text x="744" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">3. Agent Engine</text>
+    <text x="744" y="92" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">3. Agent Runtime</text>
     <circle cx="744" cy="178" r="34" fill="#fef7e0"/>
     <path d="M744,158 L764,168 V184 c0,12 -8,20 -20,24 c-12,-4 -20,-12 -20,-24 V168 Z" fill="#e37400"/>
-    <text x="744" y="250" text-anchor="middle" font-size="16" font-weight="600" fill="#1a2332">Managed runtime</text>
-    <text x="744" y="282" text-anchor="middle" font-size="14" fill="#5a6a7a">Vertex AI Agent Runtime</text>
+    <text x="744" y="250" text-anchor="middle" font-size="16" font-weight="600" fill="#1a2332">Managed hosting</text>
+    <text x="744" y="282" text-anchor="middle" font-size="14" fill="#5a6a7a">On Agent Platform</text>
     <text x="744" y="306" text-anchor="middle" font-size="14" fill="#5a6a7a">Scale and governance</text>
     <text x="744" y="330" text-anchor="middle" font-size="14" fill="#5a6a7a">CLI, console, or CI/CD</text>
     <rect x="642" y="400" width="204" height="40" rx="10" fill="#fef7e0"/>

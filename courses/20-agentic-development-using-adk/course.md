@@ -27,7 +27,7 @@
 - Describe how ADK compares to other agent frameworks (Gen AI SDK, LangChain)
 - Build a simple agent with tools using ADK
 - Explain multi-agent patterns (parent-child relationships and flows)
-- Outline how ADK agents deploy to Agent Engine and how to evaluate them
+- Outline how ADK agents deploy to Agent Runtime and how to evaluate them
 
 ---
 
@@ -108,7 +108,7 @@
 ### Google ADK
 - Agent-native primitives & multi-agent
 - Built-in eval + deploy paths
-- Deep fit with Gemini & Agent Engine
+- Deep fit with Gemini and Agent Runtime
 
 ---
 
@@ -116,7 +116,7 @@
 
 - You want **hierarchical multi-agent** apps without reinventing runners
 - You need **evaluation** (trajectory + response) in the same toolkit
-- You plan to **deploy** to Vertex AI Agent Engine / Agent Runtime
+- You plan to **deploy** to Agent Runtime on Agent Platform
 - Your team prefers **code-first** agents over low-code builders
 
 > [!TIP]
@@ -332,26 +332,26 @@ root_agent = Agent(
 
 # Shipping Agents
 
-![Deploy path: local agent, package code and dependencies, Agent Engine runtime, then query and validate](images/adk-deploy-agent-engine.svg)
+![Deploy path: local agent, package code and dependencies, Agent Runtime on Agent Platform, then query and validate](images/adk-deploy-agent-runtime.svg)
 
 ---
 
-# Deploying to Agent Engine
+# Deploying to Agent Runtime
 
-- **Agent Engine** (Vertex AI) hosts agents as managed **Agent Runtime**
+- **Agent Runtime** on **Agent Platform** hosts managed ADK agents
 - Upload agent code and declared dependencies
 - Runtime supplies the serving stack for Python ADK apps
 - Paths: console / ADK CLI, or accelerated **agents-cli** with CI/CD
 
 > [!NOTE]
-> Product docs increasingly say “Agent Runtime”; many teams still say “Agent Engine.” Same deployment destination for this course.
+> Formerly Agent Engine on Vertex AI—current names are Agent Runtime on Agent Platform.
 
 ---
 <!-- layout: 2-column -->
 # Querying a Deployed App
 
 ### After Deploy
-- Obtain the Agent Engine resource ID / endpoint
+- Obtain the Agent Runtime resource ID / endpoint
 - Call the managed query / stream APIs
 - Authenticate with Google Cloud credentials
 
@@ -410,7 +410,7 @@ adk eval path/to/agent_module path/to/eval_set.json
 - Described how ADK compares to the Gen AI SDK and LangChain-style frameworks
 - Built the mental model (and starter code) for a simple ADK agent with tools
 - Explained parent-child multi-agent patterns and flow options
-- Outlined deploy-to-Agent-Engine and ADK evaluation practices
+- Outlined deploy-to-Agent-Runtime and ADK evaluation practices
 
 ---
 
@@ -433,7 +433,7 @@ adk eval path/to/agent_module path/to/eval_set.json
 
 - Gen AI SDK: direct model/chat and simple tool use—you own orchestration
 - ADK: agent-native primitives, multi-agent, eval, and deploy paths
-- Deep fit with Gemini and Agent Engine, still code-first
+- Deep fit with Gemini and Agent Runtime, still code-first
 - Prefer ADK when you need hierarchical agents plus evaluation in one toolkit
 
 ---
@@ -470,7 +470,7 @@ Design a small ADK app for one real team task (ticket helper, runbook search, or
 ### Discuss
 - Which tools stay narrow/typed—and which side effects need confirmation?
 - Parent–child: LLM transfer, Agent-as-tool, or a Sequential/Parallel/Loop workflow?
-- What eval cases and deploy checks would you require before Agent Engine?
+- What eval cases and deploy checks would you require before Agent Runtime?
 
 ---
 <!-- layout: 2-column -->
