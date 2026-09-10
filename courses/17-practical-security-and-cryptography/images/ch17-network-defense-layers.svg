@@ -1,14 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Arial, Helvetica, sans-serif">
-  <rect x="0" y="0" width="1200" height="520" fill="#ffffff"/>
-  <text x="600" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#003865">Layers of Network Defense</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-8%" y="-6%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#1a2332" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f7"/>
+      <stop offset="100%" stop-color="#e4eaf2"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
 
-  <rect x="40" y="120" width="520" height="300" rx="20" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="300" y="168" text-anchor="middle" font-size="21" font-weight="bold" fill="#003865">Perimeter</text>
-  <text x="300" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Firewalls</text>
-  <text x="300" y="316" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">IPSec / VPN tunnels</text>
+  <rect width="1200" height="520" fill="url(#bg)"/>
 
-  <rect x="640" y="120" width="520" height="300" rx="20" fill="#e8eef5" stroke="#003865" stroke-width="2"/>
-  <text x="900" y="168" text-anchor="middle" font-size="21" font-weight="bold" fill="#003865">Per-Connection</text>
-  <text x="900" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">SSL / TLS</text>
-  <text x="900" y="316" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">SSH</text>
+  <line x1="306" y1="250" x2="330" y2="250" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="594" y1="250" x2="618" y2="250" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="882" y1="250" x2="906" y2="250" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="36" y="56" width="264" height="408" rx="20" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <path d="M36,76 Q36,56 56,56 H280 Q300,56 300,76 V126 H36 Z" fill="#1a73e8"/>
+    <text x="168" y="100" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">1. Firewalls</text>
+    <circle cx="168" cy="180" r="34" fill="#e8f0fe"/>
+    <rect x="148" y="162" width="40" height="36" rx="4" fill="none" stroke="#1a73e8" stroke-width="3"/>
+    <path d="M148,174 H188 M148,186 H188" stroke="#1a73e8" stroke-width="3"/>
+    <text x="168" y="252" text-anchor="middle" font-size="15" fill="#1a2332">• Port / protocol filter</text>
+    <text x="168" y="282" text-anchor="middle" font-size="15" fill="#1a2332">• Default-deny posture</text>
+    <text x="168" y="312" text-anchor="middle" font-size="15" fill="#1a2332">• Network and host-based</text>
+    <rect x="66" y="400" width="204" height="36" rx="10" fill="#e8f0fe"/>
+    <text x="168" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#1a73e8">Perimeter Control</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="324" y="56" width="264" height="408" rx="20" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M324,76 Q324,56 344,56 H568 Q588,56 588,76 V126 H324 Z" fill="#34a853"/>
+    <text x="456" y="100" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">2. IPSec / VPN</text>
+    <circle cx="456" cy="180" r="34" fill="#e6f4ea"/>
+    <path d="M434,180 C444,164 468,164 478,180 C468,196 444,196 434,180 Z" fill="none" stroke="#34a853" stroke-width="3"/>
+    <circle cx="456" cy="180" r="6" fill="#34a853"/>
+    <text x="456" y="252" text-anchor="middle" font-size="15" fill="#1a2332">• Encrypted tunnels</text>
+    <text x="456" y="282" text-anchor="middle" font-size="15" fill="#1a2332">• Network-layer crypto</text>
+    <text x="456" y="312" text-anchor="middle" font-size="15" fill="#1a2332">• Site-to-site or remote</text>
+    <rect x="354" y="400" width="204" height="36" rx="10" fill="#e6f4ea"/>
+    <text x="456" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Tunnel Protection</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="612" y="56" width="264" height="408" rx="20" fill="#ffffff" stroke="#f9ab00" stroke-width="2.5"/>
+    <path d="M612,76 Q612,56 632,56 H856 Q876,56 876,76 V126 H612 Z" fill="#f9ab00"/>
+    <text x="744" y="100" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">3. SSL / TLS</text>
+    <circle cx="744" cy="180" r="34" fill="#fef7e0"/>
+    <rect x="730" y="174" width="28" height="20" rx="3" fill="#e37400"/>
+    <path d="M736,174 V166 a8,8 0 0 1 16,0 v8" fill="none" stroke="#e37400" stroke-width="3"/>
+    <text x="744" y="252" text-anchor="middle" font-size="15" fill="#1a2332">• Per-connection crypto</text>
+    <text x="744" y="282" text-anchor="middle" font-size="15" fill="#1a2332">• HTTPS for web traffic</text>
+    <text x="744" y="312" text-anchor="middle" font-size="15" fill="#1a2332">• Certificates prove identity</text>
+    <rect x="642" y="400" width="204" height="36" rx="10" fill="#fef7e0"/>
+    <text x="744" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#e37400">Session Encryption</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="900" y="56" width="264" height="408" rx="20" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <path d="M900,76 Q900,56 920,56 H1144 Q1164,56 1164,76 V126 H900 Z" fill="#ea4335"/>
+    <text x="1032" y="100" text-anchor="middle" font-size="20" font-weight="700" fill="#ffffff">4. SSH</text>
+    <circle cx="1032" cy="180" r="34" fill="#fce8e6"/>
+    <rect x="1016" y="164" width="32" height="32" rx="4" fill="none" stroke="#ea4335" stroke-width="3"/>
+    <circle cx="1032" cy="176" r="5" fill="#ea4335"/>
+    <path d="M1032,182 V188" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
+    <text x="1032" y="252" text-anchor="middle" font-size="15" fill="#1a2332">• Secure remote admin</text>
+    <text x="1032" y="282" text-anchor="middle" font-size="15" fill="#1a2332">• Prefer public keys</text>
+    <text x="1032" y="312" text-anchor="middle" font-size="15" fill="#1a2332">• Replaces Telnet</text>
+    <rect x="930" y="400" width="204" height="36" rx="10" fill="#fce8e6"/>
+    <text x="1032" y="423" text-anchor="middle" font-size="14" font-weight="700" fill="#ea4335">Admin Access</text>
+  </g>
 </svg>

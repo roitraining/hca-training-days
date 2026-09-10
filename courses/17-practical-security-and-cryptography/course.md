@@ -77,7 +77,7 @@
 <!-- layout: title-image -->
 # Network and OS Components
 
-![Network components (routers, firewalls, protocols) alongside OS components (kernel, services, accounts, filesystem)](images/ch17-network-os-components.png)
+![Network components (routers, firewalls, protocols, segments) alongside OS components (kernel, services, accounts, filesystem)](images/ch17-network-os-components.svg)
 
 ---
 
@@ -171,7 +171,7 @@
 <!-- layout: title-image -->
 # Symmetric + Asymmetric + Hashing
 
-![Symmetric, asymmetric, and hashing working together: asymmetric crypto exchanges a key, symmetric crypto encrypts the data, and hashing verifies integrity](images/ch17-crypto-pipeline.png)
+![Pipeline: asymmetric key exchange, symmetric data encryption, hashing for integrity, and how they combine in TLS, SSH, and VPN](images/ch17-crypto-pipeline.svg)
 
 ---
 
@@ -207,7 +207,7 @@
 <!-- layout: title-image -->
 # PKI: Binding Keys to Identity
 
-![PKI provides identity binding, a chain of trust, and revocation; you see it in TLS certificates, code signing, client certs, and S/MIME email](images/ch17-pki-overview.png)
+![PKI trust chain: Root CA, Intermediate CA, leaf certificate, and client verification via chain validation and CRL/OCSP](images/ch17-pki-overview.svg)
 
 ---
 
@@ -270,7 +270,7 @@
 <!-- layout: title-image -->
 # Layers of Network Defense
 
-![Layers of network defense: perimeter controls like firewalls and IPSec/VPN, plus per-connection controls like SSL/TLS and SSH](images/ch17-network-defense-layers.png)
+![Layers of network defense: firewalls, IPSec/VPN tunnels, SSL/TLS session encryption, and SSH for admin access](images/ch17-network-defense-layers.svg)
 
 ---
 

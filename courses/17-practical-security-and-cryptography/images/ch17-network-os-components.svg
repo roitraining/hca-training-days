@@ -1,16 +1,71 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Arial, Helvetica, sans-serif">
-  <rect x="0" y="0" width="1200" height="520" fill="#ffffff"/>
-  <text x="600" y="52" text-anchor="middle" font-size="28" font-weight="bold" fill="#003865">Network and OS Components</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="112%" height="116%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eef2f7"/>
+      <stop offset="100%" stop-color="#e4eaf2"/>
+    </linearGradient>
+  </defs>
 
-  <rect x="40" y="120" width="520" height="300" rx="20" fill="#c3d7ea" stroke="#003865" stroke-width="2"/>
-  <text x="300" y="168" text-anchor="middle" font-size="21" font-weight="bold" fill="#003865">Network Components</text>
-  <text x="300" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Routers &amp; firewalls</text>
-  <text x="300" y="316" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Protocols (TCP/IP, DNS)</text>
-  <text x="300" y="342" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Segments &amp; boundaries</text>
+  <rect width="1200" height="520" fill="url(#bg)"/>
 
-  <rect x="640" y="120" width="520" height="300" rx="20" fill="#e8eef5" stroke="#003865" stroke-width="2"/>
-  <text x="900" y="168" text-anchor="middle" font-size="21" font-weight="bold" fill="#003865">OS Components</text>
-  <text x="900" y="290" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Kernel &amp; services</text>
-  <text x="900" y="316" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Accounts &amp; permissions</text>
-  <text x="900" y="342" text-anchor="middle" font-size="16" font-weight="bold" fill="#003865">Filesystem &amp; processes</text>
+  <!-- Network card -->
+  <g filter="url(#shadow)">
+    <rect x="48" y="48" width="532" height="424" rx="22" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <path d="M48,70 Q48,48 70,48 H558 Q580,48 580,70 V118 H48 Z" fill="#1a73e8"/>
+    <circle cx="96" cy="83" r="22" fill="#ffffff" fill-opacity="0.2"/>
+    <!-- network icon -->
+    <circle cx="96" cy="83" r="7" fill="#ffffff"/>
+    <circle cx="82" cy="94" r="4.5" fill="#ffffff"/>
+    <circle cx="110" cy="94" r="4.5" fill="#ffffff"/>
+    <path d="M96,90 L82,94 M96,90 L110,94" stroke="#ffffff" stroke-width="2" fill="none"/>
+    <text x="132" y="92" font-size="26" font-weight="700" fill="#ffffff">Network Components</text>
+
+    <g fill="#1a2332">
+      <circle cx="110" cy="178" r="5" fill="#1a73e8"/>
+      <text x="130" y="184" font-size="20" font-weight="600">Routers and firewalls</text>
+      <text x="130" y="210" font-size="15" fill="#5a6a7a">Move and filter traffic at boundaries</text>
+
+      <circle cx="110" cy="268" r="5" fill="#1a73e8"/>
+      <text x="130" y="274" font-size="20" font-weight="600">Protocols (TCP/IP, DNS)</text>
+      <text x="130" y="300" font-size="15" fill="#5a6a7a">Define how hosts talk and resolve names</text>
+
+      <circle cx="110" cy="358" r="5" fill="#1a73e8"/>
+      <text x="130" y="364" font-size="20" font-weight="600">Segments and boundaries</text>
+      <text x="130" y="390" font-size="15" fill="#5a6a7a">Limit blast radius when something fails</text>
+    </g>
+
+    <rect x="88" y="420" width="200" height="32" rx="10" fill="#e8f0fe"/>
+    <text x="188" y="441" text-anchor="middle" font-size="14" font-weight="700" fill="#1a73e8">Attack Surface: Path</text>
+  </g>
+
+  <!-- OS card -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="48" width="532" height="424" rx="22" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M620,70 Q620,48 642,48 H1130 Q1152,48 1152,70 V118 H620 Z" fill="#34a853"/>
+    <circle cx="668" cy="83" r="22" fill="#ffffff" fill-opacity="0.2"/>
+    <!-- OS / chip icon -->
+    <rect x="656" y="71" width="24" height="24" rx="4" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <rect x="662" y="77" width="12" height="12" rx="2" fill="#ffffff"/>
+    <text x="704" y="92" font-size="26" font-weight="700" fill="#ffffff">OS Components</text>
+
+    <g fill="#1a2332">
+      <circle cx="682" cy="178" r="5" fill="#34a853"/>
+      <text x="702" y="184" font-size="20" font-weight="600">Kernel and services</text>
+      <text x="702" y="210" font-size="15" fill="#5a6a7a">Core trust boundary for every process</text>
+
+      <circle cx="682" cy="268" r="5" fill="#34a853"/>
+      <text x="702" y="274" font-size="20" font-weight="600">Accounts and permissions</text>
+      <text x="702" y="300" font-size="15" fill="#5a6a7a">Who can act, and with how much power</text>
+
+      <circle cx="682" cy="358" r="5" fill="#34a853"/>
+      <text x="702" y="364" font-size="20" font-weight="600">Filesystem and processes</text>
+      <text x="702" y="390" font-size="15" fill="#5a6a7a">Where code and secrets actually live</text>
+    </g>
+
+    <rect x="660" y="420" width="200" height="32" rx="10" fill="#e6f4ea"/>
+    <text x="760" y="441" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Attack Surface: Host</text>
+  </g>
 </svg>
