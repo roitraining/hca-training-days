@@ -140,15 +140,6 @@
 
 ![Breakout sessions splitting from a main meeting into smaller rooms](images/ch18-breakout-sessions.png)
 
----
-
-# Demo: Scheduling and Running a Meeting
-
-**Time:** ~10 minutes
-
-- Schedule a meeting with a template and a waiting room enabled
-- Walk through in-meeting controls: reactions, virtual background, screen share
-- Start a recording and preview the auto-generated transcript
 
 ---
 <!-- layout: navigation -->
@@ -165,7 +156,7 @@
 - Most collaboration doesn't happen in a scheduled meeting—it happens in the moments around it
 - Webex Spaces keep conversations, files, and context together instead of scattered across email and chat
 - This segment covers the async tools that reduce how many meetings you need in the first place
-- We'll demo creating a Space and sharing a file live
+
 
 ---
 
@@ -230,7 +221,7 @@
 - Great tools still need good habits—etiquette prevents most bad-meeting complaints
 - Accessibility isn't an add-on; small defaults make meetings work for more people
 - The second half of this segment covers fixing the audio/video issues that derail meetings
-- We'll close with a live troubleshooting demo
+
 
 ---
 # Meeting Etiquette Basics
@@ -283,16 +274,6 @@
 - Persistent issues? Restart the app before restarting the whole machine
 
 ![Diagnosing video and connection issues](images/ch18-fixing-video.png)
-
----
-
-# Demo: Diagnosing a Meeting Problem
-
-**Time:** ~7 minutes
-
-- Walk through the audio and video settings panel
-- Simulate a common issue (wrong microphone selected) and fix it live
-- Show where to find connection quality indicators during a meeting
 
 ---
 
