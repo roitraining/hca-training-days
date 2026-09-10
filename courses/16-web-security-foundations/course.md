@@ -164,6 +164,8 @@ print(hashlib.sha256(b"hello").hexdigest())
 - Start at the OS, move to the network, then the web server itself
 - Small, boring changes (patching, disabling defaults) stop more attacks than clever ones
 
+![Layers of defense](images/locking-it-down.png)
+
 ---
 
 # Operating System Hardening
