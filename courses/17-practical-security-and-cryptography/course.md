@@ -174,14 +174,12 @@
 - The public key can be shared freely; the private key never leaves its owner
 
 ---
-
----
 <!-- layout: title-image -->
 # Asymmetric Encryption Illustrated
 
 ![Symmetric Encryption](images/asymmetric-encryption.png)
 
-
+---
 <!-- layout: title-image -->
 # Symmetric + Asymmetric + Hashing
 
