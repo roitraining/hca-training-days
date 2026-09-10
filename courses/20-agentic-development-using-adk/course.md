@@ -83,19 +83,13 @@
 <!-- layout: title-image -->
 # The ADK Development Loop
 
-![The ADK development loop: define, compose, evaluate, deploy](images/adk-development-loop.png)
+![The ADK development loop: define, compose, evaluate, deploy](images/adk-development-loop.svg)
 
 ---
-
+<!-- layout: title-image -->
 # Foundations: Core Primitives
 
-- **Agent** — worker unit (`LlmAgent` or deterministic workflow agents)
-- **Tool** — callable capability (APIs, search, code, other agents)
-- **Session / State** — one conversation’s history and working memory
-- **Runner** — execution engine that drives events and orchestration
-- **Event** — atomic unit of what happened (user turn, tool call, reply)
-
-![ADK core primitives](images/adk-core-primitives.png)
+![ADK core primitives: Agent, Tool, Session/State, Runner and Event](images/adk-core-primitives.svg)
 
 ---
 <!-- layout: 3-column -->
@@ -262,7 +256,7 @@ root_agent = Agent(
 <!-- layout: title-image -->
 # Parent–Child Multi-Agent Pattern
 
-![Multi-agent hierarchy](images/adk-multi-agent-hierarchy.png)
+![Parent coordinator agent routing to search, code, and reviewer specialist agents](images/adk-multi-agent-hierarchy.svg)
 
 ---
 <!-- layout: 2-column -->
@@ -327,19 +321,6 @@ root_agent = Agent(
 ```
 
 ---
-
-# Demo: Build a Tool-Using Agent
-
-**Time:** ~10–12 minutes (instructor-led)
-
-**Demo guide:** [ADK multi-tool / agent team tutorial](https://adk.dev/tutorials/index.md)
-
-- Define a tool with docstring + types
-- Wire it into an `Agent`
-- Run locally with `adk web`
-- Optional stretch: add a specialist `sub_agent`
-
----
 <!-- layout: navigation -->
 # Course Roadmap
 
@@ -351,12 +332,7 @@ root_agent = Agent(
 
 # Shipping Agents
 
-- Local demos are not production
-- Packaging must include **code + dependencies**
-- Prefer managed runtimes when you want scale and governance
-- Keep the same `root_agent` contract from laptop → cloud
-
-![Deploy to Agent Engine](images/adk-deploy-agent-engine.png)
+![Deploy path: local agent, package code and dependencies, Agent Engine runtime, then query and validate](images/adk-deploy-agent-engine.svg)
 
 ---
 
