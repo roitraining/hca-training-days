@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: What’s Possible Now (~20 min)
-- Segment 2: Find Your Use Cases — workshop (~30 min)
-- Segment 3: Make It Real (~10 min)
-- Questions and Answers (~15 min)
+- Segment 1: What’s Possible Now
+- Segment 2: Find Your Use Cases — workshop
+- Segment 3: Make It Real
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

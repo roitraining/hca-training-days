@@ -32,10 +32,10 @@
 
 # Agenda
 
-- Segment 1: GenAI Beyond the Chatbot (~20 min)
-- Segment 2: Concepts and Landscape (~25 min)
-- Segment 3: Leading the Change (~15 min)
-- Questions and Answers (~15 min)
+- Segment 1: GenAI Beyond the Chatbot
+- Segment 2: Concepts and Landscape
+- Segment 3: Leading the Change
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

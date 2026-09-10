@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: The Live Streaming Pipeline (~20 min)
-- Segment 2: Low-Latency Techniques (~25 min)
-- Segment 3: Scale and Reliability (~20 min)
-- Questions and Answers (~10 min)
+- Segment 1: The Live Streaming Pipeline
+- Segment 2: Low-Latency Techniques
+- Segment 3: Scale and Reliability
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

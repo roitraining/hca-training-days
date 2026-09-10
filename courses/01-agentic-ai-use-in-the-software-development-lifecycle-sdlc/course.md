@@ -34,10 +34,10 @@
 
 # Agenda
 
-- Segment 1: What Makes AI "Agentic"? (~20 min)
-- Segment 2: Agentic AI Across the SDLC (~35 min)
-- Segment 3: Adopting Agentic AI Responsibly (~25 min)
-- Questions and Answers (~10 min)
+- Segment 1: What Makes AI "Agentic"?
+- Segment 2: Agentic AI Across the SDLC
+- Segment 3: Adopting Agentic AI Responsibly
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 

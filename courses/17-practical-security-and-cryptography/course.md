@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: Security Problems and Tools (~25 min)
-- Segment 2: Applied Cryptography, with demo (~35 min)
-- Segment 3: Attacks and Defense (~20 min)
-- Questions and Answers (~10 min)
+- Segment 1: Security Problems and Tools
+- Segment 2: Applied Cryptography, with demo
+- Segment 3: Attacks and Defense
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

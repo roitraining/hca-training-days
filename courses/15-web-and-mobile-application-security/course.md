@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: Security Fundamentals (~20 min)
-- Segment 2: The OWASP Top 10, web and mobile (~35 min)
-- Segment 3: Defenses and Testing, with demo (~25 min)
-- Questions and Answers (~10 min)
+- Segment 1: Security Fundamentals
+- Segment 2: The OWASP Top 10, web and mobile
+- Segment 3: Defenses and Testing, with demo
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

@@ -34,10 +34,10 @@
 
 # Agenda
 
-- Segment 1: Streaming Fundamentals (~20 min)
-- Segment 2: Flink Core Concepts (~25 min)
-- Segment 3: Putting It to Work (~15 min)
-- Questions and Answers (~15 min)
+- Segment 1: Streaming Fundamentals
+- Segment 2: Flink Core Concepts
+- Segment 3: Putting It to Work
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

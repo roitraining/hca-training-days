@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: Security Fundamentals (~25 min)
-- Segment 2: Hardening the Stack (~35 min)
-- Segment 3: Safe Processing (~20 min)
-- Questions and Answers (~10 min)
+- Segment 1: Security Fundamentals
+- Segment 2: Hardening the Stack
+- Segment 3: Safe Processing
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

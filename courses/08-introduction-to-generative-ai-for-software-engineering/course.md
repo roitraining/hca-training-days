@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: GenAI for Developers (~20 min)
-- Segment 2: Prompt Engineering for Code (~25 min)
-- Segment 3: Tools and Responsible Use (~15 min)
-- Questions and Answers (~15 min)
+- Segment 1: GenAI for Developers
+- Segment 2: Prompt Engineering for Code
+- Segment 3: Tools and Responsible Use
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

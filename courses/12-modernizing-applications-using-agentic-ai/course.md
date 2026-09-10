@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: Agentic AI, Briefly (~20 min)
-- Segment 2: Agents in a Modernization Workflow (~25 min)
-- Segment 3: Doing It Safely (~15 min)
-- Questions and Answers (~15 min)
+- Segment 1: Agentic AI, Briefly
+- Segment 2: Agents in a Modernization Workflow
+- Segment 3: Doing It Safely
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---

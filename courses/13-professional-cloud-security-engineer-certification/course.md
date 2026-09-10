@@ -33,10 +33,10 @@
 
 # Agenda
 
-- Segment 1: Exam Overview (~20 min)
-- Segment 2: Core Domains Tour (~25 min)
-- Segment 3: Operations, Compliance, and Prep (~15 min)
-- Questions and Answers (~15 min)
+- Segment 1: Exam Overview
+- Segment 2: Core Domains Tour
+- Segment 3: Operations, Compliance, and Prep
+- Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---
