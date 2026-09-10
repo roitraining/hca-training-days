@@ -211,6 +211,8 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Users can't patch instantly; app-store review cycles slow response
 - The OWASP Mobile Top 10 reflects these differences
 
+![Mobile Phone Security](images/criminal.png)
+
 ---
 <!-- layout: 2-column -->
 # Mobile Top Risks: Storage & Communication
@@ -231,6 +233,9 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Client-side-only checks that a jailbroken or rooted device can bypass
 - Hardcoded API keys or tokens embedded in the app binary
 - Defense: enforce authorization on the server for every sensitive action—never trust the client
+
+
+![Mobile Phone Security](images/pin.png)
 
 ---
 <!-- layout: 2-column -->
@@ -319,6 +324,8 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Manual testing (penetration testing) finds logic flaws automation misses
 - Testing belongs in the pipeline, not just before a big release
 
+![Tester](images/tester.png)
+
 ---
 <!-- layout: 2-column -->
 # Security Testing Tool Categories
@@ -333,21 +340,13 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ---
 
-# Demo: Scanning with OWASP ZAP
-
-**Time:** ~10 minutes
-
-- Launch an automated scan against a deliberately vulnerable test application
-- Walk through a flagged finding (e.g. reflected XSS) and its evidence
-- Show how a finding maps back to an OWASP Top 10 category
-
----
-
 # Closing the Loop
 
 - Fundamentals (Segment 1) + known threats (Segment 2) + defenses and testing (Segment 3) form one continuous practice
 - Testing findings should feed back into secure coding standards, not just a one-time fix list
 - Treat the OWASP Top 10 as a recurring checklist across the whole lifecycle, not a one-time gate
+
+![closing the Loop](images/loop.png)
 
 ---
 
