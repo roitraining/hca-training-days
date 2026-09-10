@@ -86,6 +86,9 @@
 - Set a default meeting duration shorter than 60 or 30 minutes—most meetings expand to fill the time given
 - Enable the lobby/waiting room for anything with external guests
 
+
+![Smart scheduling with templates and lobby](images/ch18-scheduling-smarter.png)
+
 ---
 
 # Joining Like a Pro
@@ -95,11 +98,14 @@
 - Join from the desktop or mobile app for full features; the web app is a solid fallback
 - Preview your camera and background before joining, not after
 
+
+![Joining with a pre-meeting audio and video check](images/ch18-joining-like-a-pro.png)
+
 ---
 <!-- layout: title-image -->
 # In-Meeting Controls at a Glance
 
-![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/ch18-in-meeting-controls.svg)
+![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/meeting-controls.png)
 
 ---
 
@@ -130,6 +136,9 @@
 - Assign manually for intentional groupings, or let Webex assign randomly for speed
 - Broadcast a message to all breakout rooms without ending them
 - Set a timer so breakouts return to the main session automatically
+
+
+![Breakout sessions splitting from a main meeting into smaller rooms](images/ch18-breakout-sessions.png)
 
 ---
 
@@ -182,17 +191,18 @@
 - Message status shows who's read what—useful for confirming important updates landed
 - Search works across messages, files, and even meeting transcripts
 
+![Messaging features: threads, mentions, and read status](images/ch18-messaging-features.png)
+
 ---
-<!-- layout: 2-column -->
+
 # File Sharing and Co-Editing
 
-### File Sharing
 - Drag and drop files directly into a Space
 - Files stay attached to the conversation where they were shared
-
-### Co-Editing
 - Edit shared Office documents together in real time
 - Changes sync automatically—no more emailing versions back and forth
+
+![File sharing and real-time co-editing in a Space](images/ch18-file-coediting.png)
 
 ---
 
@@ -203,15 +213,7 @@
 - Sticky notes, shapes, and freehand drawing support real collaborative sessions
 - Boards save automatically and stay accessible after the meeting ends
 
----
-
-# Demo: Spaces, Files, and Whiteboarding
-
-**Time:** ~8 minutes
-
-- Create a Space and pin an important message
-- Share and co-edit a document live
-- Open a whiteboard and add a few sticky notes together
+![Collaborative whiteboarding with sticky notes and shapes](images/ch18-whiteboarding.png)
 
 ---
 <!-- layout: navigation -->
@@ -231,18 +233,16 @@
 - We'll close with a live troubleshooting demo
 
 ---
-<!-- layout: 2-column -->
 # Meeting Etiquette Basics
 
-### Before and During
 - Join a minute early, muted by default
 - Use video when you can—it builds engagement
 - Mute when not speaking, especially in larger groups
-
-### Presenting
 - Say who you are before speaking in large or new groups
 - Stop sharing your screen when you're done, not mid-transition
 - Watch the chat and reactions—someone may be trying to get your attention
+
+![Meeting etiquette habits for hosts and participants](images/ch18-meeting-etiquette.png)
 
 ---
 
@@ -252,6 +252,8 @@
 - Closed captioning can be translated into another language during the meeting
 - Keyboard shortcuts make Webex fully navigable without a mouse
 - Recordings and transcripts double as accessibility tools after the fact
+
+![Accessibility features: live captions and inclusive meeting tools](images/ch18-accessibility-features.png)
 
 ---
 <!-- layout: title-image -->
@@ -268,6 +270,9 @@
 - Echo or feedback? Only one device per person should have audio on in the same room
 - Background noise? Turn on background noise removal in audio settings
 
+<!-- TODO IMAGE: Conceptual illustration of diagnosing meeting audio: mic selection, mute, echo from two devices -->
+![Diagnosing common Webex audio problems](images/ch18-fixing-audio.png)
+
 ---
 
 # Fixing Video and Connection Issues
@@ -276,6 +281,8 @@
 - Choppy video or audio? Switch to "optimize for low bandwidth" or turn off your own video
 - Can't join at all? Try the web app as a fallback if the desktop app won't connect
 - Persistent issues? Restart the app before restarting the whole machine
+
+![Diagnosing video and connection issues](images/ch18-fixing-video.png)
 
 ---
 
