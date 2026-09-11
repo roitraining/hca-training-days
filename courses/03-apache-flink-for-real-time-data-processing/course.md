@@ -263,6 +263,8 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - Often faster for analytics-style jobs
 - Same runtime: state, checkpoints, event time
 
+<!-- below-columns -->
+
 > [!NOTE]
 > Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine—and the concepts—are the same.
 
@@ -434,6 +436,8 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Flink (or SQL) for live anomaly windows
 - Micro-batch OK for lake-only analytics
 - Split: speed path vs history path
+
+<!-- below-columns -->
 
 > [!IMPORTANT]
 > Ask: Do we need **continuous stateful compute** on the event path—or just fresher batch?

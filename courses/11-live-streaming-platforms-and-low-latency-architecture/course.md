@@ -165,6 +165,8 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 - Low-latency contribution
 - Pair with WHEP-style playback when needed
 
+<!-- below-columns -->
+
 > [!NOTE]
 > Dual ingest (primary + backup) matters more than which single protocol you prefer—paths fail on game day.
 
