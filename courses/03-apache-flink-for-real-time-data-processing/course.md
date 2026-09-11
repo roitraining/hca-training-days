@@ -228,6 +228,8 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - **Event time + watermark:** still attributed to 10:00; window closes when watermark passes 10:01
 - Same bug shows up in fraud scores, billing, and SLO burn rates
 
+<!-- below-columns -->
+
 > [!TIP]
 > If your chart “looks wrong under load or mobile traffic,” check time semantics before tuning parallelism.
 
