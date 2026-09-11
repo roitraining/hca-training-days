@@ -80,8 +80,8 @@
 > Agents accelerate modernization; they do not remove architecture ownership or release accountability.
 
 ---
-<!-- layout: title-image -->
-<!-- # LLMs vs. Assistants vs. Agents -->
+<!-- layout: image-only -->
+# LLMs vs. Assistants vs. Agents
 
 ![LLM assistant agent](images/llm-assistant-agent.png)
 
@@ -138,14 +138,14 @@
 - Doing It Safely
 
 ---
-<!-- layout: title-image -->
-<!-- # Modernization Workflow with Agents -->
+<!-- layout: image-only -->
+# Modernization Workflow with Agents
 
 ![Modernization agent workflow](images/modernization-agent-workflow.png)
 
 ---
-<!-- layout: title-image -->
-<!-- # High-Value Modernization Tasks -->
+<!-- layout: image-only -->
+# High-Value Modernization Tasks
 
 ![Agent modernization tasks](images/agent-modernization-tasks.png)
 
@@ -178,8 +178,8 @@
 > Best ROI: **discover + test harness + small PR batches**—not “rewrite the monolith overnight.”
 
 ---
-<!-- layout: title-image -->
-<!-- # Workflow, Autonomous, Multi-Agent -->
+<!-- layout: image-only -->
+# Workflow, Autonomous, Multi-Agent
 
 ![Modernization agent patterns](images/modernization-agent-patterns.png)
 
@@ -211,8 +211,8 @@
 - **Doing It Safely**
 
 ---
-<!-- layout: title-image -->
-<!-- # Production Guardrails -->
+<!-- layout: image-only -->
+# Production Guardrails
 
 ![Agent modernization guardrails](images/agent-modernization-guardrails.png)
 

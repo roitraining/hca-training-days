@@ -74,8 +74,8 @@
 - The goal today: read data more critically, not more mathematically
 
 ---
-<!-- layout: title-image -->
-<!-- # What Data Literacy Involves -->
+<!-- layout: image-only -->
+# What Data Literacy Involves
 
 ![What data literacy involves: Find, Understand, Question, Use](images/ch19-data-literacy-loop.png)
 

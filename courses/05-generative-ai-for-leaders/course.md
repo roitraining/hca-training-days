@@ -78,8 +78,8 @@
 > This briefing is non-technical and outcome-focused: language you can reuse with teams and sponsors.
 
 ---
-<!-- layout: title-image -->
-<!-- # GenAI Transforms Functions -->
+<!-- layout: image-only -->
+# GenAI Transforms Functions
 
 ![GenAI across business functions](images/genai-business-functions.png)
 

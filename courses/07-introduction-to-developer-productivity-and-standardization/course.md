@@ -80,14 +80,14 @@
 > AI amplifies whatever process you have—good standards scale; weak ones scale noise.
 
 ---
-<!-- layout: title-image -->
-<!-- # Workflow Lens: SDLC -->
+<!-- layout: image-only -->
+# Workflow Lens: SDLC
 
 ![Developer workflow SDLC](images/developer-workflow-sdlc.png)
 
 ---
-<!-- layout: title-image -->
-<!-- # DORA-Style Efficiency Measures -->
+<!-- layout: image-only -->
+# DORA-Style Efficiency Measures
 
 ![DORA metrics](images/dora-metrics.png)
 
@@ -110,8 +110,8 @@
 > AI is a lever on flow metrics—not a substitute for CI quality, ownership, and review.
 
 ---
-<!-- layout: title-image -->
-<!-- # Where GenAI Improves Efficiency -->
+<!-- layout: image-only -->
+# Where GenAI Improves Efficiency
 
 ![AI developer efficiency moments](images/ai-dev-efficiency-moments.png)
 
@@ -166,8 +166,8 @@
 - Require matching existing style
 
 ---
-<!-- layout: title-image -->
-<!-- # Prompting for Standard Output -->
+<!-- layout: image-only -->
+# Prompting for Standard Output
 
 ![Prompt standards loop](images/prompt-standards-loop.png)
 
@@ -276,8 +276,8 @@ Verify: show function + test only
 | Incident notes | Timeline & next actions draft |
 
 ---
-<!-- layout: title-image -->
-<!-- # End-to-End Assisted Workflow -->
+<!-- layout: image-only -->
+# End-to-End Assisted Workflow
 
 ![End-to-end assisted workflow](images/e2e-assisted-workflow.png)
 

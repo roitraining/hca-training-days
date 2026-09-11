@@ -113,8 +113,8 @@
 > Think of Flink as the compute layer for streams—similar to how Spark often serves batch/lakehouse compute.
 
 ---
-<!-- layout: title-image -->
-<!-- # Where Flink Sits in the Ecosystem -->
+<!-- layout: image-only -->
+# Where Flink Sits in the Ecosystem
 
 ![Flink pipeline architecture](images/flink-pipeline-architecture.png)
 
@@ -196,8 +196,8 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 | Session | Gap-based | User browse session until idle |
 
 ---
-<!-- layout: title-image -->
-<!-- # Event Time vs. Processing Time -->
+<!-- layout: image-only -->
+# Event Time vs. Processing Time
 
 ![Event time vs processing time](images/event-time-vs-processing-time.png)
 
@@ -348,8 +348,8 @@ resultStream.sinkTo(
 - **Putting It to Work**
 
 ---
-<!-- layout: title-image -->
-<!-- # Common Real-Time Use Cases -->
+<!-- layout: image-only -->
+# Common Real-Time Use Cases
 
 ![Flink use cases](images/flink-use-cases.png)
 

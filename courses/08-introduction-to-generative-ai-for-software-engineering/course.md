@@ -261,8 +261,8 @@ Now write get_order(id: str) -> Order the same way.
 > Standardize on **org-approved** tools and settings—personal consumer accounts create policy and IP risk.
 
 ---
-<!-- layout: title-image -->
-<!-- # Responsible AI-Assisted Coding -->
+<!-- layout: image-only -->
+# Responsible AI-Assisted Coding
 
 ![Responsible AI coding](images/responsible-ai-coding.png)
 

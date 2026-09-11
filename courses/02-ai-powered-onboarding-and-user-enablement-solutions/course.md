@@ -159,8 +159,8 @@
 - Measuring and Governing
 
 ---
-<!-- layout: title-image -->
-<!-- # Common AI Enablement Patterns -->
+<!-- layout: image-only -->
+# Common AI Enablement Patterns
 
 ![AI enablement patterns](images/ai-enablement-patterns.png)
 

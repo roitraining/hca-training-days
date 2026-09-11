@@ -100,8 +100,8 @@
 ```
 
 ---
-<!-- layout: title-image -->
-<!-- # Input vs. Output Tokens -->
+<!-- layout: image-only -->
+# Input vs. Output Tokens
 
 ![Input vs output tokens](images/input-vs-output-tokens.png)
 
@@ -240,8 +240,8 @@
 - **Cost-Aware Architecture**
 
 ---
-<!-- layout: title-image -->
-<!-- # Design for Efficiency -->
+<!-- layout: image-only -->
+# Design for Efficiency
 
 ![Cost-aware architecture](images/cost-aware-architecture.png)
 

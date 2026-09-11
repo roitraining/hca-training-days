@@ -80,8 +80,8 @@
 > This is a workshop, not a build session. Leave with prioritized candidates and a next step—not production code.
 
 ---
-<!-- layout: title-image -->
-<!-- # GenAI Across Industries -->
+<!-- layout: image-only -->
+# GenAI Across Industries
 
 ![GenAI industry use cases](images/genai-industry-usecases.png)
 
@@ -105,8 +105,8 @@
 - Checklists
 
 ---
-<!-- layout: title-image -->
-<!-- # Healthcare Spotlight -->
+<!-- layout: image-only -->
+# Healthcare Spotlight
 
 ![Healthcare spotlight](images/healthcare-spotlight.png)
 
@@ -123,8 +123,8 @@
 > Clinical, privacy, and safety-critical uses need grounding, human review, and formal governance—not a freeform chatbot.
 
 ---
-<!-- layout: title-image -->
-<!-- # Streaming / Real-Time Plays -->
+<!-- layout: image-only -->
+# Streaming / Real-Time Plays
 
 ![Streaming use case patterns](images/streaming-usecase-patterns.png)
 
@@ -167,8 +167,8 @@
 - Make It Real
 
 ---
-<!-- layout: title-image -->
-<!-- # Spot Opportunities in Daily Work -->
+<!-- layout: image-only -->
+# Spot Opportunities in Daily Work
 
 ![Spot opportunities](images/spot-opportunities.png)
 
@@ -188,8 +188,8 @@ Write 3–5 items from *your* week:
 Keep each to one sentence: *Who* + *pain* + *desired outcome*.
 
 ---
-<!-- layout: title-image -->
-<!-- # Value vs. Effort Lens -->
+<!-- layout: image-only -->
+# Value vs. Effort Lens
 
 ![Value vs effort matrix](images/value-vs-effort-matrix.png)
 
@@ -226,8 +226,8 @@ Keep each to one sentence: *Who* + *pain* + *desired outcome*.
 - **Make It Real**
 
 ---
-<!-- layout: title-image -->
-<!-- # From Idea to Next Step -->
+<!-- layout: image-only -->
+# From Idea to Next Step
 
 ![Idea to next step](images/idea-to-next-step.png)
 
