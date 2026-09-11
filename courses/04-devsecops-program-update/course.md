@@ -99,8 +99,8 @@
 - Audit-ready evidence from pipelines
 
 ---
-<!-- layout: title-image -->
-<!-- # Shift-Left and the Secure SDLC -->
+<!-- layout: image-only -->
+# Shift-Left and the Secure SDLC
 
 ![Shift-left SDLC](images/shift-left-sdlc.png)
 
