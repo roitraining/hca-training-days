@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -23,7 +24,7 @@
 
 # Course Objectives
 
-- Orient to the Google Professional Cloud Security Engineer (PCSE) exam—scope, domains, and how to prepare
+- Orient to the Google Professional Cloud Security Engineer (PCSE) exam: scope, domains, and how to prepare
 - Describe the certification’s scope, format, and exam expectations
 - Summarize the core exam domains and what each tests
 - Identify the highest-yield preparation resources and study path
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Exam Overview
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Cloud security engineers preparing for PCSE
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Prior Google Cloud experience (projects, IAM, networking basics)
@@ -73,11 +77,11 @@
 
 - Ability to **design, implement, and manage** secure Google Cloud infrastructure
 - Scenario judgment across identity, network, data, operations, and compliance
-- Product-aware decisions (which control solves which risk)—not trivia memorization
+- Product-aware decisions (which control solves which risk) - not trivia memorization
 - Readiness to operate security alongside development and platform teams
 
 > [!NOTE]
-> Always verify details against the current official Google Cloud exam guide—blueprints refresh over time.
+> Always verify details against the current official Google Cloud exam guide: blueprints refresh over time.
 
 ---
 <!-- layout: title-image -->
@@ -195,7 +199,7 @@
 
 - Spend the most hours on **Access + Data + Network** (majority of the exam)
 - Build one reference architecture that includes hierarchy, private networking, CMEK, and logging
-- Practice “choose the control” scenarios—not product feature laundry lists
+- Practice “choose the control” scenarios - not product feature laundry lists
 - Revisit VPC-SC and KMS until trade-offs feel automatic
 
 > [!TIP]
@@ -249,11 +253,11 @@
 
 # Highest-Yield Preparation Resources
 
-1. **Official exam guide** — source of truth for domains and task statements  
-2. **Google Cloud skill boosts / labs** — IAM, networking, KMS, SCC, VPC-SC  
-3. **Architecture center security patterns** — private, perimeter, encryption designs  
-4. **Practice exams / sample questions** — timing and scenario stamina  
-5. **Your production scars** — postmortems and real configs beat flashcards  
+1. **Official exam guide**: source of truth for domains and task statements  
+2. **Google Cloud skill boosts / labs**: IAM, networking, KMS, SCC, VPC-SC  
+3. **Architecture center security patterns**: private, perimeter, encryption designs  
+4. **Practice exams / sample questions**: timing and scenario stamina  
+5. **Your production scars**: postmortems and real configs beat flashcards  
 
 > [!WARNING]
 > Outdated third-party dumps miss newer topics (e.g. AI workload security). Prefer official + recent labs.
@@ -307,7 +311,7 @@ Study loop: read task → build in a sandbox → explain the trade-off out loud
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **If study time is short, which PCSE focus set is the highest-yield “big rocks” priority?**
 
@@ -331,7 +335,7 @@ Study loop: read task → build in a sandbox → explain the trade-off out loud
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **A scenario asks how to stop an authorized user from copying BigQuery data to an unapproved project. Which control is the exam’s best “choose the product” answer?**
 
@@ -339,12 +343,12 @@ Study loop: read task → build in a sandbox → explain the trade-off out loud
 
 - VPC-SC limits *where* data can go even with valid credentials
 - IAM answers *who*; it does not stop authorized exfiltration alone
-- Owner/Editor widen blast radius—opposite of least privilege
+- Owner/Editor widen blast radius: opposite of least privilege
 - Logging helps investigate; it does not enforce the perimeter
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Draft a 4–6 week PCSE prep plan for someone with Associate-level Google Cloud experience but little VPC-SC or CMEK practice.
@@ -356,7 +360,7 @@ Draft a 4–6 week PCSE prep plan for someone with Associate-level Google Cloud 
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Draft a 4–6 week PCSE prep plan for someone with Associate-level Google Cloud experience but little VPC-SC or CMEK practice.**
 

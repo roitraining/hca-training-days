@@ -5,10 +5,11 @@
 # Modernizing Applications
 # Using Agentic AI
 
-## Agents that understand legacy code, plan refactors, and accelerate migration—safely
+## Agents that understand legacy code, plan refactors, and accelerate migration: safely
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Agentic AI, Briefly
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Application developers on modernization programs
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with software development practices
@@ -175,7 +179,7 @@
 - Produce migration checklists tied to build/test evidence
 
 > [!TIP]
-> Best ROI: **discover + test harness + small PR batches**—not “rewrite the monolith overnight.”
+> Best ROI: **discover + test harness + small PR batches** - not “rewrite the monolith overnight.”
 
 ---
 <!-- layout: image-only -->
@@ -239,7 +243,7 @@
 - Log prompts, tool calls, file touches, and test results per run
 - Tie agent output to a ticket / change record
 - Capture failures (wrong API, flaky plan) to improve playbooks
-- Treat agent sessions like CI jobs—reproducible when possible
+- Treat agent sessions like CI jobs: reproducible when possible
 
 > [!WARNING]
 > An agent with broad write access and no audit trail is an incident waiting to happen.
@@ -294,14 +298,14 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **What primarily distinguishes an agentic AI system from a simple code assistant?**
 
 **Correct: B.** It holds a goal across steps, calls tools, and iterates on results
 
 - Agents pursue a goal: plan → act → observe → continue
-- Tools (repo, tests, tickets) and iteration are the shift—not model size alone
+- Tools (repo, tests, tickets) and iteration are the shift - not model size alone
 - Agents still need scoped permissions and human checkpoints
 - Agentic patterns apply to legacy modernization as much as new code
 
@@ -318,32 +322,32 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Your modernization program wants agent help with the highest ROI and lowest risk. Which approach fits best?**
 
 **Correct: D.** Discover + draft a test harness + ship small PR batches with review
 
-- Best ROI: discovery, tests, and small reviewed PRs—not overnight rewrites
+- Best ROI: discovery, tests, and small reviewed PRs - not overnight rewrites
 - Broad prod write access without audit is an incident waiting to happen
 - Characterization tests reduce risk before mechanical refactors
 - Artifacts in source control and tickets keep changes reviewable
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Pick one legacy module your team might modernize with an agent (for example: dependency map, strangler step, or framework bump).
 
 ### Discuss
-- Which pattern fits—workflow, autonomous, or multi-agent—and why?
+- Which pattern fits: workflow, autonomous, or multi-agent - and why?
 - What must a human approve before any write lands outside a branch?
 - How would you log and verify the agent run like a CI job?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Pick one legacy module your team might modernize with an agent (for example: dependency map, strangler step, or framework bump).**
 

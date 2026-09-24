@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Developer Efficiency Foundations
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Application developers adopting AI coding assistants
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Basic software development experience
@@ -77,7 +81,7 @@
 - Speed without standards creates review debt and inconsistent quality
 
 > [!NOTE]
-> AI amplifies whatever process you have—good standards scale; weak ones scale noise.
+> AI amplifies whatever process you have: good standards scale; weak ones scale noise.
 
 ---
 <!-- layout: image-only -->
@@ -103,11 +107,11 @@
 | :--- | :--- |
 | **Deployment frequency** | Faster small changes; less boilerplate |
 | **Lead time for changes** | Quicker drafts, tests, and explanations |
-| **Change fail rate** | Better tests/review prompts—if humans verify |
+| **Change fail rate** | Better tests/review prompts: if humans verify |
 | **Time to restore** | Faster log/error diagnosis and fix drafts |
 
 > [!IMPORTANT]
-> AI is a lever on flow metrics—not a substitute for CI quality, ownership, and review.
+> AI is a lever on flow metrics - not a substitute for CI quality, ownership, and review.
 
 ---
 <!-- layout: image-only -->
@@ -179,7 +183,7 @@
 - Paste or reference **existing patterns** (“match `UserService` style”)
 - Require **tests**, error handling, and logging norms
 - Ban secrets: never paste credentials or PHI into prompts
-- Ask for a **diff-sized** change—not a rewrite of the module
+- Ask for a **diff-sized** change - not a rewrite of the module
 
 ```text
 Context: Python 3.12 service using our repository pattern in services/
@@ -266,7 +270,7 @@ Verify: show function + test only
 - Paste **sanitized** stack traces and error snippets
 - Ask for likely causes *and* what to check next
 - Use assist to draft log queries or reproduction steps
-- Validate against real telemetry—don’t ship speculative fixes
+- Validate against real telemetry: don’t ship speculative fixes
 
 | Input | Ask the assistant for |
 | :--- | :--- |
@@ -349,13 +353,13 @@ Verify: show function + test only
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **How should teams treat AI coding assistant suggestions?**
 
 **Correct: B.** Treat them like a junior pair: fast drafts with mandatory human review
 
-- Suggestions are drafts—compile, test, and read the diff
+- Suggestions are drafts: compile, test, and read the diff
 - Blind multi-file accepts create review debt and subtle bugs
 - CI and human ownership remain the source of truth
 - Grounding on local patterns beats invented APIs that “look right”
@@ -373,7 +377,7 @@ Verify: show function + test only
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Which signal best measures AI-assisted developer productivity without vanity metrics?**
 
@@ -386,26 +390,26 @@ Verify: show function + test only
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Your team is rolling out an org-approved AI coding assistant next quarter.
 
 ### Discuss
-- Which 5–10 shared prompts would you standardize first—and why?
+- Which 5–10 shared prompts would you standardize first - and why?
 - Where must a human still own the merge decision?
 - How would you spot-check that standards are helping (not just adopted)?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Your team is rolling out an org-approved AI coding assistant next quarter.**
 
 ### Strong Answers Mention
 - Shared prompts for feature, test, refactor, PR, and incident
 - Human review + CI as definition of done
-- Metrics like lead time and review rework—not lines of AI code
+- Metrics like lead time and review rework - not lines of AI code
 - Security settings and “no secrets in prompts” as non-negotiables
 
 ### Watch For

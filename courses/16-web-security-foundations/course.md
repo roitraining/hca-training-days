@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -16,14 +17,14 @@
   - Name
   - Background
   - Contact info
-- Let's get started!
+- Let’s get started!
 
 ![Welcome](images/welcome.png)
 ---
 
 # Course Objectives
 
-- Secure a web server platform end to end—from foundational concepts through OS, network, and application hardening
+- Secure a web server platform end to end: from foundational concepts through OS, network, and application hardening
 - Identify the key areas of web/server security
 - Explain cryptography and PKI fundamentals (symmetric, asymmetric, hashing, certificates)
 - Recognize OS- and network-level hardening practices for web servers
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Security Fundamentals
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Security administrators
@@ -50,6 +53,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Experience administering Windows or Linux systems
@@ -68,9 +72,9 @@
 
 # The Landscape: Where Web Security Lives
 
-- A web server isn't one thing to secure—it's a stack: OS, network, services, and application code
+- A web server isn’t one thing to secure - it’s a stack: OS, network, services, and application code
 - An attacker only needs one weak layer; defenders need all of them
-- This segment maps the layers, then builds the cryptography vocabulary you'll need for the rest of the course
+- This segment maps the layers, then builds the cryptography vocabulary you’ll need for the rest of the course
 - Segments 2 and 3 return to harden each layer in turn
 
 ---
@@ -85,7 +89,7 @@
 
 ### Platform
 - Operating system hardening
-- Running services (only what's needed)
+- Running services (only what’s needed)
 
 ### Communication
 - Network configuration & segmentation
@@ -97,8 +101,8 @@
 
 - Every layer above eventually depends on cryptography to protect something: passwords, sessions, traffic, certificates
 - Three building blocks recur everywhere: symmetric encryption, asymmetric encryption, and hashing
-- PKI ties those building blocks to trust—proving a key belongs to who it claims to
-- Get comfortable with these before Segment 2's TLS discussion
+- PKI ties those building blocks to trust: proving a key belongs to who it claims to
+- Get comfortable with these before Segment 2’s TLS discussion
 
 ---
 <!-- layout: 2-column -->
@@ -106,22 +110,22 @@
 
 ### Symmetric
 - One shared secret key encrypts and decrypts
-- Fast—used for bulk data (e.g. AES)
+- Fast: used for bulk data (e.g. AES)
 - Challenge: securely distributing the key
 
 ### Asymmetric
 - A public/private key pair; encrypt with one, decrypt with the other
-- Slower—used to exchange keys, not bulk data
+- Slower: used to exchange keys, not bulk data
 - Solves the distribution problem (share the public key freely)
 
 ---
 
 # Hashing: Integrity, Not Secrecy
 
-- A hash is a one-way fingerprint of data—the same input always produces the same output
+- A hash is a one-way fingerprint of data: the same input always produces the same output
 - Used to verify integrity (did this file change?) and to store passwords (never store them in plaintext)
 - A good hash function is fast to compute but infeasible to reverse
-- Password hashing adds a **salt** so identical passwords don't produce identical hashes
+- Password hashing adds a **salt** so identical passwords don’t produce identical hashes
 
 ```python
 import hashlib
@@ -142,10 +146,10 @@ print(hashlib.sha256(b"hello").hexdigest())
 - A certificate binds a public key to an identity (a domain, a person, an organization)
 - Signed by a Certificate Authority (CA) that clients already trust
 - Expiration and revocation limit the damage if a key is compromised
-- A browser's padlock means "this certificate chains to a trusted CA," not "this site is safe"
+- A browser’s padlock means “this certificate chains to a trusted CA,” not “this site is safe”
 
 > [!TIP]
-> Automate certificate renewal (e.g. ACME / Let's Encrypt)—expired certificates are one of the most common self-inflicted outages.
+> Automate certificate renewal (e.g. ACME / Let’s Encrypt): expired certificates are one of the most common self-inflicted outages.
 
 ---
 <!-- layout: navigation -->
@@ -160,7 +164,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 # Locking It Down
 
 - Segment 1 gave you the vocabulary; now we apply it layer by layer
-- Hardening is about reducing the attack surface—turning off what you don't need
+- Hardening is about reducing the attack surface: turning off what you don’t need
 - Start at the OS, move to the network, then the web server itself
 - Small, boring changes (patching, disabling defaults) stop more attacks than clever ones
 
@@ -172,7 +176,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 - Apply security patches on a regular, tested schedule
 - Disable or remove unused services, accounts, and default credentials
-- Enforce least privilege for service accounts—no web server running as root/Administrator
+- Enforce least privilege for service accounts: no web server running as root/Administrator
 - Enable host-based logging and file integrity monitoring
 
 ---
@@ -193,7 +197,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 # Network-Level Security
 
-- Segment the network—the web server shouldn't sit next to sensitive internal systems
+- Segment the network: the web server shouldn’t sit next to sensitive internal systems
 - Firewalls should default-deny and allow only required ports (typically 443, sometimes 80 for redirect)
 - Use a DMZ, or equivalent boundary, between the internet and internal networks
 - Monitor with an IDS/IPS for known attack signatures
@@ -220,7 +224,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 - Install a certificate from a trusted CA and configure the server to present it
 - Disable outdated protocol versions (SSLv3, TLS 1.0/1.1) and weak cipher suites
 - Redirect all HTTP requests to HTTPS
-- Test the configuration with an external scanner, not just "it loads"
+- Test the configuration with an external scanner, not just “it loads”
 
 ---
 <!-- layout: 2-column -->
@@ -234,7 +238,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 ### Common Mistakes
 - Expired or mismatched certificates
 - Mixed content (HTTP resources on an HTTPS page)
-- Leaving legacy protocol versions enabled "just in case"
+- Leaving legacy protocol versions enabled “just in case”
 
 ---
 
@@ -247,7 +251,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 | Web server | Disable defaults, secure headers, TLS-only |
 
 > [!IMPORTANT]
-> Hardening isn't a one-time checklist—re-verify configuration after every deployment or platform update.
+> Hardening isn’t a one-time checklist: re-verify configuration after every deployment or platform update.
 
 ---
 <!-- layout: navigation -->
@@ -270,7 +274,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 # Risks of Server-Side Processing
 
-- Dynamic scripts execute with the privileges of the web server process—a flaw there inherits that access
+- Dynamic scripts execute with the privileges of the web server process: a flaw there inherits that access
 - File uploads, includes, and command execution are common entry points for remote code execution
 - Debug or verbose error output can leak stack traces, file paths, or credentials
 - Third-party scripts and plugins expand the attack surface as much as your own code
@@ -281,7 +285,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 - Validate and sanitize all input on the server, even if the client already checks it
 - Use output encoding appropriate to context (HTML, URL, JavaScript)
-- Keep frameworks, libraries, and plugins patched—most exploited code isn't yours
+- Keep frameworks, libraries, and plugins patched: most exploited code isn’t yours
 - Handle errors gracefully; log details server-side, not in the response
 
 ---
@@ -294,7 +298,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 # Securing Database Connections
 
-- Use parameterized queries or prepared statements—never build SQL by concatenating input
+- Use parameterized queries or prepared statements: never build SQL by concatenating input
 - Connect with a low-privilege database account, not an admin/root credential
 - Store connection credentials outside source code (a secrets manager or environment config)
 - Encrypt the connection between the application and the database, not just the browser and server
@@ -338,13 +342,13 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Which statement correctly describes hashing in a web security context?**
 
 **Correct: C.** A hash is a one-way fingerprint used for integrity and password storage (with salt)
 
-- Hashes are one-way fingerprints—same input, same output; not for secrecy of bulk data
+- Hashes are one-way fingerprints: same input, same output; not for secrecy of bulk data
 - Password storage uses hashing plus salt; don’t store plaintext or reversible “encryption” of passwords
 - Symmetric/asymmetric encryption solve different problems than hashing
 - PKI/certificates bind keys to identity; they don’t eliminate hashing
@@ -362,7 +366,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **When hardening a public web server, which practice is most aligned with least privilege and a reduced attack surface?**
 
@@ -375,7 +379,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Walk the stack for a new public web app: OS → network/DMZ → web server TLS → server-side code talking to a database.
@@ -387,7 +391,7 @@ Walk the stack for a new public web app: OS → network/DMZ → web server TLS �
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Walk the stack for a new public web app: OS → network/DMZ → web server TLS → server-side code talking to a database.**
 

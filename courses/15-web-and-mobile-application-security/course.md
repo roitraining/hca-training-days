@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -16,7 +17,7 @@
   - Name
   - Background
   - Contact info
-- Let's get started!
+- Let’s get started!
 
 ![Welcome](images/welcome.png)
 ---
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Security Fundamentals
@@ -41,15 +43,17 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Developers building web or mobile applications
 - Security staff and technical leads
-- Some development familiarity is helpful—not required
+- Some development familiarity is helpful - not required
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior security experience required
@@ -84,9 +88,9 @@
 # Confidentiality, Integrity, Availability
 
 - **Confidentiality**: only authorized users and systems can read the data
-- **Integrity**: data and code aren't altered without detection
+- **Integrity**: data and code aren’t altered without detection
 - **Availability**: the app stays usable under normal load and under attack
-- Most vulnerabilities you'll see today map back to breaking one of these three properties
+- Most vulnerabilities you’ll see today map back to breaking one of these three properties
 
 ---
 <!-- layout: 2-column -->
@@ -119,9 +123,9 @@
 # Introducing OWASP
 
 - OWASP (Open Worldwide Application Security Project) is a nonprofit community publishing free, vendor-neutral security guidance
-- Best known for the **OWASP Top 10**—a ranked list of the most critical risks, refreshed periodically
+- Best known for the **OWASP Top 10**: a ranked list of the most critical risks, refreshed periodically
 - Separate Top 10 lists exist for web applications and for mobile applications
-- Treat it as a floor, not a ceiling—passing the Top 10 doesn't mean an app is fully secure
+- Treat it as a floor, not a ceiling: passing the Top 10 doesn’t mean an app is fully secure
 
 > [!NOTE]
 > The OWASP Top 10 is a snapshot of common risk categories, not an exhaustive checklist.
@@ -140,7 +144,7 @@
 
 - The OWASP Top 10 groups real-world vulnerabilities into risk categories, not a trivia list
 - Each category represents a pattern of exploits, not a single bug
-- We'll walk the web list first, then the mobile-specific list
+- We’ll walk the web list first, then the mobile-specific list
 - Watch for the categories that show up in both
 
 ![OWASP Top 10](images/owasp-image.png)
@@ -158,7 +162,7 @@
 - Untrusted input reaches an interpreter (SQL, OS command, LDAP, etc.) as code, not data
 - Classic example: string-concatenated SQL queries built from user input
 - Defense: parameterized queries and prepared statements, strict input validation
-- Still one of the most damaging—and most preventable—vulnerability classes
+- Still one of the most damaging - and most preventable - vulnerability classes
 
 ```java
 String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
@@ -169,7 +173,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 # Cross-Site Scripting (XSS)
 
 - Untrusted input is rendered back into a page without proper escaping
-- Lets an attacker run JavaScript in another user's browser session
+- Lets an attacker run JavaScript in another user’s browser session
 - Three types: stored, reflected, and DOM-based
 - Defense: output encoding, Content Security Policy, framework auto-escaping
 
@@ -200,7 +204,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 | Software & Data Integrity Failures | Unsigned updates, insecure CI/CD pipelines |
 
 > [!NOTE]
-> The exact ranking and names shift with each OWASP Top 10 refresh—know the patterns, not just the current list.
+> The exact ranking and names shift with each OWASP Top 10 refresh: know the patterns, not just the current list.
 
 ---
 
@@ -208,7 +212,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 - Mobile adds a local device, app store, and platform layer to the same core risks
 - Data at rest on the device is now part of your attack surface
-- Users can't patch instantly; app-store review cycles slow response
+- Users can’t patch instantly; app-store review cycles slow response
 - The OWASP Mobile Top 10 reflects these differences
 
 ![Mobile Phone Security](images/criminal.png)
@@ -218,7 +222,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 # Mobile Top Risks: Storage & Communication
 
 ### Insecure Data Storage
-- Sensitive data cached in plaintext—local databases, logs, temp files
+- Sensitive data cached in plaintext: local databases, logs, temp files
 - Defense: platform secure storage (Keychain / Keystore); avoid caching secrets
 
 ### Insecure Communication
@@ -232,7 +236,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Weak or missing device-level authentication (PIN, biometrics)
 - Client-side-only checks that a jailbroken or rooted device can bypass
 - Hardcoded API keys or tokens embedded in the app binary
-- Defense: enforce authorization on the server for every sensitive action—never trust the client
+- Defense: enforce authorization on the server for every sensitive action - never trust the client
 
 
 ![Mobile Phone Security](images/pin.png)
@@ -244,7 +248,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ### What Repeats
 - Never trust client-side input or checks
 - Least privilege for every account and API call
-- Patch and update on a schedule, not "eventually"
+- Patch and update on a schedule, not “eventually”
 
 ### What Differs
 - Mobile adds on-device data and app-store review cycles
@@ -265,8 +269,8 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 - Segments 1 and 2 covered what breaks; this segment covers what to build and test
 - Two complementary layers: protect data and traffic, then verify with testing
-- No single control is sufficient—defense in depth applies to applications too
-- We'll close with a demo of a real testing tool
+- No single control is sufficient: defense in depth applies to applications too
+- We’ll close with a demo of a real testing tool
 
 ---
 
@@ -274,7 +278,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 - **Encryption at rest**: protects stored data if a disk, backup, or device is exposed
 - **Encryption in transit**: TLS protects data moving between client and server
-- **Hashing** (not encryption) verifies integrity—passwords should be hashed, never encrypted
+- **Hashing** (not encryption) verifies integrity: passwords should be hashed, never encrypted
 - Strong, current algorithms and libraries matter more than a custom implementation
 
 ---
@@ -290,7 +294,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Terminate TLS with current protocol versions; disable deprecated ones (SSLv3, TLS 1.0/1.1)
 - Use valid certificates from a trusted CA and automate renewal
 - Redirect all HTTP traffic to HTTPS; use HSTS to enforce it
-- Rotate and protect private keys—treat them as secrets
+- Rotate and protect private keys: treat them as secrets
 
 ---
 <!-- layout: 2-column -->
@@ -332,7 +336,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ### Automated Scanning
 - **SAST** (Static): scans source code without running it
-- **DAST** (Dynamic): attacks a running app like a real attacker—e.g. OWASP ZAP
+- **DAST** (Dynamic): attacks a running app like a real attacker - e.g. OWASP ZAP
 
 ### Broader Coverage
 - **SCA**: flags vulnerable third-party dependencies
@@ -370,7 +374,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Which defense best prevents classic SQL injection when building queries from user input?**
 
@@ -379,7 +383,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Injection happens when untrusted input reaches an interpreter as code
 - Parameterized queries keep input as data, not executable SQL
 - Client-side checks are bypassable; enforce controls on the server
-- HTTPS protects transit—it does not stop injection in query construction
+- HTTPS protects transit - it does not stop injection in query construction
 
 ---
 
@@ -394,7 +398,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Your pipeline needs both “scan source without running it” and “attack a running app.” Which pairing matches SAST and DAST?**
 
@@ -403,23 +407,23 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - SAST analyzes source without executing the app
 - DAST probes a running application like an attacker
 - SCA covers third-party dependencies; it is related but distinct
-- Use both in the lifecycle—design reduces risk; testing confirms it
+- Use both in the lifecycle: design reduces risk; testing confirms it
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Compare securing a browser web app vs. a native mobile app that stores a session token on-device.
 
 ### Discuss
 - Which OWASP-style risks overlap, and which are mobile-specific?
-- Where must authorization be enforced—client, server, or both?
+- Where must authorization be enforced: client, server, or both?
 - How would encryption at rest, TLS, and testing tools differ by platform?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Compare securing a browser web app vs. a native mobile app that stores a session token on-device.**
 

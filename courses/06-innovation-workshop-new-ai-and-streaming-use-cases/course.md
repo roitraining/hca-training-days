@@ -5,10 +5,11 @@
 # Innovation Workshop
 # New AI and Streaming Use Cases
 
-## Tour what’s possible—then prioritize ideas from your own work
+## Tour what’s possible - then prioritize ideas from your own work
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,16 +32,18 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: What’s Possible Now
-- Segment 2: Find Your Use Cases — workshop
+- Segment 2: Find Your Use Cases - workshop
 - Segment 3: Make It Real
 - Questions and Answers
 
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Business staff exploring AI / streaming opportunities
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior AI or streaming experience required
@@ -70,14 +74,14 @@
 
 # Workshop Norms
 
-- **Quantity first** — capture many ideas before judging
-- **Build on others** — “yes, and…” beats shutdowns
-- **Be concrete** — name the user, the pain, the outcome
-- **Stay responsible** — flag privacy, safety, and compliance early
-- **Timebox** — move ideas to the matrix; don’t over-polish
+- **Quantity first**: capture many ideas before judging
+- **Build on others**: “yes, and…” beats shutdowns
+- **Be concrete**: name the user, the pain, the outcome
+- **Stay responsible**: flag privacy, safety, and compliance early
+- **Timebox**: move ideas to the matrix; don’t over-polish
 
 > [!NOTE]
-> This is a workshop, not a build session. Leave with prioritized candidates and a next step—not production code.
+> This is a workshop, not a build session. Leave with prioritized candidates and a next step - not production code.
 
 ---
 <!-- layout: image-only -->
@@ -120,7 +124,7 @@
 - **Experience:** staff / patient self-service answers with escalation to a human
 
 > [!WARNING]
-> Clinical, privacy, and safety-critical uses need grounding, human review, and formal governance—not a freeform chatbot.
+> Clinical, privacy, and safety-critical uses need grounding, human review, and formal governance - not a freeform chatbot.
 
 ---
 <!-- layout: image-only -->
@@ -324,7 +328,7 @@ Fill this on one page (or slide):
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **When is streaming / real-time processing a better fit than batch?**
 
@@ -348,7 +352,7 @@ Fill this on one page (or slide):
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **On the value–effort matrix, which ideas should you prefer for first experiments?**
 
@@ -361,7 +365,7 @@ Fill this on one page (or slide):
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Take the top idea you plotted today and turn it into a 2-week next step.
@@ -373,7 +377,7 @@ Take the top idea you plotted today and turn it into a 2-week next step.
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Take the top idea you plotted today and turn it into a 2-week next step.**
 

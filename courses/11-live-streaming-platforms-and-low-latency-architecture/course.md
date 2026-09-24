@@ -5,10 +5,11 @@
 # Live Streaming Platforms and
 # Low-Latency Architecture
 
-## From capture to playback—protocols, edge design, and reliability at scale
+## From capture to playback: protocols, edge design, and reliability at scale
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: The Live Streaming Pipeline
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Solution architects designing media platforms
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - General familiarity with networking concepts (DNS, HTTP, CDN)
@@ -73,7 +77,7 @@
 
 - Live sports, auctions, betting, and interactive classes punish delay
 - Chat and second-screen experiences drift when video lags
-- “Live” is a product SLA—define **glass-to-glass** targets up front
+- “Live” is a product SLA: define **glass-to-glass** targets up front
 - Lower latency usually costs complexity, capacity, or resilience margin
 
 > [!NOTE]
@@ -129,7 +133,7 @@
 
 # Sample Glass-to-Glass Budgets
 
-Illustrative only—measure your stack; numbers vary by encoder, network, and player.
+Illustrative only: measure your stack; numbers vary by encoder, network, and player.
 
 | Stage (approx.) | Interactive (~&lt;2s) | Broadcast low-latency (~5–10s) |
 | :--- | :--- | :--- |
@@ -141,7 +145,7 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 | **Rough total** | **~0.5–2 s** | **~5–10 s** |
 
 > [!IMPORTANT]
-> Budget the product SLA first. If interactive needs &lt;2s, classic long-GOP HLS will never get you there—no matter how good the CDN is.
+> Budget the product SLA first. If interactive needs &lt;2s, classic long-GOP HLS will never get you there: no matter how good the CDN is.
 
 ---
 <!-- layout: 3-column -->
@@ -151,7 +155,7 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 - Still common from encoders
 - TCP; simple firewall story
 - Weaker on lossy links
-- Aging protocol—plan exits
+- Aging protocol: plan exits
 
 ### SRT
 - UDP + recovery / encryption
@@ -168,7 +172,7 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 <!-- below-columns -->
 
 > [!NOTE]
-> Dual ingest (primary + backup) matters more than which single protocol you prefer—paths fail on game day.
+> Dual ingest (primary + backup) matters more than which single protocol you prefer: paths fail on game day.
 
 ---
 <!-- layout: 2-column -->
@@ -218,7 +222,7 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 
 - Classic HLS: longer segments → simpler scale, higher delay
 - LL-HLS: shorter parts, blocking playlist reads, tuned players
-- Same family of HTTP delivery—different latency posture
+- Same family of HTTP delivery: different latency posture
 - Always validate with **your** player stack, not just origin config
 
 > [!IMPORTANT]
@@ -238,7 +242,7 @@ Illustrative only—measure your stack; numbers vary by encoder, network, and pl
 - **Origin shield:** protect packagers from CDN stampedes on misses
 - **Multi-CDN / multi-region edge:** capacity and regional failover
 - **Players:** LL-HLS/LL-DASH for scale; optional **WebRTC island** for hosts or ultra-interactive rooms
-- Auth tokens / DRM sit at the edge and player—not only at the origin
+- Auth tokens / DRM sit at the edge and player - not only at the origin
 
 ---
 <!-- layout: title-image -->
@@ -308,7 +312,7 @@ Tight encode  →  short segments/parts  →  edge near viewers
 ```
 
 - Optimize the **largest buffer first**
-- Measure end-to-end—not only CDN TTFB
+- Measure end-to-end - not only CDN TTFB
 - Accept that ultra-low latency narrows your operational margin
 
 ---
@@ -348,7 +352,7 @@ Tight encode  →  short segments/parts  →  edge near viewers
 - Dual ingest (primary / backup contribution)
 - Hot-standby packagers and origins
 - Multi-CDN or multi-region edge strategies
-- Automated cutover with health checks—not only human panic
+- Automated cutover with health checks - not only human panic
 
 > [!WARNING]
 > Failover that isn’t rehearsed will fail on the main event. Game-day runbooks need dry runs.
@@ -367,7 +371,7 @@ Tight encode  →  short segments/parts  →  edge near viewers
 - Enforce at the **edge + player**, not only origin
 - Short TTL tokens; rotate keys on a schedule
 - Don’t put long-lived secrets in client apps
-- Log denials—abuse and misconfig look the same live
+- Log denials: abuse and misconfig look the same live
 
 ---
 <!-- layout: 3-column -->
@@ -420,7 +424,7 @@ Tight encode  →  short segments/parts  →  edge near viewers
 ### T–0 / Live
 - Watch join, rebuffer, lag
 - Degrade ladder if needed
-- Execute runbook—not heroics
+- Execute runbook - not heroics
 - Stakeholder updates on cadence
 
 ---
@@ -445,13 +449,13 @@ Tight encode  →  short segments/parts  →  edge near viewers
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **What is the best first step when designing for live latency?**
 
 **Correct: A.** Define a glass-to-glass latency budget (product SLA), then choose protocols and buffers to match
 
-- “Live” is a product SLA—interactive vs broadcast-scale targets differ
+- “Live” is a product SLA: interactive vs broadcast-scale targets differ
 - Latency accumulates across ingest, encode, package, CDN, and player
 - CDN tuning alone won’t fix long segments plus large buffers
 - Lower latency usually trades complexity, capacity, or resilience margin
@@ -469,7 +473,7 @@ Tight encode  →  short segments/parts  →  edge near viewers
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Which statement best captures WebRTC vs LL-HLS trade-offs?**
 
@@ -478,11 +482,11 @@ Tight encode  →  short segments/parts  →  edge near viewers
 - WebRTC (and peers) excel at interactive, sub-second experiences but fan-out is harder at huge scale
 - LL-HLS/LL-DASH use HTTP/CDN delivery with shorter parts for broadcast-scale low latency
 - Classic HLS is simpler to scale but typically higher delay
-- Validate with your player stack—not origin config alone
+- Validate with your player stack - not origin config alone
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 You are preparing a large live event with a &lt;5s glass-to-glass target and expected audience spikes.
@@ -494,7 +498,7 @@ You are preparing a large live event with a &lt;5s glass-to-glass target and exp
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **You are preparing a large live event with a &lt;5s glass-to-glass target and expected audience spikes.**
 
@@ -502,7 +506,7 @@ You are preparing a large live event with a &lt;5s glass-to-glass target and exp
 - Optimize the largest buffer first; measure end-to-end, not only TTFB
 - Pre-warm capacity; dual ingest / hot-standby origin; degrade modes
 - Edge tokens/DRM smoke-tested; dashboards for ingest, CDN, rebuffer, lag
-- Runbooks with dry runs—not only human panic cutover
+- Runbooks with dry runs - not only human panic cutover
 
 ### Watch For
 - Protocol choice mismatched to interactivity vs scale needs

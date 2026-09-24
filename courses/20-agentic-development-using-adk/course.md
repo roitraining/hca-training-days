@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Getting Started with ADK
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Machine learning engineers
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - **Python:** Comfortable reading and writing functions, modules, and type hints
@@ -71,13 +75,13 @@
 
 # What Is ADK?
 
-- **Agent Development Kit** — open-source, code-first toolkit from Google
+- **Agent Development Kit**: open-source, code-first toolkit from Google
 - Build **conversational and non-conversational** agents in Python (and other languages)
 - Designed for the full loop: **build → evaluate → deploy**
 - Optimized for Gemini, flexible enough for other models
 
 > [!NOTE]
-> This session is a fast engineering tour—enough to build, extend, and ship your own ADK agents.
+> This session is a fast engineering tour: enough to build, extend, and ship your own ADK agents.
 
 ---
 <!-- layout: title-image -->
@@ -193,7 +197,7 @@ root_agent = Agent(
 - Bad tools are vague, side-effect heavy, or undocumented
 
 > [!WARNING]
-> Over-broad tools encourage hallucinated arguments and unsafe actions—scope each tool to one job.
+> Over-broad tools encourage hallucinated arguments and unsafe actions: scope each tool to one job.
 
 ---
 
@@ -250,7 +254,7 @@ root_agent = Agent(
 ```
 
 > [!TIP]
-> Instructions should say *when* to call tools—not restate the entire API docs.
+> Instructions should say *when* to call tools - not restate the entire API docs.
 
 ---
 <!-- layout: title-image -->
@@ -344,7 +348,7 @@ root_agent = Agent(
 - Paths: console / ADK CLI, or accelerated **agents-cli** with CI/CD
 
 > [!NOTE]
-> Formerly Agent Engine on Vertex AI—current names are Agent Runtime on Agent Platform.
+> Formerly Agent Engine on Vertex AI: current names are Agent Runtime on Agent Platform.
 
 ---
 <!-- layout: 2-column -->
@@ -364,7 +368,7 @@ root_agent = Agent(
 
 # Why Evaluate Agents?
 
-- LLM agents are **probabilistic**—unit asserts alone are not enough
+- LLM agents are **probabilistic**: unit asserts alone are not enough
 - Evaluate both **final response** and **trajectory** (steps / tools)
 - Automate early so regressions show up in CI, not in production
 
@@ -401,7 +405,7 @@ adk eval path/to/agent_module path/to/eval_set.json
 ```
 
 > [!IMPORTANT]
-> If you only ship demos, skip eval. If you ship products, eval is part of the SDLC—not a nice-to-have.
+> If you only ship demos, skip eval. If you ship products, eval is part of the SDLC - not a nice-to-have.
 
 ---
 
@@ -425,13 +429,13 @@ adk eval path/to/agent_module path/to/eval_set.json
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **How does Google ADK best relate to the Gen AI SDK in this course’s framing?**
 
 **Correct: D.** Treat the Gen AI SDK as the model layer and ADK as the agent application layer (build → evaluate → deploy)
 
-- Gen AI SDK: direct model/chat and simple tool use—you own orchestration
+- Gen AI SDK: direct model/chat and simple tool use - you own orchestration
 - ADK: agent-native primitives, multi-agent, eval, and deploy paths
 - Deep fit with Gemini and Agent Runtime, still code-first
 - Prefer ADK when you need hierarchical agents plus evaluation in one toolkit
@@ -442,14 +446,14 @@ adk eval path/to/agent_module path/to/eval_set.json
 
 **When evaluating an ADK agent before production, what should you assess?**
 
-- A. Only final wording—tool steps never matter
+- A. Only final wording: tool steps never matter
 - B. Both trajectory (sensible tools/order) and response quality (correct, grounded, useful)
 - C. Only that `adk web` started once locally
-- D. Only latency—skip tool-call correctness
+- D. Only latency: skip tool-call correctness
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **When evaluating an ADK agent before production, what should you assess?**
 
@@ -462,19 +466,19 @@ adk eval path/to/agent_module path/to/eval_set.json
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Design a small ADK app for one real team task (ticket helper, runbook search, or doc Q&A).
 
 ### Discuss
-- Which tools stay narrow/typed—and which side effects need confirmation?
+- Which tools stay narrow/typed - and which side effects need confirmation?
 - Parent–child: LLM transfer, Agent-as-tool, or a Sequential/Parallel/Loop workflow?
 - What eval cases and deploy checks would you require before Agent Runtime?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Design a small ADK app for one real team task (ticket helper, runbook search, or doc Q&A).**
 

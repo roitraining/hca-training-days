@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Token Fundamentals
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Developers building LLM-powered features
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with generative AI / LLM basics
@@ -74,10 +78,10 @@
 - Tokens drive **cost**, **latency**, and **context limits**
 - Unbounded prompts and histories create surprise bills
 - Quality does not require maximum context every time
-- Efficient design is a product capability—not only a FinOps afterthought
+- Efficient design is a product capability - not only a FinOps afterthought
 
 > [!NOTE]
-> “Tokenomics” here means the economics and mechanics of token consumption—not crypto tokens.
+> “Tokenomics” here means the economics and mechanics of token consumption - not crypto tokens.
 
 ---
 <!-- layout: title-image -->
@@ -139,7 +143,7 @@
 | Output | `max_tokens` ceiling × expected length |
 
 > [!TIP]
-> Rough monthly cost ≈ calls × (avg input + avg output tokens) × price per token—then add retries and tool loops.
+> Rough monthly cost ≈ calls × (avg input + avg output tokens) × price per token - then add retries and tool loops.
 
 ---
 <!-- layout: 3-column -->
@@ -197,7 +201,7 @@
 - Enforce a hard input budget per request type
 
 > [!IMPORTANT]
-> Long chat history is a silent cost multiplier—trim by design, not by accident.
+> Long chat history is a silent cost multiplier: trim by design, not by accident.
 
 ---
 <!-- layout: 2-column -->
@@ -210,7 +214,7 @@
 - Provider prompt caching where available
 
 ### RAG
-- Retrieve top-k chunks—not whole corpora
+- Retrieve top-k chunks - not whole corpora
 - Chunk & rank for relevance
 - Cite sources; skip filler
 - Fail closed when nothing relevant
@@ -267,7 +271,7 @@
 - Meter **input, output, cached, and embedding** tokens per feature
 - Attribute spend to app, team, and environment
 - Alert on spikes (runaway agents, loops, huge RAG)
-- Set budgets and rate limits before launch—not after the invoice
+- Set budgets and rate limits before launch - not after the invoice
 
 > [!WARNING]
 > Multi-step agents can multiply token use per user action. Budget at the *workflow* level, not only per single LLM call.
@@ -318,15 +322,15 @@
 - A. Providers bill only by character count, never by tokens
 - B. Only embeddings are free; prompts and completions are not metered
 - C. All models cost a fixed monthly seat with unlimited context
-- D. Input and output tokens are billable units—and output often costs more than input
+- D. Input and output tokens are billable units - and output often costs more than input
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **How does LLM pricing usually work?**
 
-**Correct: D.** Input and output tokens are billable units—and output often costs more than input
+**Correct: D.** Input and output tokens are billable units - and output often costs more than input
 
 - Tokenizers split text into billable units (roughly ~4 chars ≈ 1 English token)
 - Input and output are priced separately; output is often more expensive
@@ -346,20 +350,20 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Your chat feature resends the full conversation every turn and bills are climbing. What is the best first fix?**
 
 **Correct: B.** Keep only the last N turns or summarize older history, and enforce a hard input budget
 
-- Long history is a silent cost multiplier—trim by design
+- Long history is a silent cost multiplier: trim by design
 - Summarize or drop irrelevant tool traces instead of dumping transcripts
 - Cap outputs and right-size models; don’t default everything to pro
 - Prefer RAG top-k over pasting whole corpora
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 You are designing an LLM feature expected to handle 100k calls/month.
@@ -371,12 +375,12 @@ You are designing an LLM feature expected to handle 100k calls/month.
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **You are designing an LLM feature expected to handle 100k calls/month.**
 
 ### Strong Answers Mention
-- Calls × (avg input + avg output) × price—plus retries/tool loops
+- Calls × (avg input + avg output) × price: plus retries/tool loops
 - Small models for routine traffic; escalate only when needed
 - Metering by feature/team; budgets, alerts, workflow-level limits
 - Eval set so cost cuts don’t silently tank quality

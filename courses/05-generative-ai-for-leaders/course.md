@@ -8,6 +8,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -22,7 +23,7 @@
 
 # Course Objectives
 
-- Lead GenAI initiatives with clarity—what it is, where value sits, and how to adopt responsibly
+- Lead GenAI initiatives with clarity: what it is, where value sits, and how to adopt responsibly
 - Describe how generative AI transforms business functions and industries
 - Define core GenAI concepts in plain language
 - Identify the layers of the GenAI landscape (apps, agents, platforms, models, infrastructure)
@@ -30,6 +31,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: GenAI Beyond the Chatbot
@@ -40,6 +42,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Business professionals and leaders at all levels
@@ -50,6 +53,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior technical or AI experience required
@@ -71,7 +75,7 @@
 
 - GenAI is already in products employees and customers use daily
 - Competitive advantage shifts from “having a chatbot” to **redesigning work**
-- Leaders set ambition, funding, risk appetite—and what *not* to chase
+- Leaders set ambition, funding, risk appetite - and what *not* to chase
 - Waiting for perfect clarity is also a decision (usually a costly one)
 
 > [!NOTE]
@@ -115,7 +119,7 @@
 | Software / tech | Developer productivity, support, product AI features |
 
 > [!TIP]
-> Start from **jobs-to-be-done** in your industry—not from a model vendor slide.
+> Start from **jobs-to-be-done** in your industry - not from a model vendor slide.
 
 ---
 <!-- layout: title-image -->
@@ -139,7 +143,7 @@
 
 ---
 
-# Prompt Engineering — The Leadership View
+# Prompt Engineering: The Leadership View
 
 - A **prompt** is the instruction and context you give the model
 - Better prompts → better drafts; still not a substitute for process design
@@ -164,7 +168,7 @@
 | Term | Plain meaning |
 | :--- | :--- |
 | **Generative AI** | Systems that create new content (text, code, images…) |
-| **LLM** | A large language model—predicts likely next words/tokens |
+| **LLM** | A large language model: predicts likely next words/tokens |
 | **Tokens** | Chunks of text the model reads/writes (drives cost/limits) |
 | **Context window** | How much information it can consider at once |
 | **Grounding / RAG** | Answering with your approved documents, not memory alone |
@@ -230,7 +234,7 @@
 # Choosing Where to Play
 
 - **Infrastructure / models:** usually partner unless AI is your product core
-- **Platforms & governance:** often the enterprise bottleneck—and advantage
+- **Platforms & governance:** often the enterprise bottleneck - and advantage
 - **Apps & agents:** where employees and customers feel value
 - Map spend to the layer that unlocks *many* use cases, not one demo
 
@@ -306,7 +310,7 @@
 
 # The Leader’s Operating Cadence
 
-- Set **outcomes** (time saved, quality, revenue, risk reduced)—not model names
+- Set **outcomes** (time saved, quality, revenue, risk reduced) - not model names
 - Fund **platform + 2–3 flagship use cases**, not 30 orphans
 - Require **metrics and kill criteria** before scale
 - Model the behavior: use approved tools; never bypass policy for speed
@@ -343,7 +347,7 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **In plain language, what is a hallucination?**
 
@@ -351,14 +355,14 @@
 
 - Hallucinations are confident but incorrect or invented outputs
 - Grounding / RAG reduces reliance on model “memory” alone
-- Tokens and context window are cost/limit concepts—not accuracy labels
+- Tokens and context window are cost/limit concepts - not accuracy labels
 - High-stakes domains still need human review and accountable process
 
 ---
 
 # Quiz 2 of 3
 
-**Where should most enterprises focus spend to unlock many use cases—not one demo?**
+**Where should most enterprises focus spend to unlock many use cases - not one demo?**
 
 - A. Training a foundation model from scratch as the default first move
 - B. Thirty disconnected pilots with no kill criteria
@@ -367,32 +371,32 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
-**Where should most enterprises focus spend to unlock many use cases—not one demo?**
+**Where should most enterprises focus spend to unlock many use cases - not one demo?**
 
 **Correct: D.** Platforms & governance plus a short list of flagship apps/agents
 
-- Platforms and governance are often the bottleneck—and the advantage
+- Platforms and governance are often the bottleneck - and the advantage
 - Fund platform + 2–3 flagship use cases, not a zoo of PoCs
 - Infrastructure/models are usually partnered unless AI is the product core
 - Apps and agents are where employees and customers feel value
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Pick one GenAI idea in your function and run it through the portfolio filter.
 
 ### Discuss
-- Keep / fund, revisit, or park—and why (value, feasibility, risk)?
+- Keep / fund, revisit, or park - and why (value, feasibility, risk)?
 - What data or process gap would block it?
 - What does “responsible” require: secure, reliable, accountable?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Pick one GenAI idea in your function and run it through the portfolio filter.**
 
@@ -400,7 +404,7 @@ Pick one GenAI idea in your function and run it through the portfolio filter.
 - Clear owner, KPI, and human review where stakes are high
 - Approved tools, least privilege, and grounded answers
 - Metrics and kill criteria before scale
-- Jobs-to-be-done first—not a vendor model slide
+- Jobs-to-be-done first - not a vendor model slide
 
 ### Watch For
 - “The model said so” as a control

@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -32,6 +33,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Streaming Fundamentals
@@ -42,6 +44,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Data engineers building continuous pipelines
@@ -52,6 +55,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with software development fundamentals
@@ -75,7 +79,7 @@
 - Businesses increasingly need **seconds**, not overnight batches
 - Detect fraud, outages, and user issues while they are happening
 - Power live dashboards, personalization, and operational alerts
-- Continuous data is already flowing—batch is a delayed snapshot
+- Continuous data is already flowing: batch is a delayed snapshot
 
 > [!NOTE]
 > “Real-time” is a product requirement (latency budget), not a buzzword. Define the SLA first.
@@ -110,7 +114,7 @@
 - APIs for Java/Scala (DataStream) and SQL/Table for many teams
 
 > [!TIP]
-> Think of Flink as the compute layer for streams—similar to how Spark often serves batch/lakehouse compute.
+> Think of Flink as the compute layer for streams: similar to how Spark often serves batch/lakehouse compute.
 
 ---
 <!-- layout: image-only -->
@@ -158,7 +162,7 @@
 - A **stream** is an unbounded sequence of events
 - Events often carry a key (user_id, device_id, account_id)
 - Operators transform streams: map, filter, keyBy, join, window
-- Jobs run until cancelled—there is no natural “end of file”
+- Jobs run until cancelled - there is no natural “end of file”
 
 ```text
 clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
@@ -266,7 +270,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 <!-- below-columns -->
 
 > [!NOTE]
-> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine—and the concepts—are the same.
+> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine - and the concepts - are the same.
 
 ---
 
@@ -275,7 +279,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - Read a stream of purchase events (amount + event-time timestamp)
 - `keyBy` customer so each user’s state is processed independently
 - Tumbling **event-time** windows (1 minute) sum spend per customer
-- Print results—same shape as writing to Kafka, a DB, or a lake sink
+- Print results: same shape as writing to Kafka, a DB, or a lake sink
 
 ```java
 public class SimplePurchaseSumJob {
@@ -315,10 +319,10 @@ public class SimplePurchaseSumJob {
 
 # From `print()` to a Kafka Sink
 
-- Swap the sink—**not** the window or `keyBy` logic
+- Swap the sink - **not** the window or `keyBy` logic
 - Serialize the aggregate (JSON, Avro, Protobuf) for consumers
 - Use a transactional / idempotent sink when you need stronger delivery guarantees
-- Downstream reads a topic instead of job logs—same pipeline shape as production
+- Downstream reads a topic instead of job logs: same pipeline shape as production
 
 ```java
 // Instead of:  resultStream.print();
@@ -440,7 +444,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 <!-- below-columns -->
 
 > [!IMPORTANT]
-> Ask: Do we need **continuous stateful compute** on the event path—or just fresher batch?
+> Ask: Do we need **continuous stateful compute** on the event path - or just fresher batch?
 
 ---
 
@@ -466,7 +470,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
 
@@ -490,7 +494,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Which workload is the clearest fit for Apache Flink?**
 
@@ -499,23 +503,23 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Flink shines on continuous, stateful, low-latency event paths
 - Nightly batch and one-off analytics usually belong in the warehouse
 - Messaging transports events; Flink owns compute, state, and windows
-- Ask: do we need continuous stateful compute—or just fresher batch?
+- Ask: do we need continuous stateful compute - or just fresher batch?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Describe a real-time use case on your team (fraud, telemetry, alerting, or clickstream).
 
 ### Discuss
 - Where do messaging, Flink, and storage each sit in the pipeline?
-- Would you use tumbling, sliding, or session windows—and why?
+- Would you use tumbling, sliding, or session windows - and why?
 - When would DataStream be worth it instead of Flink SQL?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Describe a real-time use case on your team (fraud, telemetry, alerting, or clickstream).**
 

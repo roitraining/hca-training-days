@@ -5,10 +5,11 @@
 # Introduction to Generative AI
 # for Software Engineering
 
-## Generate, test, document, and debug code with AI assistants—responsibly
+## Generate, test, document, and debug code with AI assistants: responsibly
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: GenAI for Developers
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Software developers writing application code
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with a modern language (Python, Java, or C#)
@@ -85,7 +89,7 @@
 | **Multimodal** | Read screenshots, diagrams, error images |
 
 > [!NOTE]
-> This course focuses on **generative** coding assistants—models that draft software artifacts you still must verify.
+> This course focuses on **generative** coding assistants: models that draft software artifacts you still must verify.
 
 ---
 <!-- layout: title-image -->
@@ -211,7 +215,7 @@ Now write get_order(id: str) -> Order the same way.
 - Prefer iterative fixes over accepting a large rewrite
 
 > [!WARNING]
-> If you can’t explain the change, don’t merge it—regardless of who (or what) wrote it.
+> If you can’t explain the change, don’t merge it - regardless of who (or what) wrote it.
 
 ---
 <!-- layout: navigation -->
@@ -258,7 +262,7 @@ Now write get_order(id: str) -> Order the same way.
 | **Ecosystem fit** | GitHub-centric vs Google Cloud-centric shops |
 
 > [!TIP]
-> Standardize on **org-approved** tools and settings—personal consumer accounts create policy and IP risk.
+> Standardize on **org-approved** tools and settings: personal consumer accounts create policy and IP risk.
 
 ---
 <!-- layout: image-only -->
@@ -332,7 +336,7 @@ Now write get_order(id: str) -> Order the same way.
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Which practice most improves the quality of generated code?**
 
@@ -356,7 +360,7 @@ Now write get_order(id: str) -> Order the same way.
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Why should teams standardize on org-approved coding assistants?**
 
@@ -369,7 +373,7 @@ Now write get_order(id: str) -> Order the same way.
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Pick one workflow on your team: generate a function, draft tests, or explain a failing stack trace.
@@ -381,7 +385,7 @@ Pick one workflow on your team: generate a function, draft tests, or explain a f
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Pick one workflow on your team: generate a function, draft tests, or explain a failing stack trace.**
 

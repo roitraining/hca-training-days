@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -16,7 +17,7 @@
   - Name
   - Background
   - Contact info
-- Let's get started!
+- Let’s get started!
 
 ![Welcome](images/welcome.png)
 ---
@@ -24,13 +25,14 @@
 # Course Objectives
 
 - Secure workloads on Google Cloud using the shared responsibility model, IAM, network controls, and monitoring
-- Describe Google Cloud's shared security responsibility model
+- Describe Google Cloud’s shared security responsibility model
 - Explain identity and access management with Cloud IAM
 - Recognize network security controls (VPCs, firewalls, VPC Service Controls)
 - Identify monitoring, logging, and threat-detection options
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Foundations and Identity
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Cloud security analysts
@@ -50,6 +53,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Foundational Google Cloud knowledge (projects, resources, console/`gcloud` basics)
@@ -108,7 +112,7 @@
 
 ---
 
-# Cloud Identity: Your Organization's Foundation
+# Cloud Identity: Your Organization’s Foundation
 
 - Cloud Identity provides the organization node that anchors your resource hierarchy
 - Manages users, groups, and devices independent of any single project
@@ -127,7 +131,7 @@
 
 - An IAM policy binds **members** to **roles** on a **resource**
 - Members: Google/Cloud Identity accounts, groups, service accounts, or domains
-- Roles: bundles of permissions—basic, predefined, or custom
+- Roles: bundles of permissions - basic, predefined, or custom
 - Policies attach to resources and inherit down the hierarchy
 
 ---
@@ -135,7 +139,7 @@
 # Choosing the Right Role
 
 ### Role Types
-- Basic: Owner / Editor / Viewer (broad—avoid in production)
+- Basic: Owner / Editor / Viewer (broad - avoid in production)
 - Predefined: scoped to a service (e.g. `roles/compute.instanceAdmin`)
 - Custom: precise permission sets you define
 
@@ -171,7 +175,7 @@
 - Network security narrows the blast radius before an incident, not after
 - Two big questions: what can talk to what, and can data leave the perimeter?
 - Google Cloud gives you software-defined boundaries at multiple layers
-- Pair network isolation with strong data protection—neither replaces the other
+- Pair network isolation with strong data protection: neither replaces the other
 
 ---
 <!-- layout: title-image -->
@@ -192,8 +196,8 @@
 
 # Firewalls: Default-Deny by Design
 
-- VPC firewall rules control traffic by IP range, tag, or service account—not just IP
-- New VPCs start with **deny-all** ingress; you allow only what's needed
+- VPC firewall rules control traffic by IP range, tag, or service account - not just IP
+- New VPCs start with **deny-all** ingress; you allow only what’s needed
 - Prefer narrow, tag- or service-account-scoped rules over broad `0.0.0.0/0`
 - Hierarchical firewall policies enforce guardrails from the org or folder down
 
@@ -218,7 +222,7 @@
 - Creates a **service perimeter** around sensitive resources (e.g. BigQuery, Cloud Storage)
 - Blocks data from leaving the perimeter, even with valid credentials
 - Stops copy-to-a-different-project or public-bucket style exfiltration
-- Complements IAM—IAM says *who*, VPC Service Controls says *where data can go*
+- Complements IAM: IAM says *who*, VPC Service Controls says *where data can go*
 
 > [!IMPORTANT]
 > IAM alone cannot stop an authorized user from moving data to an unapproved destination. VPC Service Controls closes that gap.
@@ -243,7 +247,7 @@
 
 ### Design Questions
 - Who can *use* vs. who can *manage* a key?
-- What's your rotation policy?
+- What’s your rotation policy?
 - Which datasets need CMEK vs. default encryption?
 
 ---
@@ -268,10 +272,10 @@
 
 ---
 
-# Visibility: You Can't Protect What You Can't See
+# Visibility: You Can’t Protect What You Can’t See
 
 - Detection depends on centralized visibility across projects and services
-- Google Cloud's operations suite provides logs, metrics, and traces by default
+- Google Cloud’s operations suite provides logs, metrics, and traces by default
 - The goal: catch misconfigurations and active threats before they become incidents
 - Pair automated detection with a clear escalation path
 
@@ -310,15 +314,15 @@
 
 - Cloud Logging collects logs from Google Cloud services, apps, and infrastructure
 - Cloud Monitoring turns metrics into dashboards and alerting policies
-- Log-based metrics let you alert on patterns Monitoring wouldn't catch alone
+- Log-based metrics let you alert on patterns Monitoring wouldn’t catch alone
 - Route logs to BigQuery or Cloud Storage for long-term retention and analysis
 
 ---
 
 # Audit Logs: Who Did What, When
 
-- **Admin Activity logs**: configuration changes—always on, cannot be disabled
-- **Data Access logs**: reads/writes to data—off by default for most services
+- **Admin Activity logs**: configuration changes - always on, cannot be disabled
+- **Data Access logs**: reads/writes to data - off by default for most services
 - **System Event** and **Policy Denied** logs round out the picture
 - Audit logs are often the first place investigators look during an incident
 
@@ -342,7 +346,7 @@
 
 # What You Learned
 
-- Described Google Cloud's shared security responsibility model
+- Described Google Cloud’s shared security responsibility model
 - Explained identity and access management with Cloud IAM
 - Recognized network security controls (VPCs, firewalls, VPC Service Controls)
 - Identified monitoring, logging, and threat-detection options
@@ -360,7 +364,7 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **In Google Cloud’s shared responsibility model, which statement is most accurate for a managed service like BigQuery?**
 
@@ -369,7 +373,7 @@
 - Google secures infrastructure; you configure IAM, network, and data choices
 - Even managed services require you to manage access and data classification
 - Hypervisor/hardware are Google’s side, not yours on BigQuery
-- Partnership, not a handoff—responsibility shifts by service type, it doesn’t disappear
+- Partnership, not a handoff: responsibility shifts by service type, it doesn’t disappear
 
 ---
 
@@ -384,7 +388,7 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Why enable Data Access audit logs for a sensitive dataset before an incident, not during one?**
 
@@ -392,12 +396,12 @@
 
 - Admin Activity logs are always on; Data Access logs are typically off by default
 - Investigators rely on who-read-what evidence that must already be collected
-- SCC and audit logs complement each other—they don’t replace one another
+- SCC and audit logs complement each other - they don’t replace one another
 - Logging provides visibility; VPC Service Controls and IAM enforce boundaries
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 You are hardening a project that holds regulated data in Cloud Storage and BigQuery.
@@ -409,7 +413,7 @@ You are hardening a project that holds regulated data in Cloud Storage and BigQu
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **You are hardening a project that holds regulated data in Cloud Storage and BigQuery.**
 

@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -16,7 +17,7 @@
   - Name
   - Background
   - Contact info
-- Let's get started!
+- Let’s get started!
 
 ![Welcome](images/welcome.png)
 ---
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Security Problems and Tools
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Managers, administrators, and developers needing applied security knowledge
@@ -50,6 +53,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Understanding of TCP/IP networking
@@ -66,12 +70,12 @@
 
 ---
 
-# The Landscape: What We're Actually Defending
+# The Landscape: What We’re Actually Defending
 
 - Every attack targets a component: the network, the operating system, or the people and processes around them
-- Before picking a tool, you need a shared model of what "secure" means and who you're defending against
+- Before picking a tool, you need a shared model of what “secure” means and who you’re defending against
 - This segment sets that model, then Segments 2 and 3 apply it
-- We'll close with the enemy's perspective—internal vs. external threats
+- We’ll close with the enemy’s perspective: internal vs. external threats
 
 ---
 <!-- layout: title-image -->
@@ -84,9 +88,9 @@
 # CIAA: Extending the Triad
 
 - **Confidentiality**: only authorized parties can read data
-- **Integrity**: data and systems aren't altered without detection
+- **Integrity**: data and systems aren’t altered without detection
 - **Availability**: systems and data stay usable when needed
-- **Authentication**: proving an identity is who it claims to be—the fourth pillar this course adds
+- **Authentication**: proving an identity is who it claims to be - the fourth pillar this course adds
 
 ---
 <!-- layout: 2-column -->
@@ -105,8 +109,8 @@
 # Knowing the Enemy
 
 - Effective defense starts with a realistic threat model, not a generic checklist
-- Attackers vary in skill, motive, and access—commodity malware differs from a targeted intrusion
-- Not every control matters equally against every threat; prioritize based on who's actually likely to attack you
+- Attackers vary in skill, motive, and access: commodity malware differs from a targeted intrusion
+- Not every control matters equally against every threat; prioritize based on who’s actually likely to attack you
 - The next slide splits threats by where they originate
 
 ![Symmetric Encryption](images/threat-model.png)
@@ -117,12 +121,12 @@
 
 ### Internal
 - Employees, contractors, or compromised insider accounts
-- Already has some legitimate access—harder to detect
+- Already has some legitimate access: harder to detect
 - Often unintentional (misconfiguration, phishing victim)
 
 ### External
 - Attackers with no starting access
-- Must breach a perimeter—network, application, or credential
+- Must breach a perimeter: network, application, or credential
 - Ranges from opportunistic scans to targeted campaigns
 
 ---
@@ -138,16 +142,16 @@
 # The Core: Cryptography in Practice
 
 - Three building blocks do almost all the work: symmetric encryption, asymmetric encryption, and hashing
-- Each solves a different problem—know which one applies before reaching for a tool
+- Each solves a different problem: know which one applies before reaching for a tool
 - PKI ties asymmetric crypto to real-world trust
-- We'll close this segment with a hands-on demo
+- We’ll close this segment with a hands-on demo
 
 ---
 
 # Symmetric Encryption
 
 - One shared secret key both encrypts and decrypts
-- Fast and efficient—the workhorse for bulk data (e.g. AES)
+- Fast and efficient: the workhorse for bulk data (e.g. AES)
 - The hard problem: getting the key to the other party securely without exposing it
 - Used inside VPNs, disk encryption, and TLS sessions once a key is established
 
@@ -163,7 +167,7 @@
 
 - A mathematically linked key pair: a public key and a private key
 - Data encrypted with one key can only be decrypted with the other
-- Slower than symmetric—typically used to exchange a symmetric key, not bulk data
+- Slower than symmetric: typically used to exchange a symmetric key, not bulk data
 - The public key can be shared freely; the private key never leaves its owner
 
 ---
@@ -180,7 +184,7 @@
 - A one-way function: easy to compute forward, infeasible to reverse
 - The same input always produces the same output; any change produces a completely different hash
 - Verifies integrity (has this file or message changed?) and secures stored passwords (with salting)
-- Not encryption—there's no key, and it can't be "decrypted" back to the original
+- Not encryption - there’s no key, and it can’t be “decrypted” back to the original
 
 
 ---
@@ -213,7 +217,7 @@
 
 # Public/Private Key Cryptography in Practice
 
-- Encrypt with the recipient's public key → only their private key can decrypt (confidentiality)
+- Encrypt with the recipient’s public key → only their private key can decrypt (confidentiality)
 - Sign with your own private key → anyone with your public key can verify it came from you (authentication + integrity)
 - Digital signatures combine hashing and asymmetric crypto: hash the message, then encrypt the hash with the private key
 - This pairing underlies TLS, SSH, code signing, and email encryption
@@ -237,8 +241,8 @@
 # In Practice: From Concepts to Controls
 
 - Segments 1 and 2 gave us goals (CIAA) and tools (crypto); this segment applies them to real network and OS defenses
-- Every control below either encrypts something, authenticates someone, or restricts access—often more than one
-- We'll close with the two OS-level defenses most likely to stop a real attack: patching discipline and multi-factor authentication
+- Every control below either encrypts something, authenticates someone, or restricts access: often more than one
+- We’ll close with the two OS-level defenses most likely to stop a real attack: patching discipline and multi-factor authentication
 - Same rule as always: no single control is sufficient on its own
 
 ---
@@ -247,7 +251,7 @@
 
 - Filters traffic by port, protocol, and address; default-deny is the safe starting posture
 - Network firewalls sit at the perimeter; host-based firewalls add a second layer per machine
-- Doesn't inspect encrypted payloads by default—pair it with other controls for application-layer traffic
+- Doesn’t inspect encrypted payloads by default: pair it with other controls for application-layer traffic
 - Still the first control most network security programs implement
 
 ---
@@ -266,7 +270,7 @@
 
 # SSH: Secure Remote Access
 
-- Encrypts remote administration traffic—the encrypted successor to Telnet
+- Encrypts remote administration traffic: the encrypted successor to Telnet
 - Supports both password and public-key authentication; prefer key-based
 - Also tunnels other traffic (port forwarding) securely across an untrusted network
 - Disable password authentication where key-based access is available
@@ -284,19 +288,19 @@
 - Malware ranges from opportunistic (commodity ransomware) to targeted (custom tooling)
 - Common entry points: phishing attachments, drive-by downloads, unpatched vulnerabilities
 - Defenses: endpoint protection, patching, least privilege, and application allowlisting
-- Detection matters as much as prevention—assume something eventually gets through
+- Detection matters as much as prevention: assume something eventually gets through
 
 ---
 
 # Authentication and 2FA
 
-- Passwords alone are a single point of failure—reused, guessed, or phished
+- Passwords alone are a single point of failure: reused, guessed, or phished
 - Two-factor authentication (2FA) adds a second, independent proof: something you have or something you are
 - Even a phished password becomes far less useful to an attacker without the second factor
 - Apply 2FA first to the accounts with the most access: admins, VPN, and email
 
 > [!IMPORTANT]
-> Multi-factor authentication is one of the highest-impact, lowest-cost defenses available—prioritize it before more exotic controls.
+> Multi-factor authentication is one of the highest-impact, lowest-cost defenses available: prioritize it before more exotic controls.
 
 ---
 
@@ -315,16 +319,16 @@
 
 - A. Hashing is a reversible form of encryption that uses a shared secret key
 - B. A hash can be decrypted with the matching private key
-- C. Hashing is a one-way function used for integrity and (with salting) password storage—not encryption
+- C. Hashing is a one-way function used for integrity and (with salting) password storage - not encryption
 - D. Hashing is only used for bulk data encryption inside TLS sessions
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Which statement about hashing is correct?**
 
-**Correct: C.** Hashing is a one-way function used for integrity and (with salting) password storage—not encryption
+**Correct: C.** Hashing is a one-way function used for integrity and (with salting) password storage - not encryption
 
 - Hashing is one-way: easy forward, infeasible to reverse
 - Same input → same hash; any change → a different hash
@@ -344,39 +348,39 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Your team can only ship one high-impact control this quarter. Which best matches this course’s guidance?**
 
 **Correct: A.** Multi-factor authentication on high-access accounts (admins, VPN, email)
 
-- Passwords alone are a single point of failure—phished, guessed, or reused
+- Passwords alone are a single point of failure: phished, guessed, or reused
 - 2FA adds an independent second factor so a stolen password is far less useful
 - Prioritize accounts with the most access first
 - MFA is high-impact and low-cost compared with exotic one-off controls
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Pick one system you help protect (VPN, admin bastion, EHR-adjacent app, or shared drive).
 
 ### Discuss
-- Which CIAA goals matter most for that system—and what threatens them?
-- Where does cryptography already help (TLS, SSH, VPN)—and where is authentication still weak?
+- Which CIAA goals matter most for that system - and what threatens them?
+- Where does cryptography already help (TLS, SSH, VPN) - and where is authentication still weak?
 - What would you harden first this month, and how would you know it worked?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Pick one system you help protect (VPN, admin bastion, EHR-adjacent app, or shared drive).**
 
 ### Strong Answers Mention
 - Threat model first (internal vs. external, likely attackers)
 - Crypto for confidentiality/integrity; strong auth (keys/2FA) as the anchor
-- Layered controls—firewall + TLS/SSH + patching + MFA
+- Layered controls: firewall + TLS/SSH + patching + MFA
 - Measurable outcomes (failed logins blocked, MFA coverage, patch lag)
 
 ### Watch For

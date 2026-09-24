@@ -5,10 +5,11 @@
 # Introduction to Low-Code
 # and No-Code Platforms
 
-## Build apps and automations faster—with guardrails for safe citizen development
+## Build apps and automations faster: with guardrails for safe citizen development
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -23,7 +24,7 @@
 
 # Course Objectives
 
-- Orient business and IT partners to low-code/no-code—what to build, where, and how to govern it
+- Orient business and IT partners to low-code/no-code: what to build, where, and how to govern it
 - Define low-code and no-code and distinguish the two
 - Identify use cases well-suited to low-code/no-code delivery
 - Recognize major platform categories (app builders, workflow automation, AI agent builders)
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: The Low-Code/No-Code Landscape
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Business analysts and operations staff
@@ -51,6 +54,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior development experience required
@@ -76,7 +80,7 @@
 - Without guardrails, you get shadow IT, fragile apps, and data sprawl
 
 > [!NOTE]
-> Goal of this session: shared language + fit criteria + safe operating model—not a vendor bake-off.
+> Goal of this session: shared language + fit criteria + safe operating model - not a vendor bake-off.
 
 ---
 <!-- layout: title-image -->
@@ -133,7 +137,7 @@
 - Unclear ownership, retention, or compliance posture
 
 > [!TIP]
-> “Can we?” is easy. Ask “Should we—and who runs it in 18 months?”
+> “Can we?” is easy. Ask “Should we - and who runs it in 18 months?”
 
 ---
 <!-- layout: navigation -->
@@ -185,7 +189,7 @@
 
 - Platforms increasingly add **AI helpers** (generate apps, summarize, classify)
 - **Agent builders** let makers compose assistants that call tools/workflows
-- Powerful for knowledge Q&A and guided processes—with stronger governance needs
+- Powerful for knowledge Q&A and guided processes: with stronger governance needs
 - Treat AI features like any other automation: owners, data rules, human escalation
 
 > [!WARNING]
@@ -272,7 +276,7 @@
 - Plan retirement or handoff when the maker changes roles
 
 > [!IMPORTANT]
-> Citizen development succeeds when IT enables with guardrails—not when IT bans everything or ignores everything.
+> Citizen development succeeds when IT enables with guardrails - not when IT bans everything or ignores everything.
 
 ---
 <!-- layout: 2-column -->
@@ -310,7 +314,7 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **What best distinguishes no-code from low-code?**
 
@@ -318,8 +322,8 @@
 
 - No-code targets business makers with visual builders only
 - Low-code keeps visual builders but allows light code for harder logic
-- Both sit on a spectrum with traditional engineering—not a replacement for every system
-- Fit depends on process, data, and ownership—not “can we click it together?”
+- Both sit on a spectrum with traditional engineering - not a replacement for every system
+- Fit depends on process, data, and ownership - not “can we click it together?”
 
 ---
 
@@ -334,7 +338,7 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Which use case is the poorest fit for low-code/no-code and should usually hand off to engineering?**
 
@@ -342,24 +346,24 @@
 
 - Complex transactional integrity and ultra-high scale are classic hand-offs
 - Clear, department-owned processes with modest data are good LCNC fits
-- Ask who runs it in 18 months—not only whether a maker can build an MVP
+- Ask who runs it in 18 months - not only whether a maker can build an MVP
 - Poor ownership or compliance posture is another red flag
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 A business team wants to automate an internal request → approve → notify flow on an approved platform.
 
 ### Discuss
 - What governance controls would you require before go-live?
-- Who is the business owner vs technical contact—and who gets the 2 a.m. alert?
+- Who is the business owner vs technical contact - and who gets the 2 a.m. alert?
 - When would you insist on Dev → Test → Prod instead of editing production live?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **A business team wants to automate an internal request → approve → notify flow on an approved platform.**
 

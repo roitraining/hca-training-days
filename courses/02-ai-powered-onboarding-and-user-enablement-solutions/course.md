@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: The Enablement Opportunity
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Learning & Development (L&D) practitioners
@@ -52,6 +55,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior AI or engineering experience required
@@ -77,7 +81,7 @@
 - Change (new tools, policy, process) resets the learning curve again
 
 > [!NOTE]
-> AI does not replace your curriculum—it delivers the right piece of it at the right moment.
+> AI does not replace your curriculum - it delivers the right piece of it at the right moment.
 
 ---
 <!-- layout: 2-column -->
@@ -129,7 +133,7 @@
 - **High change** areas where docs lag and people guess
 
 > [!TIP]
-> Start with one role or one product workflow—prove TTP impact before boiling the ocean.
+> Start with one role or one product workflow: prove TTP impact before boiling the ocean.
 
 ---
 <!-- layout: 3-column -->
@@ -190,7 +194,7 @@
 
 - **RAG** = retrieve approved content, then generate an answer grounded in it
 - Reduces “confident but wrong” answers on policy and process
-- Lets you update a source doc once—answers improve without retraining people
+- Lets you update a source doc once: answers improve without retraining people
 
 > [!IMPORTANT]
 > If the knowledge base is stale or unowned, the assistant will scale bad information faster.
@@ -349,7 +353,7 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **What does RAG do for an enablement assistant?**
 
@@ -373,7 +377,7 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **Which metric is the strongest signal of shorter time-to-productivity?**
 
@@ -386,19 +390,19 @@
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Pick one high-volume onboarding question in your org (for example: access, policy, or a Day-1 system step).
 
 ### Discuss
-- Which pattern fits first—assistant, RAG, in-app guidance, or personalized path?
+- Which pattern fits first: assistant, RAG, in-app guidance, or personalized path?
 - What approved sources and content owners would you require before go-live?
 - How would you measure TTP or deflection in the first 90 days?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Pick one high-volume onboarding question in your org (for example: access, policy, or a Day-1 system step).**
 
@@ -406,7 +410,7 @@ Pick one high-volume onboarding question in your org (for example: access, polic
 - Narrow scope (one role/workflow) before scale
 - Approved sources, citations, and named owners
 - Human escalation for high-risk topics
-- TTP milestones + deflection—not completion % alone
+- TTP milestones + deflection - not completion % alone
 
 ### Watch For
 - Boiling the ocean across every audience

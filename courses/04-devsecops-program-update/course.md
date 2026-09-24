@@ -8,6 +8,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -30,6 +31,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: DevSecOps in Context
@@ -40,6 +42,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Engineering leads and developers on delivery teams
@@ -50,6 +53,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with software development concepts
@@ -108,9 +112,9 @@
 
 # Shift-Left in Practice
 
-- Move checks to **design, code, and CI**—not only pre-prod gates
+- Move checks to **design, code, and CI** - not only pre-prod gates
 - Give developers **actionable findings** in the PR, not a PDF next quarter
-- Keep a final gate for residual risk—but make it thin because earlier controls worked
+- Keep a final gate for residual risk - but make it thin because earlier controls worked
 - Secure SDLC spans plan → code → build → deploy → operate
 
 > [!TIP]
@@ -151,7 +155,7 @@
 
 ---
 <!-- layout: 2-column -->
-# SCA — Software Composition Analysis
+# SCA: Software Composition Analysis
 
 ### What It Catches
 - Vulnerable open-source libs
@@ -165,7 +169,7 @@
 
 ---
 <!-- layout: 2-column -->
-# SAST — Static Application Security Testing
+# SAST: Static Application Security Testing
 
 ### What It Catches
 - Insecure coding patterns
@@ -179,7 +183,7 @@
 
 ---
 
-# DAST (and Friends) — Test the Running App
+# DAST (and Friends): Test the Running App
 
 - **DAST** probes a running app/API for exploitable issues
 - Complements SAST: finds config and runtime problems code scan misses
@@ -265,7 +269,7 @@
 | **4 Optimizing** | Risk-based controls; metrics-driven improvement |
 
 > [!IMPORTANT]
-> Maturity is per capability (SCA, SAST, IaC, culture)—teams are rarely “all Level 3.”
+> Maturity is per capability (SCA, SAST, IaC, culture): teams are rarely “all Level 3.”
 
 ---
 <!-- layout: title-image -->
@@ -319,7 +323,7 @@
 
 - Shared definition of DevSecOps success metrics
 - Documented pipeline security stage map (owners included)
-- Maturity self-score by capability—not a vanity overall number
+- Maturity self-score by capability - not a vanity overall number
 - Named 3–5 roadmap items with dates and accountable owners
 
 ---
@@ -344,7 +348,7 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Which tooling category primarily finds vulnerable open-source libraries and license risk?**
 
@@ -368,20 +372,20 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **What best describes “shift left” in this program’s terms?**
 
 **Correct: C.** Moving checks into design, code, and CI with actionable PR feedback
 
-- Shift-left moves checks earlier—design, code, and CI—not only pre-prod
+- Shift-left moves checks earlier: design, code, and CI - not only pre-prod
 - Developers need fixable findings in the PR, not a PDF next quarter
 - A thin final gate remains; earlier controls should do most of the work
 - It fails without ownership, severity policy, and remediation SLAs
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Score one capability on your team (SCA, SAST, secrets, IaC, or culture) against the maturity levels.
@@ -393,12 +397,12 @@ Score one capability on your team (SCA, SAST, secrets, IaC, or culture) against 
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Score one capability on your team (SCA, SAST, secrets, IaC, or culture) against the maturity levels.**
 
 ### Strong Answers Mention
-- Maturity is per capability—not one vanity overall score
+- Maturity is per capability - not one vanity overall score
 - Coverage, MTTR, false-positive rate, and finding ownership
 - Prefer platform templates that unlock many teams
 - High-signal blocking checks beat a wall of warn-only noise

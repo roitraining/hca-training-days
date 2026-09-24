@@ -9,6 +9,7 @@
 
 ---
 
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -16,14 +17,14 @@
   - Name
   - Background
   - Contact info
-- Let's get started!
+- Let’s get started!
 
 ![Welcome](images/welcome.png)
 ---
 
 # Course Objectives
 
-- Get more out of Webex—meetings, messaging, and collaboration features most users never discover
+- Get more out of Webex: meetings, messaging, and collaboration features most users never discover
 - Navigate key Webex meeting and messaging features with confidence
 - Apply productivity features (scheduling, recordings, breakouts, whiteboarding)
 - Use collaboration and etiquette best practices for better meetings
@@ -31,6 +32,7 @@
 
 ---
 
+<!-- layout: panel-left -->
 # Agenda
 
 - Segment 1: Meetings Done Right, with demo
@@ -41,6 +43,7 @@
 ![Agenda](images/agenda.png)
 ---
 
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - All Webex users, from occasional to daily
@@ -49,6 +52,7 @@
 ![Who Should Attend](images/who-should-attend.png)
 ---
 
+<!-- layout: panel-left -->
 # Prerequisites
 
 - No prior Webex experience required
@@ -68,7 +72,7 @@
 
 - Most people use maybe 20% of what Webex actually offers
 - This segment covers the full meeting lifecycle: schedule, join, present, and follow up
-- We'll demo the features live as we go—feel free to follow along in your own Webex
+- We’ll demo the features live as we go: feel free to follow along in your own Webex
 - Small habits here save real time across dozens of meetings a week
 
 ---
@@ -81,9 +85,9 @@
 
 # Scheduling Smarter
 
-- Schedule directly from Webex, Outlook, or Google Calendar—pick whichever fits your workflow
+- Schedule directly from Webex, Outlook, or Google Calendar: pick whichever fits your workflow
 - Use meeting templates to standardize recurring formats (standups, 1:1s, all-hands)
-- Set a default meeting duration shorter than 60 or 30 minutes—most meetings expand to fill the time given
+- Set a default meeting duration shorter than 60 or 30 minutes: most meetings expand to fill the time given
 - Enable the lobby/waiting room for anything with external guests
 
 
@@ -93,7 +97,7 @@
 
 # Joining Like a Pro
 
-- One-click join from your calendar invite—avoid hunting for meeting numbers
+- One-click join from your calendar invite: avoid hunting for meeting numbers
 - Test audio and video before an important meeting, not during it
 - Join from the desktop or mobile app for full features; the web app is a solid fallback
 - Preview your camera and background before joining, not after
@@ -113,7 +117,7 @@
 
 - Reactions and raise hand keep large meetings orderly without interrupting the speaker
 - Virtual backgrounds and background noise removal reduce distractions for everyone
-- Screen share with "share sound" when presenting video or audio content
+- Screen share with “share sound” when presenting video or audio content
 - Lock the meeting once everyone expected has joined, for sensitive discussions
 
 ---
@@ -126,7 +130,7 @@
 
 ### Transcripts
 - Auto-generated transcripts save note-taking time
-- Searchable after the meeting—jump straight to the part you need
+- Searchable after the meeting: jump straight to the part you need
 
 ---
 
@@ -153,18 +157,18 @@
 
 # Messaging and Sharing: Life Between Meetings
 
-- Most collaboration doesn't happen in a scheduled meeting—it happens in the moments around it
+- Most collaboration doesn’t happen in a scheduled meeting - it happens in the moments around it
 - Webex Spaces keep conversations, files, and context together instead of scattered across email and chat
 - This segment covers the async tools that reduce how many meetings you need in the first place
 
 
 ---
 
-# Spaces: Your Team's Home Base
+# Spaces: Your Team’s Home Base
 
-- A Space is a persistent room for a team, project, or topic—not a one-off chat thread
+- A Space is a persistent room for a team, project, or topic - not a one-off chat thread
 - Everything shared in a Space stays searchable and organized by conversation
-- Pin important messages so they don't get buried
+- Pin important messages so they don’t get buried
 - Turn any meeting into a Space afterward to keep the conversation going
 
 ---
@@ -179,7 +183,7 @@
 
 - Threaded replies keep side conversations from cluttering the main channel
 - @mentions notify specific people without pinging the whole Space
-- Message status shows who's read what—useful for confirming important updates landed
+- Message status shows who’s read what: useful for confirming important updates landed
 - Search works across messages, files, and even meeting transcripts
 
 ![Messaging features: threads, mentions, and read status](images/ch18-messaging-features.png)
@@ -191,7 +195,7 @@
 - Drag and drop files directly into a Space
 - Files stay attached to the conversation where they were shared
 - Edit shared Office documents together in real time
-- Changes sync automatically—no more emailing versions back and forth
+- Changes sync automatically: no more emailing versions back and forth
 
 ![File sharing and real-time co-editing in a Space](images/ch18-file-coediting.png)
 
@@ -218,8 +222,8 @@
 
 # Etiquette and Troubleshooting: Making Meetings Work for Everyone
 
-- Great tools still need good habits—etiquette prevents most bad-meeting complaints
-- Accessibility isn't an add-on; small defaults make meetings work for more people
+- Great tools still need good habits: etiquette prevents most bad-meeting complaints
+- Accessibility isn’t an add-on; small defaults make meetings work for more people
 - The second half of this segment covers fixing the audio/video issues that derail meetings
 
 
@@ -227,11 +231,11 @@
 # Meeting Etiquette Basics
 
 - Join a minute early, muted by default
-- Use video when you can—it builds engagement
+- Use video when you can - it builds engagement
 - Mute when not speaking, especially in larger groups
 - Say who you are before speaking in large or new groups
-- Stop sharing your screen when you're done, not mid-transition
-- Watch the chat and reactions—someone may be trying to get your attention
+- Stop sharing your screen when you’re done, not mid-transition
+- Watch the chat and reactions: someone may be trying to get your attention
 
 ![Meeting etiquette habits for hosts and participants](images/ch18-meeting-etiquette.png)
 
@@ -256,8 +260,8 @@
 
 # Fixing Audio Issues
 
-- No audio? Check you've joined the meeting's audio (computer audio vs. phone call-in)
-- Others can't hear you? Check the correct microphone is selected, not muted at the OS level
+- No audio? Check you’ve joined the meeting’s audio (computer audio vs. phone call-in)
+- Others can’t hear you? Check the correct microphone is selected, not muted at the OS level
 - Echo or feedback? Only one device per person should have audio on in the same room
 - Background noise? Turn on background noise removal in audio settings
 
@@ -269,8 +273,8 @@
 # Fixing Video and Connection Issues
 
 - No video? Confirm Webex has camera permission at the OS level, not just in-app
-- Choppy video or audio? Switch to "optimize for low bandwidth" or turn off your own video
-- Can't join at all? Try the web app as a fallback if the desktop app won't connect
+- Choppy video or audio? Switch to “optimize for low bandwidth” or turn off your own video
+- Can’t join at all? Try the web app as a fallback if the desktop app won’t connect
 - Persistent issues? Restart the app before restarting the whole machine
 
 ![Diagnosing video and connection issues](images/ch18-fixing-video.png)
@@ -297,13 +301,13 @@
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **What best describes a Webex Space?**
 
 **Correct: B.** A persistent room for a team, project, or topic where messages, files, and context stay searchable
 
-- Spaces are persistent homes for a team, project, or topic—not one-off chats
+- Spaces are persistent homes for a team, project, or topic - not one-off chats
 - Shared content stays searchable and organized with the conversation
 - You can pin important messages and continue after a meeting
 - Async Spaces reduce how many meetings you need in the first place
@@ -321,7 +325,7 @@
 
 ---
 
-# Quiz 2 — Answer
+# Quiz 2: Answer
 
 **You and a colleague hear loud echo in a hybrid room. What should you check first?**
 
@@ -334,25 +338,25 @@
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Think of a recurring meeting you lead or join (standup, all-hands, or project sync).
 
 ### Discuss
-- Which features would improve it most—templates, lobby, breakouts, recordings/transcripts, or Spaces?
+- Which features would improve it most: templates, lobby, breakouts, recordings/transcripts, or Spaces?
 - What etiquette or accessibility defaults should become team norms?
 - How would you diagnose the audio/video issue that most often derails that meeting?
 
 ---
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Think of a recurring meeting you lead or join (standup, all-hands, or project sync).**
 
 ### Strong Answers Mention
 - Lifecycle habits: schedule well, join early muted, present cleanly, follow up in a Space
-- Captions, transcripts, and recordings as accessibility—and productivity—tools
+- Captions, transcripts, and recordings as accessibility - and productivity - tools
 - Isolate then fix: right mic/camera, bandwidth, web app fallback
 - Lock/lobby for external guests; stop sharing when done
 
