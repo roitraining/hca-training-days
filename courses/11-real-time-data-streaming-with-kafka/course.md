@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Real-Time Data Streaming with Kafka -->
+<!-- course-title: Real-Time Data Streaming with Kafka -->
 
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
