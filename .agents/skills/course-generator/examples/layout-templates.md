@@ -15,7 +15,7 @@ course-root/
   01-getting-started.md
   02-basic-language-syntax.md
   images/
-    roi-logo-with-name.png      # stock — copy from template
+    roi-logo-with-name.png      # stock: copy from template
     welcome.png                 # stock
     agenda.png                  # stock
     who-should-attend.png       # stock
@@ -64,9 +64,10 @@ Chapter divider variant:
 
 ## 2. Welcome (Introduction chapter)
 
-Bullets + `welcome.png` → auto-split. **Recommended** when using this template’s stock set.
+`<!-- layout: panel-right -->`. Bullets stay in the light area. `welcome.png` is centered in the colored third. **Required** for the introduction when using this template’s stock set.
 
 ```markdown
+<!-- layout: panel-right -->
 # Welcome!
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
@@ -79,7 +80,7 @@ Bullets + `welcome.png` → auto-split. **Recommended** when using this template
 ![Welcome](images/welcome.png)
 ```
 
-Do **not** invent a fictional instructor—leave Name / Background / Contact info as placeholders unless the user provides details.
+Do **not** invent a fictional instructor: leave Name / Background / Contact info as placeholders unless the user provides details.
 
 ---
 
@@ -103,26 +104,30 @@ Do **not** invent a fictional instructor—leave Name / Background / Contact inf
 
 Course-level orientation (distinct from per-section Navigation):
 
+`<!-- layout: panel-left -->`. Chapter list stays in the light area. `agenda.png` is centered in the colored third.
+
 ```markdown
+<!-- layout: panel-left -->
 # Agenda
 
 - Chapter 1: Getting Started with Terraform
-- Chapter 2: State & Remote Backends
-- Chapter 3: Modules & Workspaces
-- Chapter 4: Delivery & Guardrails
+- Chapter 2: State and Remote Backends
+- Chapter 3: Modules and Workspaces
+- Chapter 4: Delivery and Guardrails
 
 ![Agenda](images/agenda.png)
 ```
 
-Optional: use `<!-- layout: navigation -->` and bold the first chapter if you want syllabus highlighting.
+This is the course-level agenda, not section Navigation. Do not use `<!-- layout: navigation -->` here.
 
 ---
 
 ## 5. Who Should Attend / Prerequisites
 
-Include stock images when using this template’s set (auto-split).
+Who Should Attend uses `<!-- layout: panel-right -->`. Prerequisites uses `<!-- layout: panel-left -->`. Bullets stay in the light area. The stock image is centered in the colored third.
 
 ```markdown
+<!-- layout: panel-right -->
 # Who Should Attend
 
 - Cloud engineers and DevOps practitioners
@@ -133,6 +138,7 @@ Include stock images when using this template’s set (auto-split).
 ```
 
 ```markdown
+<!-- layout: panel-left -->
 # Prerequisites
 
 - Comfortable with the Linux command line
@@ -265,7 +271,56 @@ Alert examples:
 - Strong GCP IAM fit
 ```
 
-Prefer the house style when it helps teaching (thesis-first, ~3–4 main bullets, optional sub-bullets, **two levels max**). If you need deeper structure, use a **table** or columns—or split the slide. **Teaching quality wins** over blind bullet-count compliance; viewer syntax remains a hard constraint.
+Prefer the house style when it helps teaching (thesis-first, ~3–4 main bullets, optional sub-bullets, **two levels max**). If you need deeper structure, use a **table** or columns, or split the slide. **Teaching quality wins** over blind bullet-count compliance; viewer syntax remains a hard constraint.
+
+### Full-width callout below columns
+
+By default, alerts placed after a column header stay **inside that column**. To put a NOTE/WARNING under the whole column row (full slide width), end the column region with:
+
+```markdown
+<!-- layout: 2-column -->
+# Local vs Remote State
+
+### Local
+- Fast for solo prototypes
+- No team sharing
+
+### Remote
+- Shared source of truth
+- State locking
+
+<!-- below-columns -->
+
+> [!WARNING]
+> This warning spans the full slide width under both columns.
+```
+
+The same `<!-- below-columns -->` marker works with `<!-- layout: 3-column -->`.
+
+---
+
+## 10c. Card layout
+
+Each `###` heading becomes a card title. Dash list items under that heading become **sentences** in the card body (the viewer strips the bullets). Prefer complete sentences. Three cards sit in a row; four cards use a 2-by-2 grid.
+
+```markdown
+<!-- layout: card-layout -->
+# Choose a Backend Shape
+
+### Locking
+- Concurrent writes must be blocked before they corrupt state.
+- Pick a lock that the team already knows how to operate.
+
+### Durability
+- State belongs in a service with versioning and encryption at rest.
+- Local files are fine for a prototype and risky the moment two people apply.
+
+### Access
+- Grant the pipeline identity only what it needs to read and write state.
+- Do not share a personal credential across laptops.
+```
+
+Aliases: `<!-- layout: cards -->` or `<!-- layout: card -->`.
 
 ---
 
@@ -280,6 +335,57 @@ Prefer the house style when it helps teaching (thesis-first, ~3–4 main bullets
 
 ---
 
+## 11a. Image-only (tray title, no on-slide heading)
+
+Use when the diagram should fill the stage with **no visible title**. Keep an `#` heading in Markdown so the slide drawer still has a useful label.
+
+```markdown
+<!-- layout: image-only -->
+# Reference Architecture
+
+![System Diagram](images/ch02-reference-architecture.png)
+```
+
+Alias: `<!-- layout: image -->` also works.
+
+---
+
+## 11a1. Panel left and panel right
+
+The colored third comes from the active theme (solid ROI blue, or the Holcim gradient). Title and bullets stay in the light two-thirds. An image is centered in the colored third. The top bar and footer stay visible.
+
+**Introduction standard** (copy sections 2, 4, and 5, do not invent a different shape):
+
+| Slide | Layout | Image |
+| :--- | :--- | :--- |
+| Welcome! | `panel-right` | `images/welcome.png` |
+| Agenda | `panel-left` | `images/agenda.png` |
+| Who Should Attend | `panel-right` | `images/who-should-attend.png` |
+| Prerequisites | `panel-left` | `images/prerequisites.png` |
+
+Aliases: `<!-- layout: left-panel -->` and `<!-- layout: right-panel -->`.
+
+The image is optional on other slides. Without one, the colored third is empty and the title still sits in the light area.
+
+---
+
+## 11a2. Full-bleed (covers top bar and footer)
+
+Use when the image should fill the **entire 16:9 slide**, overlapping the accent bar and footer. Keep an `#` heading so the drawer still has a label. The image uses `cover` (fills the canvas; may crop).
+
+```markdown
+<!-- layout: full-bleed -->
+# Opening Visual
+
+![Keynote photo](images/ch01-opening-visual.png)
+```
+
+Aliases: `<!-- layout: bleed -->` or `<!-- layout: full-bleed-image -->`.
+
+Do **not** use this when you still want the ROI footer and top bar. That is `image-only`.
+
+---
+
 ## 11b. Stacked (content top, image below)
 
 Use when bullets and a wide diagram belong on the same slide, but auto-split (side-by-side) is the wrong shape.
@@ -288,7 +394,7 @@ Use when bullets and a wide diagram belong on the same slide, but auto-split (si
 <!-- layout: stacked -->
 # From Chatbots to Agents
 
-- A chatbot answers one prompt at a time—you drive every step
+- A chatbot answers one prompt at a time - you drive every step
 - An agent pursues a goal: it plans, acts, checks results, and keeps going
 - The shift is giving the model a loop, tools, and permission to act
 
@@ -342,16 +448,14 @@ Generate custom diagrams/infographics/photos into `images/` when you can; use TO
 
 ---
 
-## 14. Lab stub (end of chapter — no lab body)
+## 14. Lab stub (end of chapter - no lab body)
 
-Do **not** write lab steps here. Labs are authored separately.
+Do **not** write lab steps here. Do **not** add the lab URL. Humans add the link later. Labs are authored separately with the Lab Generator skill.
 
 ```markdown
 # Lab 2: Configure Remote State
 
-**Time:** 25 minutes
-
-**Lab guide:** [Lab 2 instructions](https://example.com/labs/lab-02)
+**Time:** 30 minutes
 ```
 
 ---
@@ -368,7 +472,7 @@ Do **not** write lab steps here. Labs are authored separately.
 
 ---
 
-## 16. Chapter quizzes (default — content chapters only)
+## 16. Chapter quizzes (default: content chapters only)
 
 Place after What You Learned and **before** Questions and Answers. Skip for Introduction and course-summary/office-hours closers; omit if the chapter is very short or the user declines quizzes.
 
@@ -386,25 +490,25 @@ Place after What You Learned and **before** Questions and Answers. Skip for Intr
 
 ---
 
-# Quiz 1 — Answer
+# Quiz 1: Answer
 
 **Why does local Terraform state fail for teams?**
 
 **Correct: B.** Concurrent applies can corrupt state without locking or a shared backend
 
-- Local state lives on one machine—no shared source of truth
+- Local state lives on one machine: no shared source of truth
 - Without locking, two applies can overwrite each other
 - Secrets in state increase risk if the file is copied or committed
 - Remote backends + locking are the usual team fix
 ```
 
-(Repeat as `Quiz 2 of 3` / `Quiz 2 — Answer`.)
+(Repeat as `Quiz 2 of 3` / `Quiz 2: Answer`.)
 
 ### Quiz 3 (open discussion + discussion points)
 
 ```markdown
 <!-- layout: 2-column -->
-# Quiz 3 of 3 — Discussion
+# Quiz 3 of 3: Discussion
 
 ### Prompt
 Your team still keeps `terraform.tfstate` on laptops for a shared network stack.
@@ -417,7 +521,7 @@ Your team still keeps `terraform.tfstate` on laptops for a shared network stack.
 ---
 
 <!-- layout: 2-column -->
-# Quiz 3 — Discussion Points
+# Quiz 3: Discussion Points
 
 **Your team still keeps `terraform.tfstate` on laptops for a shared network stack.**
 
@@ -439,7 +543,7 @@ Your team still keeps `terraform.tfstate` on laptops for a shared network stack.
 
 **Default:** title + `Questions?` body.
 
-**Template alternative:** stacked layout with stock `qa.png` (title only—no `Q&A` / ampersand).
+**Template alternative:** stacked layout with stock `qa.png` (title only, no `Q&A` / ampersand).
 
 ```markdown
 # Questions and Answers
@@ -458,9 +562,9 @@ Questions?
 
 ## 18. Assemble files
 
-**Default — `00-introduction.md`:** Title → Welcome (+ stock images) → Course Objectives → Agenda → Who Should Attend → Prerequisites
+**Default: `00-introduction.md`:** Title → Welcome (`panel-right` + `welcome.png`) → Course Objectives → Agenda (`panel-left` + `agenda.png`) → Who Should Attend (`panel-right` + `who-should-attend.png`) → Prerequisites (`panel-left` + `prerequisites.png`)
 
-**Default — each content `0N-….md` chapter:** Title → Chapter Objectives → (Navigation → section slides) × N → Lab stub → What You Learned → Quizzes (2 MCQ + 1 discussion, with answers) → Questions and Answers
+**Default: each content `0N-….md` chapter:** Title → Chapter Objectives → (Navigation → section slides) × N → Lab stub → What You Learned → Quizzes (2 MCQ + 1 discussion, with answers) → Questions and Answers
 
 **No quizzes on:** Introduction; course-summary / office-hours closers; very short chapters or when the user declines
 

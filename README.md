@@ -12,7 +12,7 @@ Open a course in the [ROI Training Course Slide Viewer](https://slidesv.roitrain
 8. [GenAI for Software Engineering](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/08-introduction-to-generative-ai-for-software-engineering)
 9. [Introduction to Low-Code & No-Code](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/09-introduction-to-low-code-and-no-code-platforms)
 10. [Tokenomics & Token Optimization](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/10-introduction-to-tokenomics-and-token-optimization)
-11. [Live Streaming & Low-Latency Architecture](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/11-live-streaming-platforms-and-low-latency-architecture)
+11. [Real-Time Data Streaming with Kafka](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/11-real-time-data-streaming-with-kafka)
 12. [Modernizing Apps with Agentic AI](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/12-modernizing-applications-using-agentic-ai)
 13. [Professional Cloud Security Engineer Cert](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/13-professional-cloud-security-engineer-certification)
 14. [Security in Google Cloud](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/14-security-in-google-cloud)

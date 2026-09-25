@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1600" height="900" fill="#f4f7fb"/>
+
+  <rect x="40" y="70" width="400" height="640" rx="24" fill="#ffffff" stroke="#1d6fad" stroke-width="3"/>
+  <text x="240" y="130" text-anchor="middle" font-size="28" font-weight="bold" fill="#1d6fad">Producing teams</text>
+  <text x="240" y="170" text-anchor="middle" font-size="18" fill="#4a5b6b">Own the meaning of the event</text>
+  <rect x="80" y="220" width="320" height="120" rx="16" fill="#e8f1f8"/>
+  <text x="240" y="274" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">EHR and interface</text>
+  <text x="240" y="308" text-anchor="middle" font-size="18" fill="#4a5b6b">Admits, transfers, orders</text>
+  <rect x="80" y="370" width="320" height="120" rx="16" fill="#e8f1f8"/>
+  <text x="240" y="424" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">Device gateways</text>
+  <text x="240" y="458" text-anchor="middle" font-size="18" fill="#4a5b6b">Vitals, alarms, sensors</text>
+  <rect x="80" y="520" width="320" height="120" rx="16" fill="#e8f1f8"/>
+  <text x="240" y="574" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">Business applications</text>
+  <text x="240" y="608" text-anchor="middle" font-size="18" fill="#4a5b6b">Facts those systems own</text>
+
+  <line x1="440" y1="390" x2="530" y2="390" stroke="#003865" stroke-width="6"/>
+  <polygon points="540,390 516,378 516,402" fill="#003865"/>
+
+  <rect x="550" y="70" width="500" height="640" rx="24" fill="#003865"/>
+  <text x="800" y="140" text-anchor="middle" font-size="28" font-weight="bold" fill="#ffffff">Confluent Cloud</text>
+  <text x="800" y="180" text-anchor="middle" font-size="18" fill="#d6e6f2">Shared event platform</text>
+  <rect x="610" y="230" width="380" height="90" rx="14" fill="#1d6fad"/>
+  <text x="800" y="282" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Topics and retention</text>
+  <rect x="610" y="340" width="380" height="90" rx="14" fill="#1d6fad"/>
+  <text x="800" y="392" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Schema Registry</text>
+  <rect x="610" y="450" width="380" height="90" rx="14" fill="#1d6fad"/>
+  <text x="800" y="502" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Access per application</text>
+  <rect x="610" y="560" width="380" height="90" rx="14" fill="#1d6fad"/>
+  <text x="800" y="612" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffffff">Platform support</text>
+
+  <line x1="1050" y1="390" x2="1140" y2="390" stroke="#003865" stroke-width="6"/>
+  <polygon points="1150,390 1126,378 1126,402" fill="#003865"/>
+
+  <rect x="1160" y="70" width="400" height="640" rx="24" fill="#ffffff" stroke="#0e7c66" stroke-width="3"/>
+  <text x="1360" y="130" text-anchor="middle" font-size="28" font-weight="bold" fill="#0c6b52">Consuming teams</text>
+  <text x="1360" y="170" text-anchor="middle" font-size="18" fill="#4a5b6b">Each group reads the full log</text>
+  <rect x="1200" y="220" width="320" height="120" rx="16" fill="#eef8f5"/>
+  <text x="1360" y="274" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">Operational apps</text>
+  <text x="1360" y="308" text-anchor="middle" font-size="18" fill="#4a5b6b">Bed board, workflow</text>
+  <rect x="1200" y="370" width="320" height="120" rx="16" fill="#eef8f5"/>
+  <text x="1360" y="424" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">Alerting</text>
+  <text x="1360" y="458" text-anchor="middle" font-size="18" fill="#4a5b6b">Page while it still matters</text>
+  <rect x="1200" y="520" width="320" height="120" rx="16" fill="#eef8f5"/>
+  <text x="1360" y="574" text-anchor="middle" font-size="22" font-weight="bold" fill="#003865">Warehouse sink</text>
+  <text x="1360" y="608" text-anchor="middle" font-size="18" fill="#4a5b6b">History and compliance</text>
+
+  <text x="800" y="800" text-anchor="middle" font-size="24" font-weight="bold" fill="#003865">Producers own the contract. Platform support owns the shared path.</text>
+  <text x="800" y="844" text-anchor="middle" font-size="20" fill="#4a5b6b">A new consumer subscribes. It should not require a new point-to-point interface.</text>
+</svg>

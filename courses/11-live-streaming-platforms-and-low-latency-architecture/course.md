@@ -1,11 +1,11 @@
-<!-- course-title: HCA: Live Streaming & Low-Latency Architecture -->
+<!-- course-title: HCA: Real-Time Data Streaming with Kafka -->
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
-# Live Streaming Platforms and
-# Low-Latency Architecture
+# Real-Time Data Streaming
+# with Kafka and Confluent
 
-## From capture to playback: protocols, edge design, and reliability at scale
+## How events move from sources through Confluent Cloud to downstream applications
 
 ---
 
@@ -20,501 +20,601 @@
 - Let’s get started!
 
 ![Welcome](images/welcome.png)
+
 ---
 
 # Course Objectives
 
-- Architect live audio/video delivery with clear latency, scale, and reliability trade-offs
-- Describe the end-to-end live streaming pipeline and contribution options
-- Explain the protocols and trade-offs behind low-latency delivery
-- Identify architectural levers (edge, CDN, encoding, player) that reduce latency
-- Apply scaling, reliability, auth, and game-day practices for live events
+- **Explain how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications**
+- Decide when a stream is a better fit than a batch job
+- Describe how producers, topics, and consumers move data through Kafka
+- Map device data and application data onto an enterprise event platform
 
 ---
 
 <!-- layout: panel-left -->
 # Agenda
 
-- Segment 1: The Live Streaming Pipeline
-- Segment 2: Low-Latency Techniques
-- Segment 3: Scale and Reliability
+- Segment 1: Stream or Batch
+- Segment 2: How Kafka Moves Data
+- Segment 3: Low-Latency Event-Driven Design
 - Questions and Answers
 
 ![Agenda](images/agenda.png)
+
 ---
 
 <!-- layout: panel-right -->
 # Who Should Attend
 
-- Solution architects designing media platforms
-- Platform engineers operating streaming infrastructure
-- Technical media / product teams shipping live experiences
-- Cloud engineers supporting large live events
+- Teams that produce or consume data on Confluent Cloud today
+- Teams that may adopt the platform for new integrations
+- Platform engineers and support staff who run the streaming platform
+- Architects choosing between batch jobs and event streaming
 
 ![Who Should Attend](images/who-should-attend.png)
+
 ---
 
 <!-- layout: panel-left -->
 # Prerequisites
 
-- General familiarity with networking concepts (DNS, HTTP, CDN)
-- General familiarity with cloud architecture patterns
-- Helpful: exposure to video formats or event broadcasting
-- Helpful: awareness of HLS / DASH terminology
+- Comfort with applications, databases, and file-based data exchange
+- Familiarity with cloud-hosted shared platforms
+- Helpful: exposure to integration, ETL, or messaging
+- No prior Kafka administration experience required
 
 ![Prerequisites](images/prerequisites.png)
+
 ---
+
 <!-- layout: navigation -->
 # Course Roadmap
 
-- **The Live Streaming Pipeline**
-- Low-Latency Techniques
-- Scale and Reliability
+- **Stream or Batch**
+- How Kafka Moves Data
+- Low-Latency Event-Driven Design
 
 ---
 
-# Why Latency Matters
+# Streaming Means Events
 
-- Live sports, auctions, betting, and interactive classes punish delay
-- Chat and second-screen experiences drift when video lags
-- “Live” is a product SLA: define **glass-to-glass** targets up front
-- Lower latency usually costs complexity, capacity, or resilience margin
+- **This session is data and event streaming on Kafka, not audio or video**
+- A stream is an unbounded sequence of facts: a transfer, a vital sign, an order, an alarm
+- A producer appends each fact to a topic; consumers read that log and act
+- Confluent Cloud is the managed Kafka platform those teams share
 
 > [!NOTE]
-> Pick a latency budget first (e.g. &lt;2s interactive vs 5–15s broadcast-scale), then choose protocols.
+> “Near real time” means a consumer can act in seconds, while the situation is still true. It is not a video latency target and it is not high-frequency trading.
 
 ---
+
 <!-- layout: title-image -->
-# Capture to Playback
+# Batch and Stream Side by Side
 
-![Live streaming pipeline](images/live-streaming-pipeline.png)
-
----
-<!-- layout: 3-column -->
-# Pipeline Stages
-
-### Ingest
-- Camera / encoder
-- RTMP, SRT, WHIP
-- Contribution link
-
-### Process
-- Transcode ladders
-- Package manifests
-- Origin / packager
-
-### Deliver
-- CDN / edge
-- ABR playback
-- Player buffering
-
----
-<!-- layout: title-image -->
-# Where Latency Accumulates
-
-![Latency accumulation](images/latency-accumulation.png)
+![Batch collects a bounded set and runs on a schedule. An event stream publishes each fact as it happens so consumers can act while it is still true.](images/batch-vs-stream.png)
 
 ---
 
-# Typical Delay Contributors
+<!-- layout: 2-column -->
+# What Each One Optimizes For
 
-| Stage | What adds delay |
-| :--- | :--- |
-| Capture / ingest | Device buffers, uplink jitter handling |
-| Encode | GOP length, look-ahead, multi-rendition |
-| Package | Segment duration, playlist depth |
-| CDN | Cache miss, origin fetch, regional hop |
-| Player | Startup buffer, rebuffer safety margin |
+### Batch
+- Bounded input and a scheduled job
+- High throughput over a complete set
+- Strong fit for closed periods and rebuilds
+- The result arrives when the job finishes
+
+### Stream
+- Unbounded events, handled continuously
+- Freshness measured in seconds
+- Many consumers can share one fact
+- You take on schema, lag, and retries
+
+<!-- below-columns -->
 
 > [!TIP]
-> Optimizing only the CDN won’t fix a 6-second segment + large player buffer.
+> Pick from the consumer’s deadline. If nobody acts until morning, a nightly job is not a failure of streaming.
 
 ---
 
-# Sample Glass-to-Glass Budgets
+<!-- layout: card-layout -->
+# Three Questions Before You Choose
 
-Illustrative only: measure your stack; numbers vary by encoder, network, and player.
+### How fresh?
+- If the answer can wait for a schedule, batch is enough.
+- If the answer expires in minutes, publish an event.
 
-| Stage (approx.) | Interactive (~&lt;2s) | Broadcast low-latency (~5–10s) |
-| :--- | :--- | :--- |
-| Capture / ingest | 50–150 ms | 100–300 ms |
-| Encode | 100–300 ms | 300–800 ms |
-| Package / parts | 100–400 ms | 1–3 s (segment/part size) |
-| CDN / edge | 50–200 ms | 200–800 ms |
-| Player buffer | 200–800 ms | 2–5 s |
-| **Rough total** | **~0.5–2 s** | **~5–10 s** |
+### Who is waiting?
+- Someone or some system must be ready to consume continuously.
+- A topic nobody reads is not a real-time design.
 
-> [!IMPORTANT]
-> Budget the product SLA first. If interactive needs &lt;2s, classic long-GOP HLS will never get you there: no matter how good the CDN is.
+### What stays the source of truth?
+- Kafka moves the change. It does not replace the EHR, the device, or the warehouse.
+- Keep the system of record, and stream the fact that it changed.
 
 ---
+
+<!-- layout: 2-column -->
+# Two Questions, Two Designs
+
+### Page someone now
+- A pump or monitor crosses a threshold
+- The fact is stale within minutes
+- A gateway publishes an alarm event
+- A consumer pages the responding team
+
+### Explain it next week
+- Leadership wants last week’s volumes
+- The dataset is bounded and complete
+- A warehouse job is the right shape
+- A topic would add cost and no waiting consumer
+
+---
+
 <!-- layout: 3-column -->
-# Contribution: RTMP vs SRT vs WHIP
+# Where the Work Belongs
 
-### RTMP
-- Still common from encoders
-- TCP; simple firewall story
-- Weaker on lossy links
-- Aging protocol: plan exits
+### Choose a stream
+**Live alarm**
+- Someone must act now
+- A morning file is already late
+- Publish the event as it happens
 
-### SRT
-- UDP + recovery / encryption
-- Strong for unreliable WAN
-- Popular for backup paths
-- Great contribution workhorse
+### Stay with batch
+**Leadership pack**
+- The period is already closed
+- Completeness beats speed
+- Schedule the warehouse job
 
-### WHIP
-- WebRTC ingest over HTTP
-- Browser / modern encoders
-- Low-latency contribution
-- Pair with WHEP-style playback when needed
+### Not a topic
+**Point lookup**
+- “What room is this patient in?” can stay a request
+- Do not stream a fact nobody consumes
+- An unread topic is just storage
+
+---
+
+# The Warehouse Still Matters
+
+- **Streaming a fact does not retire the batch path that explains history**
+- Operational consumers need the event now; analysts often need a complete table later
+- A sink can land the same topic in the warehouse without a second extract from the source
+- Batch remains the right tool for rebuilds, reconciliations, and closed reporting periods
+
+> [!WARNING]
+> Do not rip out a working batch job because a platform exists. Add a stream where a consumer is actually waiting.
+
+---
+
+<!-- layout: navigation -->
+# Course Roadmap
+
+- Stream or Batch
+- **How Kafka Moves Data**
+- Low-Latency Event-Driven Design
+
+---
+
+<!-- layout: title-image -->
+# From Source to Downstream System
+
+![Sources reach Kafka through an application producer or a connector. The topic lives on Confluent Cloud. Separate consumer groups read the same log: one acts, one stores history.](images/kafka-data-flow.png)
+
+---
+
+<!-- layout: 2-column -->
+# Two Ways to Produce
+
+### Your application produces
+- The service knows the business moment
+- It chooses the key and the event type
+- Use this for facts your system owns
+- Example: the app emits OrderPlaced
+
+### A connector produces
+- Managed Connect writes for a system that should not embed a Kafka client
+- Typical for databases, SaaS, or a gateway feed
+- The connector still lands records on a topic
+- Example: device readings bridged onto a topic
 
 <!-- below-columns -->
 
 > [!NOTE]
-> Dual ingest (primary + backup) matters more than which single protocol you prefer: paths fail on game day.
+> Clinical systems often reach Kafka through an interface engine. That engine is the producer, even when the EHR remains the system of record.
 
 ---
+
 <!-- layout: 2-column -->
-# Encode, Package, Deliver
+# Anatomy of a Transfer Event
 
-### Encode & Package
-- Bitrate ladder for devices/networks
-- Segment or chunk the stream
-- Publish to an origin
+### Why each field is there
+- `event_type` tells consumers what happened
+- `event_time` is when the transfer happened
+- `patient_id` is the ordering key
+- The units are the fact other systems need
 
-### Deliver & Play
-- CDN fans out to viewers
-- Player picks rendition (ABR)
-- Buffer trades smoothness vs delay
-
----
-<!-- layout: navigation -->
-# Course Roadmap
-
-- The Live Streaming Pipeline
-- **Low-Latency Techniques**
-- Scale and Reliability
-
----
-<!-- layout: title-image -->
-# Protocols and Trade-offs
-
-![Streaming protocols](images/streaming-protocols.png)
-
----
-<!-- layout: 2-column -->
-# Protocol Landscape
-
-### WebRTC (and peers)
-- Sub-second / interactive
-- Great for calls, auctions, classrooms
-- Harder fan-out at huge scale
-
-### LL-HLS / LL-DASH
-- Seconds-scale “broadcast low latency”
-- CDN-friendly HTTP delivery
-- Partial segments / chunked transfer
-
----
-
-# Classic HLS vs Low-Latency HLS
-
-- Classic HLS: longer segments → simpler scale, higher delay
-- LL-HLS: shorter parts, blocking playlist reads, tuned players
-- Same family of HTTP delivery: different latency posture
-- Always validate with **your** player stack, not just origin config
-
-> [!IMPORTANT]
-> Protocol choice is a product decision: interactivity needs ≠ stadium-scale one-to-many.
-
----
-<!-- layout: title-image -->
-# Reference Architecture
-
-![Live streaming reference architecture: encoder to contribution to packager to origin shield to multi-CDN to players, plus WebRTC island for hosts](images/live-reference-architecture.png)
-
----
-
-# Reference Architecture Notes
-
-- **Contribution:** primary + backup (SRT/RTMP/WHIP) into cloud packager/transcode
-- **Origin shield:** protect packagers from CDN stampedes on misses
-- **Multi-CDN / multi-region edge:** capacity and regional failover
-- **Players:** LL-HLS/LL-DASH for scale; optional **WebRTC island** for hosts or ultra-interactive rooms
-- Auth tokens / DRM sit at the edge and player - not only at the origin
-
----
-<!-- layout: title-image -->
-# Architectural Levers
-
-![Latency architecture levers](images/latency-architecture-levers.png)
-
----
-<!-- layout: 3-column -->
-# Encoding Trade-offs
-
-### Faster
-- Shorter GOP
-- Lower latency presets
-- Fewer fancy tools
-
-### Cost / Quality
-- More CPU/GPU
-- Bitrate efficiency ↓
-- Visual quality risk
-
-### Design Rule
-- Match encode to SLA
-- Don’t over-optimize
-  unused interactivity
-
----
-<!-- layout: 2-column -->
-# Edge, CDN, and Player
-
-### Edge / CDN
-- PoPs near audiences
-- Shield origins
-- Prefetch / mid-gress tuning
-- Anycast & regional failover
-
-### Player
-- Minimal safe buffer
-- Fast startup vs rebuffer risk
-- LL-capable player required
-- ABR logic that doesn’t chase
-
----
-<!-- layout: 2-column -->
-# Player / ABR Pitfalls
-
-### “We enabled LL-HLS… still laggy”
-- Player still using a large startup buffer
-- ABR thrashing on busy Wi-Fi (up/down swings)
-- Manifest/part fetch blocked behind a slow CDN PoP
-- Mixed classic + LL assumptions in one player build
-
-### Design Fixes
-- Require an LL-capable player build
-- Cap aggressive ABR downswitches
-- Measure **glass-to-glass**, not only CDN TTFB
-- Test on real device/network profiles before go-live
-
----
-
-# Putting Low-Latency Techniques Together
-
-```text
-Tight encode  →  short segments/parts  →  edge near viewers
-                                         →  LL-capable player
-                                         →  monitor glass-to-glass
+### Illustrative payload
+```json
+{
+  "event_type": "PatientTransferred",
+  "event_time": "2026-09-25T14:03:11Z",
+  "patient_id": "p-18422",
+  "from_unit": "4E",
+  "to_unit": "ICU"
+}
 ```
 
-- Optimize the **largest buffer first**
-- Measure end-to-end - not only CDN TTFB
-- Accept that ultra-low latency narrows your operational margin
+<!-- below-columns -->
+
+> [!IMPORTANT]
+> Put the business time in the payload. The time Kafka stored the record is not the time the patient moved.
 
 ---
+
+# A Producer Writes a Record
+
+- **A successful produce appends the record and returns an acknowledgement**
+- The key keeps one patient, device, or order on a single partition
+- The value is the fact, described by a schema consumers can rely on
+- Until the acknowledgement returns, downstream systems have not seen the event
+
+```python
+producer.produce(
+    topic="adt.patient-events",
+    key=patient_id,
+    value=event_json,
+)
+producer.flush()
+```
+
+---
+
+<!-- layout: 3-column -->
+# Topic, Partition, Offset
+
+### Topic
+- Named log of one kind of fact
+- Example: `adt.patient-events`
+- Many groups can read it
+- Retention is set on the topic
+
+### Partition
+- Ordered shard of that log
+- Order holds inside one partition
+- The key chooses the partition
+- More partitions, more parallel readers
+
+### Offset
+- Position in one partition
+- Stored per consumer group
+- Commit means “handled”
+- Replay starts further back
+
+---
+
+<!-- layout: title-image -->
+# One Topic, Two Kinds of Readers
+
+![One topic has three partitions. The bed-board group splits them across two consumers so each event is read once. The nutrition group has its own offsets and receives every event.](images/consumer-groups.png)
+
+---
+
+# A Consumer Reads and Commits
+
+- **Poll, handle, then commit: that is the consumer’s contract with the group**
+- Two instances of one application share a group id and split the partitions
+- Two applications that both need every event use two group ids
+- Extra consumers beyond the partition count sit idle; they do not add throughput
+
+```python
+consumer.subscribe(["adt.patient-events"])
+msg = consumer.poll(1.0)
+handle(msg.key(), msg.value())
+consumer.commit(msg)
+```
+
+> [!WARNING]
+> A shared group id splits the stream. It does not give each application a full copy. Commit only after a successful handle, and make a second delivery safe.
+
+---
+
+<!-- layout: card-layout -->
+# How a Healthy Topic Goes Wrong
+
+### Consumer lag
+- The group is behind the log, so alarms and bed boards are stale.
+- Scale only up to the partition count. More consumers than partitions sit idle.
+
+### Duplicates
+- A producer can deduplicate its own retries. A crash before commit cannot.
+- Apply the transfer by key so handling it twice does not invent a second move.
+
+### A bad record
+- One poison payload can stall every later event on that partition.
+- Route the failure aside. Do not hold every patient behind one bad record.
+
+---
+
+# The Log Keeps the Fact
+
+- **A consumer does not delete an event by reading it**
+- Kafka retains the topic for a configured time, then drops older records
+- A new group can replay whatever is still inside that window
+- Long compliance history belongs in the warehouse sink, not in an endless hot topic
+
+> [!IMPORTANT]
+> If an alarm consumer is offline longer than retention, those events are gone. Set retention for the outage you still intend to recover by replay.
+
+---
+
 <!-- layout: navigation -->
 # Course Roadmap
 
-- The Live Streaming Pipeline
-- Low-Latency Techniques
-- **Scale and Reliability**
+- Stream or Batch
+- How Kafka Moves Data
+- **Low-Latency Event-Driven Design**
 
 ---
-<!-- layout: title-image -->
-# Running Live at Scale
 
-![Live scale and reliability](images/live-scale-reliability.png)
-
----
 <!-- layout: 2-column -->
-# Handling Spikes
+# Ask, or Publish the Fact
 
-### Demand Spikes
-- Pre-warm CDN / capacity
-- Regional load shedding
-- Cap concurrent starts
-- Queue join / waiting room
+### Request and response
+- The caller asks a source and waits
+- Every new consumer adds load and a private interface
+- Fine for “what is true this instant”
+- Poor when many systems must learn that something changed
 
-### Publish Spikes
-- Redundant ingest paths
-- Auto-scale transcoders
-- Protect origin with shield
-- Degrade renditions gracefully
+### Event-driven
+- The source publishes the fact once
+- A new consumer subscribes without changing the source
+- The log retains the fact so a group can replay
+- You now own the schema, the key, and the lag
+
+<!-- below-columns -->
+
+> [!NOTE]
+> An event announces a fact. It is not a command to every downstream system. Each consumer decides what to do with PatientTransferred.
 
 ---
 
-# Failover Patterns
+<!-- layout: title-image -->
+# A Shared Platform, Many Teams
 
-- Dual ingest (primary / backup contribution)
-- Hot-standby packagers and origins
-- Multi-CDN or multi-region edge strategies
-- Automated cutover with health checks - not only human panic
+![Producing teams publish EHR, device, and application facts onto Confluent Cloud. Consuming teams read with their own groups: operations, alerting, and a warehouse sink. Platform support owns access, schema policy, and retention.](images/enterprise-event-platform.png)
+
+---
+
+# Where the Seconds Go
+
+- **Broker time is rarely the latency people feel**
+- The budget runs from the source event to a person or system acting
+- Kafka usually makes an acknowledged record readable in milliseconds
+- The rest sits in the gateway, the consumer, or a stream processor such as Flink
+
+| Step | What usually happens | What stretches it |
+| :--- | :--- | :--- |
+| Source | The device or app notices | Gateway buffering, interface-engine batching |
+| Produce | The client waits for an ack | Silent retries, a client that never checks the error |
+| On the topic | The record is readable | Still usually milliseconds after a successful ack |
+| Consume and act | The group handles it | Lag, rare polling, a slow database write |
+
+> [!TIP]
+> When an alarm is late, check consumer lag and the gateway interval before you blame the cluster.
+
+---
+
+<!-- layout: 2-column -->
+# Device Data and Application Data
+
+### Device and sensor data
+- Monitors, pumps, fridges, location badges
+- The device usually does not speak Kafka
+- A gateway or integration service produces
+- Often high rate: thresholds, or the latest value
+
+### Application and system data
+- EHR, scheduling, orders, internal applications
+- The system of record emits a business fact
+- Lower rate, richer payload, clearer event types
+- Example: admit, discharge, and transfer (ADT)
+
+<!-- below-columns -->
+
+> [!NOTE]
+> Both shapes use the same topic, key, group, and offset model. The producer in front of the device is what changes.
+
+---
+
+<!-- layout: 3-column -->
+# Three Uses of the Same Platform
+
+### Device alarm
+**Fridge excursion**
+- Gateway publishes the reading
+- Alert group pages pharmacy
+- Latest value matters more than a full history on the topic
+
+### Clinical fact
+**Patient transfer**
+- Interface engine produces
+- Key is the patient or encounter
+- Bed board and nutrition each have a group
+
+### System event
+**Order or app fact**
+- The owning application produces
+- Other systems subscribe instead of polling
+- Schema Registry holds the contract
+
+---
+
+<!-- layout: 2-column -->
+# Who Owns What
+
+### Producing and consuming teams
+- Define the event and its schema
+- Choose the key and the topic
+- Write the producer, or request a connector
+- Make the consumer safe to run twice
+- Own the business response
+
+### Platform support
+- Environments, access, and quotas on Confluent Cloud
+- Schema compatibility rules
+- Retention, storage, and the network path
+- Lag, failures, and who gets called
+- Least privilege for every application
+
+<!-- below-columns -->
+
+> [!IMPORTANT]
+> Platform support keeps the path healthy. They do not decide what PatientTransferred means. That stays with the producing team.
+
+---
+
+<!-- layout: card-layout -->
+# Before a Team Goes Live
+
+### Schema
+- Register the contract before another team depends on the payload.
+- Add fields safely. Renaming or dropping a field is a breaking change.
+
+### Access
+- Grant each application only the topics it produces or consumes.
+- Clients authenticate to Confluent Cloud. Anonymous produce and consume is not the model.
+
+### Retention and PHI
+- Keep the hot topic only as long as replay still matters.
+- Payloads may be protected health information. Treat the topic as governed data.
+
+### Lag
+- Name an owner for consumer lag on any path that pages a person.
+- A quiet consumer may be down, not idle.
+
+---
+
+<!-- layout: 3-column -->
+# Stream, Batch, or Both
+
+### Stream
+**Fridge excursion**
+- Actionable only while it is happening
+- Gateway publishes, an alert group pages
+- A nightly extract misses the excursion
+
+### Batch
+**Monthly utilization**
+- The question is a closed month
+- A warehouse job is enough
+- Nobody is waiting on one event
+
+### Both
+**Patient transfer**
+- Operations need the bed update in seconds
+- Compliance still wants warehouse history
+- Stream the event, and sink it for the report
+
+<!-- below-columns -->
 
 > [!WARNING]
-> Failover that isn’t rehearsed will fail on the main event. Game-day runbooks need dry runs.
-
----
-<!-- layout: 2-column -->
-# Who Can Watch? Auth & Entitlement
-
-### Common Controls
-- Signed / expiring URLs or tokens at the CDN edge
-- Geo / IP allow–deny when required
-- DRM when content licenses demand it
-- Separate entitlements for hosts vs audience
-
-### Design Rules
-- Enforce at the **edge + player**, not only origin
-- Short TTL tokens; rotate keys on a schedule
-- Don’t put long-lived secrets in client apps
-- Log denials: abuse and misconfig look the same live
-
----
-<!-- layout: 3-column -->
-# Monitor Quality of Experience
-
-### Integrity
-- Ingest health
-- Encode errors
-- Manifest freshness
-
-### Delivery
-- CDN cache hit
-- Error rates 4xx/5xx
-- Startup failures
-
-### Experience
-- Join time
-- Rebuffer ratio
-- Glass-to-glass lag
-- Audience complaints
-
----
-
-# Reliability Checklist for Live Events
-
-| Area | Ready when… |
-| :--- | :--- |
-| Capacity | Peak + headroom modeled and tested |
-| Redundancy | Dual path ingest & origin failover proven |
-| Observability | QoE dashboards + on-call alerts live |
-| Degrade mode | Lower ladder / higher latency fallback defined |
-| Comms | Status page / stakeholder updates prepared |
-
----
-<!-- layout: 3-column -->
-# Game-Day Timeline
-
-### T–24h
-- Capacity & CDN pre-warm plan
-- Dual-ingest dry run
-- Dashboard & alert check
-- Comms / status page ready
-
-### T–2h
-- Confirm backup path live
-- Spot-check ladder & LL player
-- Token/DRM smoke test
-- On-call bridge open
-
-### T–0 / Live
-- Watch join, rebuffer, lag
-- Degrade ladder if needed
-- Execute runbook - not heroics
-- Stakeholder updates on cadence
+> “Real time” is not a reason to put every interface on Kafka. Name the waiting consumer, or keep the batch job.
 
 ---
 
 # What You Learned
 
-- Described the end-to-end live streaming pipeline and contribution options (RTMP, SRT, WHIP)
-- Explained protocol trade-offs for low-latency delivery (WebRTC, LL-HLS, peers)
-- Identified encoding, edge/CDN, player, and architecture levers that reduce latency
-- Applied scaling, failover, auth/entitlement, QoE monitoring, and game-day practices
+- Explained how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications
+- Decided when a stream is a better fit than a batch job
+- Described how producers, topics, and consumers move data through Kafka
+- Mapped device data and application data onto an enterprise event platform
 
 ---
 
 # Quiz 1 of 3
 
-**What is the best first step when designing for live latency?**
+**A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
 
-- A. Define a glass-to-glass latency budget (product SLA), then choose protocols and buffers to match
-- B. Always pick classic HLS with long segments for interactive auctions
-- C. Optimize only the CDN and ignore segment duration and player buffer
-- D. Assume player startup buffer never affects end-to-end delay
+- A. Keep the nightly file and ask the unit to wait until morning
+- B. Publish a transfer event as it happens so consumers can update while the assignment is current
+- C. Replace the EHR database with a Kafka topic
+- D. Have every downstream system poll the EHR on its own nightly schedule
 
 ---
 
 # Quiz 1: Answer
 
-**What is the best first step when designing for live latency?**
+**A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
 
-**Correct: A.** Define a glass-to-glass latency budget (product SLA), then choose protocols and buffers to match
+**Correct: B.** Publish a transfer event as it happens so consumers can update while the assignment is current
 
-- “Live” is a product SLA: interactive vs broadcast-scale targets differ
-- Latency accumulates across ingest, encode, package, CDN, and player
-- CDN tuning alone won’t fix long segments plus large buffers
-- Lower latency usually trades complexity, capacity, or resilience margin
+- The assignment is already wrong by morning, so the batch deadline misses the consumer
+- Kafka carries the change; the EHR stays the system of record
+- A separate nightly poll from every consumer adds load and coupling
+- The same event can still sink into the warehouse for history
 
 ---
 
 # Quiz 2 of 3
 
-**Which statement best captures WebRTC vs LL-HLS trade-offs?**
+**Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
 
-- A. WebRTC is always the right choice for stadium-scale one-to-many fan-out
-- B. Classic HLS always has lower latency than LL-HLS
-- C. WebRTC targets sub-second interactive use; LL-HLS offers CDN-friendly seconds-scale broadcast low latency
-- D. Protocol choice has no product implications if the origin is configured
+- A. Share one consumer group so Kafka splits events between the two applications
+- B. Use two consumer groups so each application gets the full stream and its own offsets
+- C. Let one application consume and email the other a spreadsheet
+- D. Use the same group id and expect each application to see every partition
 
 ---
 
 # Quiz 2: Answer
 
-**Which statement best captures WebRTC vs LL-HLS trade-offs?**
+**Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
 
-**Correct: C.** WebRTC targets sub-second interactive use; LL-HLS offers CDN-friendly seconds-scale broadcast low latency
+**Correct: B.** Use two consumer groups so each application gets the full stream and its own offsets
 
-- WebRTC (and peers) excel at interactive, sub-second experiences but fan-out is harder at huge scale
-- LL-HLS/LL-DASH use HTTP/CDN delivery with shorter parts for broadcast-scale low latency
-- Classic HLS is simpler to scale but typically higher delay
-- Validate with your player stack - not origin config alone
+- Inside one group, each record is delivered to only one member
+- A second group is how a second application gets its own copy and its own place in the log
+- Sharing a group id is how you scale one application, not how you integrate two
+- One group can lag or fail without stopping the other group’s offsets
 
 ---
+
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
 
 ### Prompt
-You are preparing a large live event with a &lt;5s glass-to-glass target and expected audience spikes.
+A device gateway can publish fridge temperatures. The EHR can publish admission events. Clinical engineering wants live alarms. Compliance still needs 90 days of history in the warehouse.
 
 ### Discuss
-- Which encode, segment/part, edge, and player levers would you tune first?
-- What failover (dual ingest, origin, multi-CDN) and auth checks must be rehearsed before game day?
-- Which QoE signals would you watch live (join time, rebuffer, glass-to-glass)?
+- Which facts should be events, and which can stay on a batch path?
+- Who produces, and which consumer groups do you create?
+- What must be true before either team goes live on the shared platform?
 
 ---
+
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
 
-**You are preparing a large live event with a &lt;5s glass-to-glass target and expected audience spikes.**
+**A device gateway can publish fridge temperatures. The EHR can publish admission events. Clinical engineering wants live alarms. Compliance still needs 90 days of history in the warehouse.**
 
 ### Strong Answers Mention
-- Optimize the largest buffer first; measure end-to-end, not only TTFB
-- Pre-warm capacity; dual ingest / hot-standby origin; degrade modes
-- Edge tokens/DRM smoke-tested; dashboards for ingest, CDN, rebuffer, lag
-- Runbooks with dry runs - not only human panic cutover
+- Alarms are a stream; the 90-day report is a sink into the warehouse
+- The gateway produces device events; the EHR or interface engine produces admissions
+- Separate topics, and separate groups for alarming and for the warehouse
+- A key so one fridge or one patient stays ordered
+- Schema, access, retention, and PHI handling agreed before go-live
+- An owner for consumer lag on the alarm path
 
 ### Watch For
-- Protocol choice mismatched to interactivity vs scale needs
-- Failover or entitlement checks never rehearsed on the main event
-- Watching only origin metrics while viewers rebuffer
+- One shared consumer group for unrelated applications
+- Treating Kafka as a system of record that replaces the EHR
+- Putting broad PHI on a widely readable topic because it is internal
+- Assuming broker latency is the end-to-end latency the nurse will feel
 
 ---
-<!-- layout: title-image -->
+
+<!-- layout: stacked -->
 # Questions and Answers
 
-![Questions](images/qa.png)
+![Questions and Answers](images/qa.png)
