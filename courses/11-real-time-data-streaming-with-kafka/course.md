@@ -1,4 +1,5 @@
 <!-- course-title: HCA: Real-Time Data Streaming with Kafka -->
+
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -6,9 +7,7 @@
 # with Kafka and Confluent
 
 ## How events move from sources through Confluent Cloud to downstream applications
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -20,18 +19,14 @@
 - Let’s get started!
 
 ![Welcome](images/welcome.png)
-
 ---
-
 # Course Objectives
 
-- **Explain how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications**
+- Explain how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications
 - Decide when a stream is a better fit than a batch job
 - Describe how producers, topics, and consumers move data through Kafka
 - Map device data and application data onto an enterprise event platform
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -41,9 +36,7 @@
 - Questions and Answers
 
 ![Agenda](images/agenda.png)
-
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -53,9 +46,7 @@
 - Architects choosing between batch jobs and event streaming
 
 ![Who Should Attend](images/who-should-attend.png)
-
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -65,37 +56,29 @@
 - No prior Kafka administration experience required
 
 ![Prerequisites](images/prerequisites.png)
-
 ---
-
 <!-- layout: navigation -->
 # Course Roadmap
 
 - **Stream or Batch**
 - How Kafka Moves Data
 - Low-Latency Event-Driven Design
-
 ---
-
 # Streaming Means Events
 
-- **This session is data and event streaming on Kafka, not audio or video**
+- This session is data and event streaming on Kafka, not audio or video
 - A stream is an unbounded sequence of facts: a transfer, a vital sign, an order, an alarm
 - A producer appends each fact to a topic; consumers read that log and act
 - Confluent Cloud is the managed Kafka platform those teams share
 
 > [!NOTE]
 > “Near real time” means a consumer can act in seconds, while the situation is still true. It is not a video latency target and it is not high-frequency trading.
-
 ---
-
 <!-- layout: title-image -->
 # Batch and Stream Side by Side
 
 ![Batch collects a bounded set and runs on a schedule. An event stream publishes each fact as it happens so consumers can act while it is still true.](images/batch-vs-stream.png)
-
 ---
-
 <!-- layout: 2-column -->
 # What Each One Optimizes For
 
@@ -115,9 +98,7 @@
 
 > [!TIP]
 > Pick from the consumer’s deadline. If nobody acts until morning, a nightly job is not a failure of streaming.
-
 ---
-
 <!-- layout: card-layout -->
 # Three Questions Before You Choose
 
@@ -132,9 +113,7 @@
 ### What stays the source of truth?
 - Kafka moves the change. It does not replace the EHR, the device, or the warehouse.
 - Keep the system of record, and stream the fact that it changed.
-
 ---
-
 <!-- layout: 2-column -->
 # Two Questions, Two Designs
 
@@ -149,9 +128,7 @@
 - The dataset is bounded and complete
 - A warehouse job is the right shape
 - A topic would add cost and no waiting consumer
-
 ---
-
 <!-- layout: 3-column -->
 # Where the Work Belongs
 
@@ -172,37 +149,29 @@
 - “What room is this patient in?” can stay a request
 - Do not stream a fact nobody consumes
 - An unread topic is just storage
-
 ---
-
 # The Warehouse Still Matters
 
-- **Streaming a fact does not retire the batch path that explains history**
+- Streaming a fact does not retire the batch path that explains history
 - Operational consumers need the event now; analysts often need a complete table later
 - A sink can land the same topic in the warehouse without a second extract from the source
 - Batch remains the right tool for rebuilds, reconciliations, and closed reporting periods
 
 > [!WARNING]
 > Do not rip out a working batch job because a platform exists. Add a stream where a consumer is actually waiting.
-
 ---
-
 <!-- layout: navigation -->
 # Course Roadmap
 
 - Stream or Batch
 - **How Kafka Moves Data**
 - Low-Latency Event-Driven Design
-
 ---
-
 <!-- layout: title-image -->
 # From Source to Downstream System
 
 ![Sources reach Kafka through an application producer or a connector. The topic lives on Confluent Cloud. Separate consumer groups read the same log: one acts, one stores history.](images/kafka-data-flow.png)
-
 ---
-
 <!-- layout: 2-column -->
 # Two Ways to Produce
 
@@ -222,9 +191,7 @@
 
 > [!NOTE]
 > Clinical systems often reach Kafka through an interface engine. That engine is the producer, even when the EHR remains the system of record.
-
 ---
-
 <!-- layout: 2-column -->
 # Anatomy of a Transfer Event
 
@@ -249,15 +216,13 @@
 
 > [!IMPORTANT]
 > Put the business time in the payload. The time Kafka stored the record is not the time the patient moved.
-
 ---
-
 # A Producer Writes a Record
 
-- **A successful produce appends the record and returns an acknowledgement**
+- A successful producer appends the record and returns an acknowledgment
 - The key keeps one patient, device, or order on a single partition
 - The value is the fact, described by a schema consumers can rely on
-- Until the acknowledgement returns, downstream systems have not seen the event
+- Until the acknowledgment returns, downstream systems have not seen the event
 
 ```python
 producer.produce(
@@ -267,9 +232,7 @@ producer.produce(
 )
 producer.flush()
 ```
-
 ---
-
 <!-- layout: 3-column -->
 # Topic, Partition, Offset
 
@@ -290,19 +253,15 @@ producer.flush()
 - Stored per consumer group
 - Commit means “handled”
 - Replay starts further back
-
 ---
-
 <!-- layout: title-image -->
 # One Topic, Two Kinds of Readers
 
 ![One topic has three partitions. The bed-board group splits them across two consumers so each event is read once. The nutrition group has its own offsets and receives every event.](images/consumer-groups.png)
-
 ---
-
 # A Consumer Reads and Commits
 
-- **Poll, handle, then commit: that is the consumer’s contract with the group**
+- Poll, handle, then commit: that is the consumer’s contract with the group
 - Two instances of one application share a group id and split the partitions
 - Two applications that both need every event use two group ids
 - Extra consumers beyond the partition count sit idle; they do not add throughput
@@ -316,9 +275,7 @@ consumer.commit(msg)
 
 > [!WARNING]
 > A shared group id splits the stream. It does not give each application a full copy. Commit only after a successful handle, and make a second delivery safe.
-
 ---
-
 <!-- layout: card-layout -->
 # How a Healthy Topic Goes Wrong
 
@@ -333,30 +290,24 @@ consumer.commit(msg)
 ### A bad record
 - One poison payload can stall every later event on that partition.
 - Route the failure aside. Do not hold every patient behind one bad record.
-
 ---
-
 # The Log Keeps the Fact
 
-- **A consumer does not delete an event by reading it**
+- A consumer does not delete an event by reading it
 - Kafka retains the topic for a configured time, then drops older records
 - A new group can replay whatever is still inside that window
 - Long compliance history belongs in the warehouse sink, not in an endless hot topic
 
 > [!IMPORTANT]
 > If an alarm consumer is offline longer than retention, those events are gone. Set retention for the outage you still intend to recover by replay.
-
 ---
-
 <!-- layout: navigation -->
 # Course Roadmap
 
 - Stream or Batch
 - How Kafka Moves Data
 - **Low-Latency Event-Driven Design**
-
 ---
-
 <!-- layout: 2-column -->
 # Ask, or Publish the Fact
 
@@ -376,19 +327,15 @@ consumer.commit(msg)
 
 > [!NOTE]
 > An event announces a fact. It is not a command to every downstream system. Each consumer decides what to do with PatientTransferred.
-
 ---
-
 <!-- layout: title-image -->
 # A Shared Platform, Many Teams
 
 ![Producing teams publish EHR, device, and application facts onto Confluent Cloud. Consuming teams read with their own groups: operations, alerting, and a warehouse sink. Platform support owns access, schema policy, and retention.](images/enterprise-event-platform.png)
-
 ---
-
 # Where the Seconds Go
 
-- **Broker time is rarely the latency people feel**
+- Broker time is rarely the latency people feel
 - The budget runs from the source event to a person or system acting
 - Kafka usually makes an acknowledged record readable in milliseconds
 - The rest sits in the gateway, the consumer, or a stream processor such as Flink
@@ -402,9 +349,7 @@ consumer.commit(msg)
 
 > [!TIP]
 > When an alarm is late, check consumer lag and the gateway interval before you blame the cluster.
-
 ---
-
 <!-- layout: 2-column -->
 # Device Data and Application Data
 
@@ -424,9 +369,7 @@ consumer.commit(msg)
 
 > [!NOTE]
 > Both shapes use the same topic, key, group, and offset model. The producer in front of the device is what changes.
-
 ---
-
 <!-- layout: 3-column -->
 # Three Uses of the Same Platform
 
@@ -447,9 +390,7 @@ consumer.commit(msg)
 - The owning application produces
 - Other systems subscribe instead of polling
 - Schema Registry holds the contract
-
 ---
-
 <!-- layout: 2-column -->
 # Who Owns What
 
@@ -471,9 +412,7 @@ consumer.commit(msg)
 
 > [!IMPORTANT]
 > Platform support keeps the path healthy. They do not decide what PatientTransferred means. That stays with the producing team.
-
 ---
-
 <!-- layout: card-layout -->
 # Before a Team Goes Live
 
@@ -492,9 +431,7 @@ consumer.commit(msg)
 ### Lag
 - Name an owner for consumer lag on any path that pages a person.
 - A quiet consumer may be down, not idle.
-
 ---
-
 <!-- layout: 3-column -->
 # Stream, Batch, or Both
 
@@ -520,18 +457,14 @@ consumer.commit(msg)
 
 > [!WARNING]
 > “Real time” is not a reason to put every interface on Kafka. Name the waiting consumer, or keep the batch job.
-
 ---
-
 # What You Learned
 
 - Explained how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications
 - Decided when a stream is a better fit than a batch job
 - Described how producers, topics, and consumers move data through Kafka
 - Mapped device data and application data onto an enterprise event platform
-
 ---
-
 # Quiz 1 of 3
 
 **A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
@@ -540,12 +473,10 @@ consumer.commit(msg)
 - B. Publish a transfer event as it happens so consumers can update while the assignment is current
 - C. Replace the EHR database with a Kafka topic
 - D. Have every downstream system poll the EHR on its own nightly schedule
-
 ---
-
 # Quiz 1: Answer
 
-**A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
+**A unit needs the current bed assignment within a minute of a transfer. Today, that fact arrives in a nightly file. What is the better fit?**
 
 **Correct: B.** Publish a transfer event as it happens so consumers can update while the assignment is current
 
@@ -553,9 +484,7 @@ consumer.commit(msg)
 - Kafka carries the change; the EHR stays the system of record
 - A separate nightly poll from every consumer adds load and coupling
 - The same event can still sink into the warehouse for history
-
 ---
-
 # Quiz 2 of 3
 
 **Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
@@ -564,9 +493,7 @@ consumer.commit(msg)
 - B. Use two consumer groups so each application gets the full stream and its own offsets
 - C. Let one application consume and email the other a spreadsheet
 - D. Use the same group id and expect each application to see every partition
-
 ---
-
 # Quiz 2: Answer
 
 **Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
@@ -577,9 +504,7 @@ consumer.commit(msg)
 - A second group is how a second application gets its own copy and its own place in the log
 - Sharing a group id is how you scale one application, not how you integrate two
 - One group can lag or fail without stopping the other group’s offsets
-
 ---
-
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
 
@@ -590,9 +515,7 @@ A device gateway can publish fridge temperatures. The EHR can publish admission 
 - Which facts should be events, and which can stay on a batch path?
 - Who produces, and which consumer groups do you create?
 - What must be true before either team goes live on the shared platform?
-
 ---
-
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
 
@@ -611,9 +534,7 @@ A device gateway can publish fridge temperatures. The EHR can publish admission 
 - Treating Kafka as a system of record that replaces the EHR
 - Putting broad PHI on a widely readable topic because it is internal
 - Assuming broker latency is the end-to-end latency the nurse will feel
-
 ---
-
 <!-- layout: stacked -->
 # Questions and Answers
 
