@@ -23,5 +23,5 @@ Before creating or editing **labs**, read and follow:
 
 ## Preview
 
-Slides: https://roitraining.github.io/md-to-html-slides-viewer/  
+Slides: https://slidesv.roitraining.com/  
 Labs: https://github.com/roitraining/md-to-html-lab-viewer  

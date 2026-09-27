@@ -86,7 +86,7 @@ Suggested sequence:
 ### Slides
 
 1. Push your repo to GitHub (public, or ensure the viewer can read it).
-2. Open the [HTML Slides Viewer](https://roitraining.github.io/md-to-html-slides-viewer/).
+2. Open the [HTML Slides Viewer](https://slidesv.roitraining.com/).
 3. **Open → GitHub**, paste the URL to your `course/` folder (or a single `.md` file).
 
 Local alternative: run any static server in a checkout of the slides viewer and pass `?course=` at your Markdown URL.
