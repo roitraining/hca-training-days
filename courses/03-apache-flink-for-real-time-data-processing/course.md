@@ -1,4 +1,11 @@
 <!-- course-title: HCA: Apache Flink for Real-Time Data -->
+
+<!-- layout: full-bleed -->
+# Welcome Slide
+![ROI Logo](images/hca-1.png)
+
+---
+
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -539,3 +546,22 @@ Describe a real-time use case on your team (fraud, telemetry, alerting, or click
 # Questions and Answers
 
 ![Questions](images/qa.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Survey
+![ROI Logo](images/hca-2.png)
+
+---
+
+<!-- layout: full-bleed -->
+# My Path
+![ROI Logo](images/hca-3.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Thank You
+![ROI Logo](images/hca-4.png)
+

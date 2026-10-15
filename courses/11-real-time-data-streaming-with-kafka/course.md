@@ -1,5 +1,11 @@
 <!-- course-title: Real-Time Data Streaming with Kafka -->
 
+<!-- layout: full-bleed -->
+# Welcome Slide
+![ROI Logo](images/hca-1.png)
+
+---
+
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -539,3 +545,22 @@ A device gateway can publish fridge temperatures. The EHR can publish admission 
 # Questions and Answers
 
 ![Questions and Answers](images/qa.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Survey
+![ROI Logo](images/hca-2.png)
+
+---
+
+<!-- layout: full-bleed -->
+# My Path
+![ROI Logo](images/hca-3.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Thank You
+![ROI Logo](images/hca-4.png)
+

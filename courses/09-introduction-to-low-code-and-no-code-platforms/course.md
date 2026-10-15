@@ -1,4 +1,11 @@
 <!-- course-title: HCA: Introduction to Low-Code & No-Code -->
+
+<!-- layout: full-bleed -->
+# Welcome Slide
+![ROI Logo](images/hca-1.png)
+
+---
+
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -383,3 +390,22 @@ A business team wants to automate an internal request → approve → notify flo
 # Questions and Answers
 
 ![Questions](images/qa.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Survey
+![ROI Logo](images/hca-2.png)
+
+---
+
+<!-- layout: full-bleed -->
+# My Path
+![ROI Logo](images/hca-3.png)
+
+---
+
+<!-- layout: full-bleed -->
+# Thank You
+![ROI Logo](images/hca-4.png)
+
