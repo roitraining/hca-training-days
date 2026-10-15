@@ -15,9 +15,9 @@ Open a course in the [ROI Training Course Slide Viewer](https://slidesv.roitrain
 10. [Webex Tips and Tricks](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/18-webex-tips-and-tricks)
 
 MISSING:
-Introduction to Developer Productivity and Standardization
-DevSecOps Program Update
-Apache Flink for Real-Time Data Processing
+* Introduction to Developer Productivity and Standardization
+* DevSecOps Program Update
+* Apache Flink for Real-Time Data Processing
 
 IS THIS CANCELLED? [Introduction to Low-Code & No-Code](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/09-introduction-to-low-code-and-no-code-platforms)
 
