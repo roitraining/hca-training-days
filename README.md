@@ -5,21 +5,24 @@ Open a course in the [ROI Training Course Slide Viewer](https://slidesv.roitrain
 
 1. [AI-Powered Onboarding and Enablement](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/02-ai-powered-onboarding-and-user-enablement-solutions)
 2. [GenAI for Software Engineering](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/08-introduction-to-generative-ai-for-software-engineering)
-3. [Apache Flink for Real-Time Data](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/03-apache-flink-for-real-time-data-processing)
-4. [Data Literacy](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/19-data-literacy-making-better-decisions)
-5. [DevSecOps Program Update](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/04-devsecops-program-update)
-6. [Web Security Foundations](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/16-web-security-foundations)5. [Generative AI for Leaders](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/05-generative-ai-for-leaders)
-7. [Web and Mobile App Security](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/15-web-and-mobile-application-security)6. [Innovation Workshop AI & Streaming](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/06-innovation-workshop-new-ai-and-streaming-use-cases)
-8. [Security Principles in Google Cloud](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/14-security-in-google-cloud)7. [Developer Productivity & Standardization](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/07-introduction-to-developer-productivity-and-standardization)
-9. [Professional Cloud Security Engineer Cert](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/13-professional-cloud-security-engineer-certification)
-10. [Real-Time Data Streaming with Kafka](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/11-real-time-data-streaming-with-kafka)
-11. [Practical Security and Cryptography](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/17-practical-security-and-cryptography)
-12. [Webex Tips and Tricks](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/18-webex-tips-and-tricks)
+3. [Data Literacy](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/19-data-literacy-making-better-decisions)
+4. [Web Security Foundations](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/16-web-security-foundations)
+5. [Web and Mobile App Security](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/15-web-and-mobile-application-security)
+6. [Security Principles in Google Cloud](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/14-security-in-google-cloud)
+7. [Professional Cloud Security Engineer Cert](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/13-professional-cloud-security-engineer-certification)
+8. [Developer Productivity & Standardization](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/07-introduction-to-developer-productivity-and-standardization)
+9. [DevSecOps Program Update](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/04-devsecops-program-update)
+10. [Apache Flink for Real-Time Data](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/03-apache-flink-for-real-time-data-processing)
+11. [Real-Time Data Streaming with Kafka](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/11-real-time-data-streaming-with-kafka)
+12. [Practical Security and Cryptography](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/17-practical-security-and-cryptography)
+13. [Webex Tips and Tricks](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/18-webex-tips-and-tricks)
 
-MISSING:
-* Introduction to Developer Productivity and Standardization
-* DevSecOps Program Update
-* Apache Flink for Real-Time Data Processing
+
+
+
+IS THIS CANCELLED? [Generative AI for Leaders](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/05-generative-ai-for-leaders)
+
+IS THIS CANCELLED? [Innovation Workshop AI & Streaming](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/06-innovation-workshop-new-ai-and-streaming-use-cases)
 
 IS THIS CANCELLED? [Introduction to Low-Code & No-Code](https://slidesv.roitraining.com/?course=https://github.com/roitraining/hca-training-days/tree/main/courses/09-introduction-to-low-code-and-no-code-platforms)
 
