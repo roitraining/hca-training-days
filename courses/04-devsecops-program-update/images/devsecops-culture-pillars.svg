@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+
+  <line x1="372" y1="180" x2="402" y2="180" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="776" y1="180" x2="806" y2="180" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="187" cy="100" r="42" fill="#e8f0fe"/>
+    <path d="M160,100 h18 m12,0 h18" stroke="#1a73e8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M168,88 c0,-12 12,-18 19,-10 c7,-8 19,-2 19,10" fill="none" stroke="#1a73e8" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="206" cy="80" r="6" fill="#1a73e8"/>
+    <text x="187" y="200" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Shared Ownership</text>
+    <text x="187" y="250" text-anchor="middle" font-size="22" fill="#4a5568">Security is a team sport</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="416" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="591" cy="100" r="42" fill="#e6f4ea"/>
+    <circle cx="580" cy="100" r="15" fill="none" stroke="#34a853" stroke-width="3.5"/>
+    <circle cx="580" cy="100" r="5" fill="#34a853"/>
+    <path d="M580,78 v-5 M580,127 v5 M559,100 h-5 M601,100 h5" stroke="#34a853" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M606,88 l16,-5 v16 c0,12 -9,21 -16,24 c-7,-3 -16,-12 -16,-24 v-16 z" fill="none" stroke="#34a853" stroke-width="3"/>
+    <text x="591" y="200" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Automation First</text>
+    <text x="591" y="250" text-anchor="middle" font-size="22" fill="#4a5568">Guardrails over gatekeeping</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="820" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="995" cy="100" r="42" fill="#fef7e0"/>
+    <path d="M974,100 c0,-12 10,-20 21,-12 c11,-8 21,0 21,12 c0,12 -10,20 -21,12 c-11,8 -21,0 -21,-12 z" fill="none" stroke="#e37400" stroke-width="3.5"/>
+    <text x="995" y="200" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Fast Feedback</text>
+    <text x="995" y="250" text-anchor="middle" font-size="22" fill="#4a5568">Fix in the same sprint</text>
+  </g>
+</svg>

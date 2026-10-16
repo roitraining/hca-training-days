@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 420" width="1220" height="420" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+
+  <text x="610" y="42" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Shift-Left Security Across the Secure SDLC</text>
+
+  <g filter="url(#shadow)">
+    <rect x="12" y="72" width="212" height="280" rx="14" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="118" cy="150" r="36" fill="#e8f0fe"/>
+    <rect x="100" y="134" width="36" height="28" rx="3" fill="none" stroke="#1a73e8" stroke-width="3"/>
+    <path d="M106,144 h24 M106,152 h16 M106,160 h20" stroke="#1a73e8" stroke-width="2.5"/>
+    <text x="118" y="240" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Plan and</text>
+    <text x="118" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Design</text>
+  </g>
+
+  <line x1="232" y1="212" x2="254" y2="212" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="262" y="72" width="212" height="280" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="368" cy="150" r="36" fill="#e6f4ea"/>
+    <path d="M352,136 l-12,14 l12,14 M384,136 l12,14 l-12,14" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="368" y="256" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2332">Code</text>
+  </g>
+
+  <line x1="482" y1="212" x2="504" y2="212" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="512" y="72" width="212" height="280" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="618" cy="150" r="36" fill="#fef7e0"/>
+    <circle cx="618" cy="150" r="14" fill="none" stroke="#e37400" stroke-width="3.5"/>
+    <path d="M618,130 v-4 M618,174 v4 M598,150 h-4 M638,150 h4" stroke="#e37400" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="636" cy="166" r="9" fill="#fef7e0" stroke="#e37400" stroke-width="2.5"/>
+    <path d="M631,166 l3,3 l6,-7" fill="none" stroke="#e37400" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="618" y="240" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Build and</text>
+    <text x="618" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Test</text>
+  </g>
+
+  <line x1="732" y1="212" x2="754" y2="212" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="762" y="72" width="212" height="280" rx="14" fill="#ffffff" stroke="#7b61ff" stroke-width="2.5"/>
+    <circle cx="868" cy="150" r="36" fill="#f0ebff"/>
+    <path d="M868,130 v32 M854,148 l14,-18 l14,18" fill="none" stroke="#7b61ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="868" y="240" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Release and</text>
+    <text x="868" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2332">Deploy</text>
+  </g>
+
+  <line x1="982" y1="212" x2="1004" y2="212" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="1012" y="72" width="196" height="280" rx="14" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <circle cx="1110" cy="150" r="36" fill="#fce8e6"/>
+    <path d="M1090,150 c0,-11 9,-18 20,-11 c11,-7 20,0 20,11 c0,11 -9,18 -20,11 c-11,7 -20,0 -20,-11 z" fill="none" stroke="#ea4335" stroke-width="3.5"/>
+    <text x="1110" y="240" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2332">Operate and</text>
+    <text x="1110" y="272" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2332">Monitor</text>
+  </g>
+
+  <text x="610" y="396" text-anchor="middle" font-size="20" fill="#4a5568">Find and fix issues earlier: cheaper, faster, safer than late gates only</text>
+</svg>

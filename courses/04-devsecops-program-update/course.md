@@ -90,10 +90,35 @@
 > This session is a program briefing: shared language, pipeline map, maturity snapshot, and next moves.
 
 ---
+
+# So Many Acronyms
+
+| Acronym | Short For | Meaning |
+| :--- | :--- | :--- |
+| DevSecOps | Development, Security, and Operations | Security embedded in the same build-and-run loop as delivery |
+| DevOps | Development and Operations | Culture and practices that join build and run |
+| CI/CD | Continuous Integration / Continuous Delivery | Automated build, test, and release pipelines |
+| SDLC | Software Development Life Cycle | Plan → code → build → deploy → operate |
+| SCA | Software Composition Analysis | Finds vulnerable open-source libraries and license risk |
+| SAST | Static Application Security Testing | Scans source for insecure coding patterns |
+| DAST | Dynamic Application Security Testing | Probes a running app or API for exploitable issues |
+| IAST | Interactive Application Security Testing | Instruments a running app to find issues during tests |
+| IaC | Infrastructure as Code | Cloud and Kubernetes config expressed as code |
+| SBOM | Software Bill of Materials | Inventory of components in an app or image |
+| CVE | Common Vulnerabilities and Exposures | Public ID for a known security flaw |
+| XSS | Cross-Site Scripting | Injection that runs script in another user’s browser |
+| OPA | Open Policy Agent | Policy-as-code engine used to enforce rules |
+| MTTR | Mean Time To Remediate | How long critical findings take to fix |
+| SLA | Service Level Agreement | Timebox for severity-based remediation |
+| KPI | Key Performance Indicator | Metric used to track program outcomes |
+| PR | Pull Request | Proposed code change reviewed before merge |
+| K8s | Kubernetes | Container orchestration platform |
+
+---
 <!-- layout: title-image -->
 # Culture Pillars
 
-![DevSecOps culture pillars](images/devsecops-culture-pillars.png)
+![DevSecOps culture pillars](images/devsecops-culture-pillars.svg)
 
 ---
 <!-- layout: 2-column -->
@@ -113,7 +138,7 @@
 <!-- layout: image-only -->
 # Shift-Left and the Secure SDLC
 
-![Shift-left SDLC](images/shift-left-sdlc.png)
+![Shift-left SDLC](images/shift-left-sdlc.svg)
 
 ---
 
@@ -158,7 +183,7 @@
 <!-- layout: title-image -->
 # Automated Guardrails in CI/CD
 
-![Pipeline security scans](images/pipeline-security-scans.png)
+![Pipeline security scans](images/pipeline-security-scans.svg)
 
 ---
 <!-- layout: 2-column -->
@@ -262,7 +287,7 @@
 <!-- layout: title-image -->
 # DevSecOps Maturity Model
 
-![DevSecOps maturity model](images/devsecops-maturity-model.png)
+![DevSecOps maturity model](images/devsecops-maturity-model.svg)
 
 ---
 
@@ -282,7 +307,7 @@
 <!-- layout: title-image -->
 # Assess → Prioritize → Roadmap
 
-![Assess prioritize roadmap](images/assess-prioritize-roadmap.png)
+![Assess prioritize roadmap](images/assess-prioritize-roadmap.svg)
 
 ---
 <!-- layout: 2-column -->

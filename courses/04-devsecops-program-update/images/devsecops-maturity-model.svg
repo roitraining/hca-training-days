@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620" width="1100" height="620" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="12" width="1068" height="136" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <rect x="16" y="12" width="100" height="136" rx="14" fill="#34a853"/>
+    <rect x="80" y="12" width="36" height="136" fill="#34a853"/>
+    <text x="66" y="98" text-anchor="middle" font-size="48" font-weight="700" fill="#ffffff">4</text>
+    <text x="150" y="68" font-size="32" font-weight="700" fill="#1a2332">Optimizing</text>
+    <text x="150" y="112" font-size="22" fill="#4a5568">Risk-based controls - Continuous improvement - Metrics-driven</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="168" width="1068" height="136" rx="14" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <rect x="16" y="168" width="100" height="136" rx="14" fill="#1a73e8"/>
+    <rect x="80" y="168" width="36" height="136" fill="#1a73e8"/>
+    <text x="66" y="254" text-anchor="middle" font-size="48" font-weight="700" fill="#ffffff">3</text>
+    <text x="150" y="224" font-size="32" font-weight="700" fill="#1a2332">Defined</text>
+    <text x="150" y="268" font-size="22" fill="#4a5568">Standard pipelines - Owned findings - Remediation SLAs</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="324" width="1068" height="136" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <rect x="16" y="324" width="100" height="136" rx="14" fill="#e37400"/>
+    <rect x="80" y="324" width="36" height="136" fill="#e37400"/>
+    <text x="66" y="410" text-anchor="middle" font-size="48" font-weight="700" fill="#ffffff">2</text>
+    <text x="150" y="380" font-size="32" font-weight="700" fill="#1a2332">Managed</text>
+    <text x="150" y="424" font-size="22" fill="#4a5568">CI checks on key repos - Basic severity policy</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="480" width="1068" height="128" rx="14" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <rect x="16" y="480" width="100" height="128" rx="14" fill="#ea4335"/>
+    <rect x="80" y="480" width="36" height="128" fill="#ea4335"/>
+    <text x="66" y="560" text-anchor="middle" font-size="48" font-weight="700" fill="#ffffff">1</text>
+    <text x="150" y="532" font-size="32" font-weight="700" fill="#1a2332">Initial</text>
+    <text x="150" y="574" font-size="22" fill="#4a5568">Ad hoc scans - Heroics - Tribal knowledge</text>
+  </g>
+</svg>

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 360" width="1180" height="360" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+
+  <line x1="372" y1="180" x2="402" y2="180" stroke="#6b7c8f" stroke-width="3.5" marker-end="url(#arr)"/>
+  <line x1="776" y1="180" x2="806" y2="180" stroke="#6b7c8f" stroke-width="3.5" marker-end="url(#arr)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="187" cy="100" r="42" fill="#e8f0fe"/>
+    <circle cx="181" cy="94" r="15" fill="none" stroke="#1a73e8" stroke-width="3.5"/>
+    <line x1="193" y1="106" x2="206" y2="119" stroke="#1a73e8" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="174" cy="88" r="4" fill="#1a73e8"/>
+    <circle cx="188" cy="88" r="4" fill="#1a73e8"/>
+    <circle cx="181" cy="102" r="4" fill="#1a73e8"/>
+    <text x="187" y="200" text-anchor="middle" font-size="34" font-weight="700" fill="#1a2332">Assess</text>
+    <text x="187" y="250" text-anchor="middle" font-size="20" fill="#4a5568">People, process, tooling, metrics</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="416" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="591" cy="100" r="42" fill="#e6f4ea"/>
+    <line x1="591" y1="78" x2="591" y2="122" stroke="#34a853" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="564" y1="86" x2="618" y2="86" stroke="#34a853" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M564,86 L552,106 h24 z" fill="none" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M618,86 L606,106 h24 z" fill="none" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="591" cy="78" r="5" fill="#34a853"/>
+    <text x="591" y="200" text-anchor="middle" font-size="34" font-weight="700" fill="#1a2332">Prioritize</text>
+    <text x="591" y="250" text-anchor="middle" font-size="20" fill="#4a5568">Risk x effort, quick wins</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="820" y="12" width="350" height="336" rx="16" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="995" cy="100" r="42" fill="#fef7e0"/>
+    <path d="M972,120 C980,102 988,112 995,98 C1002,84 1010,94 1018,80" fill="none" stroke="#e37400" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="1018" y1="80" x2="1018" y2="122" stroke="#e37400" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1018,80 h16 l-4,7 l4,7 h-16 z" fill="#e37400"/>
+    <text x="995" y="200" text-anchor="middle" font-size="34" font-weight="700" fill="#1a2332">Roadmap</text>
+    <text x="995" y="250" text-anchor="middle" font-size="20" fill="#4a5568">90-day moves, owners and KPIs</text>
+  </g>
+</svg>
