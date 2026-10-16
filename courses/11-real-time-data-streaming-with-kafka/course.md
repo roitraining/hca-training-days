@@ -8,7 +8,7 @@
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Real-Time Data Streaming
-# with Kafka and Confluent
+# with Kafka 
 
 ## How events move from sources to applications
 ---

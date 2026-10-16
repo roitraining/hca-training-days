@@ -1,4 +1,4 @@
-<!-- course-title: Developer Productivity and Standardization -->
+<!-- course-title: Introduction to Developer Productivity and Standardization -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

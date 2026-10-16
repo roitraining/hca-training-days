@@ -7,8 +7,8 @@
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
-# AI-Powered Onboarding and
-# User Enablement Solutions
+# AI-Powered Onboarding 
+# and Enablement
 
 ## Shorten time-to-productivity with assistants, guidance, and personalized learning
 ---
