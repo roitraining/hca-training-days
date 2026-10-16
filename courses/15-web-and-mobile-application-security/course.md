@@ -3,19 +3,15 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Web and Mobile
 # Application Security
 
-## Secure design, the OWASP Top 10, and the encryption and testing that keep apps safe
-
+## Secure design that keeps apps safe
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Secure web and mobile applications against common vulnerabilities using sound design, encryption, and testing
@@ -36,9 +31,7 @@
 - Identify the most common web and mobile vulnerabilities (OWASP Top 10)
 - Explain how encryption protects confidentiality and integrity
 - Recognize automated tools for testing application vulnerabilities
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -59,12 +51,11 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
 - No prior security experience required
-- Basic familiarity with web or mobile development is helpful, but not required
+- Familiarity with web or mobile development is helpful, but not required
 
 ![Prerequisites](images/prerequisites.png)
 ---
@@ -74,31 +65,25 @@
 - **Security Fundamentals**
 - The OWASP Top 10
 - Defenses and Testing
-
 ---
-
 # Groundwork: Why Application Security Matters
 
 - Most breaches trace back to application-layer weaknesses, not just network perimeter failures
 - Security is cheapest to fix at design time and most expensive after release
 - Every application has two attack surfaces: the code, and the people who use it
 - This segment sets the shared vocabulary the rest of the course builds on
-
 ---
 <!-- layout: title-image -->
 # The CIA Triad
 
 ![The CIA triad: Confidentiality, Integrity, and Availability](images/ch15-cia-triad.png)
-
 ---
-
 # Confidentiality, Integrity, Availability
 
 - Confidentiality: only authorized users and systems can read the data
 - Integrity: data and code aren’t altered without detection
 - Availability: the app stays usable under normal load and under attack
 - Most vulnerabilities you’ll see today map back to breaking one of these three properties
-
 ---
 <!-- layout: 2-column -->
 # Secure Code vs. Secure Users
@@ -112,9 +97,7 @@
 - Clear security prompts, not dark patterns
 - Sensible defaults for risky settings
 - Educate without blaming
-
 ---
-
 # Where Security Fits in the Lifecycle
 
 | Stage | Security activity |
@@ -124,9 +107,7 @@
 | Test | Automated (SAST / DAST) scanning |
 | Release | Dependency and configuration checks |
 | Operate | Monitoring and patching |
-
 ---
-
 # Introducing OWASP
 
 - OWASP (Open Worldwide Application Security Project) is a nonprofit community publishing free, vendor-neutral security guidance
@@ -136,7 +117,6 @@
 
 > [!NOTE]
 > The OWASP Top 10 is a snapshot of common risk categories, not an exhaustive checklist.
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -144,26 +124,21 @@
 - Security Fundamentals
 - **The OWASP Top 10**
 - Defenses and Testing
-
 ---
-
 # Know the Threats
 
 - The OWASP Top 10 groups real-world vulnerabilities into risk categories, not a trivia list
-- Each category represents a pattern of exploits, not a single bug
+- Categories represent a pattern of exploits, not a single bug
 - We’ll walk the web list first, then the mobile-specific list
 - Watch for the categories that show up in both
 
 ![OWASP Top 10](images/owasp-image.png)
-
 ---
 <!-- layout: title-image -->
 # OWASP Top 10: Web vs. Mobile
 
 ![OWASP Top 10 highlights for web applications (injection, broken access control, XSS) versus mobile applications (insecure storage, communication, authentication)](images/ch15-web-vs-mobile-top10.png)
-
 ---
-
 # Injection
 
 - Untrusted input reaches an interpreter (SQL, OS command, LDAP, etc.) as code, not data
@@ -174,9 +149,7 @@
 ```java
 String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ```
-
 ---
-
 # Cross-Site Scripting (XSS)
 
 - Untrusted input is rendered back into a page without proper escaping
@@ -187,7 +160,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ```html
 <div>Welcome, <%= request.getParameter("name") %></div>
 ```
-
 ---
 <!-- layout: 2-column -->
 # Broken Access Control and Authentication
@@ -199,9 +171,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ### Broken Authentication
 - Weak session handling, credential stuffing, missing MFA
 - Common cause: rolling your own auth instead of a vetted library
-
 ---
-
 # More Web Categories to Know
 
 | Category | Risk pattern |
@@ -212,9 +182,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 > [!NOTE]
 > The exact ranking and names shift with each OWASP Top 10 refresh: know the patterns, not just the current list.
-
 ---
-
 # Mobile Apps: Same Principles, Different Surface
 
 - Mobile adds a local device, app store, and platform layer to the same core risks
@@ -223,7 +191,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - The OWASP Mobile Top 10 reflects these differences
 
 ![Mobile Phone Security](images/criminal.png)
-
 ---
 <!-- layout: 2-column -->
 # Mobile Top Risks: Storage and Communication
@@ -235,9 +202,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ### Insecure Communication
 - Data sent over HTTP, or TLS misconfigured or unvalidated
 - Defense: enforce TLS everywhere; certificate pinning for high-risk apps
-
 ---
-
 # Insecure Authentication (Mobile)
 
 - Weak or missing device-level authentication (PIN, biometrics)
@@ -247,7 +212,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 
 ![Mobile Phone Security](images/pin.png)
-
 ---
 <!-- layout: 2-column -->
 # Web and Mobile: Shared Lessons
@@ -261,7 +225,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Mobile adds on-device data and app-store review cycles
 - Web adds session and cookie-specific risks
 - Both need server-side enforcement as the real control
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -269,40 +232,32 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Security Fundamentals
 - The OWASP Top 10
 - **Defenses and Testing**
-
 ---
-
 # Protecting Apps: From Detection to Defense
 
 - Segments 1 and 2 covered what breaks; this segment covers what to build and test
 - Two complementary layers: protect data and traffic, then verify with testing
 - No single control is sufficient: defense in depth applies to applications too
 - We’ll close with a demo of a real testing tool
-
 ---
-
 # Encryption: Confidentiality and Integrity in Practice
 
 - Encryption at rest: protects stored data if a disk, backup, or device is exposed
 - Encryption in transit: TLS protects data moving between client and server
 - Hashing (not encryption) verifies integrity: passwords should be hashed, never encrypted
 - Strong, current algorithms and libraries matter more than a custom implementation
-
 ---
 <!-- layout: title-image -->
 # TLS Handshake at a Glance
 
 ![TLS handshake flow: ClientHello, ServerHello and certificate, key exchange, then an encrypted session](images/ch15-tls-handshake.png)
-
 ---
-
 # Securing the Server: TLS Configuration
 
 - Terminate TLS with current protocol versions; disable deprecated ones (SSLv3, TLS 1.0/1.1)
 - Use valid certificates from a trusted CA and automate renewal
 - Redirect all HTTP traffic to HTTPS; use HSTS to enforce it
 - Rotate and protect private keys: treat them as secrets
-
 ---
 <!-- layout: 2-column -->
 # Firewalls and Intrusion Detection
@@ -314,9 +269,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ### Intrusion Detection / Prevention
 - IDS monitors and alerts on suspicious activity
 - IPS actively blocks traffic matching known attack signatures
-
 ---
-
 # Defense in Depth for Applications
 
 | Layer | Example control |
@@ -325,18 +278,15 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 | Transit | TLS, HSTS |
 | Application | Input validation, secure frameworks |
 | Data | Encryption at rest, hashing |
-
 ---
-
 # Why Test, Not Just Design
 
-- Secure design reduces risk; testing confirms it actually holds up
+- Secure design reduces risk; testing confirms it holds up
 - Automated tools catch known patterns fast and repeatably
 - Manual testing (penetration testing) finds logic flaws automation misses
 - Testing belongs in the pipeline, not just before a big release
 
 ![Tester](images/tester.png)
-
 ---
 <!-- layout: 2-column -->
 # Security Testing Tool Categories
@@ -348,28 +298,22 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ### Broader Coverage
 - SCA: flags vulnerable third-party dependencies
 - Mobile-specific scanners check app binaries and platform configuration
-
 ---
-
 # Closing the Loop
 
-- Fundamentals (Segment 1) + known threats (Segment 2) + defenses and testing (Segment 3) form one continuous practice
+- Fundamentals (Segment 1) + known threats (Segment 2) + defenses (Segment 3) form one continuous practice
 - Testing findings should feed back into secure coding standards, not just a one-time fix list
 - Treat the OWASP Top 10 as a recurring checklist across the whole lifecycle, not a one-time gate
 
 ![closing the Loop](images/loop.png)
-
 ---
-
 # What You Learned
 
 - Described the fundamentals of securing web and mobile applications
 - Identified the most common web and mobile vulnerabilities (OWASP Top 10)
 - Explained how encryption protects confidentiality and integrity
 - Recognized automated tools for testing application vulnerabilities
-
 ---
-
 # Quiz 1 of 3
 
 **Which defense best prevents classic SQL injection when building queries from user input?**
@@ -378,9 +322,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - B. Disabling HTTPS so payloads are easier to inspect
 - C. Storing passwords with reversible encryption instead of hashing
 - D. Parameterized queries / prepared statements plus server-side validation
-
 ---
-
 # Quiz 1: Answer
 
 **Which defense best prevents classic SQL injection when building queries from user input?**
@@ -391,9 +333,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Parameterized queries keep input as data, not executable SQL
 - Client-side checks are bypassable; enforce controls on the server
 - HTTPS protects transit - it does not stop injection in query construction
-
 ---
-
 # Quiz 2 of 3
 
 **Your pipeline needs both “scan source without running it” and “attack a running app.” Which pairing matches SAST and DAST?**
@@ -402,9 +342,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - B. SAST = static source analysis; DAST = dynamic testing of a live app (e.g. OWASP ZAP)
 - C. SAST = firewall rules; DAST = OS patching
 - D. SAST and DAST are interchangeable names for the same scanner
-
 ---
-
 # Quiz 2: Answer
 
 **Your pipeline needs both “scan source without running it” and “attack a running app.” Which pairing matches SAST and DAST?**
@@ -415,7 +353,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - DAST probes a running application like an attacker
 - SCA covers third-party dependencies; it is related but distinct
 - Use both in the lifecycle: design reduces risk; testing confirms it
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -427,7 +364,6 @@ Compare securing a browser web app vs. a native mobile app that stores a session
 - Which OWASP-style risks overlap, and which are mobile-specific?
 - Where must authorization be enforced: client, server, or both?
 - How would encryption at rest, TLS, and testing tools differ by platform?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -444,28 +380,20 @@ Compare securing a browser web app vs. a native mobile app that stores a session
 - Hardcoded API keys in the mobile binary
 - “HTTPS means the app is secure”
 - Treating OWASP Top 10 as a one-time gate, not a recurring checklist
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

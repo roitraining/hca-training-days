@@ -3,16 +3,14 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Real-Time Data Streaming
 # with Kafka and Confluent
 
-## How events move from sources through Confluent Cloud to downstream applications
+## How events move from sources to applications
 ---
 <!-- layout: panel-right -->
 # Welcome!
@@ -28,7 +26,7 @@
 ---
 # Course Objectives
 
-- Explain how real-time event data moves from sources through Kafka and Confluent Cloud to downstream applications
+- Explain how real-time data moves from sources through Kafka and Confluent Cloud to downstream applications
 - Decide when a stream is a better fit than a batch job
 - Describe how producers, topics, and consumers move data through Kafka
 - Map device data and application data onto an enterprise event platform
@@ -545,22 +543,15 @@ A device gateway can publish fridge temperatures. The EHR can publish admission 
 # Questions and Answers
 
 ![Questions and Answers](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

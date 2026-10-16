@@ -3,9 +3,7 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -13,9 +11,7 @@
 # Tips and Tricks
 
 ## Meetings, messaging, and collaboration features most users never discover
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Get more out of Webex: meetings, messaging, and collaboration features most users never discover
@@ -36,9 +31,7 @@
 - Apply productivity features (scheduling, recordings, breakouts, whiteboarding)
 - Use collaboration and etiquette best practices for better meetings
 - Troubleshoot the most common audio/video/connection issues
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -58,7 +50,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -72,24 +63,19 @@
 - **Meetings Done Right**
 - Collaboration Beyond Meetings
 - Smooth and Reliable
-
 ---
-
 # Core Features: Getting the Most from Every Meeting
 
 - Most people use maybe 20% of what Webex actually offers
 - This segment covers the full meeting lifecycle: schedule, join, present, and follow up
 - We’ll demo the features live as we go: feel free to follow along in your own Webex
 - Small habits here save real time across dozens of meetings a week
-
 ---
 <!-- layout: title-image -->
 # The Meeting Lifecycle
 
 ![The meeting lifecycle: Schedule, Join, Present and Collaborate, then Record and Follow Up](images/ch18-meeting-lifecycle.svg)
-
 ---
-
 # Scheduling Smarter
 
 - Schedule directly from Webex, Outlook, or Google Calendar: pick whichever fits your workflow
@@ -99,9 +85,7 @@
 
 
 ![Smart scheduling with templates and lobby](images/ch18-scheduling-smarter.png)
-
 ---
-
 # Joining Like a Pro
 
 - One-click join from your calendar invite: avoid hunting for meeting numbers
@@ -111,22 +95,18 @@
 
 
 ![Joining with a pre-meeting audio and video check](images/ch18-joining-like-a-pro.png)
-
 ---
 <!-- layout: title-image -->
 # In-Meeting Controls at a Glance
 
 ![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/meeting-controls.png)
-
 ---
-
 # In-Meeting Controls Worth Knowing
 
 - Reactions and raise hand keep large meetings orderly without interrupting the speaker
 - Virtual backgrounds and background noise removal reduce distractions for everyone
 - Screen share with “share sound” when presenting video or audio content
 - Lock the meeting once everyone expected to attend has joined, for sensitive discussions
-
 ---
 <!-- layout: 2-column -->
 # Recordings and Transcripts
@@ -138,9 +118,7 @@
 ### Transcripts
 - Auto-generated transcripts save note-taking time
 - Searchable after the meeting: jump straight to the part you need
-
 ---
-
 # Breakout Sessions
 
 - Split a large meeting into smaller, focused discussion groups
@@ -150,8 +128,6 @@
 
 
 ![Breakout sessions splitting from a main meeting into smaller rooms](images/ch18-breakout-sessions.png)
-
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -159,33 +135,25 @@
 - Meetings Done Right
 - **Collaboration Beyond Meetings**
 - Smooth and Reliable
-
 ---
-
 # Messaging and Sharing: Life Between Meetings
 
 - Most collaboration doesn’t happen in a scheduled meeting - it happens in the moments around it
 - Webex Spaces keep conversations, files, and context together instead of scattered across email and chat
 - This segment covers the async tools that reduce how many meetings you need in the first place
-
-
 ---
-
 # Spaces: Your Team’s Home Base
 
 - A Space is a persistent room for a team, project, or topic - not a one-off chat thread
 - Everything shared in a Space stays searchable and organized by conversation
 - Pin important messages so they don’t get buried
 - Turn any meeting into a Space afterward to keep the conversation going
-
 ---
 <!-- layout: title-image -->
 # Spaces and Messaging Layout
 
 ![Webex Spaces layout: space list, message thread with pins and mentions, and files panel](images/ch18-spaces-messaging.svg)
-
 ---
-
 # Messaging Features Worth Knowing
 
 - Threaded replies keep side conversations from cluttering the main channel
@@ -194,9 +162,7 @@
 - Search works across messages, files, and even meeting transcripts
 
 ![Messaging features: threads, mentions, and read status](images/ch18-messaging-features.png)
-
 ---
-
 # File Sharing and Co-Editing
 
 - Drag and drop files directly into a Space
@@ -205,9 +171,7 @@
 - Changes sync automatically: no more emailing versions back and forth
 
 ![File sharing and real-time co-editing in a Space](images/ch18-file-coediting.png)
-
 ---
-
 # Whiteboarding
 
 - A persistent digital whiteboard for brainstorming, diagrams, and planning
@@ -216,7 +180,6 @@
 - Boards save automatically and stay accessible after the meeting ends
 
 ![Collaborative whiteboarding with sticky notes and shapes](images/ch18-whiteboarding.png)
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -224,16 +187,12 @@
 - Meetings Done Right
 - Collaboration Beyond Meetings
 - **Smooth and Reliable**
-
 ---
-
-# Etiquette and Troubleshooting: Making Meetings Work for Everyone
+# Etiquette and Troubleshooting: Making Meetings Work
 
 - Great tools still need good habits: etiquette prevents most bad-meeting complaints
 - Accessibility isn’t an add-on; small defaults make meetings work for more people
 - The second half of this segment covers fixing the audio/video issues that derail meetings
-
-
 ---
 # Meeting Etiquette Basics
 
@@ -245,9 +204,7 @@
 - Watch the chat and reactions: someone may be trying to get your attention
 
 ![Meeting etiquette habits for hosts and participants](images/ch18-meeting-etiquette.png)
-
 ---
-
 # Accessibility Features Worth Turning On
 
 - Live captions display spoken words in real time for anyone who needs or prefers them
@@ -256,15 +213,12 @@
 - Recordings and transcripts double as accessibility tools after the fact
 
 ![Accessibility features: live captions and inclusive meeting tools](images/ch18-accessibility-features.png)
-
 ---
 <!-- layout: title-image -->
 # Troubleshooting Flow
 
 ![Troubleshooting flow: Identify, Isolate, Fix, then Confirm](images/ch18-troubleshooting-flow.svg)
-
 ---
-
 # Fixing Audio Issues
 
 - No audio? Check you’ve joined the meeting’s audio (computer audio vs. phone call-in)
@@ -274,9 +228,7 @@
 
 <!-- TODO IMAGE: Conceptual illustration of diagnosing meeting audio: mic selection, mute, echo from two devices -->
 ![Diagnosing common Webex audio problems](images/ch18-fixing-audio.png)
-
 ---
-
 # Fixing Video and Connection Issues
 
 - No video? Confirm Webex has camera permission at the OS level, not just in-app
@@ -285,18 +237,14 @@
 - Persistent issues? Restart the app before restarting the whole machine
 
 ![Diagnosing video and connection issues](images/ch18-fixing-video.png)
-
 ---
-
 # What You Learned
 
 - Navigated key Webex meeting and messaging features with confidence
 - Applied productivity features (scheduling, recordings, breakouts, whiteboarding)
 - Used collaboration and etiquette best practices for better meetings
 - Troubleshot the most common audio/video/connection issues
-
 ---
-
 # Quiz 1 of 3
 
 **What best describes a Webex Space?**
@@ -305,9 +253,7 @@
 - B. A persistent room for a team, project, or topic where messages, files, and context stay searchable
 - C. Only a whiteboard that cannot hold messages or files
 - D. A calendar invite template used only for scheduling
-
 ---
-
 # Quiz 1: Answer
 
 **What best describes a Webex Space?**
@@ -318,9 +264,7 @@
 - Shared content stays searchable and organized with the conversation
 - You can pin important messages and continue after a meeting
 - Async Spaces reduce how many meetings you need in the first place
-
 ---
-
 # Quiz 2 of 3
 
 **You and a colleague hear loud echo in a hybrid room. What should you check first?**
@@ -329,9 +273,7 @@
 - B. Delete the Space and recreate the meeting
 - C. Disable live captions for all attendees
 - D. Ensure only one device per person has meeting audio on in that room
-
 ---
-
 # Quiz 2: Answer
 
 **You and a colleague hear loud echo in a hybrid room. What should you check first?**
@@ -342,7 +284,6 @@
 - Keep one device’s audio active per person; mute or leave audio on others
 - Background noise removal helps noise, but not classic dual-device echo
 - Fix audio path before restarting machines or redesigning the meeting
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -354,7 +295,6 @@ Think of a recurring meeting you lead or join (standup, all-hands, or project sy
 - Which features would improve it most: templates, lobby, breakouts, recordings/transcripts, or Spaces?
 - What etiquette or accessibility defaults should become team norms?
 - How would you diagnose the audio/video issue that most often derails that meeting?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -371,28 +311,20 @@ Think of a recurring meeting you lead or join (standup, all-hands, or project sy
 - Treating Webex as “video only” and ignoring Spaces/whiteboards
 - Jumping to reboot before checking mute, mic selection, or dual-device audio
 - Skipping etiquette (late join unmuted, abandoned screen share)
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

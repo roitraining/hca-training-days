@@ -3,19 +3,15 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Data Literacy:
 # Making Better Decisions
 
-## Reading data critically to support safer care, smarter operations, and better decisions
-
+## Reading data critically to support safe operations and better decisions
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Build practical data literacy to read, question, and act on data with confidence
@@ -36,9 +31,7 @@
 - Interpret charts, dashboards, and statistics without common misreadings
 - Apply a practical framework for asking good questions of data before deciding
 - Recognize data pitfalls and biases that commonly mislead healthcare decisions
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -59,7 +51,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -74,29 +65,22 @@
 - **Foundations of Data Literacy**
 - Reading and Interpreting Data
 - From Data to Decisions
-
 ---
-
 # Why Data Literacy Matters Here
 
 - Every shift produces data: vitals, throughput times, staffing ratios, satisfaction scores, safety events
 - Decisions made on misread data can affect patient safety, staffing, and cost - not just a spreadsheet
 - Data literacy isn’t about becoming a statistician - it’s about asking the right questions before you act
 - The goal today: read data more critically, not more mathematically
-
 ---
 <!-- layout: image-only -->
 # What Data Literacy Involves
 
 ![What data literacy involves: Find, Understand, Question, Use](images/ch19-data-literacy-loop.png)
-
 ---
-
 # Types of Data You’ll See
 
 ![Types of Data](images/types-of-data.png)
-
-
 ---
 <!-- layout: 2-column -->
 # Where Healthcare Data Comes From
@@ -110,9 +94,7 @@
 - Patient satisfaction surveys
 - Claims and billing data
 - Cost and utilization reports
-
 ---
-
 # Data Quality: Garbage In, Garbage Out
 
 - Completeness: is anything missing, and does that missingness mean something?
@@ -122,9 +104,7 @@
 
 > [!WARNING]
 > A clean-looking dashboard doesn’t guarantee clean data underneath it. Always ask where the numbers came from.
-
 ---
-
 # Data Literacy in One Sentence
 
 - Data literacy is the ability to find, understand, question, and use data appropriately for a decision
@@ -132,7 +112,6 @@
   - The rest of this course builds the “question” and “use” parts, since “find” and “understand” usually come with training on your specific systems
 
 ![Data Analyst](images/data-analyst.png)
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -140,7 +119,6 @@
 - Foundations of Data Literacy
 - **Reading and Interpreting Data**
 - From Data to Decisions
-
 ---
 <!-- layout: stacked -->
 # From Numbers to Understanding
@@ -151,9 +129,7 @@
 - None of this requires math beyond what you already use daily
 
 ![Number to Understanding](images/numbers-understanding.png)
-
 ---
-
 # Averages Hide the Story
 
 - An average collapses a whole distribution into one number - and hides the spread
@@ -162,9 +138,7 @@
 - A median is often more representative than a mean when a few extreme values exist
 
 ![Averages Hide the Story](images/avg-hide-story.png)
-
 ---
-
 # Worked Example: Same Average, Different Story
 
 | Unit | Avg wait (min) | Range |
@@ -174,7 +148,6 @@
 
 > [!NOTE]
 > Same average: very different patient experience. Unit B needs a different fix than Unit A.
-
 ---
 <!-- layout: 2-column -->
 # Charts Can Mislead: On Purpose or Not
@@ -188,18 +161,14 @@
 - Check the axis before you react to the slope
 - Ask “what happened right before this window starts?”
 - Compare the chart to a longer time frame
-
 ---
-
 # Small Numbers, Big Swings
 
 - A unit with 20 patients a month can swing from a 0% to a 15% readmission rate on just a couple of cases
 - Small sample sizes make month-to-month changes look dramatic even when nothing really changed
 - Look for a trend over several periods, not a single data point, before reacting
 - Ask how many cases are behind a percentage before treating it as a signal
-
 ---
-
 # Correlation Is Not Causation
 
 - Two metrics moving together doesn’t mean one caused the other
@@ -209,14 +178,12 @@
 
 ![Correlation Is Not Causation](images/cor-cause.png)
 ---
-
 # Worked Example: What Actually Changed?
 
 - Readmissions dropped 3 points the same month a new discharge process launched
 - Also that month: flu season ended, and two high-risk-mix skilled nursing partners closed for renovation
 - Which explanation is right? Possibly all three, in some combination
 - The lesson isn’t “ignore the process change” - it’s “don’t credit it alone without checking”
-
 ---
 <!-- layout: 2-column -->
 # Statistical vs. Practical Significance
@@ -230,9 +197,7 @@
 - Large enough to matter for a decision
 - Can exist even with weaker statistical confidence
 - The real question: “worth acting on?”
-
 ---
-
 # Risk Adjustment: Comparing Apples to Apples
 
 - Raw outcome numbers don’t account for how sick or complex a patient population already was
@@ -242,7 +207,6 @@
 
 > [!TIP]
 > When comparing outcomes across units or facilities, ask “is this risk-adjusted?” before drawing any conclusion.
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -250,42 +214,33 @@
 - Foundations of Data Literacy
 - Reading and Interpreting Data
 - **From Data to Decisions**
-
 ---
-
 # From Reading to Deciding
 
 - Segments 1 and 2 built the skills to read data critically; this segment turns that into a repeatable habit
 - Good data-informed decisions follow a pattern you can reuse on any report or dashboard
 - We’ll close with common pitfalls to watch for and a practical starting point for your team
 - None of this requires more tools: just better questions
-
 ---
 <!-- layout: title-image -->
 # A Framework for Asking Good Questions
 
 ![A framework for asking good questions: Define the Question, Check the Source, Check the Comparison, Check for Bias](images/ch19-good-questions-framework.png)
-
 ---
-
 # Define the Question Before You Look at the Data
 
 - What decision does this data actually need to inform?
 - A vague question (“how are we doing?”) invites a vague, unreliable answer
 - A specific question (“did wait times improve after the new triage process?”) points you to the right comparison
 - If you can’t state the decision, you’re not ready to look at the number yet
-
 ---
-
 # Check the Source and the Comparison
 
 - Where did this number come from, and how current is it?
 - What is it being compared to: last month, a target, another unit, itself a year ago?
 - A number without a comparison point is just a number, not information
 - Make sure the comparison is apples-to-apples (same population, same time window, same definition)
-
 ---
-
 # Check for Bias
 
 - Confirmation bias: noticing the data that supports what you already believed
@@ -295,7 +250,6 @@
 
 > [!CAUTION]
 > The moment a number confirms exactly what you expected, that’s exactly when it deserves a second look.
-
 ---
 <!-- layout: 2-column -->
 # Building a Data-Informed Team
@@ -309,27 +263,21 @@
 - Reacting to a single data point without a trend
 - Letting one dashboard replace clinical or operational judgment
 - Presenting data without its source or definition
-
 ---
-
 # What to Do Monday Morning
 
 - Pick one recurring report or dashboard you already use
 - Apply the framework: define the question, check the source, check the comparison, check for bias
 - Ask one clarifying question in your next meeting instead of accepting a number at face value
 - Data literacy builds through repetition, not a single training session
-
 ---
-
 # What You Learned
 
 - Described the building blocks of data literacy: types of data, sources, and quality
 - Interpreted charts, dashboards, and statistics without common misreadings
 - Applied a practical framework for asking good questions of data before deciding
 - Recognized data pitfalls and biases that commonly mislead healthcare decisions
-
 ---
-
 # Quiz 1 of 3
 
 **Two units both report a 22-minute average wait. Unit A’s range is 18–26; Unit B’s is 5–65. What’s the best takeaway?**
@@ -338,9 +286,7 @@
 - B. Averages always tell the full story, so both units need the same fix
 - C. Unit B must be better because some patients wait only 5 minutes
 - D. Ranges are irrelevant; only the average matters for staffing decisions
-
 ---
-
 # Quiz 1: Answer
 
 **Two units both report a 22-minute average wait. Unit A’s range is 18–26; Unit B’s is 5–65. What’s the best takeaway?**
@@ -351,9 +297,7 @@
 - Unit B’s wide range means inconsistent experience: even with the same mean
 - Ask about range, outliers, and whether a median fits better
 - Different patterns need different fixes, not one one-size response
-
 ---
-
 # Quiz 2 of 3
 
 **Readmissions drop the same month a new discharge process launches - and flu season ends. What’s the soundest stance?**
@@ -362,9 +306,7 @@
 - B. Ignore the process change because other factors exist
 - C. Correlation isn’t proof of causation: check what else changed before crediting one driver alone
 - D. Any month-over-month drop on a small sample is always statistically and practically significant
-
 ---
-
 # Quiz 2: Answer
 
 **Readmissions drop the same month a new discharge process launches - and flu season ends. What’s the soundest stance?**
@@ -375,7 +317,6 @@
 - Third factors (seasonality, partner changes) can drive both
 - Don’t ignore the process: don’t credit it alone without checking
 - Small samples and single periods exaggerate “signals”
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -387,7 +328,6 @@ Pick one recurring dashboard or report you already use (throughput, readmissions
 - What decision should this data inform: stated specifically?
 - How would you check source, comparison, and bias before acting?
 - Where might risk adjustment, small samples, or a misleading chart change your conclusion?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -404,28 +344,20 @@ Pick one recurring dashboard or report you already use (throughput, readmissions
 - Reacting to a clean dashboard as if the underlying data is clean
 - Treating correlation or a short window as proof
 - Letting one metric replace clinical or operational judgment
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

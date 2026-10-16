@@ -3,19 +3,15 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Introduction to Generative AI
 # for Software Engineering
 
-## Generate, test, document, and debug code with AI assistants: responsibly
-
+## Generate, test, document, and debug code with AI assistants
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Apply generative AI across the software engineering workflow while keeping quality and security intact
@@ -36,9 +31,7 @@
 - Use prompt techniques to generate, document, and test code
 - Compare leading AI coding assistants (Copilot, Gemini Code Assist) and IDE integration
 - Recognize responsible-use and security considerations for AI-assisted coding
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -60,7 +52,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -77,15 +68,12 @@
 - **GenAI for Developers**
 - Prompt Engineering for Code
 - Tools and Responsible Use
-
 ---
 <!-- layout: title-image -->
 # Generative vs. Discriminative AI
 
 ![Generative vs discriminative](images/generative-vs-discriminative.png)
-
 ---
-
 # Model Types Developers Encounter
 
 | Type | Role in engineering work |
@@ -97,13 +85,11 @@
 
 > [!NOTE]
 > This course focuses on **generative** coding assistants: models that draft software artifacts you still must verify.
-
 ---
 <!-- layout: title-image -->
 # Where GenAI Fits in the Workflow
 
 ![GenAI developer workflow](images/genai-dev-workflow.png)
-
 ---
 <!-- layout: 3-column -->
 # Practical Applications
@@ -122,7 +108,6 @@
 - Explain unfamiliar code
 - Debug errors
 - Explore options
-
 ---
 <!-- layout: 2-column -->
 # What Changes (and What Doesn’t)
@@ -136,7 +121,6 @@
 - Accountability for merges
 - Need for tests and review
 - Security and license duties
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -144,15 +128,12 @@
 - GenAI for Developers
 - **Prompt Engineering for Code**
 - Tools and Responsible Use
-
 ---
 <!-- layout: title-image -->
 # Prompt Techniques That Improve Output
 
 ![Code prompt techniques](images/code-prompt-techniques.png)
-
 ---
-
 # Generating Code
 
 - State language, runtime, and framework versions
@@ -165,7 +146,6 @@ Write a Python 3.12 function parse_iso_dates(values: list[str]) -> list[date].
 Skip invalid entries; log a warning; no external libraries.
 Include type hints and a short docstring.
 ```
-
 ---
 <!-- layout: 2-column -->
 # Documentation and Tests
@@ -179,9 +159,7 @@ Include type hints and a short docstring.
 - Unit tests for happy path
 - Edge cases and errors
 - Fixtures matching project style
-
 ---
-
 # Adding Context and Few-Shot Prompting
 
 - Context: paste interfaces, error logs, or “match this file’s style”
@@ -195,7 +173,6 @@ def get_user(id: str) -> User:
     ...
 Now write get_order(id: str) -> Order the same way.
 ```
-
 ---
 <!-- layout: 2-column -->
 # Pitfalls: Hallucinations
@@ -211,9 +188,7 @@ Now write get_order(id: str) -> Order the same way.
 - Do tests pass?
 - Licenses OK?
 - Security smell review?
-
 ---
-
 # Evaluating Generated Code
 
 - Run the smallest verification immediately (test, REPL, build)
@@ -223,7 +198,6 @@ Now write get_order(id: str) -> Order the same way.
 
 > [!WARNING]
 > If you can’t explain the change, don’t merge it - regardless of who (or what) wrote it.
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -231,13 +205,11 @@ Now write get_order(id: str) -> Order the same way.
 - GenAI for Developers
 - Prompt Engineering for Code
 - **Tools and Responsible Use**
-
 ---
 <!-- layout: title-image -->
 # Copilot and Gemini Code Assist
 
 ![Copilot vs Gemini Code Assist](images/copilot-vs-gemini-code-assist.png)
-
 ---
 <!-- layout: 3-column -->
 # IDE Integration Capabilities
@@ -256,9 +228,7 @@ Now write get_order(id: str) -> Order the same way.
 - PR summaries
 - Agent-style tasks*
 - Cloud/repo grounding*
-
 ---
-
 # Choosing and Configuring Assistants
 
 | Consideration | Why it matters |
@@ -270,13 +240,11 @@ Now write get_order(id: str) -> Order the same way.
 
 > [!TIP]
 > Standardize on **org-approved** tools and settings: personal consumer accounts create policy and IP risk.
-
 ---
 <!-- layout: image-only -->
 # Responsible AI-Assisted Coding
 
 ![Responsible AI coding](images/responsible-ai-coding.png)
-
 ---
 <!-- layout: 2-column -->
 # Privacy and Prompt Safety
@@ -292,9 +260,7 @@ Now write get_order(id: str) -> Order the same way.
 - Redacted logs and samples
 - Synthetic test data
 - Local secrets managers
-
 ---
-
 # Prompt Hacking and Abuse Awareness
 
 - Assistants can be steered into unsafe or policy-violating output
@@ -304,7 +270,6 @@ Now write get_order(id: str) -> Order the same way.
 
 > [!IMPORTANT]
 > Responsible use is a team sport: policy, tooling defaults, and peer review.
-
 ---
 <!-- layout: 2-column -->
 # Assess Current State → Prioritize
@@ -320,18 +285,14 @@ Now write get_order(id: str) -> Order the same way.
 - Train prompting + review
 - Add secret scanning
 - Measure lead time / rework
-
 ---
-
 # What You Learned
 
 - Described how generative AI applies across the software development workflow
 - Used prompt techniques to generate, document, and test code
 - Compared Copilot and Gemini Code Assist style IDE integrations
 - Recognized responsible-use and security considerations for AI-assisted coding
-
 ---
-
 # Quiz 1 of 3
 
 **Which practice most improves the quality of generated code?**
@@ -340,9 +301,7 @@ Now write get_order(id: str) -> Order the same way.
 - B. Accept a large rewrite without reading the diff if the model sounds confident
 - C. Prefer giant pasted context over open-file / codebase grounding
 - D. Skip license and security review because the assistant “knows best”
-
 ---
-
 # Quiz 1: Answer
 
 **Which practice most improves the quality of generated code?**
@@ -353,9 +312,7 @@ Now write get_order(id: str) -> Order the same way.
 - Immediate verification catches invented APIs and logic bugs early
 - Diff-sized iteration beats merging unexplained large changes
 - Accountability for merges and security duties never goes away
-
 ---
-
 # Quiz 2 of 3
 
 **Why should teams standardize on org-approved coding assistants?**
@@ -364,9 +321,7 @@ Now write get_order(id: str) -> Order the same way.
 - B. IDE support and enterprise controls do not matter
 - C. Any free tool is fine as long as suggestions look good
 - D. Enterprise controls (retention, training opt-out, allowlists) reduce policy and IP risk
-
 ---
-
 # Quiz 2: Answer
 
 **Why should teams standardize on org-approved coding assistants?**
@@ -377,7 +332,6 @@ Now write get_order(id: str) -> Order the same way.
 - Enterprise SKUs align with org data-protection settings
 - Standard tooling also enables shared prompts and review norms
 - Security and license duties remain human responsibilities
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -389,7 +343,6 @@ Pick one workflow on your team: generate a function, draft tests, or explain a f
 - What context and few-shot examples would you include in the prompt?
 - What must never be pasted (secrets, PHI, production dumps)?
 - How would you evaluate the output before merge?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -406,28 +359,20 @@ Pick one workflow on your team: generate a function, draft tests, or explain a f
 - Pasting credentials or customer data “for better context”
 - Merging code nobody on the team can explain
 - Treating hallucinations as ground truth
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

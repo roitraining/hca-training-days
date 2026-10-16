@@ -3,9 +3,7 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -13,9 +11,7 @@
 # and Standardization
 
 ## AI-assisted coding, shared prompting standards, and faster diagnosis
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Use AI coding assistants to ship faster and more consistently across the team workflow
@@ -36,9 +31,7 @@
 - Use an AI code assistant to write and complete code more consistently
 - Apply prompting best practices that standardize output quality
 - Describe how AI cloud-assist tools speed up diagnosis and design
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -60,7 +52,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -77,9 +68,7 @@
 - **Developer Efficiency Foundations**
 - AI-Assisted Coding
 - Beyond the Editor
-
 ---
-
 # The Productivity Problem
 
 - Developers lose time to boilerplate, context switching, and hunt-the-docs
@@ -89,13 +78,11 @@
 
 > [!NOTE]
 > AI amplifies whatever process you have: good standards scale; weak ones scale noise.
-
 ---
 <!-- layout: image-only -->
 # Workflow Lens: SDLC
 
 ![Developer workflow SDLC](images/developer-workflow-sdlc.png)
-
 ---
 <!-- layout: image-only -->
 # DORA-Style Efficiency Measures
@@ -105,9 +92,7 @@
 
 > [!NOTE]
 > DORA-style efficiency measures refer to standard software delivery and operational performance metrics established by the DevOps Research and Assessment (DORA) program (now part of Google Cloud).
-
 ---
-
 # Connecting AI Assist to DORA Outcomes
 
 | DORA-style measure | How AI assist can help |
@@ -119,13 +104,11 @@
 
 > [!IMPORTANT]
 > AI is a lever on flow metrics - not a substitute for CI quality, ownership, and review.
-
 ---
 <!-- layout: image-only -->
 # Where GenAI Improves Efficiency
 
 ![AI developer efficiency moments](images/ai-dev-efficiency-moments.png)
-
 ---
 <!-- layout: 2-column -->
 # Efficiency Challenges to Name Explicitly
@@ -141,7 +124,6 @@
 - Uneven review quality
 - Tribal knowledge
 - Tool sprawl
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -149,9 +131,7 @@
 - Developer Efficiency Foundations
 - **AI-Assisted Coding**
 - Beyond the Editor
-
 ---
-
 # What an AI Code Assistant Does
 
 - Completes code as you type (inline suggestions)
@@ -161,7 +141,6 @@
 
 > [!TIP]
 > Treat suggestions like a junior pair: fast drafts, mandatory review.
-
 ---
 <!-- layout: 2-column -->
 # Generating and Completing Code
@@ -175,15 +154,12 @@
 - Ask for a function or test
 - Specify inputs/outputs
 - Require matching existing style
-
 ---
 <!-- layout: image-only -->
 # Prompting for Standard Output
 
 ![Prompt standards loop](images/prompt-standards-loop.png)
-
 ---
-
 # Prompting Best Practices (Team Standards)
 
 - State language, framework, and file path
@@ -198,7 +174,6 @@ Task: Add get_patient_summary(patient_id) returning a dict
 Standards: type hints, raise NotFoundError, no PHI in logs, add pytest
 Verify: show function + test only
 ```
-
 ---
 <!-- layout: 3-column -->
 # Consistency Levers
@@ -217,9 +192,7 @@ Verify: show function + test only
 - AI-origin label OK
 - Human owns merge
 - Reject unverified code
-
 ---
-
 # Grounding on Your Own Codebase
 
 - Open relevant files so the assistant sees local patterns
@@ -229,9 +202,7 @@ Verify: show function + test only
 
 > [!WARNING]
 > Ungrounded generation invents APIs that “look right.” Always compile, test, and read the diff.
-
 ---
-
 <!-- layout: 2-column -->
 # Anti-Patterns to Avoid
 
@@ -246,16 +217,13 @@ Verify: show function + test only
 - Keep CI as source of truth
 - Use approved enterprise tools
 - Share winning prompts weekly
-
 ---
-
 <!-- layout: navigation -->
 # Course Roadmap
 
 - Developer Efficiency Foundations
 - AI-Assisted Coding
 - **Beyond the Editor**
-
 ---
 <!-- layout: 2-column -->
 # Cloud-Assist: Design
@@ -269,9 +237,7 @@ Verify: show function + test only
 - Architecture owners decide
 - Capture ADRs for big calls
 - Don’t skip threat modeling
-
 ---
-
 # Cloud-Assist: Diagnosis
 
 - Paste sanitized stack traces and error snippets
@@ -285,13 +251,11 @@ Verify: show function + test only
 | Failing test | Minimal fix + why |
 | Slow endpoint | Instrumentation ideas |
 | Incident notes | Timeline and next actions draft |
-
 ---
 <!-- layout: image-only -->
 # End-to-End Assisted Workflow
 
 ![End-to-end assisted workflow](images/e2e-assisted-workflow.png)
-
 ---
 <!-- layout: 3-column -->
 # Putting It Together
@@ -309,9 +273,7 @@ Verify: show function + test only
 - Review like a peer
 - CI must pass
 - Note what to reuse
-
 ---
-
 # Team Standardization Starter Kit
 
 - Approved assistant + security settings documented
@@ -321,7 +283,6 @@ Verify: show function + test only
 
 > [!TIP]
 > Standardization is social: office hours and examples beat a wiki nobody opens.
-
 ---
 <!-- layout: 2-column -->
 # Measuring Without Vanity Metrics
@@ -337,18 +298,14 @@ Verify: show function + test only
 - Acceptance-rate alone
 - Raw suggestion counts
 - “Hours saved” guesses
-
 ---
-
 # What You Learned
 
 - Identified efficiency challenges across the developer workflow and SDLC
 - Used (or walked through) an AI code assistant for consistent write/complete loops
 - Applied prompting practices that standardize output quality
 - Described how cloud-assist tools speed diagnosis and design in an end-to-end flow
-
 ---
-
 # Quiz 1 of 3
 
 **How should teams treat AI coding assistant suggestions?**
@@ -357,9 +314,7 @@ Verify: show function + test only
 - B. Treat them like a junior pair: fast drafts with mandatory human review
 - C. Skip tests because “the AI already wrote them”
 - D. Prefer ungrounded generation over open-file / repo context
-
 ---
-
 # Quiz 1: Answer
 
 **How should teams treat AI coding assistant suggestions?**
@@ -370,9 +325,7 @@ Verify: show function + test only
 - Blind multi-file accepts create review debt and subtle bugs
 - CI and human ownership remain the source of truth
 - Grounding on local patterns beats invented APIs that “look right”
-
 ---
-
 # Quiz 2 of 3
 
 **Which signal best measures AI-assisted developer productivity without vanity metrics?**
@@ -381,20 +334,17 @@ Verify: show function + test only
 - B. Raw suggestion acceptance rate alone
 - C. Lead time on small changes and PR rework / review cycles
 - D. Total suggestion count shown in the IDE
-
 ---
-
 # Quiz 2: Answer
 
 **Which signal best measures AI-assisted developer productivity without vanity metrics?**
 
-**Correct: C.** Lead time on small changes and PR rework / review cycles
+**Correct: C.** Lead time on small changes and PR rework/review cycles
 
 - Flow and quality outcomes matter more than generation volume
 - Acceptance rate alone ignores whether code survived review and CI
 - Lead time and rework reflect real team efficiency
 - Pair with incident time-to-mitigate and developer satisfaction pulses
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -406,7 +356,6 @@ Your team is rolling out an org-approved AI coding assistant next quarter.
 - Which 5–10 shared prompts would you standardize first - and why?
 - Where must a human still own the merge decision?
 - How would you spot-check that standards are helping (not just adopted)?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -423,28 +372,20 @@ Your team is rolling out an org-approved AI coding assistant next quarter.
 - “Everyone invents their own prompts”
 - Measuring success only by suggestion acceptance
 - Skipping grounding and review to go faster
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-
