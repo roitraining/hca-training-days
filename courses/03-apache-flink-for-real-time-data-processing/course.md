@@ -1,11 +1,9 @@
-<!-- course-title: Apache Flink for Real-Time Data -->
+<!-- course-title: Apache Flink for Real-Time Data Processing -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -13,9 +11,7 @@
 # Real-Time Data Processing
 
 ## Streams, state, windows, and where Flink fits in modern pipelines
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +24,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Explain how Apache Flink enables low-latency stream processing in a modern data architecture
@@ -37,9 +32,7 @@
 - Contrast DataStream and SQL/Table APIs on the same engine
 - Identify common real-time use cases and judge when Flink is a fit
 - Recognize how Flink fits alongside messaging and storage in a pipeline
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -50,7 +43,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -61,7 +53,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -78,9 +69,7 @@
 - **Streaming Fundamentals**
 - Flink Core Concepts
 - Putting It to Work
-
 ---
-
 # Why Real-Time Matters
 
 - Businesses increasingly need seconds, not overnight batches
@@ -90,13 +79,11 @@
 
 > [!NOTE]
 > “Real-time” is a product requirement (latency budget), not a buzzword. Define the SLA first.
-
 ---
 <!-- layout: title-image -->
 # Batch vs. Stream
 
 ![Batch vs stream](images/batch-vs-stream.png)
-
 ---
 <!-- layout: 2-column -->
 # Latency and Throughput
@@ -110,9 +97,7 @@
 - Events processed per second
 - Streaming systems scale both
 - Optimize for your bottleneck
-
 ---
-
 # What Is Apache Flink?
 
 - Open-source stateful stream processing engine
@@ -122,32 +107,29 @@
 
 > [!TIP]
 > Think of Flink as the compute layer for streams: similar to how Spark often serves batch/lakehouse compute.
-
 ---
 <!-- layout: image-only -->
 # Where Flink Sits in the Ecosystem
 
 ![Flink pipeline architecture](images/flink-pipeline-architecture.png)
-
 ---
 <!-- layout: 3-column -->
 # Flink vs. Adjacent Tools
 
 ### Messaging
-- Kafka / Pub/Sub / Pulsar
+- Kafka, Pub/Sub, Pulsar
 - Transport and buffer
 - Not heavy compute
 
 ### Flink
 - Stateful transforms
 - Windows and joins
-- Exactly-once sinks*
+- Exactly-once sinks
 
 ### Storage
-- Warehouse / lake / OLTP
+- Warehouse, lake, OLTP
 - Durable history
 - Serving and analytics
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -155,26 +137,22 @@
 - Streaming Fundamentals
 - **Flink Core Concepts**
 - Putting It to Work
-
 ---
 <!-- layout: title-image -->
 # How Flink Works: Building Blocks
 
 ![Flink core concepts](images/flink-core-concepts.png)
-
 ---
-
 # Streams
 
 - A stream is an unbounded sequence of events
 - Events often carry a key (user_id, device_id, account_id)
 - Operators transform streams: map, filter, keyBy, join, window
-- Jobs run until cancelled - there is no natural “end of file”
+- Jobs run until cancelled—there is no natural “end of file”
 
 ```text
 clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 ```
-
 ---
 <!-- layout: 2-column -->
 # State: Memory Across Events
@@ -190,9 +168,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - Checkpoint to durable store
 - Restore after failure
 - Scale with keyed parallelism
-
 ---
-
 # Windowing
 
 - Windows slice an unbounded stream into finite buckets
@@ -205,15 +181,12 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 | Tumbling | Fixed, non-overlapping | Count orders every 1 minute |
 | Sliding | Fixed, overlapping | 5-minute fraud score every 1 minute |
 | Session | Gap-based | User browse session until idle |
-
 ---
 <!-- layout: image-only -->
 # Event Time vs. Processing Time
 
 ![Event time vs processing time](images/event-time-vs-processing-time.png)
-
 ---
-
 # Watermarks and Late Data
 
 - Watermarks estimate how far event time has progressed
@@ -223,7 +196,6 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 > [!IMPORTANT]
 > For correctness under delay and reordering, prefer **event time** + watermarks over processing time.
-
 ---
 <!-- layout: 2-column -->
 # Story: The Late Click
@@ -243,7 +215,6 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 > [!TIP]
 > If your chart “looks wrong under load or mobile traffic,” check time semantics before tuning parallelism.
-
 ---
 <!-- layout: 2-column -->
 # Mental Model: A Flink Job
@@ -257,18 +228,17 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - Stateful keyed logic
 - Windows and timers
 - Write to DB, lake, alert bus
-
 ---
 <!-- layout: 2-column -->
 # Two APIs, Same Engine
 
-### DataStream (Java / Scala)
+### DataStream (Java/Scala)
 - Imperative operators in code
 - Full control: timers, custom state, CEP
 - What the next example uses
 - Best when logic is complex or bespoke
 
-### SQL / Table API
+### SQL/Table API
 - Declarative queries over streams and tables
 - Windows, joins, aggregations in SQL
 - Often faster for analytics-style jobs
@@ -277,10 +247,8 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 <!-- below-columns -->
 
 > [!NOTE]
-> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine - and the concepts - are the same.
-
+> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine, and the concepts, are the same.
 ---
-
 # Example: A Simple Flink Stream Job
 
 - Read a stream of purchase events (amount + event-time timestamp)
@@ -321,14 +289,12 @@ public class SimplePurchaseSumJob {
     }
 }
 ```
-
 ---
-
 # From `print()` to a Kafka Sink
 
-- Swap the sink - not the window or `keyBy` logic
+- Swap the sink, not the window or `keyBy` logic
 - Serialize the aggregate (JSON, Avro, Protobuf) for consumers
-- Use a transactional / idempotent sink when you need stronger delivery guarantees
+- Use a transactional/idempotent sink when you need stronger delivery guarantees
 - Downstream reads a topic instead of job logs: same pipeline shape as production
 
 ```java
@@ -349,7 +315,6 @@ resultStream.sinkTo(
 
 > [!TIP]
 > Source → stateful operators → sink is the whole job. Changing Kafka topic names or sink guarantees should not require rewriting your window math.
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -357,18 +322,16 @@ resultStream.sinkTo(
 - Streaming Fundamentals
 - Flink Core Concepts
 - **Putting It to Work**
-
 ---
 <!-- layout: image-only -->
 # Common Real-Time Use Cases
 
 ![Flink use cases](images/flink-use-cases.png)
-
 ---
 <!-- layout: 3-column -->
 # Pattern Snapshots
 
-### Fraud / Risk
+### Fraud/Risk
 - Score each event live
 - Enrich with recent history
 - Route high-risk to review
@@ -376,15 +339,13 @@ resultStream.sinkTo(
 ### Telemetry
 - Roll up metrics
 - Detect anomalies
-- Feed SLO / ops views
+- Feed SLO/ops views
 
 ### Alerting
 - Threshold and composite rules
 - Deduplicate noise
-- Trigger tickets / pages
-
+- Trigger tickets/pages
 ---
-
 # Integration: Messaging In, Sinks Out
 
 - Ingress: Kafka, Google Pub/Sub, Kinesis, Pulsar
@@ -394,7 +355,6 @@ resultStream.sinkTo(
 
 > [!WARNING]
 > A Flink job is only as reliable as its checkpoint storage, restart strategy, and sink semantics.
-
 ---
 <!-- layout: 2-column -->
 # Architecture Checklist
@@ -406,13 +366,11 @@ resultStream.sinkTo(
 - Complex event logic
 
 ### Consider Alternatives
-- Pure batch / micro-batch OK
+- Pure batch/micro-batch OK
 - Simple filter at the broker
 - Request/response APIs only
 - Tiny volume, rare jobs
-
 ---
-
 # Putting It Together
 
 ```text
@@ -425,7 +383,6 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Flink owns compute + state for the stream path
 - Messaging owns durable transport and fan-out
 - Storage owns history, BI, and downstream ML features
-
 ---
 <!-- layout: 3-column -->
 # Would You Use Flink?
@@ -439,7 +396,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 ### No
 **Nightly sales workbook**
 - Finance needs yesterday’s totals by 7 a.m.
-- Batch / warehouse job is enough
+- Batch/warehouse job is enough
 - No continuous consumer waiting on the stream
 
 ### Maybe
@@ -452,9 +409,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 > [!IMPORTANT]
 > Ask: Do we need **continuous stateful compute** on the event path - or just fresher batch?
-
 ---
-
 # What You Learned
 
 - Explained real-time stream processing and how it differs from batch
@@ -462,21 +417,20 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Contrasted DataStream and SQL/Table APIs on the same engine
 - Identified common real-time use cases suited to Flink
 - Recognized how Flink fits alongside messaging and storage in a pipeline
-- Judged fit for Flink with yes / no / maybe scenarios
-
+- Judged fit for Flink with yes, no, maybe scenarios
 ---
-
 # Quiz 1 of 3
 
 **A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
 
-- A. Processing time only (wall-clock arrival)
-- B. Dropping any event that arrives after the minute ends
-- C. Ignoring timestamps and counting in arrival order
-- D. Event time with watermarks (and configured lateness)
+A. Processing time only (wall-clock arrival)
 
+B. Dropping any event that arrives after the minute ends
+
+C. Ignoring timestamps and counting in arrival order
+
+D. Event time with watermarks (and configured lateness)
 ---
-
 # Quiz 1: Answer
 
 **A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
@@ -487,20 +441,19 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Watermarks let windows close despite out-of-order arrival
 - Processing time would put the click in the 10:01 bucket
 - Wrong time semantics break dashboards, fraud scores, and billing
-
 ---
-
 # Quiz 2 of 3
 
 **Which workload is the clearest fit for Apache Flink?**
 
-- A. A nightly sales workbook Finance needs by 7 a.m.
-- B. Scoring each card authorization with recent spend history in sub-seconds
-- C. A one-off SQL pull for a quarterly board slide
-- D. A simple broker-side filter with no state or windows
+A. A nightly sales workbook Finance needs by 7 a.m.
 
+B. Scoring each card authorization with recent spend history in sub-seconds
+
+C. A one-off SQL pull for a quarterly board slide
+
+D. A simple broker-side filter with no state or windows
 ---
-
 # Quiz 2: Answer
 
 **Which workload is the clearest fit for Apache Flink?**
@@ -511,7 +464,6 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Nightly batch and one-off analytics usually belong in the warehouse
 - Messaging transports events; Flink owns compute, state, and windows
 - Ask: do we need continuous stateful compute - or just fresher batch?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -523,7 +475,6 @@ Describe a real-time use case on your team (fraud, telemetry, alerting, or click
 - Where do messaging, Flink, and storage each sit in the pipeline?
 - Would you use tumbling, sliding, or session windows - and why?
 - When would DataStream be worth it instead of Flink SQL?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -540,28 +491,20 @@ Describe a real-time use case on your team (fraud, telemetry, alerting, or click
 - Treating Kafka as the compute engine
 - Processing-time windows for correctness-critical metrics
 - Using Flink for pure overnight batch with no continuous consumer
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-
