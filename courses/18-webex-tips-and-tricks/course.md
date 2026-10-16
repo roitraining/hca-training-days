@@ -7,8 +7,7 @@
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
-# Webex
-# Tips and Tricks
+# Webex Tips and Tricks
 
 ## Meetings, messaging, and collaboration features most users never discover
 ---
@@ -249,10 +248,14 @@
 
 **What best describes a Webex Space?**
 
-- A. A one-time chat thread that disappears when the meeting ends
-- B. A persistent room for a team, project, or topic where messages, files, and context stay searchable
-- C. Only a whiteboard that cannot hold messages or files
-- D. A calendar invite template used only for scheduling
+A. A one-time chat thread that disappears when the meeting ends
+
+
+B. A persistent room for a team, project, or topic where messages, files, and context stay searchable
+
+C. Only a whiteboard that cannot hold messages or files
+
+D. A calendar invite template used only for scheduling
 ---
 # Quiz 1: Answer
 
@@ -269,10 +272,13 @@
 
 **You and a colleague hear loud echo in a hybrid room. What should you check first?**
 
-- A. Turn everyone’s video off permanently
-- B. Delete the Space and recreate the meeting
-- C. Disable live captions for all attendees
-- D. Ensure only one device per person has meeting audio on in that room
+A. Turn everyone’s video off permanently
+
+B. Delete the Space and recreate the meeting
+
+C. Disable live captions for all attendees
+
+D. Ensure only one device per person has meeting audio on in that room
 ---
 # Quiz 2: Answer
 

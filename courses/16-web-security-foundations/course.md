@@ -67,7 +67,7 @@
 ---
 # The Landscape: Where Web Security Lives
 
-- A web server isn’t one thing to secure - it’s a stack: OS, network, services, and application code
+- A web server isn’t one thing to secure—it’s a stack: OS, network, services, and application code
 - An attacker only needs one weak layer; defenders need all of them
 - This segment maps the layers, then builds the cryptography vocabulary you’ll need for the rest of the course
 - Segments 2 and 3 return to harden each layer in turn
@@ -134,7 +134,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 - A browser’s padlock means “this certificate chains to a trusted CA,” not “this site is safe”
 
 > [!TIP]
-> Automate certificate renewal (e.g. ACME / Let’s Encrypt): expired certificates are one of the most common self-inflicted outages.
+> Automate certificate renewal (e.g., ACME/Let’s Encrypt): expired certificates are one of the most common self-inflicted outages.
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -168,7 +168,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 - Unneeded local admin rights
 
 ### Enforce
-- Strong password / key-based auth
+- Strong password/key-based auth
 - Automatic security updates
 - Centralized log collection
 ---
@@ -188,7 +188,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 - Run the web server process with the least privilege necessary
 - Disable directory listing, remove default/sample content, and hide version banners
-- Turn off unused modules and HTTP methods (e.g. TRACE, PUT if not needed)
+- Turn off unused modules and HTTP methods (e.g., TRACE, PUT if not needed)
 - Set secure HTTP response headers (HSTS, X-Content-Type-Options, CSP)
 ---
 # Enabling SSL/TLS on the Web Server
@@ -289,10 +289,13 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 **Which statement correctly describes hashing in a web security context?**
 
-- A. Hashing is a reversible encryption method for bulk traffic
-- B. A public/private key pair is required to compute any hash
-- C. A hash is a one-way fingerprint used for integrity and password storage (with salt)
-- D. Certificates replace the need for hashing entirely
+A. Hashing is a reversible encryption method for bulk traffic
+
+B. A public/private key pair is required to compute any hash
+
+C. A hash is a one-way fingerprint used for integrity and password storage (with salt)
+
+D. Certificates replace the need for hashing entirely
 ---
 # Quiz 1: Answer
 
@@ -309,10 +312,13 @@ print(hashlib.sha256(b"hello").hexdigest())
 
 **When hardening a public web server, which practice is most aligned with least privilege and a reduced attack surface?**
 
-- A. Run the web process without root/Administrator, disable unused modules/methods, and enforce TLS-only with a trusted certificate
-- B. Leave sample apps and directory listing enabled for easier troubleshooting
-- C. Keep SSLv3 and TLS 1.0 enabled “just in case” old clients connect
-- D. Connect the app to the database with an admin account for convenience
+A. Run the web process without root/Administrator, disable unused modules/methods, and enforce TLS-only with a trusted certificate
+
+B. Leave sample apps and directory listing enabled for easier troubleshooting
+
+C. Keep SSLv3 and TLS 1.0 enabled “just in case” old clients connect
+
+D. Connect the app to the database with an admin account for convenience
 ---
 # Quiz 2: Answer
 

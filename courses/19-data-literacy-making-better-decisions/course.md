@@ -69,8 +69,8 @@
 # Why Data Literacy Matters Here
 
 - Every shift produces data: vitals, throughput times, staffing ratios, satisfaction scores, safety events
-- Decisions made on misread data can affect patient safety, staffing, and cost - not just a spreadsheet
-- Data literacy isn’t about becoming a statistician - it’s about asking the right questions before you act
+- Decisions made on misread data can affect patient safety, staffing, and cost—not just a spreadsheet
+- Data literacy isn’t about becoming a statistician—it’s about asking the right questions before you act
 - The goal today: read data more critically, not more mathematically
 ---
 <!-- layout: image-only -->
@@ -132,7 +132,7 @@
 ---
 # Averages Hide the Story
 
-- An average collapses a whole distribution into one number - and hides the spread
+- An average collapses a whole distribution into one number and hides the spread
 - Two units can have the same average wait time with very different experiences: one steady, one wildly inconsistent
 - Ask: what’s the range? Are there outliers pulling the average up or down?
 - A median is often more representative than a mean when a few extreme values exist
@@ -183,7 +183,7 @@
 - Readmissions dropped 3 points the same month a new discharge process launched
 - Also that month: flu season ended, and two high-risk-mix skilled nursing partners closed for renovation
 - Which explanation is right? Possibly all three, in some combination
-- The lesson isn’t “ignore the process change” - it’s “don’t credit it alone without checking”
+- The lesson isn’t “ignore the process change”, it’s “don’t credit it alone without checking”
 ---
 <!-- layout: 2-column -->
 # Statistical vs. Practical Significance
@@ -282,10 +282,13 @@
 
 **Two units both report a 22-minute average wait. Unit A’s range is 18–26; Unit B’s is 5–65. What’s the best takeaway?**
 
-- A. Same average can hide very different patient experiences: ask about spread and outliers before acting
-- B. Averages always tell the full story, so both units need the same fix
-- C. Unit B must be better because some patients wait only 5 minutes
-- D. Ranges are irrelevant; only the average matters for staffing decisions
+A. Same average can hide very different patient experiences: ask about spread and outliers before acting
+
+B. Averages always tell the full story, so both units need the same fix
+
+C. Unit B must be better because some patients wait only 5 minutes
+
+D. Ranges are irrelevant; only the average matters for staffing decisions
 ---
 # Quiz 1: Answer
 
@@ -302,10 +305,13 @@
 
 **Readmissions drop the same month a new discharge process launches - and flu season ends. What’s the soundest stance?**
 
-- A. The process change must be the sole cause
-- B. Ignore the process change because other factors exist
-- C. Correlation isn’t proof of causation: check what else changed before crediting one driver alone
-- D. Any month-over-month drop on a small sample is always statistically and practically significant
+A. The process change must be the sole cause
+
+B. Ignore the process change because other factors exist
+
+C. Correlation isn’t proof of causation: check what else changed before crediting one driver alone
+
+D. Any month-over-month drop on a small sample is always statistically and practically significant
 ---
 # Quiz 2: Answer
 
@@ -337,8 +343,8 @@ Pick one recurring dashboard or report you already use (throughput, readmissions
 ### Strong Answers Mention
 - Define the question before staring at the number
 - Source, freshness, apples-to-apples comparison, risk adjustment
-- Trend over periods - not one point; practical vs. statistical significance
-- Confirmation bias / cherry-picking deserve a second look when data “agrees”
+- Trend over periods, not one point; practical vs. statistical significance
+- Confirmation bias/cherry-picking deserve a second look when data “agrees”
 
 ### Watch For
 - Reacting to a clean dashboard as if the underlying data is clean
