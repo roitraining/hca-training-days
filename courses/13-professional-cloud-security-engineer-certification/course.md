@@ -82,7 +82,7 @@
 
 # What the Certification Validates
 
-- Ability to **design, implement, and manage** secure Google Cloud infrastructure
+- Ability to design, implement, and manage secure Google Cloud infrastructure
 - Scenario judgment across identity, network, data, operations, and compliance
 - Product-aware decisions (which control solves which risk) - not trivia memorization
 - Readiness to operate security alongside development and platform teams
@@ -116,8 +116,8 @@
 
 # Recommended Prior Experience
 
-- Google commonly recommends **~3+ years** industry experience
-- Including **~1+ year** designing/managing solutions on Google Cloud
+- Google commonly recommends ~3+ years industry experience
+- Including ~1+ year designing/managing solutions on Google Cloud
 - Strongest predictors of success: real IAM, VPC, KMS, and logging work
 - Reading alone rarely replaces console/`gcloud` muscle memory
 
@@ -168,7 +168,7 @@
 
 ---
 <!-- layout: 2-column -->
-# Network & Boundary (~22%)
+# Network and Boundary (~22%)
 
 ### Expect Coverage Of
 - VPC firewalls / NGFW ideas
@@ -204,7 +204,7 @@
 
 # “Big Rocks” Study Priorities
 
-- Spend the most hours on **Access + Data + Network** (majority of the exam)
+- Spend the most hours on Access + Data + Network (majority of the exam)
 - Build one reference architecture that includes hierarchy, private networking, CMEK, and logging
 - Practice “choose the control” scenarios - not product feature laundry lists
 - Revisit VPC-SC and KMS until trade-offs feel automatic
@@ -225,13 +225,13 @@
 # Domain 4: Managing Operations (~19%)
 
 - Detect and respond using Google Cloud security operations tooling
-- **Security Command Center** findings, priorities, and remediation workflows
+- Security Command Center findings, priorities, and remediation workflows
 - Logging, monitoring, and detection design (what to log; where to sink)
 - Incident-oriented scenarios: investigate → contain → improve controls
 
 | Ops theme | Why it’s tested |
 | :--- | :--- |
-| SCC | Centralize posture & findings |
+| SCC | Centralize posture and findings |
 | Logging | Evidence + detection inputs |
 | Automation | Scale response consistently |
 
@@ -260,11 +260,11 @@
 
 # Highest-Yield Preparation Resources
 
-1. **Official exam guide**: source of truth for domains and task statements  
-2. **Google Cloud skill boosts / labs**: IAM, networking, KMS, SCC, VPC-SC  
-3. **Architecture center security patterns**: private, perimeter, encryption designs  
-4. **Practice exams / sample questions**: timing and scenario stamina  
-5. **Your production scars**: postmortems and real configs beat flashcards  
+1. Official exam guide: source of truth for domains and task statements  
+2. Google Cloud skill boosts / labs: IAM, networking, KMS, SCC, VPC-SC  
+3. Architecture center security patterns: private, perimeter, encryption designs  
+4. Practice exams / sample questions: timing and scenario stamina  
+5. Your production scars: postmortems and real configs beat flashcards  
 
 > [!WARNING]
 > Outdated third-party dumps miss newer topics (e.g. AI workload security). Prefer official + recent labs.

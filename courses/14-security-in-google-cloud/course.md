@@ -95,12 +95,12 @@
 # Who Secures What
 
 ### Google Secures
-- Physical data centers & hardware
+- Physical data centers and hardware
 - Global network infrastructure
-- Hypervisor & host OS
+- Hypervisor and host OS
 
 ### You Secure
-- Identity & access management
+- Identity and access management
 - Network configuration (VPCs, firewalls)
 - Data classification and encryption choices
 
@@ -136,7 +136,7 @@
 
 # IAM Essentials: Who Can Do What
 
-- An IAM policy binds **members** to **roles** on a **resource**
+- An IAM policy binds members to roles on a resource
 - Members: Google/Cloud Identity accounts, groups, service accounts, or domains
 - Roles: bundles of permissions - basic, predefined, or custom
 - Policies attach to resources and inherit down the hierarchy
@@ -161,7 +161,7 @@
 
 - Service accounts let applications and VMs authenticate as an identity, not a person
 - Avoid long-lived downloaded keys where possible
-- Prefer **impersonation** and **workload identity federation**
+- Prefer impersonation and workload identity federation
 - Grant a service account only the roles its workload actually needs
 
 > [!WARNING]
@@ -196,7 +196,7 @@
 
 - A VPC is a global, software-defined network scoped to your project (or shared across projects)
 - Subnets are regional; resources get internal IPs from the subnet range
-- Use **Shared VPC** to centralize network administration across many projects
+- Use Shared VPC to centralize network administration across many projects
 - Private Google Access lets internal-only VMs reach Google APIs without a public IP
 
 ---
@@ -204,7 +204,7 @@
 # Firewalls: Default-Deny by Design
 
 - VPC firewall rules control traffic by IP range, tag, or service account - not just IP
-- New VPCs start with **deny-all** ingress; you allow only what’s needed
+- New VPCs start with deny-all ingress; you allow only what’s needed
 - Prefer narrow, tag- or service-account-scoped rules over broad `0.0.0.0/0`
 - Hierarchical firewall policies enforce guardrails from the org or folder down
 
@@ -212,7 +212,7 @@
 <!-- layout: 2-column -->
 # Layering Network Controls
 
-### Perimeter & Access
+### Perimeter and Access
 - Cloud Armor: edge / WAF protection
 - Identity-Aware Proxy: admin access without a VPN
 - Cloud NAT: outbound-only internet access
@@ -226,7 +226,7 @@
 
 # VPC Service Controls: Data Exfiltration Boundary
 
-- Creates a **service perimeter** around sensitive resources (e.g. BigQuery, Cloud Storage)
+- Creates a service perimeter around sensitive resources (e.g. BigQuery, Cloud Storage)
 - Blocks data from leaving the perimeter, even with valid credentials
 - Stops copy-to-a-different-project or public-bucket style exfiltration
 - Complements IAM: IAM says *who*, VPC Service Controls says *where data can go*
@@ -239,16 +239,16 @@
 # Encryption: On by Default, Configurable by You
 
 - All data at rest is encrypted by default; encryption in transit is standard for Google APIs
-- **Google-managed keys**: zero setup, Google controls rotation
-- **CMEK** (Customer-Managed Encryption Keys): you control the key in Cloud KMS
-- **CSEK** (Customer-Supplied Encryption Keys): you hold and supply the key material yourself
+- Google-managed keys: zero setup, Google controls rotation
+- CMEK (Customer-Managed Encryption Keys): you control the key in Cloud KMS
+- CSEK (Customer-Supplied Encryption Keys): you hold and supply the key material yourself
 
 ---
 <!-- layout: 2-column -->
 # Cloud KMS at a Glance
 
 ### What It Manages
-- Symmetric & asymmetric keys
+- Symmetric and asymmetric keys
 - Key rings and rotation schedules
 - HSM-backed keys for higher assurance
 
@@ -262,8 +262,8 @@
 # Sensitive Data Protection (DLP): Find and De-Identify
 
 - Scans data for PII, PHI, and secrets across Cloud Storage, BigQuery, and streams
-- **Inspect**: classify what sensitive data exists and where
-- **De-identify**: mask, tokenize, or redact before wider use
+- Inspect: classify what sensitive data exists and where
+- De-identify: mask, tokenize, or redact before wider use
 - Feeds findings into governance and Security Command Center
 
 > [!TIP]
@@ -297,8 +297,8 @@
 # Security Command Center: Centralized Posture
 
 - Aggregates findings across projects: misconfigurations, vulnerabilities, active threats
-- **Standard tier**: asset inventory plus a baseline set of detectors
-- **Premium / Enterprise tier**: deeper threat detection, compliance monitoring, attack path simulation
+- Standard tier: asset inventory plus a baseline set of detectors
+- Premium / Enterprise tier: deeper threat detection, compliance monitoring, attack path simulation
 - Findings can route to ticketing or SIEM tools for response workflows
 
 ---
@@ -328,9 +328,9 @@
 
 # Audit Logs: Who Did What, When
 
-- **Admin Activity logs**: configuration changes - always on, cannot be disabled
-- **Data Access logs**: reads/writes to data - off by default for most services
-- **System Event** and **Policy Denied** logs round out the picture
+- Admin Activity logs: configuration changes - always on, cannot be disabled
+- Data Access logs: reads/writes to data - off by default for most services
+- System Event and Policy Denied logs round out the picture
 - Audit logs are often the first place investigators look during an incident
 
 > [!IMPORTANT]
@@ -341,11 +341,11 @@
 <!-- layout: 2-column -->
 # Putting It Together
 
-### Detect & Triage
+### Detect and Triage
 - SCC findings and log-based alerts surface anomalies
 - Audit logs establish who, what, and when
 
-### Contain & Improve
+### Contain and Improve
 - IAM revocation, firewall updates, VPC Service Controls adjustments
 - Feed findings back into policy and monitoring coverage
 

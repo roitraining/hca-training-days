@@ -83,7 +83,7 @@
 
 # Why Real-Time Matters
 
-- Businesses increasingly need **seconds**, not overnight batches
+- Businesses increasingly need seconds, not overnight batches
 - Detect fraud, outages, and user issues while they are happening
 - Power live dashboards, personalization, and operational alerts
 - Continuous data is already flowing: batch is a delayed snapshot
@@ -115,9 +115,9 @@
 
 # What Is Apache Flink?
 
-- Open-source **stateful stream processing** engine
+- Open-source stateful stream processing engine
 - Runs continuous jobs over unbounded data
-- Strong model for **event time**, **windows**, and **fault-tolerant state**
+- Strong model for event time, windows, and fault-tolerant state
 - APIs for Java/Scala (DataStream) and SQL/Table for many teams
 
 > [!TIP]
@@ -135,18 +135,18 @@
 
 ### Messaging
 - Kafka / Pub/Sub / Pulsar
-- Transport & buffer
+- Transport and buffer
 - Not heavy compute
 
 ### Flink
 - Stateful transforms
-- Windows & joins
+- Windows and joins
 - Exactly-once sinks*
 
 ### Storage
 - Warehouse / lake / OLTP
 - Durable history
-- Serving & analytics
+- Serving and analytics
 
 ---
 <!-- layout: navigation -->
@@ -166,7 +166,7 @@
 
 # Streams
 
-- A **stream** is an unbounded sequence of events
+- A stream is an unbounded sequence of events
 - Events often carry a key (user_id, device_id, account_id)
 - Operators transform streams: map, filter, keyBy, join, window
 - Jobs run until cancelled - there is no natural “end of file”
@@ -195,9 +195,9 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 # Windowing
 
-- Windows **slice** an unbounded stream into finite buckets
+- Windows slice an unbounded stream into finite buckets
 - Common types: tumbling, sliding, session
-- Aggregations (sum, count, avg) usually happen **inside** a window
+- Aggregations (sum, count, avg) usually happen inside a window
 - Choose windows from the business question, not from habit
 
 | Window | Idea | Example |
@@ -216,7 +216,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 # Watermarks and Late Data
 
-- **Watermarks** estimate how far event time has progressed
+- Watermarks estimate how far event time has progressed
 - They let windows close even when data arrives out of order
 - Late events can still be allowed within a configured lateness
 - Wrong time semantics → wrong dashboards and wrong alerts
@@ -229,14 +229,14 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 # Story: The Late Click
 
 ### What Happened
-- User clicks at **10:00:50** (event time)
+- User clicks at 10:00:50 (event time)
 - Mobile network delays delivery
-- Event arrives at the job at **10:01:05**
-- You need “clicks per minute” for **10:00**
+- Event arrives at the job at 10:01:05
+- You need “clicks per minute” for 10:00
 
 ### Processing Time vs Event Time
-- **Processing time:** lands in the 10:01 bucket → undercount 10:00, inflate 10:01
-- **Event time + watermark:** still attributed to 10:00; window closes when watermark passes 10:01
+- Processing time: lands in the 10:01 bucket → undercount 10:00, inflate 10:01
+- Event time + watermark: still attributed to 10:00; window closes when watermark passes 10:01
 - Same bug shows up in fraud scores, billing, and SLO burn rates
 
 <!-- below-columns -->
@@ -255,7 +255,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 ### Operators → Sink
 - Stateful keyed logic
-- Windows & timers
+- Windows and timers
 - Write to DB, lake, alert bus
 
 ---
@@ -269,7 +269,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 - Best when logic is complex or bespoke
 
 ### SQL / Table API
-- Declarative queries over streams & tables
+- Declarative queries over streams and tables
 - Windows, joins, aggregations in SQL
 - Often faster for analytics-style jobs
 - Same runtime: state, checkpoints, event time
@@ -285,7 +285,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 - Read a stream of purchase events (amount + event-time timestamp)
 - `keyBy` customer so each user’s state is processed independently
-- Tumbling **event-time** windows (1 minute) sum spend per customer
+- Tumbling event-time windows (1 minute) sum spend per customer
 - Print results: same shape as writing to Kafka, a DB, or a lake sink
 
 ```java
@@ -326,7 +326,7 @@ public class SimplePurchaseSumJob {
 
 # From `print()` to a Kafka Sink
 
-- Swap the sink - **not** the window or `keyBy` logic
+- Swap the sink - not the window or `keyBy` logic
 - Serialize the aggregate (JSON, Avro, Protobuf) for consumers
 - Use a transactional / idempotent sink when you need stronger delivery guarantees
 - Downstream reads a topic instead of job logs: same pipeline shape as production
@@ -379,7 +379,7 @@ resultStream.sinkTo(
 - Feed SLO / ops views
 
 ### Alerting
-- Threshold & composite rules
+- Threshold and composite rules
 - Deduplicate noise
 - Trigger tickets / pages
 
@@ -387,9 +387,9 @@ resultStream.sinkTo(
 
 # Integration: Messaging In, Sinks Out
 
-- **Ingress:** Kafka, Google Pub/Sub, Kinesis, Pulsar
-- **Egress:** warehouses, lakes, OLTP, search, notification topics
-- Design for **replay**: keep source offsets and idempotent sinks
+- Ingress: Kafka, Google Pub/Sub, Kinesis, Pulsar
+- Egress: warehouses, lakes, OLTP, search, notification topics
+- Design for replay: keep source offsets and idempotent sinks
 - Separate “speed layer” results from long-term analytical storage when needed
 
 > [!WARNING]
@@ -422,9 +422,9 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
                               └─→ Lakehouse / Warehouse
 ```
 
-- Flink owns **compute + state** for the stream path
-- Messaging owns **durable transport and fan-out**
-- Storage owns **history, BI, and downstream ML features**
+- Flink owns compute + state for the stream path
+- Messaging owns durable transport and fan-out
+- Storage owns history, BI, and downstream ML features
 
 ---
 <!-- layout: 3-column -->

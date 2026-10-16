@@ -99,7 +99,7 @@
 - Running services (only what’s needed)
 
 ### Communication
-- Network configuration & segmentation
+- Network configuration and segmentation
 - Protocols (HTTP/S, DNS, SSH, etc.)
 
 ---
@@ -108,7 +108,7 @@
 
 - Every layer above eventually depends on cryptography to protect something: passwords, sessions, traffic, certificates
 - Three building blocks recur everywhere: symmetric encryption, asymmetric encryption, and hashing
-- PKI ties those building blocks to trust: proving a key belongs to who it claims to
+- PKI ties those building blocks to trust: proving a key belongs to the identity it claims
 - Get comfortable with these before Segment 2’s TLS discussion
 
 ---
@@ -132,7 +132,7 @@
 - A hash is a one-way fingerprint of data: the same input always produces the same output
 - Used to verify integrity (did this file change?) and to store passwords (never store them in plaintext)
 - A good hash function is fast to compute but infeasible to reverse
-- Password hashing adds a **salt** so identical passwords don’t produce identical hashes
+- Password hashing adds a salt so identical passwords don’t produce identical hashes
 
 ```python
 import hashlib
@@ -318,9 +318,9 @@ print(hashlib.sha256(b"hello").hexdigest())
 # Application Layer Checklist
 
 ### Code
-- Server-side validation & output encoding
+- Server-side validation and output encoding
 - Least-privilege database accounts
-- Patched frameworks & dependencies
+- Patched frameworks and dependencies
 
 ### Operations
 - Secrets kept out of source code

@@ -101,12 +101,12 @@
 <!-- layout: 2-column -->
 # Where Healthcare Data Comes From
 
-### Clinical & Operational
+### Clinical and Operational
 - EHR (vitals, orders, diagnoses)
-- Scheduling & staffing systems
+- Scheduling and staffing systems
 - Quality and safety event reports
 
-### Experience & Financial
+### Experience and Financial
 - Patient satisfaction surveys
 - Claims and billing data
 - Cost and utilization reports
@@ -115,9 +115,9 @@
 
 # Data Quality: Garbage In, Garbage Out
 
-- **Completeness**: is anything missing, and does that missingness mean something?
-- **Accuracy**: was it recorded correctly at the source, not just entered correctly downstream?
-- **Timeliness**: how stale is this number by the time you’re looking at it?
+- Completeness: is anything missing, and does that missingness mean something?
+- Accuracy: was it recorded correctly at the source, not just entered correctly downstream?
+- Timeliness: how stale is this number by the time you’re looking at it?
 - A perfectly formatted report built on bad data is still a bad report
 
 > [!WARNING]
@@ -182,7 +182,7 @@
 ### Common Tricks
 - Y-axis that doesn’t start at zero, exaggerating a small change
 - A cherry-picked date range that hides the bigger trend
-- Two different scales on one chart, invited to be compared
+- Two different scales on one chart, inviting a false comparison
 
 ### Your Defense
 - Check the axis before you react to the slope
@@ -288,9 +288,9 @@
 
 # Check for Bias
 
-- **Confirmation bias**: noticing the data that supports what you already believed
-- **Cherry-picking**: choosing the time window or metric that tells the story you want
-- **Simpson’s paradox**: a trend that appears in several groups can reverse when the groups are combined
+- Confirmation bias: noticing the data that supports what you already believed
+- Cherry-picking: choosing the time window or metric that tells the story you want
+- Simpson’s paradox: a trend that appears in several groups can reverse when the groups are combined
 - Ask: would I trust this number if it disagreed with me?
 
 > [!CAUTION]

@@ -109,12 +109,12 @@
 # Practical Applications
 
 ### Build Faster
-- Boilerplate & APIs
+- Boilerplate and APIs
 - Refactors
-- Migrations stubs
+- Migration stubs
 
 ### Raise Quality
-- Tests & edge cases
+- Tests and edge cases
 - Docstrings / README
 - Review checklists
 
@@ -134,8 +134,8 @@
 
 ### Doesn’t Change
 - Accountability for merges
-- Need for tests & review
-- Security & license duties
+- Need for tests and review
+- Security and license duties
 
 ---
 <!-- layout: navigation -->
@@ -177,15 +177,15 @@ Include type hints and a short docstring.
 
 ### Tests
 - Unit tests for happy path
-- Edge cases & errors
+- Edge cases and errors
 - Fixtures matching project style
 
 ---
 
 # Adding Context and Few-Shot Prompting
 
-- **Context:** paste interfaces, error logs, or “match this file’s style”
-- **Few-shot:** show 1–2 examples of the pattern you want repeated
+- Context: paste interfaces, error logs, or “match this file’s style”
+- Few-shot: show 1–2 examples of the pattern you want repeated
 - Prefer open files / codebase grounding in the IDE over giant pastes
 - Refresh context when the assistant drifts from your APIs
 
@@ -216,7 +216,7 @@ Now write get_order(id: str) -> Order the same way.
 
 # Evaluating Generated Code
 
-- Run the **smallest verification** immediately (test, REPL, build)
+- Run the smallest verification immediately (test, REPL, build)
 - Diff like a PR from a junior engineer
 - Ask the assistant to critique its own output against your checklist
 - Prefer iterative fixes over accepting a large rewrite
@@ -248,7 +248,7 @@ Now write get_order(id: str) -> Order the same way.
 - Accept / edit / reject
 
 ### Chat
-- Generate & explain
+- Generate and explain
 - Multi-file Q&A
 - Test / doc drafts
 
@@ -289,7 +289,7 @@ Now write get_order(id: str) -> Order the same way.
 
 ### Prefer
 - Approved enterprise SKUs
-- Redacted logs & samples
+- Redacted logs and samples
 - Synthetic test data
 - Local secrets managers
 
@@ -297,7 +297,7 @@ Now write get_order(id: str) -> Order the same way.
 
 # Prompt Hacking and Abuse Awareness
 
-- Assistants can be steered into **unsafe or policy-violating** output
+- Assistants can be steered into unsafe or policy-violating output
 - Treat untrusted content (web pages, tickets) as potentially adversarial
 - Don’t let AI execute destructive commands without human confirmation
 - Report suspicious IDE / extension behavior through security channels

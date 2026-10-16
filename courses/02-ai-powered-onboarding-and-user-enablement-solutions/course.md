@@ -1,4 +1,4 @@
-<!-- course-title: AI-Powered Onboarding & Enablement -->
+<!-- course-title: AI-Powered Onboarding and Enablement -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -53,7 +53,7 @@
 <!-- layout: panel-right -->
 # Who Should Attend
 
-- Learning & Development (L&D) practitioners
+- Learning and Development (L&D) practitioners
 - Employee / customer enablement and success teams
 - HR technology and people systems owners
 - Product managers shaping in-app help and adoption
@@ -82,9 +82,9 @@
 
 # The Problem We Are Solving
 
-- New hires and new users face **too much content, too little timing**
+- New hires and new users face too much content, too little timing
 - Help is scattered: LMS, wiki, Slack, tickets, and tribal knowledge
-- Managers and trainers become **bottlenecks** for the same questions
+- Managers and trainers become bottlenecks for the same questions
 - Change (new tools, policy, process) resets the learning curve again
 
 > [!NOTE]
@@ -114,7 +114,7 @@
 
 # Time-to-Productivity as the North Star
 
-- **Time-to-productivity (TTP):** how long until someone performs independently
+- Time-to-productivity (TTP): how long until someone performs independently
 - Shorter TTP compounds: less shadowing, fewer tickets, faster value
 - Measure milestones, not “completed training modules” alone
 
@@ -134,10 +134,10 @@
 
 # Moments Worth Automating First
 
-- **High volume** questions (“How do I…?”) that experts answer daily
-- **High friction** steps that stall Day 1–30 (access, systems, forms)
-- **High risk** topics where wrong answers hurt (policy, compliance, safety)
-- **High change** areas where docs lag and people guess
+- High volume questions (“How do I…?”) that experts answer daily
+- High friction steps that stall Day 1–30 (access, systems, forms)
+- High risk topics where wrong answers hurt (policy, compliance, safety)
+- High change areas where docs lag and people guess
 
 > [!TIP]
 > Start with one role or one product workflow: prove TTP impact before boiling the ocean.
@@ -199,7 +199,7 @@
 
 # Why RAG Matters for Enablement
 
-- **RAG** = retrieve approved content, then generate an answer grounded in it
+- RAG = retrieve approved content, then generate an answer grounded in it
 - Reduces “confident but wrong” answers on policy and process
 - Lets you update a source doc once: answers improve without retraining people
 
@@ -224,7 +224,7 @@
 
 # Pattern 4: Personalized Learning Paths
 
-- Adapt by **role, skill gap, product plan, or tenure**
+- Adapt by role, skill gap, product plan, or tenure
 - Sequence micro-lessons, practice, and checkpoints
 - AI can recommend “what’s next” from behavior and goals
 - Humans still own the curriculum map and quality bar
@@ -249,7 +249,7 @@
 
 ### Grow
 - Personalized path
-- Practice & coach
+- Practice and coach
 
 
 ---
@@ -270,11 +270,11 @@
 
 # Metrics That Prove It Works
 
-- **Time-to-productivity:** days to milestone / role-ready
-- **Task success:** % completing critical first-week actions
-- **Deflection:** fewer repeat tickets / Slack pings on known topics
-- **Adoption:** weekly active users of assistant / guidance
-- **Experience:** CSAT / thumbs on answers; qualitative comments
+- Time-to-productivity: days to milestone / role-ready
+- Task success: % completing critical first-week actions
+- Deflection: fewer repeat tickets / Slack pings on known topics
+- Adoption: weekly active users of assistant / guidance
+- Experience: CSAT / thumbs on answers; qualitative comments
 
 > [!NOTE]
 > Pair leading indicators (adoption, thumbs) with lagging outcomes (TTP, ticket volume).
@@ -286,7 +286,7 @@
 ### Collect
 - Thumbs up/down on answers
 - “Was this helpful?” on tours
-- Escalation transcripts themes
+- Themes from escalation transcripts
 
 ### Act
 - Fix or retire bad sources
@@ -297,11 +297,11 @@
 
 # Content Accuracy Guardrails
 
-- **Approved sources only** (policy, SOP, product docs you own)
-- **Named content owners** and review cadences
-- **Citations** so learners can verify the source
-- **Versioning** when process or policy changes
-- **Blocklists** for topics the bot must not answer
+- Approved sources only (policy, SOP, product docs you own)
+- Named content owners and review cadences
+- Citations so learners can verify the source
+- Versioning when process or policy changes
+- Blocklists for topics the bot must not answer
 
 > [!WARNING]
 > Never let the assistant invent HR, clinical, legal, or compliance guidance without a grounded source.
@@ -323,7 +323,7 @@
 ### Technology
 - Access control by audience
 - PII minimization
-- Logging & audit trail
+- Logging and audit trail
 
 ---
 

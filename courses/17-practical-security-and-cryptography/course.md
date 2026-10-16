@@ -1,4 +1,4 @@
-<!-- course-title: Practical Security & Cryptography -->
+<!-- course-title: Practical Security and Cryptography -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -94,10 +94,10 @@
 
 # CIAA: Extending the Triad
 
-- **Confidentiality**: only authorized parties can read data
-- **Integrity**: data and systems aren’t altered without detection
-- **Availability**: systems and data stay usable when needed
-- **Authentication**: proving an identity is who it claims to be - the fourth pillar this course adds
+- Confidentiality: only authorized parties can read data
+- Integrity: data and systems aren’t altered without detection
+- Availability: systems and data stay usable when needed
+- Authentication: proving an identity is who it claims to be - the fourth pillar this course adds
 
 ---
 <!-- layout: 2-column -->

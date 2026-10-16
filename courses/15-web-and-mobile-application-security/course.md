@@ -94,9 +94,9 @@
 
 # Confidentiality, Integrity, Availability
 
-- **Confidentiality**: only authorized users and systems can read the data
-- **Integrity**: data and code aren’t altered without detection
-- **Availability**: the app stays usable under normal load and under attack
+- Confidentiality: only authorized users and systems can read the data
+- Integrity: data and code aren’t altered without detection
+- Availability: the app stays usable under normal load and under attack
 - Most vulnerabilities you’ll see today map back to breaking one of these three properties
 
 ---
@@ -130,7 +130,7 @@
 # Introducing OWASP
 
 - OWASP (Open Worldwide Application Security Project) is a nonprofit community publishing free, vendor-neutral security guidance
-- Best known for the **OWASP Top 10**: a ranked list of the most critical risks, refreshed periodically
+- Best known for the OWASP Top 10: a ranked list of the most critical risks, refreshed periodically
 - Separate Top 10 lists exist for web applications and for mobile applications
 - Treat it as a floor, not a ceiling: passing the Top 10 doesn’t mean an app is fully secure
 
@@ -190,7 +190,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ---
 <!-- layout: 2-column -->
-# Broken Access Control & Authentication
+# Broken Access Control and Authentication
 
 ### Broken Access Control
 - Users can act outside their intended permissions
@@ -207,8 +207,8 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 | Category | Risk pattern |
 | :--- | :--- |
 | Security Misconfiguration | Default credentials, verbose errors, open cloud storage |
-| Vulnerable & Outdated Components | Unpatched libraries with known CVEs |
-| Software & Data Integrity Failures | Unsigned updates, insecure CI/CD pipelines |
+| Vulnerable and Outdated Components | Unpatched libraries with known CVEs |
+| Software and Data Integrity Failures | Unsigned updates, insecure CI/CD pipelines |
 
 > [!NOTE]
 > The exact ranking and names shift with each OWASP Top 10 refresh: know the patterns, not just the current list.
@@ -226,7 +226,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ---
 <!-- layout: 2-column -->
-# Mobile Top Risks: Storage & Communication
+# Mobile Top Risks: Storage and Communication
 
 ### Insecure Data Storage
 - Sensitive data cached in plaintext: local databases, logs, temp files
@@ -283,9 +283,9 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 # Encryption: Confidentiality and Integrity in Practice
 
-- **Encryption at rest**: protects stored data if a disk, backup, or device is exposed
-- **Encryption in transit**: TLS protects data moving between client and server
-- **Hashing** (not encryption) verifies integrity: passwords should be hashed, never encrypted
+- Encryption at rest: protects stored data if a disk, backup, or device is exposed
+- Encryption in transit: TLS protects data moving between client and server
+- Hashing (not encryption) verifies integrity: passwords should be hashed, never encrypted
 - Strong, current algorithms and libraries matter more than a custom implementation
 
 ---
@@ -342,11 +342,11 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 # Security Testing Tool Categories
 
 ### Automated Scanning
-- **SAST** (Static): scans source code without running it
-- **DAST** (Dynamic): attacks a running app like a real attacker - e.g. OWASP ZAP
+- SAST (Static): scans source code without running it
+- DAST (Dynamic): attacks a running app like a real attacker - e.g. OWASP ZAP
 
 ### Broader Coverage
-- **SCA**: flags vulnerable third-party dependencies
+- SCA: flags vulnerable third-party dependencies
 - Mobile-specific scanners check app binaries and platform configuration
 
 ---

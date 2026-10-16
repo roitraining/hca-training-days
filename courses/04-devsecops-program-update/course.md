@@ -81,9 +81,9 @@
 
 # What DevSecOps Is (and Is Not)
 
-- **DevSecOps** = security as a continuous, shared responsibility across build and run
+- DevSecOps = security as a continuous, shared responsibility across build and run
 - Embeds controls into the same pipelines that ship software
-- Favors **automation and feedback** over late, manual approval theater
+- Favors automation and feedback over late, manual approval theater
 - Not a rebrand of a separate security team doing the same handoffs
 
 > [!NOTE]
@@ -119,8 +119,8 @@
 
 # Shift-Left in Practice
 
-- Move checks to **design, code, and CI** - not only pre-prod gates
-- Give developers **actionable findings** in the PR, not a PDF next quarter
+- Move checks to design, code, and CI - not only pre-prod gates
+- Give developers actionable findings in the PR, not a PDF next quarter
 - Keep a final gate for residual risk - but make it thin because earlier controls worked
 - Secure SDLC spans plan → code → build → deploy → operate
 
@@ -138,11 +138,11 @@
 
 ### Platform
 - Standard pipelines
-- Tooling & policy-as-code
+- Tooling and policy-as-code
 - Fast, stable feedback
 
 ### Security
-- Risk appetite & standards
+- Risk appetite and standards
 - Threat guidance
 - Exception governance
 
@@ -192,7 +192,7 @@
 
 # DAST (and Friends): Test the Running App
 
-- **DAST** probes a running app/API for exploitable issues
+- DAST probes a running app/API for exploitable issues
 - Complements SAST: finds config and runtime problems code scan misses
 - Often later in pipeline (staging) or on a schedule
 - Pair with API security tests and authenticated scan profiles
@@ -223,7 +223,7 @@
 
 # Infrastructure-as-Code Security
 
-- Scan Terraform, CloudFormation, Bicep, Helm, K8s manifests **before apply**
+- Scan Terraform, CloudFormation, Bicep, Helm, K8s manifests before apply
 - Catch public buckets, open security groups, privileged pods, missing encryption
 - Policy-as-code (e.g. OPA / Conftest / vendor IaC scanners) in the same PR flow
 - Drift detection in cloud accounts closes the loop after deploy
@@ -292,7 +292,7 @@
 - Coverage % of critical apps
 - Mean time to remediate (MTTR)
 - False-positive / ignore rates
-- Exception volume & age
+- Exception volume and age
 
 ### Ask Honestly
 - Who owns critical findings?
@@ -304,9 +304,9 @@
 
 # Prioritizing Improvements
 
-- Score candidates by **risk reduced × feasibility**
+- Score candidates by risk reduced × feasibility
 - Prefer fixes that unlock many teams (platform pipeline templates)
-- Sequence: inventory & SCA → secrets → SAST tune-in → IaC → DAST depth
+- Sequence: inventory and SCA → secrets → SAST tune-in → IaC → DAST depth
 - Kill zombie tools that add noise without owners
 
 > [!TIP]

@@ -1,4 +1,4 @@
-<!-- course-title: Developer Productivity & Standardization -->
+<!-- course-title: Developer Productivity and Standardization -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -82,7 +82,7 @@
 
 # The Productivity Problem
 
-- Developers lose time to **boilerplate, context switching, and hunt-the-docs**
+- Developers lose time to boilerplate, context switching, and hunt-the-docs
 - Teams diverge on style, patterns, and “how we do things here”
 - Senior engineers become bottlenecks for the same explanations
 - Speed without standards creates review debt and inconsistent quality
@@ -114,7 +114,7 @@
 | :--- | :--- |
 | **Deployment frequency** | Faster small changes; less boilerplate |
 | **Lead time for changes** | Quicker drafts, tests, and explanations |
-| **Change fail rate** | Better tests/review prompts: if humans verify |
+| **Change fail rate** | Better tests and review prompts, if humans verify |
 | **Time to restore** | Faster log/error diagnosis and fix drafts |
 
 > [!IMPORTANT]
@@ -154,10 +154,10 @@
 
 # What an AI Code Assistant Does
 
-- **Completes** code as you type (inline suggestions)
-- **Generates** functions, tests, and refactors from prompts/chat
-- **Explains** unfamiliar code and error messages
-- Works best when grounded in **your open files / repo context**
+- Completes code as you type (inline suggestions)
+- Generates functions, tests, and refactors from prompts/chat
+- Explains unfamiliar code and error messages
+- Works best when grounded in your open files / repo context
 
 > [!TIP]
 > Treat suggestions like a junior pair: fast drafts, mandatory review.
@@ -186,11 +186,11 @@
 
 # Prompting Best Practices (Team Standards)
 
-- State **language, framework, and file path**
-- Paste or reference **existing patterns** (“match `UserService` style”)
-- Require **tests**, error handling, and logging norms
+- State language, framework, and file path
+- Paste or reference existing patterns (“match `UserService` style”)
+- Require tests, error handling, and logging norms
 - Ban secrets: never paste credentials or PHI into prompts
-- Ask for a **diff-sized** change - not a rewrite of the module
+- Ask for a diff-sized change - not a rewrite of the module
 
 ```text
 Context: Python 3.12 service using our repository pattern in services/
@@ -222,10 +222,10 @@ Verify: show function + test only
 
 # Grounding on Your Own Codebase
 
-- Open relevant files so the assistant sees **local patterns**
+- Open relevant files so the assistant sees local patterns
 - Point to interfaces, fixtures, and examples to clone
 - Prefer repo-aware / codebase chat features when licensed
-- Keep enterprise **data protection** settings on for work code
+- Keep enterprise data protection settings on for work code
 
 > [!WARNING]
 > Ungrounded generation invents APIs that “look right.” Always compile, test, and read the diff.
@@ -274,7 +274,7 @@ Verify: show function + test only
 
 # Cloud-Assist: Diagnosis
 
-- Paste **sanitized** stack traces and error snippets
+- Paste sanitized stack traces and error snippets
 - Ask for likely causes *and* what to check next
 - Use assist to draft log queries or reproduction steps
 - Validate against real telemetry: don’t ship speculative fixes
@@ -284,7 +284,7 @@ Verify: show function + test only
 | Stack trace | Ranked hypotheses + checks |
 | Failing test | Minimal fix + why |
 | Slow endpoint | Instrumentation ideas |
-| Incident notes | Timeline & next actions draft |
+| Incident notes | Timeline and next actions draft |
 
 ---
 <!-- layout: image-only -->
