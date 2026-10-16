@@ -46,7 +46,7 @@
 # Who Should Attend
 
 - Learning and Development (L&D) practitioners
-- Employee / customer enablement and success teams
+- Employee/customer enablement and success teams
 - HR technology and people systems owners
 - Product managers shaping in-app help and adoption
 - Leaders sponsoring AI assistants for onboarding
@@ -77,13 +77,13 @@
 - Change (new tools, policy, process) resets the learning curve again
 
 > [!NOTE]
-> AI does not replace your curriculum - it delivers the right piece of it at the right moment.
+> AI does not replace your curriculum—it delivers the right piece of it at the right moment.
 ---
 <!-- layout: 2-column -->
 # Onboarding vs. Ongoing Enablement
 
 ### Onboarding
-- First days / weeks in role or product
+- First days/weeks in role or product
 - Access, orientation, first wins
 - High emotion; high drop-off risk
 
@@ -165,7 +165,7 @@
 ### What You Provide
 - Clear scope (“HR onboarding only”)
 - Tone and brand guidelines
-- Handoff to Service Desk / L&D
+- Handoff to Service Desk/L&D
 ---
 <!-- layout: title-image -->
 # Pattern 2: Knowledge Retrieval (RAG)
@@ -211,7 +211,7 @@
 # How These Patterns Work Together
 
 ### Discover
-- Assistant / search
+- Assistant/search
 - “What should I do?”
 
 ### Do
@@ -236,11 +236,11 @@
 ---
 # Metrics That Prove It Works
 
-- Time-to-productivity: days to milestone / role-ready
+- Time-to-productivity: days to milestone/role-ready
 - Task success: % completing critical first-week actions
-- Deflection: fewer repeat tickets / Slack pings on known topics
-- Adoption: weekly active users of assistant / guidance
-- Experience: CSAT / thumbs on answers; qualitative comments
+- Deflection: fewer repeat tickets/Slack pings on known topics
+- Adoption: weekly active users of assistant/guidance
+- Experience: CSAT/thumbs on answers; qualitative comments
 
 > [!NOTE]
 > Pair leading indicators (adoption, thumbs) with lagging outcomes (TTP, ticket volume).
@@ -275,7 +275,7 @@
 ### People
 - Human escalation path
 - Manager override options
-- Clear ownership (L&D / IT / Risk)
+- Clear ownership (L&D/IT/Risk)
 
 ### Process
 - Change intake for new content
@@ -309,10 +309,13 @@
 
 **What does RAG do for an enablement assistant?**
 
-- A. Retrains the model overnight on every LMS course video
-- B. Replaces your curriculum with open-web search results
-- C. Retrieves approved content, then generates an answer grounded in it
-- D. Removes the need for content owners and review cadences
+A. Retrains the model overnight on every LMS course video
+
+B. Replaces your curriculum with open-web search results
+
+C. Retrieves approved content, then generates an answer grounded in it
+
+D. Removes the need for content owners and review cadences
 ---
 # Quiz 1: Answer
 
@@ -329,10 +332,13 @@
 
 **Which metric is the strongest signal of shorter time-to-productivity?**
 
-- A. First independent task completed / days to role-ready checklist
-- B. Course completion percentage alone
-- C. Hours of onboarding video watched
-- D. Number of enablement pages published
+A. First independent task completed/days to role-ready checklist
+
+B. Course completion percentage alone
+
+C. Hours of onboarding video watched
+
+D. Number of enablement pages published
 ---
 # Quiz 2: Answer
 

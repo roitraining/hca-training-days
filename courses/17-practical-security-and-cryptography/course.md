@@ -3,19 +3,14 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
-# Practical Security
-# and Cryptography
+# Practical Security and Cryptography
 
 ## CIAA foundations, applied cryptography, and defending the network and OS against real attacks
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,7 +23,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Apply security and cryptography fundamentals to defend real networks and operating systems
@@ -36,9 +30,7 @@
 - Explain applied cryptography: symmetric, asymmetric, and hashing
 - Recognize how security tools incorporate cryptography (VPNs, SSL/TLS, SSH)
 - Identify common network and OS attacks and their defenses
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +41,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -59,7 +50,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -74,31 +64,25 @@
 - **Security Problems and Tools**
 - Applied Cryptography
 - Attacks and Defense
-
 ---
-
 # The Landscape: What We’re Actually Defending
 
 - Every attack targets a component: the network, the operating system, or the people and processes around them
 - Before picking a tool, you need a shared model of what “secure” means and who you’re defending against
 - This segment sets that model, then Segments 2 and 3 apply it
 - We’ll close with the enemy’s perspective: internal vs. external threats
-
 ---
 <!-- layout: title-image -->
 # Network and OS Components
 
 ![Network components (routers, firewalls, protocols, segments) alongside OS components (kernel, services, accounts, filesystem)](images/ch17-network-os-components.svg)
-
 ---
-
 # CIAA: Extending the Triad
 
 - Confidentiality: only authorized parties can read data
 - Integrity: data and systems aren’t altered without detection
 - Availability: systems and data stay usable when needed
-- Authentication: proving an identity is who it claims to be - the fourth pillar this course adds
-
+- Authentication: proving an identity is who it claims to be—the fourth pillar this course adds
 ---
 <!-- layout: 2-column -->
 # Why Authentication Gets Its Own Pillar
@@ -110,9 +94,7 @@
 ### With It
 - Strong authentication anchors access decisions
 - Sets up everything Segment 3 covers: 2FA, VPNs, SSH keys
-
 ---
-
 # Knowing the Enemy
 
 - Effective defense starts with a realistic threat model, not a generic checklist
@@ -121,7 +103,6 @@
 - The next slide splits threats by where they originate
 
 ![Symmetric Encryption](images/threat-model.png)
-
 ---
 <!-- layout: 2-column -->
 # Internal vs. External Threats
@@ -135,7 +116,6 @@
 - Attackers with no starting access
 - Must breach a perimeter: network, application, or credential
 - Ranges from opportunistic scans to targeted campaigns
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -143,71 +123,54 @@
 - Security Problems and Tools
 - **Applied Cryptography**
 - Attacks and Defense
-
 ---
-
 # The Core: Cryptography in Practice
 
 - Three building blocks do almost all the work: symmetric encryption, asymmetric encryption, and hashing
 - Each solves a different problem: know which one applies before reaching for a tool
 - PKI ties asymmetric crypto to real-world trust
 - We’ll close this segment with a hands-on demo
-
 ---
-
 # Symmetric Encryption
 
 - One shared secret key both encrypts and decrypts
-- Fast and efficient: the workhorse for bulk data (e.g. AES)
+- Fast and efficient: the workhorse for bulk data (e.g., AES)
 - The hard problem: getting the key to the other party securely without exposing it
 - Used inside VPNs, disk encryption, and TLS sessions once a key is established
-
 ---
 <!-- layout: title-image -->
 # Symmetric Encryption Illustrated
 
 ![Symmetric Encryption](images/symmetric-encryption.png)
-
 ---
-
 # Asymmetric Encryption
 
 - A mathematically linked key pair: a public key and a private key
 - Data encrypted with one key can only be decrypted with the other
 - Slower than symmetric: typically used to exchange a symmetric key, not bulk data
 - The public key can be shared freely; the private key never leaves its owner
-
 ---
 <!-- layout: title-image -->
 # Asymmetric Encryption Illustrated
 
 ![Asymmetric Encryption](images/asymmetric-encryption.png)
-
-
 ---
-
 # Hashing
 
 - A one-way function: easy to compute forward, infeasible to reverse
 - The same input always produces the same output; any change produces a completely different hash
 - Verifies integrity (has this file or message changed?) and secures stored passwords (with salting)
-- Not encryption - there’s no key, and it can’t be “decrypted” back to the original
-
-
+- Not encryption—there’s no key, and it can’t be “decrypted” back to the original
 ---
 <!-- layout: title-image -->
 # Hashing Illustrated
 
 ![Hashing](images/hashing.png)
-
-
 ---
 <!-- layout: title-image -->
 # Symmetric + Asymmetric + Hashing
 
 ![Pipeline: asymmetric key exchange, symmetric data encryption, hashing for integrity, and how they combine in TLS, SSH, and VPN](images/ch17-crypto-pipeline.svg)
-
-
 ---
 <!-- layout: 2-column -->
 # Choosing the Right Tool
@@ -219,22 +182,18 @@
 ### Use Asymmetric When
 - You need to exchange a key securely
 - You need to prove identity (digital signatures)
-
 ---
-
 # Public/Private Key Cryptography in Practice
 
 - Encrypt with the recipient’s public key → only their private key can decrypt (confidentiality)
 - Sign with your own private key → anyone with your public key can verify it came from you (authentication + integrity)
 - Digital signatures combine hashing and asymmetric crypto: hash the message, then encrypt the hash with the private key
 - This pairing underlies TLS, SSH, code signing, and email encryption
-
 ---
 <!-- layout: title-image -->
 # PKI: Binding Keys to Identity
 
 ![PKI trust chain: Root CA, Intermediate CA, leaf certificate, and client verification via chain validation and CRL/OCSP](images/ch17-pki-overview.svg)
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -242,63 +201,51 @@
 - Security Problems and Tools
 - Applied Cryptography
 - **Attacks and Defense**
-
 ---
-
 # In Practice: From Concepts to Controls
 
 - Segments 1 and 2 gave us goals (CIAA) and tools (crypto); this segment applies them to real network and OS defenses
 - Every control below either encrypts something, authenticates someone, or restricts access: often more than one
 - We’ll close with the two OS-level defenses most likely to stop a real attack: patching discipline and multi-factor authentication
 - Same rule as always: no single control is sufficient on its own
-
 ---
-
 # Securing the Network: Firewalls
 
 - Filters traffic by port, protocol, and address; default-deny is the safe starting posture
 - Network firewalls sit at the perimeter; host-based firewalls add a second layer per machine
 - Doesn’t inspect encrypted payloads by default: pair it with other controls for application-layer traffic
 - Still the first control most network security programs implement
-
 ---
 <!-- layout: 2-column -->
 # IPSec/VPN and SSL/TLS
 
-### IPSec / VPN
+### IPSec/VPN
 - Encrypts traffic at the network layer, often site-to-site or remote access
 - Builds a private tunnel across an untrusted network
 
-### SSL / TLS
+### SSL/TLS
 - Encrypts traffic at the application/transport layer
-- Secures a specific connection (e.g. HTTPS), not the whole network path
-
+- Secures a specific connection (e.g., HTTPS), not the whole network path
 ---
-
 # SSH: Secure Remote Access
 
 - Encrypts remote administration traffic: the encrypted successor to Telnet
 - Supports both password and public-key authentication; prefer key-based
 - Also tunnels other traffic (port forwarding) securely across an untrusted network
 - Disable password authentication where key-based access is available
-
 ---
 <!-- layout: title-image -->
 # Layers of Network Defense
 
 ![Layers of network defense: firewalls, IPSec/VPN tunnels, SSL/TLS session encryption, and SSH for admin access](images/ch17-network-defense-layers.svg)
-
 ---
-
 # OS Attacks: Malware
 
 - Malware ranges from opportunistic (commodity ransomware) to targeted (custom tooling)
 - Common entry points: phishing attachments, drive-by downloads, unpatched vulnerabilities
 - Defenses: endpoint protection, patching, least privilege, and application allowlisting
 - Detection matters as much as prevention: assume something eventually gets through
-
 ---
-
 # Authentication and 2FA
 
 - Passwords alone are a single point of failure: reused, guessed, or phished
@@ -308,29 +255,26 @@
 
 > [!IMPORTANT]
 > Multi-factor authentication is one of the highest-impact, lowest-cost defenses available: prioritize it before more exotic controls.
-
 ---
-
 # What You Learned
 
 - Described security foundations (confidentiality, integrity, availability, authentication)
 - Explained applied cryptography: symmetric, asymmetric, and hashing
 - Recognized how security tools incorporate cryptography (VPNs, SSL/TLS, SSH)
 - Identified common network and OS attacks and their defenses
-
 ---
-
 # Quiz 1 of 3
 
 **Which statement about hashing is correct?**
 
-- A. Hashing is a reversible form of encryption that uses a shared secret key
-- B. A hash can be decrypted with the matching private key
-- C. Hashing is a one-way function used for integrity and (with salting) password storage - not encryption
-- D. Hashing is only used for bulk data encryption inside TLS sessions
+A. Hashing is a reversible form of encryption that uses a shared secret key
 
+B. A hash can be decrypted with the matching private key
+
+C. Hashing is a one-way function used for integrity and (with salting) password storage - not encryption
+
+D. Hashing is only used for bulk data encryption inside TLS sessions
 ---
-
 # Quiz 1: Answer
 
 **Which statement about hashing is correct?**
@@ -340,21 +284,20 @@
 - Hashing is one-way: easy forward, infeasible to reverse
 - Same input → same hash; any change → a different hash
 - It verifies integrity and protects stored passwords; there is no decryption key
-- Bulk encryption uses symmetric crypto (e.g. AES), not hashing
-
+- Bulk encryption uses symmetric crypto (e.g., AES), not hashing
 ---
-
 # Quiz 2 of 3
 
 **Your team can only ship one high-impact control this quarter. Which best matches this course’s guidance?**
 
-- A. Multi-factor authentication on high-access accounts (admins, VPN, email)
-- B. Replace all firewalls with application allowlisting alone
-- C. Disable SSH and rely only on Telnet with strong passwords
-- D. Skip patching because endpoint antivirus is “good enough”
+A. Multi-factor authentication on high-access accounts (admins, VPN, email)
 
+B. Replace all firewalls with application allowlisting alone
+
+C. Disable SSH and rely only on Telnet with strong passwords
+
+D. Skip patching because endpoint antivirus is “good enough”
 ---
-
 # Quiz 2: Answer
 
 **Your team can only ship one high-impact control this quarter. Which best matches this course’s guidance?**
@@ -365,7 +308,6 @@
 - 2FA adds an independent second factor so a stolen password is far less useful
 - Prioritize accounts with the most access first
 - MFA is high-impact and low-cost compared with exotic one-off controls
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -377,7 +319,6 @@ Pick one system you help protect (VPN, admin bastion, EHR-adjacent app, or share
 - Which CIAA goals matter most for that system - and what threatens them?
 - Where does cryptography already help (TLS, SSH, VPN) - and where is authentication still weak?
 - What would you harden first this month, and how would you know it worked?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -394,28 +335,20 @@ Pick one system you help protect (VPN, admin bastion, EHR-adjacent app, or share
 - “Encrypt everything” with no authentication story
 - Trusting perimeter alone (firewall without host/app controls)
 - Treating hashing as encryption or “decrypting” hashes
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

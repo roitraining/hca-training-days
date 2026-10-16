@@ -1,4 +1,4 @@
-<!-- course-title: Web and Mobile App Security -->
+<!-- course-title: Web and Mobile Application Security -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -47,7 +47,7 @@
 
 - Developers building web or mobile applications
 - Security staff and technical leads
-- Some development familiarity is helpful - not required
+- Some development familiarity is helpful, not required
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
@@ -104,7 +104,7 @@
 | :--- | :--- |
 | Design | Threat modeling |
 | Build | Secure coding standards, code review |
-| Test | Automated (SAST / DAST) scanning |
+| Test | Automated (SAST/DAST) scanning |
 | Release | Dependency and configuration checks |
 | Operate | Monitoring and patching |
 ---
@@ -144,7 +144,7 @@
 - Untrusted input reaches an interpreter (SQL, OS command, LDAP, etc.) as code, not data
 - Classic example: string-concatenated SQL queries built from user input
 - Defense: parameterized queries and prepared statements, strict input validation
-- Still one of the most damaging - and most preventable - vulnerability classes
+- Still one of the most damaging, and most preventable, vulnerability classes
 
 ```java
 String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
@@ -197,7 +197,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ### Insecure Data Storage
 - Sensitive data cached in plaintext: local databases, logs, temp files
-- Defense: platform secure storage (Keychain / Keystore); avoid caching secrets
+- Defense: platform secure storage (Keychain/Keystore); avoid caching secrets
 
 ### Insecure Communication
 - Data sent over HTTP, or TLS misconfigured or unvalidated
@@ -208,7 +208,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Weak or missing device-level authentication (PIN, biometrics)
 - Client-side-only checks that a jailbroken or rooted device can bypass
 - Hardcoded API keys or tokens embedded in the app binary
-- Defense: enforce authorization on the server for every sensitive action - never trust the client
+- Defense: enforce authorization on the server for every sensitive action—never trust the client
 
 
 ![Mobile Phone Security](images/pin.png)
@@ -266,7 +266,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Filter traffic by port, protocol, and address
 - Web Application Firewalls (WAF) inspect HTTP-layer traffic for known attack patterns
 
-### Intrusion Detection / Prevention
+### Intrusion Detection/Prevention
 - IDS monitors and alerts on suspicious activity
 - IPS actively blocks traffic matching known attack signatures
 ---
@@ -293,7 +293,7 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 ### Automated Scanning
 - SAST (Static): scans source code without running it
-- DAST (Dynamic): attacks a running app like a real attacker - e.g. OWASP ZAP
+- DAST (Dynamic): attacks a running app like a real attacker; e.g., OWASP ZAP
 
 ### Broader Coverage
 - SCA: flags vulnerable third-party dependencies
@@ -318,16 +318,19 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 **Which defense best prevents classic SQL injection when building queries from user input?**
 
-- A. Trusting client-side JavaScript validation alone
-- B. Disabling HTTPS so payloads are easier to inspect
-- C. Storing passwords with reversible encryption instead of hashing
-- D. Parameterized queries / prepared statements plus server-side validation
+A. Trusting client-side JavaScript validation alone
+
+B. Disabling HTTPS so payloads are easier to inspect
+
+C. Storing passwords with reversible encryption instead of hashing
+
+D. Parameterized queries/prepared statements plus server-side validation
 ---
 # Quiz 1: Answer
 
 **Which defense best prevents classic SQL injection when building queries from user input?**
 
-**Correct: D.** Parameterized queries / prepared statements plus server-side validation
+**Correct: D.** Parameterized queries/prepared statements plus server-side validation
 
 - Injection happens when untrusted input reaches an interpreter as code
 - Parameterized queries keep input as data, not executable SQL
@@ -338,16 +341,19 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 
 **Your pipeline needs both “scan source without running it” and “attack a running app.” Which pairing matches SAST and DAST?**
 
-- A. SAST = dependency CVE feed only; DAST = certificate pinning
-- B. SAST = static source analysis; DAST = dynamic testing of a live app (e.g. OWASP ZAP)
-- C. SAST = firewall rules; DAST = OS patching
-- D. SAST and DAST are interchangeable names for the same scanner
+A. SAST = dependency CVE feed only; DAST = certificate pinning
+
+B. SAST = static source analysis; DAST = dynamic testing of a live app (e.g. OWASP ZAP)
+
+C. SAST = firewall rules; DAST = OS patching
+
+D. SAST and DAST are interchangeable names for the same scanner
 ---
 # Quiz 2: Answer
 
 **Your pipeline needs both “scan source without running it” and “attack a running app.” Which pairing matches SAST and DAST?**
 
-**Correct: B.** SAST = static source analysis; DAST = dynamic testing of a live app (e.g. OWASP ZAP)
+**Correct: B.** SAST = static source analysis; DAST = dynamic testing of a live app (e.g., OWASP ZAP)
 
 - SAST analyzes source without executing the app
 - DAST probes a running application like an attacker

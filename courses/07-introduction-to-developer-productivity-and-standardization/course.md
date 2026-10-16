@@ -48,7 +48,7 @@
 - Application developers adopting AI coding assistants
 - Engineering leads driving consistency across teams
 - Tech leads defining shared prompts and review norms
-- Platform engineers supporting IDE / cloud AI tooling
+- Platform engineers supporting IDE/cloud AI tooling
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
@@ -57,7 +57,7 @@
 
 - Basic software development experience
 - Comfortable reading and editing code in an IDE
-- Helpful: Git / PR workflow familiarity
+- Helpful: Git/PR workflow familiarity
 - Helpful: access to an org-approved AI code assistant for the demo
 
 ![Prerequisites](images/prerequisites.png)
@@ -102,10 +102,10 @@
 | **Time to restore** | Faster log/error diagnosis and fix drafts |
 
 > [!IMPORTANT]
-> AI is a lever on flow metrics - not a substitute for CI quality, ownership, and review.
+> AI is a lever on flow metrics—not a substitute for CI quality, ownership, and review.
 ---
 <!-- layout: default -->
-# Where GenAI Improves Efficiency
+# Where Gen AI Improves Efficiency
 
 ![AI developer efficiency moments](images/ai-dev-efficiency-moments.svg)
 ---
@@ -136,7 +136,7 @@
 - Completes code as you type (inline suggestions)
 - Generates functions, tests, and refactors from prompts/chat
 - Explains unfamiliar code and error messages
-- Works best when grounded in your open files / repo context
+- Works best when grounded in your open files/repo context
 
 > [!TIP]
 > Treat suggestions like a junior pair: fast drafts, mandatory review.
@@ -146,7 +146,7 @@
 
 ### Completion
 - Keep typing with clear names
-- Accept / reject / edit often
+- Accept, reject, edit often
 - Prefer small, local suggestions
 
 ### Generation
@@ -164,7 +164,7 @@
 - Paste or reference existing patterns (“match `UserService` style”)
 - Require tests, error handling, and logging norms
 - Ban secrets: never paste credentials or PHI into prompts
-- Ask for a diff-sized change - not a rewrite of the module
+- Ask for a diff-sized change—not a rewrite of the module
 
 ```text
 Context: Python 3.12 service using our repository pattern in services/
@@ -182,7 +182,7 @@ Verify: show function + test only
 - “Generate tests” macro
 
 ### Guardrails
-- Linters / formatters
+- Linters/formatters
 - CI checks
 - Secure coding rules
 
@@ -195,7 +195,7 @@ Verify: show function + test only
 
 - Open relevant files so the assistant sees local patterns
 - Point to interfaces, fixtures, and examples to clone
-- Prefer repo-aware / codebase chat features when licensed
+- Prefer repo-aware/codebase chat features when licensed
 - Keep enterprise data protection settings on for work code
 
 > [!WARNING]
@@ -227,7 +227,7 @@ Verify: show function + test only
 # Cloud-Assist: Design
 
 ### Design Help
-- Draft sequence / API sketches
+- Draft sequence/API sketches
 - Compare options with tradeoffs
 - Turn requirements into tasks
 
@@ -262,7 +262,7 @@ Verify: show function + test only
 - Prompt for task split
 
 ### Build
-- Complete / generate
+- Complete/generate
 - Ground on repo
 - Add tests
 
@@ -286,7 +286,7 @@ Verify: show function + test only
 
 ### Prefer
 - Lead time on small changes
-- PR rework / review cycles
+- PR rework/review cycles
 - Incident time-to-mitigate
 - Developer satisfaction pulses
 
@@ -307,10 +307,13 @@ Verify: show function + test only
 
 **How should teams treat AI coding assistant suggestions?**
 
-- A. Blind-accept multi-file rewrites to maximize speed
-- B. Treat them like a junior pair: fast drafts with mandatory human review
-- C. Skip tests because “the AI already wrote them”
-- D. Prefer ungrounded generation over open-file / repo context
+A. Blind-accept multi-file rewrites to maximize speed
+
+B. Treat them like a junior pair: fast drafts with mandatory human review
+
+C. Skip tests because “the AI already wrote them”
+
+D. Prefer ungrounded generation over open-file/repo context
 ---
 # Quiz 1: Answer
 
@@ -327,10 +330,13 @@ Verify: show function + test only
 
 **Which signal best measures AI-assisted developer productivity without vanity metrics?**
 
-- A. Lines of AI-generated code
-- B. Raw suggestion acceptance rate alone
-- C. Lead time on small changes and PR rework / review cycles
-- D. Total suggestion count shown in the IDE
+A. Lines of AI-generated code
+
+B. Raw suggestion acceptance rate alone
+
+C. Lead time on small changes and PR rework/review cycles
+
+D. Total suggestion count shown in the IDE
 ---
 # Quiz 2: Answer
 
@@ -350,7 +356,7 @@ Verify: show function + test only
 Your team is rolling out an org-approved AI coding assistant next quarter.
 
 ### Discuss
-- Which 5–10 shared prompts would you standardize first - and why?
+- Which 5–10 shared prompts would you standardize first, and why?
 - Where must a human still own the merge decision?
 - How would you spot-check that standards are helping (not just adopted)?
 ---

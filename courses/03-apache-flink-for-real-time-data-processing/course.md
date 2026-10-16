@@ -117,17 +117,17 @@
 # Flink vs. Adjacent Tools
 
 ### Messaging
-- Kafka / Pub/Sub / Pulsar
+- Kafka, Pub/Sub, Pulsar
 - Transport and buffer
 - Not heavy compute
 
 ### Flink
 - Stateful transforms
 - Windows and joins
-- Exactly-once sinks*
+- Exactly-once sinks
 
 ### Storage
-- Warehouse / lake / OLTP
+- Warehouse, lake, OLTP
 - Durable history
 - Serving and analytics
 ---
@@ -148,7 +148,7 @@
 - A stream is an unbounded sequence of events
 - Events often carry a key (user_id, device_id, account_id)
 - Operators transform streams: map, filter, keyBy, join, window
-- Jobs run until cancelled - there is no natural “end of file”
+- Jobs run until cancelled—there is no natural “end of file”
 
 ```text
 clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
@@ -232,13 +232,13 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 <!-- layout: 2-column -->
 # Two APIs, Same Engine
 
-### DataStream (Java / Scala)
+### DataStream (Java/Scala)
 - Imperative operators in code
 - Full control: timers, custom state, CEP
 - What the next example uses
 - Best when logic is complex or bespoke
 
-### SQL / Table API
+### SQL/Table API
 - Declarative queries over streams and tables
 - Windows, joins, aggregations in SQL
 - Often faster for analytics-style jobs
@@ -247,7 +247,7 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 <!-- below-columns -->
 
 > [!NOTE]
-> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine - and the concepts - are the same.
+> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine, and the concepts, are the same.
 ---
 # Example: A Simple Flink Stream Job
 
@@ -292,9 +292,9 @@ public class SimplePurchaseSumJob {
 ---
 # From `print()` to a Kafka Sink
 
-- Swap the sink - not the window or `keyBy` logic
+- Swap the sink, not the window or `keyBy` logic
 - Serialize the aggregate (JSON, Avro, Protobuf) for consumers
-- Use a transactional / idempotent sink when you need stronger delivery guarantees
+- Use a transactional/idempotent sink when you need stronger delivery guarantees
 - Downstream reads a topic instead of job logs: same pipeline shape as production
 
 ```java
@@ -331,7 +331,7 @@ resultStream.sinkTo(
 <!-- layout: 3-column -->
 # Pattern Snapshots
 
-### Fraud / Risk
+### Fraud/Risk
 - Score each event live
 - Enrich with recent history
 - Route high-risk to review
@@ -339,7 +339,7 @@ resultStream.sinkTo(
 ### Telemetry
 - Roll up metrics
 - Detect anomalies
-- Feed SLO / ops views
+- Feed SLO/ops views
 
 ### Alerting
 - Threshold and composite rules
@@ -366,7 +366,7 @@ resultStream.sinkTo(
 - Complex event logic
 
 ### Consider Alternatives
-- Pure batch / micro-batch OK
+- Pure batch/micro-batch OK
 - Simple filter at the broker
 - Request/response APIs only
 - Tiny volume, rare jobs
@@ -396,7 +396,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 ### No
 **Nightly sales workbook**
 - Finance needs yesterday’s totals by 7 a.m.
-- Batch / warehouse job is enough
+- Batch/warehouse job is enough
 - No continuous consumer waiting on the stream
 
 ### Maybe
