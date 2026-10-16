@@ -1,4 +1,4 @@
-<!-- course-title: GenAI for Software Engineering -->
+<!-- course-title: Generative AI for Software Engineering -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -65,7 +65,7 @@
 <!-- layout: navigation -->
 # Course Roadmap
 
-- **GenAI for Developers**
+- **Gen AI for Developers**
 - Prompt Engineering for Code
 - Tools and Responsible Use
 ---
@@ -78,7 +78,7 @@
 
 | Type | Role in engineering work |
 | :--- | :--- |
-| **LLMs / code models** | Generate and explain code, docs, tests |
+| **LLMs/code models** | Generate and explain code, docs, tests |
 | **Embedding models** | Search code/docs by meaning |
 | **Classic ML** | Classify, score, detect (often not “generative”) |
 | **Multimodal** | Read screenshots, diagrams, error images |
@@ -87,7 +87,7 @@
 > This course focuses on **generative** coding assistants: models that draft software artifacts you still must verify.
 ---
 <!-- layout: title-image -->
-# Where GenAI Fits in the Workflow
+# Where Gen AI Fits in the Workflow
 
 ![GenAI developer workflow](images/genai-dev-workflow.png)
 ---
@@ -101,7 +101,7 @@
 
 ### Raise Quality
 - Tests and edge cases
-- Docstrings / README
+- Docstrings/README
 - Review checklists
 
 ### Unblock
@@ -153,7 +153,7 @@ Include type hints and a short docstring.
 ### Documentation
 - Docstrings from signatures
 - README usage examples
-- ADR / design drafts
+- ADR/design drafts
 
 ### Tests
 - Unit tests for happy path
@@ -164,7 +164,7 @@ Include type hints and a short docstring.
 
 - Context: paste interfaces, error logs, or “match this file’s style”
 - Few-shot: show 1–2 examples of the pattern you want repeated
-- Prefer open files / codebase grounding in the IDE over giant pastes
+- Prefer open files/codebase grounding in the IDE over giant pastes
 - Refresh context when the assistant drifts from your APIs
 
 ```text
@@ -178,13 +178,13 @@ Now write get_order(id: str) -> Order the same way.
 # Pitfalls: Hallucinations
 
 ### Common Failure Modes
-- Invented methods / packages
+- Invented methods/packages
 - Subtle logic bugs
 - Outdated API usage
 - Overconfident explanations
 
 ### Evaluation Checklist
-- Does it compile / typecheck?
+- Does it compile/typecheck?
 - Do tests pass?
 - Licenses OK?
 - Security smell review?
@@ -197,7 +197,7 @@ Now write get_order(id: str) -> Order the same way.
 - Prefer iterative fixes over accepting a large rewrite
 
 > [!WARNING]
-> If you can’t explain the change, don’t merge it - regardless of who (or what) wrote it.
+> If you can’t explain the change, don’t merge it, regardless of who (or what) wrote it.
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -217,12 +217,12 @@ Now write get_order(id: str) -> Order the same way.
 ### Inline
 - Completions
 - Next-edit hints
-- Accept / edit / reject
+- Accept/edit/reject
 
 ### Chat
 - Generate and explain
 - Multi-file Q&A
-- Test / doc drafts
+- Test/doc drafts
 
 ### Workflow
 - PR summaries
@@ -250,10 +250,10 @@ Now write get_order(id: str) -> Order the same way.
 # Privacy and Prompt Safety
 
 ### Never Paste
-- Secrets / API keys
-- PHI / PII / production dumps
+- Secrets/API keys
+- PHI/PII/production dumps
 - Customer confidential data
-- Private keys / tokens
+- Private keys/tokens
 
 ### Prefer
 - Approved enterprise SKUs
@@ -266,7 +266,7 @@ Now write get_order(id: str) -> Order the same way.
 - Assistants can be steered into unsafe or policy-violating output
 - Treat untrusted content (web pages, tickets) as potentially adversarial
 - Don’t let AI execute destructive commands without human confirmation
-- Report suspicious IDE / extension behavior through security channels
+- Report suspicious IDE/extension behavior through security channels
 
 > [!IMPORTANT]
 > Responsible use is a team sport: policy, tooling defaults, and peer review.
@@ -284,7 +284,7 @@ Now write get_order(id: str) -> Order the same way.
 - Enable approved tooling
 - Train prompting + review
 - Add secret scanning
-- Measure lead time / rework
+- Measure lead time/rework
 ---
 # What You Learned
 
@@ -297,10 +297,13 @@ Now write get_order(id: str) -> Order the same way.
 
 **Which practice most improves the quality of generated code?**
 
-- A. State language/runtime, constrain scope, then verify with the smallest build/test immediately
-- B. Accept a large rewrite without reading the diff if the model sounds confident
-- C. Prefer giant pasted context over open-file / codebase grounding
-- D. Skip license and security review because the assistant “knows best”
+A. State language/runtime, constrain scope, then verify with the smallest build/test immediately
+
+B. Accept a large rewrite without reading the diff if the model sounds confident
+
+C. Prefer giant pasted context over open-file/codebase grounding
+
+D. Skip license and security review because the assistant “knows best”
 ---
 # Quiz 1: Answer
 
@@ -317,10 +320,13 @@ Now write get_order(id: str) -> Order the same way.
 
 **Why should teams standardize on org-approved coding assistants?**
 
-- A. Consumer personal accounts never create IP or policy risk
-- B. IDE support and enterprise controls do not matter
-- C. Any free tool is fine as long as suggestions look good
-- D. Enterprise controls (retention, training opt-out, allowlists) reduce policy and IP risk
+A. Consumer personal accounts never create IP or policy risk
+
+B. IDE support and enterprise controls do not matter
+
+C. Any free tool is fine as long as suggestions look good
+
+D. Enterprise controls (retention, training opt-out, allowlists) reduce policy and IP risk
 ---
 # Quiz 2: Answer
 
@@ -351,7 +357,7 @@ Pick one workflow on your team: generate a function, draft tests, or explain a f
 
 ### Strong Answers Mention
 - Language, I/O contracts, and “match this file’s style”
-- Redacted logs / synthetic data; approved enterprise tools
+- Redacted logs/synthetic data; approved enterprise tools
 - Compile, tests, license/security smell check, explainable diff
 - Iterative fixes over one-shot mega-rewrites
 

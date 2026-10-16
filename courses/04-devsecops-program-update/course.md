@@ -3,18 +3,14 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # DevSecOps Program Update
 
 ## Practices, automation, and shift-left security against a maturity model
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -27,7 +23,6 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
 - Frame the current DevSecOps program against a maturity model and agree near-term priorities
@@ -35,9 +30,7 @@
 - Describe how security integrates into the CI/CD pipeline (“shift left”)
 - Recognize tooling categories across the secure SDLC (SCA, SAST, DAST, IaC scanning)
 - Assess program maturity and identify next-step priorities
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -48,23 +41,21 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
 - Engineering leads and developers on delivery teams
-- Platform / DevOps engineers owning CI/CD
+- Platform/DevOps engineers owning CI/CD
 - Application and cloud security stakeholders
 - Leaders tracking a DevSecOps initiative
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
 - Familiarity with software development concepts
-- Familiarity with IT operations / delivery basics
+- Familiarity with IT operations/delivery basics
 - Helpful: exposure to CI/CD pipelines and pull-request workflows
 - Helpful: awareness of your org’s current security scanning tools
 
@@ -76,9 +67,7 @@
 - **DevSecOps in Context**
 - Security in the Pipeline
 - Maturity and Roadmap
-
 ---
-
 # What DevSecOps Is (and Is Not)
 
 - DevSecOps = security as a continuous, shared responsibility across build and run
@@ -88,16 +77,14 @@
 
 > [!NOTE]
 > This session is a program briefing: shared language, pipeline map, maturity snapshot, and next moves.
-
 ---
-
 # So Many Acronyms
 
 | Acronym | Short For | Meaning |
 | :--- | :--- | :--- |
 | DevSecOps | Development, Security, and Operations | Security embedded in the same build-and-run loop as delivery |
 | DevOps | Development and Operations | Culture and practices that join build and run |
-| CI/CD | Continuous Integration / Continuous Delivery | Automated build, test, and release pipelines |
+| CI/CD | Continuous Integration/Continuous Delivery | Automated build, test, and release pipelines |
 | SDLC | Software Development Life Cycle | Plan → code → build → deploy → operate |
 | SCA | Software Composition Analysis | Finds vulnerable open-source libraries and license risk |
 | SAST | Static Application Security Testing | Scans source for insecure coding patterns |
@@ -113,13 +100,11 @@
 | KPI | Key Performance Indicator | Metric used to track program outcomes |
 | PR | Pull Request | Proposed code change reviewed before merge |
 | K8s | Kubernetes | Container orchestration platform |
-
 ---
 <!-- layout: title-image -->
 # Culture Pillars
 
 ![DevSecOps culture pillars](images/devsecops-culture-pillars.svg)
-
 ---
 <!-- layout: 2-column -->
 # Why It Matters Now
@@ -133,25 +118,21 @@
 - Fewer sev-1 surprises in prod
 - Faster, safer change
 - Audit-ready evidence from pipelines
-
 ---
 <!-- layout: image-only -->
 # Shift-Left and the Secure SDLC
 
 ![Shift-left SDLC](images/shift-left-sdlc.svg)
-
 ---
-
 # Shift-Left in Practice
 
 - Move checks to design, code, and CI - not only pre-prod gates
 - Give developers actionable findings in the PR, not a PDF next quarter
-- Keep a final gate for residual risk - but make it thin because earlier controls worked
+- Keep a final gate for residual risk, but make it thin because earlier controls worked
 - Secure SDLC spans plan → code → build → deploy → operate
 
 > [!TIP]
 > Shift-left fails without fix ownership, severity policy, and timeboxed remediation SLAs.
-
 ---
 <!-- layout: 3-column -->
 # Shared Responsibilities
@@ -170,7 +151,6 @@
 - Risk appetite and standards
 - Threat guidance
 - Exception governance
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -178,13 +158,11 @@
 - DevSecOps in Context
 - **Security in the Pipeline**
 - Maturity and Roadmap
-
 ---
 <!-- layout: title-image -->
 # Automated Guardrails in CI/CD
 
 ![Pipeline security scans](images/pipeline-security-scans.svg)
-
 ---
 <!-- layout: 2-column -->
 # SCA: Software Composition Analysis
@@ -198,23 +176,20 @@
 - On PR and main builds
 - Block critical CVEs by policy
 - Feed SBOM for inventory
-
 ---
 <!-- layout: 2-column -->
 # SAST: Static Application Security Testing
 
 ### What It Catches
 - Insecure coding patterns
-- Injection / XSS candidates
+- Injection/XSS candidates
 - Hard-coded risky APIs
 
 ### Pipeline Fit
 - Incremental on PRs
 - Full scans on main/release
 - Tune rules to cut noise
-
 ---
-
 # DAST (and Friends): Test the Running App
 
 - DAST probes a running app/API for exploitable issues
@@ -224,7 +199,6 @@
 
 > [!WARNING]
 > DAST without a stable test environment produces flaky gates teams learn to ignore.
-
 ---
 <!-- layout: 3-column -->
 # Tooling Categories at a Glance
@@ -234,31 +208,28 @@
 - Licenses
 - SBOM
 
-### SAST / Secrets
+### SAST/Secrets
 - Source patterns
 - Secret scanning
 - IDE + CI feedback
 
-### DAST / IaC
+### DAST/IaC
 - Running apps
 - Terraform/K8s/cloud
 - Misconfig detection
-
 ---
-
 # Infrastructure-as-Code Security
 
 - Scan Terraform, CloudFormation, Bicep, Helm, K8s manifests before apply
 - Catch public buckets, open security groups, privileged pods, missing encryption
-- Policy-as-code (e.g. OPA / Conftest / vendor IaC scanners) in the same PR flow
+- Policy-as-code (e.g. OPA, Conftest, vendor IaC scanners) in the same PR flow
 - Drift detection in cloud accounts closes the loop after deploy
 
 | Signal | Example control |
 | :--- | :--- |
 | Misconfiguration | Deny `0.0.0.0/0` on admin ports |
-| Identity risk | Flag roles with admin on `*` |
+| Identity risk | Flag roles with admin on  |
 | Data risk | Require encryption at rest |
-
 ---
 <!-- layout: 2-column -->
 # Guardrails vs. Gates
@@ -274,7 +245,6 @@
 - Opaque severity
 - Days-long ticket queues
 - Waive-everything culture
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -282,15 +252,12 @@
 - DevSecOps in Context
 - Security in the Pipeline
 - **Maturity and Roadmap**
-
 ---
 <!-- layout: title-image -->
 # DevSecOps Maturity Model
 
 ![DevSecOps maturity model](images/devsecops-maturity-model.svg)
-
 ---
-
 # Reading the Maturity Levels
 
 | Level | Typical signals |
@@ -302,13 +269,11 @@
 
 > [!IMPORTANT]
 > Maturity is per capability (SCA, SAST, IaC, culture): teams are rarely “all Level 3.”
-
 ---
 <!-- layout: title-image -->
 # Assess → Prioritize → Roadmap
 
 ![Assess prioritize roadmap](images/assess-prioritize-roadmap.svg)
-
 ---
 <!-- layout: 2-column -->
 # Assessing Current State
@@ -316,7 +281,7 @@
 ### Look For
 - Coverage % of critical apps
 - Mean time to remediate (MTTR)
-- False-positive / ignore rates
+- False-positive/ignore rates
 - Exception volume and age
 
 ### Ask Honestly
@@ -324,9 +289,7 @@
 - Can devs fix in the PR?
 - Are IaC changes scanned?
 - Is prod runtime in scope?
-
 ---
-
 # Prioritizing Improvements
 
 - Score candidates by risk reduced × feasibility
@@ -336,9 +299,7 @@
 
 > [!TIP]
 > A smaller set of blocking, high-signal checks beats a wall of warn-only scanners.
-
 ---
-
 # Example 90-Day Priority Themes
 
 | Theme | Example outcome |
@@ -348,38 +309,33 @@
 | IaC | PR scanning required for infra repos |
 | Accountability | Finding SLAs by severity; dashboards live |
 | Culture | Security champions + office hours |
-
 ---
-
 # What “Good” Looks Like Next Quarter
 
 - Shared definition of DevSecOps success metrics
 - Documented pipeline security stage map (owners included)
-- Maturity self-score by capability - not a vanity overall number
+- Maturity self-score by capability—not a vanity overall number
 - Named 3–5 roadmap items with dates and accountable owners
-
 ---
-
 # What You Learned
 
 - Restated core DevSecOps principles and culture
 - Described how security integrates into CI/CD through shift-left practices
 - Recognized tooling categories across the secure SDLC (SCA, SAST, DAST, IaC)
 - Assessed program maturity and identified next-step priority patterns
-
 ---
-
 # Quiz 1 of 3
 
 **Which tooling category primarily finds vulnerable open-source libraries and license risk?**
 
-- A. SCA (Software Composition Analysis)
-- B. SAST (Static Application Security Testing)
-- C. DAST (Dynamic Application Security Testing)
-- D. Manual security review only at release
+A. SCA (Software Composition Analysis)
 
+B. SAST (Static Application Security Testing)
+
+C. DAST (Dynamic Application Security Testing)
+
+D. Manual security review only at release
 ---
-
 # Quiz 1: Answer
 
 **Which tooling category primarily finds vulnerable open-source libraries and license risk?**
@@ -390,20 +346,19 @@
 - SAST looks for insecure coding patterns in source
 - DAST probes a running app/API for exploitable issues
 - Manual late review is not a substitute for automated dependency checks
-
 ---
-
 # Quiz 2 of 3
 
 **What best describes “shift left” in this program’s terms?**
 
-- A. Moving all security work to a separate team after deploy
-- B. Replacing CI checks with longer manual approval queues
-- C. Moving checks into design, code, and CI with actionable PR feedback
-- D. Waiving every finding so releases never slow down
+A. Moving all security work to a separate team after deploy
 
+B. Replacing CI checks with longer manual approval queues
+
+C. Moving checks into design, code, and CI with actionable PR feedback
+
+D. Waiving every finding so releases never slow down
 ---
-
 # Quiz 2: Answer
 
 **What best describes “shift left” in this program’s terms?**
@@ -414,7 +369,6 @@
 - Developers need fixable findings in the PR, not a PDF next quarter
 - A thin final gate remains; earlier controls should do most of the work
 - It fails without ownership, severity policy, and remediation SLAs
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -426,7 +380,6 @@ Score one capability on your team (SCA, SAST, secrets, IaC, or culture) against 
 - What signals put you at Initial, Managed, Defined, or Optimizing?
 - Which 90-day priority would reduce the most risk for the effort?
 - Where should guardrails (PR feedback) replace heavy gates?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -443,28 +396,20 @@ Score one capability on your team (SCA, SAST, secrets, IaC, or culture) against 
 - “We’re Level 4” with ad hoc scans and bypassed gates
 - Adding more tools without owners or severity policy
 - DAST in an unstable environment that teams learn to ignore
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-
