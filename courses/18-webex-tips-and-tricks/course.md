@@ -125,7 +125,7 @@
 - Reactions and raise hand keep large meetings orderly without interrupting the speaker
 - Virtual backgrounds and background noise removal reduce distractions for everyone
 - Screen share with “share sound” when presenting video or audio content
-- Lock the meeting once everyone expected has joined, for sensitive discussions
+- Lock the meeting once everyone expected to attend has joined, for sensitive discussions
 
 ---
 <!-- layout: 2-column -->
