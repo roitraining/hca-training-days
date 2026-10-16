@@ -1,4 +1,4 @@
-<!-- course-title: HCA: AI-Powered Onboarding & Enablement -->
+<!-- course-title: AI-Powered Onboarding & Enablement -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

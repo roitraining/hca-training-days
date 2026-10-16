@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Tokenomics & Token Optimization -->
+<!-- course-title: Tokenomics & Token Optimization -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

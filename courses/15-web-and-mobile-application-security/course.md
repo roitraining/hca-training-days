@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Web and Mobile App Security -->
+<!-- course-title: Web and Mobile App Security -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

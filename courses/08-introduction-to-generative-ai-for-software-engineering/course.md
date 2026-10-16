@@ -1,4 +1,4 @@
-<!-- course-title: HCA: GenAI for Software Engineering -->
+<!-- course-title: GenAI for Software Engineering -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

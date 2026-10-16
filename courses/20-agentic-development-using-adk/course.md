@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Agentic Development with ADK -->
+<!-- course-title: Agentic Development with ADK -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

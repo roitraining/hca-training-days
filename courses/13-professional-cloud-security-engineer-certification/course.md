@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Professional Cloud Security Engineer Cert -->
+<!-- course-title: Professional Cloud Security Engineer Cert -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

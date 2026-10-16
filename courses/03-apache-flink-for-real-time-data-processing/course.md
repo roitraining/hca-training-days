@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Apache Flink for Real-Time Data -->
+<!-- course-title: Apache Flink for Real-Time Data -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Introduction to Low-Code & No-Code -->
+<!-- course-title: Introduction to Low-Code & No-Code -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

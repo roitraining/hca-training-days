@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Generative AI for Leaders -->
+<!-- course-title: Generative AI for Leaders -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

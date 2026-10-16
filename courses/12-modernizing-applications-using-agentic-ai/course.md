@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Modernizing Apps with Agentic AI -->
+<!-- course-title: Modernizing Apps with Agentic AI -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

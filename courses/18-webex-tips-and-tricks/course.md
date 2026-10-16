@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Webex Tips and Tricks -->
+<!-- course-title: Webex Tips and Tricks -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

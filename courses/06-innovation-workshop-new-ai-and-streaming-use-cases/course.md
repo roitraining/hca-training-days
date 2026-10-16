@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Innovation Workshop AI & Streaming -->
+<!-- course-title: Innovation Workshop AI & Streaming -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

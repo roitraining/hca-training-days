@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Security in Google Cloud -->
+<!-- course-title: Security in Google Cloud -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

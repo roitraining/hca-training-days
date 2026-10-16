@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Developer Productivity & Standardization -->
+<!-- course-title: Developer Productivity & Standardization -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

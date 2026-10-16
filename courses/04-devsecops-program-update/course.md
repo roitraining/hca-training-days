@@ -1,4 +1,4 @@
-<!-- course-title: HCA: DevSecOps Program Update -->
+<!-- course-title: DevSecOps Program Update -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

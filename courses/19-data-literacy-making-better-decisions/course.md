@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Data Literacy -->
+<!-- course-title: Data Literacy -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Agentic AI Use in the SDLC -->
+<!-- course-title: Agentic AI Use in the SDLC -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Practical Security & Cryptography -->
+<!-- course-title: Practical Security & Cryptography -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

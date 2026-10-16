@@ -1,4 +1,4 @@
-<!-- course-title: HCA: Web Security Foundations -->
+<!-- course-title: Web Security Foundations -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
