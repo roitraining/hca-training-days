@@ -8,7 +8,7 @@
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Real-Time Data Streaming
-# with Kafka and Confluent
+# with Kafka
 
 ## How events move from sources to applications
 ---
@@ -473,10 +473,13 @@ consumer.commit(msg)
 
 **A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
 
-- A. Keep the nightly file and ask the unit to wait until morning
-- B. Publish a transfer event as it happens so consumers can update while the assignment is current
-- C. Replace the EHR database with a Kafka topic
-- D. Have every downstream system poll the EHR on its own nightly schedule
+A. Keep the nightly file and ask the unit to wait until morning
+
+B. Publish a transfer event as it happens so consumers can update while the assignment is current
+
+C. Replace the EHR database with a Kafka topic
+
+D. Have every downstream system poll the EHR on its own nightly schedule
 ---
 # Quiz 1: Answer
 
@@ -493,10 +496,13 @@ consumer.commit(msg)
 
 **Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
 
-- A. Share one consumer group so Kafka splits events between the two applications
-- B. Use two consumer groups so each application gets the full stream and its own offsets
-- C. Let one application consume and email the other a spreadsheet
-- D. Use the same group id and expect each application to see every partition
+A. Share one consumer group so Kafka splits events between the two applications
+
+B. Use two consumer groups so each application gets the full stream and its own offsets
+
+C. Let one application consume and email the other a spreadsheet
+
+D. Use the same group id and expect each application to see every partition
 ---
 # Quiz 2: Answer
 
