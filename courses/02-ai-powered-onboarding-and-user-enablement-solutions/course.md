@@ -3,9 +3,7 @@
 <!-- layout: full-bleed -->
 # Welcome Slide
 ![ROI Logo](images/hca-1.png)
-
 ---
-
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
@@ -13,9 +11,7 @@
 # User Enablement Solutions
 
 ## Shorten time-to-productivity with assistants, guidance, and personalized learning
-
 ---
-
 <!-- layout: panel-right -->
 # Welcome!
 
@@ -28,17 +24,14 @@
 
 ![Welcome](images/welcome.png)
 ---
-
 # Course Objectives
 
-- Design AI-enabled onboarding and enablement experiences that shorten time-to-productivity for employees and customers
+- Design AI-enabled onboarding and enablement experiences that shorten time-to-productivity
 - Identify onboarding and enablement moments where AI adds value
 - Describe common patterns (AI assistants, RAG knowledge bots, guided flows)
 - Recognize how to personalize enablement with AI
 - Outline success measures and guardrails for AI enablement tools
-
 ---
-
 <!-- layout: panel-left -->
 # Agenda
 
@@ -49,7 +42,6 @@
 
 ![Agenda](images/agenda.png)
 ---
-
 <!-- layout: panel-right -->
 # Who Should Attend
 
@@ -61,7 +53,6 @@
 
 ![Who Should Attend](images/who-should-attend.png)
 ---
-
 <!-- layout: panel-left -->
 # Prerequisites
 
@@ -77,9 +68,7 @@
 - **The Enablement Opportunity**
 - Patterns and Tools
 - Measuring and Governing
-
 ---
-
 # The Problem We Are Solving
 
 - New hires and new users face too much content, too little timing
@@ -89,7 +78,6 @@
 
 > [!NOTE]
 > AI does not replace your curriculum - it delivers the right piece of it at the right moment.
-
 ---
 <!-- layout: 2-column -->
 # Onboarding vs. Ongoing Enablement
@@ -103,15 +91,12 @@
 - New features, policy, skills
 - Just-in-time refreshers
 - Sustains productivity after ramp
-
 ---
 <!-- layout: title-image -->
 # The Enablement Journey
 
 ![Enablement journey](images/enablement-journey.png)
-
 ---
-
 # Time-to-Productivity as the North Star
 
 - Time-to-productivity (TTP): how long until someone performs independently
@@ -123,15 +108,12 @@
 | Course completion % | First independent task done |
 | Hours of video watched | Days to role-ready checklist |
 | Content published | Repeat questions deflected |
-
 ---
 <!-- layout: title-image -->
 # Where AI Adds Value
 
-![AI enablement moments](images/ai-enablement-moments.png)
-
+![AI enablement moments](images/ai-enablement-moments.svg)
 ---
-
 # Moments Worth Automating First
 
 - High volume questions (“How do I…?”) that experts answer daily
@@ -141,7 +123,6 @@
 
 > [!TIP]
 > Start with one role or one product workflow: prove TTP impact before boiling the ocean.
-
 ---
 <!-- layout: 3-column -->
 # Employee vs. Customer Enablement
@@ -160,7 +141,6 @@
 - Answers in context
 - Guided next steps
 - Personalized paths
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -168,13 +148,11 @@
 - The Enablement Opportunity
 - **Patterns and Tools**
 - Measuring and Governing
-
 ---
-<!-- layout: image-only -->
+<!-- layout: default -->
 # Common AI Enablement Patterns
 
-![AI enablement patterns](images/ai-enablement-patterns.png)
-
+![AI enablement patterns](images/ai-enablement-patterns.svg)
 ---
 <!-- layout: 2-column -->
 # Pattern 1: AI Assistants
@@ -188,15 +166,12 @@
 - Clear scope (“HR onboarding only”)
 - Tone and brand guidelines
 - Handoff to Service Desk / L&D
-
 ---
 <!-- layout: title-image -->
 # Pattern 2: Knowledge Retrieval (RAG)
 
-![RAG enablement flow](images/rag-enablement-flow.jpeg)
-
+![RAG enablement flow](images/rag-enablement-flow.svg)
 ---
-
 # Why RAG Matters for Enablement
 
 - RAG = retrieve approved content, then generate an answer grounded in it
@@ -205,7 +180,6 @@
 
 > [!IMPORTANT]
 > If the knowledge base is stale or unowned, the assistant will scale bad information faster.
-
 ---
 <!-- layout: 2-column -->
 # Pattern 3: In-App Guidance
@@ -219,9 +193,7 @@
 - Guide the next action, not a lecture
 - Keep steps short and dismissible
 - Measure completion of the flow
-
 ---
-
 # Pattern 4: Personalized Learning Paths
 
 - Adapt by role, skill gap, product plan, or tenure
@@ -234,7 +206,6 @@
 | Role = nurse manager | Prioritize scheduling + compliance modules |
 | Failed quiz item | Assign a 5-minute refresher |
 | Feature unused | Trigger in-app tour + tip |
-
 ---
 <!-- layout: 3-column -->
 # How These Patterns Work Together
@@ -250,8 +221,6 @@
 ### Grow
 - Personalized path
 - Practice and coach
-
-
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -259,15 +228,12 @@
 - The Enablement Opportunity
 - Patterns and Tools
 - **Measuring and Governing**
-
 ---
 <!-- layout: title-image -->
 # Metrics and Guardrails at a Glance
 
-![Metrics and guardrails](images/metrics-and-guardrails.png)
-
+![Metrics and guardrails](images/metrics-and-guardrails.svg)
 ---
-
 # Metrics That Prove It Works
 
 - Time-to-productivity: days to milestone / role-ready
@@ -278,7 +244,6 @@
 
 > [!NOTE]
 > Pair leading indicators (adoption, thumbs) with lagging outcomes (TTP, ticket volume).
-
 ---
 <!-- layout: 2-column -->
 # Feedback Loops That Improve Content
@@ -292,9 +257,7 @@
 - Fix or retire bad sources
 - Add missing playbooks
 - Retrain owners on gaps
-
 ---
-
 # Content Accuracy Guardrails
 
 - Approved sources only (policy, SOP, product docs you own)
@@ -305,7 +268,6 @@
 
 > [!WARNING]
 > Never let the assistant invent HR, clinical, legal, or compliance guidance without a grounded source.
-
 ---
 <!-- layout: 3-column -->
 # Operating Guardrails
@@ -324,9 +286,7 @@
 - Access control by audience
 - PII minimization
 - Logging and audit trail
-
 ---
-
 # Making It Stick: 90-Day Starter Plan
 
 | Window | Focus |
@@ -337,18 +297,14 @@
 
 > [!TIP]
 > Governance is lighter when scope is narrow. Expand audience only after accuracy holds.
-
 ---
-
 # What You Learned
 
 - Identified onboarding and enablement moments where AI adds value
 - Described common patterns: assistants, RAG knowledge bots, and guided flows
 - Recognized how to personalize enablement with roles, signals, and paths
 - Outlined success measures and guardrails for AI enablement tools
-
 ---
-
 # Quiz 1 of 3
 
 **What does RAG do for an enablement assistant?**
@@ -357,9 +313,7 @@
 - B. Replaces your curriculum with open-web search results
 - C. Retrieves approved content, then generates an answer grounded in it
 - D. Removes the need for content owners and review cadences
-
 ---
-
 # Quiz 1: Answer
 
 **What does RAG do for an enablement assistant?**
@@ -370,9 +324,7 @@
 - It reduces “confident but wrong” answers on policy and process
 - Updating a source doc improves answers without retraining people
 - Stale or unowned knowledge still scales bad information faster
-
 ---
-
 # Quiz 2 of 3
 
 **Which metric is the strongest signal of shorter time-to-productivity?**
@@ -381,9 +333,7 @@
 - B. Course completion percentage alone
 - C. Hours of onboarding video watched
 - D. Number of enablement pages published
-
 ---
-
 # Quiz 2: Answer
 
 **Which metric is the strongest signal of shorter time-to-productivity?**
@@ -394,7 +344,6 @@
 - Milestones beat “completed modules” as the north star
 - Deflection and task success complement TTP; vanity content metrics do not
 - Pair leading indicators (adoption, thumbs) with lagging outcomes (TTP, tickets)
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
@@ -406,7 +355,6 @@ Pick one high-volume onboarding question in your org (for example: access, polic
 - Which pattern fits first: assistant, RAG, in-app guidance, or personalized path?
 - What approved sources and content owners would you require before go-live?
 - How would you measure TTP or deflection in the first 90 days?
-
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
@@ -423,28 +371,20 @@ Pick one high-volume onboarding question in your org (for example: access, polic
 - Boiling the ocean across every audience
 - Letting the bot invent HR/clinical/legal guidance
 - Measuring only adoption with no accuracy loop
-
 ---
 <!-- layout: title-image -->
 # Questions and Answers
 
 ![Questions](images/qa.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Survey
 ![ROI Logo](images/hca-2.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # My Path
 ![ROI Logo](images/hca-3.png)
-
 ---
-
 <!-- layout: full-bleed -->
 # Thank You
 ![ROI Logo](images/hca-4.png)
-

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 280" width="1220" height="280" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-6%" width="108%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
+    </marker>
+  </defs>
+
+  <!-- Ticket / intent -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="30" width="200" height="220" rx="14" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="112" cy="100" r="34" fill="#e8f0fe"/>
+    <rect x="94" y="86" width="28" height="22" rx="3" fill="none" stroke="#1a73e8" stroke-width="2.5"/>
+    <path d="M100,94 h16 M100,100 h10" stroke="#1a73e8" stroke-width="2"/>
+    <circle cx="128" cy="108" r="10" fill="none" stroke="#1a73e8" stroke-width="2"/>
+    <path d="M120,120 a12,8 0 0 1 16,0" fill="none" stroke="#1a73e8" stroke-width="2"/>
+    <text x="112" y="178" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2332">Ticket /</text>
+    <text x="112" y="202" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2332">intent</text>
+  </g>
+  <line x1="220" y1="140" x2="244" y2="140" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- AI draft in editor -->
+  <g filter="url(#shadow)">
+    <rect x="252" y="30" width="200" height="220" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="352" cy="100" r="34" fill="#e6f4ea"/>
+    <rect x="332" y="84" width="36" height="28" rx="3" fill="none" stroke="#34a853" stroke-width="2.5"/>
+    <text x="350" y="104" text-anchor="middle" font-size="12" font-weight="700" fill="#34a853">&lt;/&gt;</text>
+    <path d="M362,112 L372,88 L375,96 L384,94 Z" fill="none" stroke="#34a853" stroke-width="2" stroke-linejoin="round"/>
+    <text x="352" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">AI draft</text>
+    <text x="352" y="202" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">in editor</text>
+  </g>
+  <line x1="460" y1="140" x2="484" y2="140" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Ground and standardize -->
+  <g filter="url(#shadow)">
+    <rect x="492" y="30" width="210" height="220" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="597" cy="100" r="34" fill="#fef7e0"/>
+    <circle cx="586" cy="98" r="12" fill="none" stroke="#e37400" stroke-width="2.5"/>
+    <path d="M598,98 h18 M616,90 v16 M606,98 l10,-8 M606,98 l10,8" stroke="#e37400" stroke-width="2" stroke-linecap="round"/>
+    <text x="597" y="178" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2332">Ground and</text>
+    <text x="597" y="202" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2332">standardize</text>
+  </g>
+  <line x1="710" y1="140" x2="734" y2="140" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Test and review -->
+  <g filter="url(#shadow)">
+    <rect x="742" y="30" width="200" height="220" rx="14" fill="#ffffff" stroke="#7b61ff" stroke-width="2.5"/>
+    <circle cx="842" cy="100" r="34" fill="#f0ebff"/>
+    <rect x="824" y="84" width="22" height="28" rx="2" fill="none" stroke="#7b61ff" stroke-width="2.5"/>
+    <path d="M830,94 h10 M830,102 h10 M830,110 h6" stroke="#7b61ff" stroke-width="2"/>
+    <ellipse cx="856" cy="92" rx="10" ry="8" fill="none" stroke="#7b61ff" stroke-width="2"/>
+    <ellipse cx="862" cy="104" rx="10" ry="8" fill="none" stroke="#7b61ff" stroke-width="2"/>
+    <text x="842" y="178" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Test and</text>
+    <text x="842" y="202" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">review</text>
+  </g>
+  <line x1="950" y1="140" x2="974" y2="140" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- Ship and learn -->
+  <g filter="url(#shadow)">
+    <rect x="982" y="30" width="226" height="220" rx="14" fill="#ffffff" stroke="#9333ea" stroke-width="2.5"/>
+    <circle cx="1095" cy="100" r="34" fill="#f3e8ff"/>
+    <path d="M1080,114 L1095,78 L1110,114 Z" fill="none" stroke="#9333ea" stroke-width="2.5"/>
+    <line x1="1095" y1="92" x2="1095" y2="118" stroke="#9333ea" stroke-width="2.5"/>
+    <path d="M1084,112 q11,-8 22,0" fill="none" stroke="#9333ea" stroke-width="2"/>
+    <text x="1095" y="178" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2332">Ship and</text>
+    <text x="1095" y="202" text-anchor="middle" font-size="17" font-weight="700" fill="#1a2332">learn</text>
+  </g>
+</svg>

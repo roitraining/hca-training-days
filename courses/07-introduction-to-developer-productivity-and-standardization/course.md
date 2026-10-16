@@ -79,15 +79,14 @@
 > [!NOTE]
 > AI amplifies whatever process you have: good standards scale; weak ones scale noise.
 ---
-<!-- layout: image-only -->
+<!-- layout: default -->
 # Workflow Lens: SDLC
 
-![Developer workflow SDLC](images/developer-workflow-sdlc.png)
+![Developer workflow SDLC](images/developer-workflow-sdlc.svg)
 ---
-<!-- layout: image-only -->
 # DORA-Style Efficiency Measures
 
-![DORA metrics](images/dora-metrics.png)
+![DORA metrics](images/dora-metrics.svg)
 
 
 > [!NOTE]
@@ -105,10 +104,10 @@
 > [!IMPORTANT]
 > AI is a lever on flow metrics - not a substitute for CI quality, ownership, and review.
 ---
-<!-- layout: image-only -->
+<!-- layout: default -->
 # Where GenAI Improves Efficiency
 
-![AI developer efficiency moments](images/ai-dev-efficiency-moments.png)
+![AI developer efficiency moments](images/ai-dev-efficiency-moments.svg)
 ---
 <!-- layout: 2-column -->
 # Efficiency Challenges to Name Explicitly
@@ -155,10 +154,9 @@
 - Specify inputs/outputs
 - Require matching existing style
 ---
-<!-- layout: image-only -->
 # Prompting for Standard Output
 
-![Prompt standards loop](images/prompt-standards-loop.png)
+![Prompt standards loop](images/prompt-standards-loop.svg)
 ---
 # Prompting Best Practices (Team Standards)
 
@@ -252,10 +250,9 @@ Verify: show function + test only
 | Slow endpoint | Instrumentation ideas |
 | Incident notes | Timeline and next actions draft |
 ---
-<!-- layout: image-only -->
 # End-to-End Assisted Workflow
 
-![End-to-end assisted workflow](images/e2e-assisted-workflow.png)
+![End-to-end assisted workflow](images/e2e-assisted-workflow.svg)
 ---
 <!-- layout: 3-column -->
 # Putting It Together

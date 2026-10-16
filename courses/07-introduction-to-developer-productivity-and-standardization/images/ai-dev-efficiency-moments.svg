@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 420" width="1180" height="420" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-3%" y="-4%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Row 1 -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="370" height="186" rx="14" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="72" cy="105" r="32" fill="#e8f0fe"/>
+    <path d="M62,118 L78,78 L82,92 L94,88 Z" fill="none" stroke="#1a73e8" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="88" cy="76" r="3" fill="#1a73e8"/>
+    <circle cx="96" cy="84" r="2.5" fill="#1a73e8"/>
+    <circle cx="84" cy="70" r="2" fill="#1a73e8"/>
+    <text x="120" y="100" font-size="22" font-weight="700" fill="#1a2332">Complete and</text>
+    <text x="120" y="130" font-size="22" font-weight="700" fill="#1a2332">generate code</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="404" y="12" width="370" height="186" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="464" cy="105" r="32" fill="#e6f4ea"/>
+    <circle cx="464" cy="100" r="12" fill="none" stroke="#34a853" stroke-width="2.5"/>
+    <path d="M464,92 v10 M458,108 h12" stroke="#34a853" stroke-width="2" stroke-linecap="round"/>
+    <text x="448" y="118" font-size="10" font-weight="700" fill="#34a853">&lt;/&gt;</text>
+    <text x="512" y="100" font-size="22" font-weight="700" fill="#1a2332">Explain and</text>
+    <text x="512" y="130" font-size="22" font-weight="700" fill="#1a2332">refactor</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="796" y="12" width="372" height="186" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="856" cy="105" r="32" fill="#fef7e0"/>
+    <rect x="840" y="88" width="22" height="28" rx="2" fill="none" stroke="#e37400" stroke-width="2.5"/>
+    <path d="M846,98 h10 M846,106 h10 M846,114 h6" stroke="#e37400" stroke-width="2"/>
+    <ellipse cx="872" cy="96" rx="10" ry="8" fill="none" stroke="#e37400" stroke-width="2"/>
+    <text x="904" y="100" font-size="22" font-weight="700" fill="#1a2332">Tests and</text>
+    <text x="904" y="130" font-size="22" font-weight="700" fill="#1a2332">docs drafts</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="222" width="370" height="186" rx="14" fill="#ffffff" stroke="#7b61ff" stroke-width="2.5"/>
+    <circle cx="72" cy="315" r="32" fill="#f0ebff"/>
+    <circle cx="60" cy="308" r="10" fill="none" stroke="#7b61ff" stroke-width="2.5"/>
+    <path d="M48,322 a14,10 0 0 1 24,0" fill="none" stroke="#7b61ff" stroke-width="2.5"/>
+    <circle cx="84" cy="308" r="10" fill="none" stroke="#7b61ff" stroke-width="2.5"/>
+    <path d="M72,322 a14,10 0 0 1 24,0" fill="none" stroke="#7b61ff" stroke-width="2.5"/>
+    <text x="120" y="310" font-size="22" font-weight="700" fill="#1a2332">PR review</text>
+    <text x="120" y="340" font-size="22" font-weight="700" fill="#1a2332">assist</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="404" y="222" width="370" height="186" rx="14" fill="#ffffff" stroke="#d93025" stroke-width="2.5"/>
+    <circle cx="464" cy="315" r="32" fill="#fce8e6"/>
+    <circle cx="458" cy="312" r="14" fill="none" stroke="#d93025" stroke-width="3"/>
+    <line x1="469" y1="323" x2="482" y2="336" stroke="#d93025" stroke-width="3" stroke-linecap="round"/>
+    <text x="512" y="310" font-size="22" font-weight="700" fill="#1a2332">Diagnose</text>
+    <text x="512" y="340" font-size="22" font-weight="700" fill="#1a2332">errors / logs</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="796" y="222" width="372" height="186" rx="14" fill="#ffffff" stroke="#0d9488" stroke-width="2.5"/>
+    <circle cx="856" cy="315" r="32" fill="#ccfbf1"/>
+    <rect x="840" y="298" width="24" height="30" rx="2" fill="none" stroke="#0d9488" stroke-width="2.5"/>
+    <path d="M846,308 h12 M846,316 h8" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="874" cy="308" r="8" fill="none" stroke="#0d9488" stroke-width="2"/>
+    <circle cx="882" cy="316" r="8" fill="none" stroke="#0d9488" stroke-width="2"/>
+    <text x="904" y="310" font-size="20" font-weight="700" fill="#1a2332">Design and</text>
+    <text x="904" y="340" font-size="20" font-weight="700" fill="#1a2332">architecture drafts</text>
+  </g>
+</svg>

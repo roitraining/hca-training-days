@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 420" width="1220" height="420" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Card 1 High Volume -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <rect x="12" y="12" width="280" height="56" rx="16" fill="#1a73e8"/>
+    <rect x="12" y="40" width="280" height="28" fill="#1a73e8"/>
+    <text x="152" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">HIGH VOLUME QUESTIONS</text>
+    <circle cx="152" cy="130" r="36" fill="#e8f0fe"/>
+    <path d="M136,122 h20 a8,8 0 0 1 0,16 h-8 l-8,10 v-10 h-4 a8,8 0 0 1 0,-16 z" fill="none" stroke="#1a73e8" stroke-width="2.5"/>
+    <text x="152" y="136" text-anchor="middle" font-size="18" font-weight="700" fill="#1a73e8">?</text>
+    <text x="28" y="210" font-size="17" fill="#1a2332">Automate FAQs and</text>
+    <text x="28" y="234" font-size="17" fill="#1a2332">simple inquiries</text>
+    <text x="28" y="278" font-size="17" fill="#1a2332">Provide instant answers</text>
+    <text x="28" y="302" font-size="17" fill="#1a2332">to experts and learners</text>
+    <text x="28" y="346" font-size="17" fill="#1a2332">Reduce repeat tickets</text>
+    <text x="28" y="370" font-size="17" fill="#1a2332">and Slack pings</text>
+  </g>
+
+  <!-- Card 2 High Friction -->
+  <g filter="url(#shadow)">
+    <rect x="316" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <rect x="316" y="12" width="280" height="56" rx="16" fill="#34a853"/>
+    <rect x="316" y="40" width="280" height="28" fill="#34a853"/>
+    <text x="456" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">HIGH FRICTION STEPS</text>
+    <circle cx="456" cy="130" r="36" fill="#e6f4ea"/>
+    <path d="M436,148 L448,128 L456,140 L464,118 L476,148 Z" fill="none" stroke="#34a853" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="332" y="210" font-size="17" fill="#1a2332">Streamline access,</text>
+    <text x="332" y="234" font-size="17" fill="#1a2332">systems, and forms</text>
+    <text x="332" y="278" font-size="17" fill="#1a2332">Personalize Day 1-30</text>
+    <text x="332" y="302" font-size="17" fill="#1a2332">onboarding flows</text>
+    <text x="332" y="346" font-size="17" fill="#1a2332">Remove process</text>
+    <text x="332" y="370" font-size="17" fill="#1a2332">bottlenecks</text>
+  </g>
+
+  <!-- Card 3 High Risk -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <rect x="620" y="12" width="280" height="56" rx="16" fill="#e37400"/>
+    <rect x="620" y="40" width="280" height="28" fill="#e37400"/>
+    <text x="760" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">HIGH RISK TOPICS</text>
+    <circle cx="760" cy="130" r="36" fill="#fef7e0"/>
+    <path d="M760,108 l18,32 h-36 z" fill="none" stroke="#e37400" stroke-width="2.5" stroke-linejoin="round"/>
+    <text x="760" y="138" text-anchor="middle" font-size="16" font-weight="700" fill="#e37400">!</text>
+    <text x="636" y="210" font-size="17" fill="#1a2332">Ground answers in</text>
+    <text x="636" y="234" font-size="17" fill="#1a2332">approved policy sources</text>
+    <text x="636" y="278" font-size="17" fill="#1a2332">Detect and correct</text>
+    <text x="636" y="302" font-size="17" fill="#1a2332">compliance risks</text>
+    <text x="636" y="346" font-size="17" fill="#1a2332">Escalate safety and</text>
+    <text x="636" y="370" font-size="17" fill="#1a2332">legal questions to humans</text>
+  </g>
+
+  <!-- Card 4 High Change -->
+  <g filter="url(#shadow)">
+    <rect x="924" y="12" width="284" height="396" rx="16" fill="#ffffff" stroke="#7b61ff" stroke-width="2.5"/>
+    <rect x="924" y="12" width="284" height="56" rx="16" fill="#7b61ff"/>
+    <rect x="924" y="40" width="284" height="28" fill="#7b61ff"/>
+    <text x="1066" y="48" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">HIGH CHANGE AREAS</text>
+    <circle cx="1066" cy="130" r="36" fill="#f0ebff"/>
+    <path d="M1050,130 a16,16 0 1 1 16,16" fill="none" stroke="#7b61ff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M1068,140 l-6,6 l10,0 z" fill="#7b61ff"/>
+    <text x="940" y="210" font-size="17" fill="#1a2332">Update guidance when</text>
+    <text x="940" y="234" font-size="17" fill="#1a2332">tools and policy change</text>
+    <text x="940" y="278" font-size="17" fill="#1a2332">Publish once; answers</text>
+    <text x="940" y="302" font-size="17" fill="#1a2332">improve with the source</text>
+    <text x="940" y="346" font-size="17" fill="#1a2332">Keep content fresh</text>
+    <text x="940" y="370" font-size="17" fill="#1a2332">and owned</text>
+  </g>
+</svg>

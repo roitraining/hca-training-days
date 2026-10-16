@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1220 420" width="1220" height="420" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- 1 AI Assistants -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <circle cx="152" cy="82" r="38" fill="#e8f0fe"/>
+    <circle cx="152" cy="78" r="14" fill="none" stroke="#1a73e8" stroke-width="3"/>
+    <path d="M138,100 h28 a10,10 0 0 1 0,16 h-28 a10,10 0 0 1 0,-16 z" fill="none" stroke="#1a73e8" stroke-width="2.5"/>
+    <text x="152" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#1a2332">1. AI Assistants</text>
+    <text x="28" y="202" font-size="15" fill="#4a5568">Conversational help for</text>
+    <text x="28" y="224" font-size="15" fill="#4a5568">learners and new hires</text>
+    <text x="28" y="270" font-size="16" fill="#1a2332">- Ask in natural language</text>
+    <text x="28" y="302" font-size="16" fill="#1a2332">- Get steps, links, summaries</text>
+    <text x="28" y="334" font-size="16" fill="#1a2332">- Escalate to a human</text>
+    <text x="28" y="366" font-size="16" fill="#1a2332">  when stuck</text>
+  </g>
+
+  <!-- 2 RAG -->
+  <g filter="url(#shadow)">
+    <rect x="316" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="456" cy="82" r="38" fill="#e6f4ea"/>
+    <circle cx="450" cy="78" r="14" fill="none" stroke="#34a853" stroke-width="3"/>
+    <line x1="460" y1="88" x2="474" y2="102" stroke="#34a853" stroke-width="3" stroke-linecap="round"/>
+    <rect x="468" y="64" width="14" height="18" rx="2" fill="none" stroke="#34a853" stroke-width="2"/>
+    <text x="456" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">2. Knowledge Retrieval</text>
+    <text x="456" y="176" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">(RAG)</text>
+    <text x="332" y="212" font-size="15" fill="#4a5568">Answers grounded in</text>
+    <text x="332" y="234" font-size="15" fill="#4a5568">approved source content</text>
+    <text x="332" y="280" font-size="16" fill="#1a2332">- Retrieve, then generate</text>
+    <text x="332" y="312" font-size="16" fill="#1a2332">- Cite the source doc</text>
+    <text x="332" y="344" font-size="16" fill="#1a2332">- Update once; improve</text>
+    <text x="332" y="376" font-size="16" fill="#1a2332">  answers everywhere</text>
+  </g>
+
+  <!-- 3 In-App Guidance -->
+  <g filter="url(#shadow)">
+    <rect x="620" y="12" width="280" height="396" rx="16" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="760" cy="82" r="38" fill="#fef7e0"/>
+    <rect x="740" y="64" width="40" height="30" rx="3" fill="none" stroke="#e37400" stroke-width="2.5"/>
+    <path d="M748,72 h24 M748,80 h16" stroke="#e37400" stroke-width="2"/>
+    <rect x="770" y="92" width="28" height="14" rx="2" fill="#e37400"/>
+    <text x="784" y="103" text-anchor="middle" font-size="8" font-weight="700" fill="#ffffff">Tip</text>
+    <text x="760" y="162" text-anchor="middle" font-size="18" font-weight="700" fill="#1a2332">3. In-App Guidance</text>
+    <text x="636" y="202" font-size="15" fill="#4a5568">Tooltips, checklists, and</text>
+    <text x="636" y="224" font-size="15" fill="#4a5568">walkthroughs in context</text>
+    <text x="636" y="270" font-size="16" fill="#1a2332">- Guide the next action</text>
+    <text x="636" y="302" font-size="16" fill="#1a2332">- Keep steps short</text>
+    <text x="636" y="334" font-size="16" fill="#1a2332">- Trigger by role, page,</text>
+    <text x="636" y="366" font-size="16" fill="#1a2332">  or task</text>
+  </g>
+
+  <!-- 4 Personalized Paths -->
+  <g filter="url(#shadow)">
+    <rect x="924" y="12" width="284" height="396" rx="16" fill="#ffffff" stroke="#7b61ff" stroke-width="2.5"/>
+    <circle cx="1066" cy="82" r="38" fill="#f0ebff"/>
+    <path d="M1044,100 C1052,80 1060,92 1066,72 C1072,52 1080,64 1088,60" fill="none" stroke="#7b61ff" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1046" cy="98" r="4" fill="#7b61ff"/>
+    <circle cx="1066" cy="72" r="4" fill="#7b61ff"/>
+    <circle cx="1088" cy="60" r="5" fill="#7b61ff"/>
+    <text x="1066" y="152" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">4. Personalized</text>
+    <text x="1066" y="176" text-anchor="middle" font-size="16" font-weight="700" fill="#1a2332">Learning Paths</text>
+    <text x="940" y="212" font-size="15" fill="#4a5568">Adapt by role, skill gap,</text>
+    <text x="940" y="234" font-size="15" fill="#4a5568">plan, or tenure</text>
+    <text x="940" y="280" font-size="16" fill="#1a2332">- Sequence micro-lessons</text>
+    <text x="940" y="312" font-size="16" fill="#1a2332">- Recommend what is next</text>
+    <text x="940" y="344" font-size="16" fill="#1a2332">- Humans own curriculum</text>
+    <text x="940" y="376" font-size="16" fill="#1a2332">  quality</text>
+  </g>
+</svg>

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 400" width="1180" height="400" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Left: Success Metrics -->
+  <g filter="url(#shadow)">
+    <rect x="12" y="12" width="560" height="376" rx="16" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <text x="292" y="58" text-anchor="middle" font-size="28" font-weight="700" fill="#1a2332">Success Metrics</text>
+
+    <!-- simple bars -->
+    <rect x="56" y="260" width="36" height="60" rx="4" fill="#aecbfa"/>
+    <rect x="108" y="220" width="36" height="100" rx="4" fill="#8ab4f8"/>
+    <rect x="160" y="180" width="36" height="140" rx="4" fill="#669df6"/>
+    <rect x="212" y="140" width="36" height="180" rx="4" fill="#1a73e8"/>
+
+    <text x="300" y="150" font-size="20" fill="#1a2332">Time-to-productivity</text>
+    <text x="300" y="190" font-size="20" fill="#1a2332">Task success</text>
+    <text x="300" y="230" font-size="20" fill="#1a2332">Deflection</text>
+    <text x="300" y="270" font-size="20" fill="#1a2332">Adoption</text>
+    <text x="300" y="310" font-size="20" fill="#1a2332">Experience (CSAT)</text>
+  </g>
+
+  <!-- Right: Guardrails -->
+  <g filter="url(#shadow)">
+    <rect x="608" y="12" width="560" height="376" rx="16" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <text x="888" y="58" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2332">Content and Operating</text>
+    <text x="888" y="90" text-anchor="middle" font-size="26" font-weight="700" fill="#1a2332">Guardrails</text>
+
+    <circle cx="720" cy="220" r="56" fill="#e6f4ea"/>
+    <path d="M720,176 l28,12 v28 c0,24 -16,40 -28,46 c-12,-6 -28,-22 -28,-46 v-28 z" fill="none" stroke="#34a853" stroke-width="3.5"/>
+    <path d="M706,220 l10,10 l20,-22" fill="none" stroke="#34a853" stroke-width="3.5" stroke-linecap="round"/>
+
+    <text x="800" y="160" font-size="20" fill="#1a2332">Approved sources only</text>
+    <text x="800" y="200" font-size="20" fill="#1a2332">Named content owners</text>
+    <text x="800" y="240" font-size="20" fill="#1a2332">Citations learners can verify</text>
+    <text x="800" y="280" font-size="20" fill="#1a2332">Human escalation path</text>
+    <text x="800" y="320" font-size="20" fill="#1a2332">PII minimization and audit</text>
+  </g>
+</svg>
