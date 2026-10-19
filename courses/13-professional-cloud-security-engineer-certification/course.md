@@ -1,4 +1,4 @@
-<!-- course-title: Professional Cloud Security Engineer Cert -->
+<!-- course-title: Professional Cloud Security Engineer Certification Overview -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -8,7 +8,7 @@
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # Professional Cloud Security Engineer
-# Certification
+# Certification Overview
 
 ## Exam scope, domain tour, and a practical preparation path
 ---

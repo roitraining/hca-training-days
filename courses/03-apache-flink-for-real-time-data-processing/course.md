@@ -408,7 +408,7 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 <!-- below-columns -->
 
 > [!IMPORTANT]
-> Ask: Do we need **continuous stateful compute** on the event path - or just fresher batch?
+> Ask: Do we need **continuous stateful compute** on the event path or just fresher batch?
 ---
 # What You Learned
 
@@ -417,16 +417,19 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 - Contrasted DataStream and SQL/Table APIs on the same engine
 - Identified common real-time use cases suited to Flink
 - Recognized how Flink fits alongside messaging and storage in a pipeline
-- Judged fit for Flink with yes / no / maybe scenarios
+- Judged fit for Flink with yes/no/maybe scenarios
 ---
 # Quiz 1 of 3
 
 **A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
 
-- A. Processing time only (wall-clock arrival)
-- B. Dropping any event that arrives after the minute ends
-- C. Ignoring timestamps and counting in arrival order
-- D. Event time with watermarks (and configured lateness)
+A. Processing time only (wall-clock arrival)
+
+B. Dropping any event that arrives after the minute ends
+
+C. Ignoring timestamps and counting in arrival order
+
+D. Event time with watermarks (and configured lateness)
 ---
 # Quiz 1: Answer
 
@@ -443,10 +446,13 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 **Which workload is the clearest fit for Apache Flink?**
 
-- A. A nightly sales workbook Finance needs by 7 a.m.
-- B. Scoring each card authorization with recent spend history in sub-seconds
-- C. A one-off SQL pull for a quarterly board slide
-- D. A simple broker-side filter with no state or windows
+A. A nightly sales workbook Finance needs by 7 a.m.
+
+B. Scoring each card authorization with recent spend history in sub-seconds
+
+C. A one-off SQL pull for a quarterly board slide
+
+D. A simple broker-side filter with no state or windows
 ---
 # Quiz 2: Answer
 

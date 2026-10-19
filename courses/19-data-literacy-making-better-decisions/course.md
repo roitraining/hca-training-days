@@ -1,4 +1,4 @@
-<!-- course-title: Data Literacy -->
+<!-- course-title: Data Literacy: Making Better Decisions -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide

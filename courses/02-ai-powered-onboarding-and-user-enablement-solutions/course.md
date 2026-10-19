@@ -1,4 +1,4 @@
-<!-- course-title: AI-Powered Onboarding and Enablement -->
+<!-- course-title: AI-Powered Onboarding and User Enablement Solutions -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -8,7 +8,7 @@
 ![ROI Logo](images/roi-logo-with-name.png)
 
 # AI-Powered Onboarding 
-# and Enablement
+# and User Enablement Solutions
 
 ## Shorten time-to-productivity with assistants, guidance, and personalized learning
 ---

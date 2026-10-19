@@ -137,13 +137,13 @@
 ---
 # Messaging and Sharing: Life Between Meetings
 
-- Most collaboration doesn’t happen in a scheduled meeting - it happens in the moments around it
+- Most collaboration doesn’t happen in a scheduled meeting—it happens in the moments around it
 - Webex Spaces keep conversations, files, and context together instead of scattered across email and chat
 - This segment covers the async tools that reduce how many meetings you need in the first place
 ---
 # Spaces: Your Team’s Home Base
 
-- A Space is a persistent room for a team, project, or topic - not a one-off chat thread
+- A Space is a persistent room for a team, project, or topic—not a one-off chat thread
 - Everything shared in a Space stays searchable and organized by conversation
 - Pin important messages so they don’t get buried
 - Turn any meeting into a Space afterward to keep the conversation going
@@ -196,7 +196,7 @@
 # Meeting Etiquette Basics
 
 - Join a minute early, muted by default
-- Use video when you can - it builds engagement
+- Use video when you can—it builds engagement
 - Mute when not speaking, especially in larger groups
 - Say who you are before speaking in large or new groups
 - Stop sharing your screen when you’re done, not mid-transition
