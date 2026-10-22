@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 650" width="1180" height="650" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Section 1 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="14" width="1140" height="112" rx="14" fill="#ffffff" stroke="#1a73e8" stroke-width="2.5"/>
+    <rect x="20" y="14" width="14" height="112" rx="7" fill="#1a73e8"/>
+    <text x="54" y="60" font-size="26" font-weight="700" fill="#1a2332">Section 1: Configuring Access</text>
+    <text x="54" y="96" font-size="20" fill="#4a5568">IAM roles, service accounts, workforce federation, Org policies, resource hierarchy</text>
+    <rect x="944" y="42" width="188" height="56" rx="28" fill="#e8f0fe" stroke="#1a73e8" stroke-width="2"/>
+    <text x="1038" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#1a73e8">~25% Weight</text>
+  </g>
+
+  <!-- Section 2 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="142" width="1140" height="112" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <rect x="20" y="142" width="14" height="112" rx="7" fill="#34a853"/>
+    <text x="54" y="188" font-size="26" font-weight="700" fill="#1a2332">Section 2: Securing Communications and Boundary Protection</text>
+    <text x="54" y="224" font-size="20" fill="#4a5568">VPC Service Controls, Shared VPC, Cloud Armor, IAP, Cloud DNS, firewalls</text>
+    <rect x="944" y="170" width="188" height="56" rx="28" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+    <text x="1038" y="206" text-anchor="middle" font-size="22" font-weight="700" fill="#34a853">~22% Weight</text>
+  </g>
+
+  <!-- Section 3 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="270" width="1140" height="112" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <rect x="20" y="270" width="14" height="112" rx="7" fill="#e37400"/>
+    <text x="54" y="316" font-size="26" font-weight="700" fill="#1a2332">Section 3: Ensuring Data Protection</text>
+    <text x="54" y="352" font-size="20" fill="#4a5568">Cloud KMS (CMEK/HSM), Secret Manager, Sensitive Data Protection (DLP), BigQuery masking</text>
+    <rect x="944" y="298" width="188" height="56" rx="28" fill="#fef7e0" stroke="#e37400" stroke-width="2"/>
+    <text x="1038" y="334" text-anchor="middle" font-size="22" font-weight="700" fill="#e37400">~23% Weight</text>
+  </g>
+
+  <!-- Section 4 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="398" width="1140" height="112" rx="14" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <rect x="20" y="398" width="14" height="112" rx="7" fill="#ea4335"/>
+    <text x="54" y="444" font-size="26" font-weight="700" fill="#1a2332">Section 4: Managing Operations</text>
+    <text x="54" y="480" font-size="20" fill="#4a5568">Cloud Audit Logs, Security Command Center (SCC), SIEM export, incident response</text>
+    <rect x="944" y="426" width="188" height="56" rx="28" fill="#fce8e6" stroke="#ea4335" stroke-width="2"/>
+    <text x="1038" y="462" text-anchor="middle" font-size="22" font-weight="700" fill="#ea4335">~19% Weight</text>
+  </g>
+
+  <!-- Section 5 -->
+  <g filter="url(#shadow)">
+    <rect x="20" y="526" width="1140" height="112" rx="14" fill="#ffffff" stroke="#5f6368" stroke-width="2.5"/>
+    <rect x="20" y="526" width="14" height="112" rx="7" fill="#5f6368"/>
+    <text x="54" y="572" font-size="26" font-weight="700" fill="#1a2332">Section 5: Supporting Compliance Requirements</text>
+    <text x="54" y="608" font-size="20" fill="#4a5568">Regulatory compliance controls, Assured Workloads, audit evidence, security posture</text>
+    <rect x="944" y="554" width="188" height="56" rx="28" fill="#f1f3f4" stroke="#5f6368" stroke-width="2"/>
+    <text x="1038" y="590" text-anchor="middle" font-size="22" font-weight="700" fill="#5f6368">~11% Weight</text>
+  </g>
+</svg>

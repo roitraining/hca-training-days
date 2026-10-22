@@ -71,10 +71,11 @@
 ---
 # What the Certification Validates
 
-- Ability to design, implement, and manage secure Google Cloud infrastructure
-- Scenario judgment across identity, network, data, operations, and compliance
-- Product-aware decisions (which control solves which risk)—not trivia memorization
-- Readiness to operate security alongside development and platform teams
+- **Access and Identity Management:** Configure IAM roles, policies, and service accounts
+- **Network and Boundary Protection:** Implement VPC security, firewalls, and Cloud Armor
+- **Data Protection and Encryption:** Manage KMS keys, DLP, and encryption standards
+- **Security Operations and Monitoring:** Utilize Security Command Center, logging, and threat detection
+- **Compliance and Governance:** Enforce security controls and audit compliance frameworks
 
 > [!NOTE]
 > Always verify details against the current official Google Cloud exam guide: blueprints refresh over time.
@@ -84,35 +85,10 @@
 
 ![PCSE exam at a glance](images/pcse-exam-at-a-glance.png)
 ---
-<!-- layout: 2-column -->
-# Format and Registration
-
-### What to Expect
-- ~50–60 multiple-choice/multiple-select
-- ~120 minutes
-- Scenario-style questions
-- Online proctoring or test center
-
-### Logistics
-- Register via Google Cloud certification
-- English (and other languages as listed)
-- Typical fee ~USD $200 + tax
-- Recertify on Google’s published cycle
----
-# Recommended Prior Experience
-
-- Google commonly recommends ~3+ years industry experience
-- Including ~1+ year designing/managing solutions on Google Cloud
-- Strongest predictors of success: real IAM, VPC, KMS, and logging work
-- Reading alone rarely replaces console/`gcloud` muscle memory
-
-> [!IMPORTANT]
-> If you have not configured VPC Service Controls, CMEK, or SCC findings in a project, schedule labs before the exam date.
----
 <!-- layout: title-image -->
 # Domain Map (Approximate Weights)
 
-![PCSE exam domains](images/pcse-exam-domains.png)
+![PCSE exam domains](images/pcse-exam-domains.svg)
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -122,11 +98,11 @@
 - Operations, Compliance, and Prep
 ---
 <!-- layout: title-image -->
-# Domain 1: Access/IAM (~25%)
+# Section 1: Configuring Access (~25%)
 
 ![IAM resource hierarchy](images/pcse-iam-hierarchy.png)
 ---
-# What Access Questions Test
+# Configuring Access: Key Exam Topics
 
 - Resource hierarchy: org → folders → projects → resources
 - Least privilege with predefined/custom roles and conditions
@@ -141,12 +117,12 @@
 | Org policy | Restrict public IPs / SA key creation |
 ---
 <!-- layout: title-image -->
-# Domains 2–3: Network and Data
+# Sections 2 and 3: Network and Data Protection
 
 ![Network and data protection](images/pcse-network-data.png)
 ---
 <!-- layout: 2-column -->
-# Network and Boundary (~22%)
+# Section 2: Securing Communications and Boundary Protection (~22%)
 
 ### Expect Coverage Of
 - VPC firewalls/NGFW ideas
@@ -162,7 +138,7 @@
 - Private paths over public exposure
 ---
 <!-- layout: 2-column -->
-# Data Protection (~23%)
+# Section 3: Ensuring Data Protection (~23%)
 
 ### Expect Coverage Of
 - Encryption at rest / in transit
@@ -177,15 +153,15 @@
 - Where does data leave?
 - How is sensitive data discovered?
 ---
-# “Big Rocks” Study Priorities
+# Network and Data Study Priorities
 
-- Spend the most hours on Access + Data + Network (majority of the exam)
-- Build one reference architecture that includes hierarchy, private networking, CMEK, and logging
-- Practice “choose the control” scenarios—not product feature laundry lists
-- Revisit VPC-SC and KMS until trade-offs feel automatic
+- **Master VPC Service Controls:** Know how perimeters, access levels, and ingress/egress rules prevent data exfiltration
+- **Layer network boundaries:** Practice choosing between Shared VPC, VPC peering, IAP, Cloud Armor, and Private Service Connect
+- **Know encryption key ownership:** Distinguish default Google-managed keys, CMEK, CSEK, Cloud EKM, and Cloud HSM trade-offs
+- **Automate sensitive data discovery:** Pair Sensitive Data Protection (DLP) inspection and de-identification with BigQuery policy tags
 
 > [!TIP]
-> If time is short, deepen IAM + VPC-SC + KMS before niche product edges.
+> Sections 1, 2, and 3 represent roughly 70% of the exam: deepen IAM, VPC-SC, and KMS until trade-offs feel automatic.
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -194,7 +170,7 @@
 - Core Domains Tour
 - **Operations, Compliance, and Prep**
 ---
-# Domain 4: Managing Operations (~19%)
+# Section 4: Managing Operations (~19%)
 
 - Detect and respond using Google Cloud security operations tooling
 - Security Command Center findings, priorities, and remediation workflows
@@ -208,7 +184,7 @@
 | Automation | Scale response consistently |
 ---
 <!-- layout: 2-column -->
-# Domain 5: Compliance (~11%)
+# Section 5: Supporting Compliance Requirements (~11%)
 
 ### What It Covers
 - Mapping controls to requirements
@@ -228,26 +204,22 @@
 ---
 # Highest-Yield Preparation Resources
 
-1. Official exam guide: source of truth for domains and task statements  
-2. Google Cloud skill boosts/labs: IAM, networking, KMS, SCC, VPC-SC  
-3. Architecture center security patterns: private, perimeter, encryption designs  
-4. Practice exams/sample questions: timing and scenario stamina  
-5. Your production scars: postmortems and real configs beat flashcards  
+1. **Official exam guide:** Source of truth for domains and in-scope topics
+2. **Google Skills labs:** Hands-on experience is essential
+3. **Architecture Center security patterns:** Identify best practices
+4. **Practice exams and sample questions:** Timing and scenario stamina
 
 > [!WARNING]
-> Outdated third-party dumps miss newer topics (e.g., AI workload security). Prefer official + recent labs.
+> Outdated third-party dumps are not always accurate.
 ---
 # Where Hands-On Experience Is Required
 
-- Creating custom roles and conditional IAM bindings
-- Designing VPC segmentation and private connectivity
-- Standing up CMEK and understanding key rotation/impact
-- Configuring SCC and interpreting findings
-- Sketching a VPC Service Controls perimeter for a sensitive project set
-
-```text
-Study loop: read task → build in a sandbox → explain the trade-off out loud
-```
+- **IAM and Workload Identity:** Configuring custom roles and resource hierarchies
+- **Network Defenses:** Building VPC Service Controls and Cloud Armor policies
+- **Encryption (KMS):** Implementing Customer-Managed Encryption Keys (CMEK)
+- **Security Operations:** Setting up Security Command Center (SCC) and audit log exports
+- **Data Privacy:** Using Cloud DLP to inspect and mask sensitive data
+- **GKE Security:** Hardening clusters with RBAC and network policies
 ---
 # Sample 4–6 Week Prep Outline
 
@@ -260,6 +232,19 @@ Study loop: read task → build in a sandbox → explain the trade-off out loud
 | 5 | Compliance mapping + practice exam |
 | 6 | Gap remediation + light review |
 ---
+<!-- layout: 2-column -->
+# Exam-Taking Tips
+
+### Reading the Scenario
+- Identify the core security requirement first (least privilege, exfiltration prevention, key control, or compliance)
+- Eliminate answers that rely on manual toil, primitive roles (`Owner`/`Editor`), or user-managed service account keys
+- Watch for qualifiers like *least operational overhead*, *Google-recommended*, or *strict regulatory control*
+
+### Pacing and Strategy
+- Budget roughly 2 minutes per question across the 120-minute window
+- Flag long multi-service architecture questions, lock in your best answer, and revisit at the end
+- Choose native managed Google Cloud controls (VPC-SC, IAP, CMEK, SCC) over custom scripts when both solve the risk
+---
 # What You Learned
 
 - Described PCSE scope, format, and exam expectations
@@ -269,7 +254,7 @@ Study loop: read task → build in a sandbox → explain the trade-off out loud
 ---
 # Quiz 1 of 3
 
-**If study time is short, which PCSE focus set is the highest-yield “big rocks” priority?**
+**If study time is short, which PCSE focus set is the highest-yield priority?**
 
 A. Niche product edges and third-party exam dumps only
 
@@ -281,7 +266,7 @@ D. Skipping hands-on labs if you’ve read the exam guide twice
 ---
 # Quiz 1: Answer
 
-**If study time is short, which PCSE focus set is the highest-yield “big rocks” priority?**
+**If study time is short, which PCSE focus set is the highest-yield priority?**
 
 **Correct: C.** Access (IAM) + Network + Data (including VPC-SC and KMS)
 
