@@ -84,7 +84,7 @@
 | :--- | :--- | :--- |
 | DevSecOps | Development, Security, and Operations | Security embedded in the same build-and-run loop as delivery |
 | DevOps | Development and Operations | Culture and practices that join build and run |
-| CI/CD | Continuous Integration/Continuous Delivery | Automated build, test, and release pipelines |
+| CI/CD | Continuous Integration/Continuous Delivery (or Deployment) | Automated build, test, and release pipelines |
 | SDLC | Software Development Life Cycle | Plan → code → build → deploy → operate |
 | SCA | Software Composition Analysis | Finds vulnerable open-source libraries and license risk |
 | SAST | Static Application Security Testing | Scans source for insecure coding patterns |
@@ -96,7 +96,7 @@
 | XSS | Cross-Site Scripting | Injection that runs script in another user’s browser |
 | OPA | Open Policy Agent | Policy-as-code engine used to enforce rules |
 | MTTR | Mean Time To Remediate | How long critical findings take to fix |
-| SLA | Service Level Agreement | Timebox for severity-based remediation |
+| SLA | Service Level Agreement | Agreed time target; here, remediation deadlines by severity |
 | KPI | Key Performance Indicator | Metric used to track program outcomes |
 | PR | Pull Request | Proposed code change reviewed before merge |
 | K8s | Kubernetes | Container orchestration platform |
@@ -175,7 +175,8 @@
 ### Pipeline Fit
 - On PR and main builds
 - Block critical CVEs by policy
-- Feed SBOM for inventory
+- Generate SBOM for inventory
+- Re-scan deployed apps as new CVEs are published
 ---
 <!-- layout: 2-column -->
 # SAST: Static Application Security Testing
@@ -183,7 +184,7 @@
 ### What It Catches
 - Insecure coding patterns
 - Injection/XSS candidates
-- Hard-coded risky APIs
+- Dangerous API calls and hard-coded credentials
 
 ### Pipeline Fit
 - Incremental on PRs
@@ -228,7 +229,7 @@
 | Signal | Example control |
 | :--- | :--- |
 | Misconfiguration | Deny `0.0.0.0/0` on admin ports |
-| Identity risk | Flag roles with admin on  |
+| Identity risk | Flag roles granting admin or wildcard (*) permissions |
 | Data risk | Require encryption at rest |
 ---
 <!-- layout: 2-column -->
@@ -314,7 +315,7 @@
 
 - Shared definition of DevSecOps success metrics
 - Documented pipeline security stage map (owners included)
-- Maturity self-score by capability—not a vanity overall number
+- Maturity self-score by capability - not a vanity overall number
 - Named 3–5 roadmap items with dates and accountable owners
 ---
 # What You Learned

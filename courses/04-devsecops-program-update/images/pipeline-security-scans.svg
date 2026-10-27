@@ -3,9 +3,6 @@
     <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#1a2332" flood-opacity="0.12"/>
     </filter>
-    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#6b7c8f"/>
-    </marker>
   </defs>
 
   <g filter="url(#shadow)">
@@ -18,27 +15,23 @@
     <text x="192" y="195" text-anchor="middle" font-size="20" fill="#4a5568">Dependencies and licenses</text>
   </g>
 
-  <line x1="382" y1="122" x2="408" y2="122" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
-
   <g filter="url(#shadow)">
-    <rect x="420" y="12" width="360" height="220" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
-    <circle cx="600" cy="80" r="34" fill="#e6f4ea"/>
-    <rect x="582" y="62" width="36" height="36" rx="3" fill="none" stroke="#34a853" stroke-width="3"/>
-    <circle cx="608" cy="78" r="10" fill="none" stroke="#34a853" stroke-width="3"/>
-    <line x1="616" y1="86" x2="626" y2="96" stroke="#34a853" stroke-width="3" stroke-linecap="round"/>
-    <text x="600" y="155" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">SAST</text>
-    <text x="600" y="195" text-anchor="middle" font-size="20" fill="#4a5568">Source code patterns</text>
+    <rect x="410" y="12" width="360" height="220" rx="14" fill="#ffffff" stroke="#34a853" stroke-width="2.5"/>
+    <circle cx="590" cy="80" r="34" fill="#e6f4ea"/>
+    <rect x="572" y="62" width="36" height="36" rx="3" fill="none" stroke="#34a853" stroke-width="3"/>
+    <circle cx="598" cy="78" r="10" fill="none" stroke="#34a853" stroke-width="3"/>
+    <line x1="606" y1="86" x2="616" y2="96" stroke="#34a853" stroke-width="3" stroke-linecap="round"/>
+    <text x="590" y="155" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">SAST</text>
+    <text x="590" y="195" text-anchor="middle" font-size="20" fill="#4a5568">Source code patterns</text>
   </g>
 
-  <line x1="790" y1="122" x2="816" y2="122" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
-
   <g filter="url(#shadow)">
-    <rect x="828" y="12" width="340" height="220" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
-    <circle cx="998" cy="80" r="34" fill="#fef7e0"/>
-    <path d="M984,92 v-12 a14,14 0 1 1 28,0 v12" fill="none" stroke="#e37400" stroke-width="3.5"/>
-    <rect x="980" y="90" width="36" height="22" rx="3" fill="#e37400"/>
-    <text x="998" y="155" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Secrets</text>
-    <text x="998" y="195" text-anchor="middle" font-size="20" fill="#4a5568">Keys in repo and pipelines</text>
+    <rect x="808" y="12" width="360" height="220" rx="14" fill="#ffffff" stroke="#e37400" stroke-width="2.5"/>
+    <circle cx="988" cy="80" r="34" fill="#fef7e0"/>
+    <path d="M974,92 v-12 a14,14 0 1 1 28,0 v12" fill="none" stroke="#e37400" stroke-width="3.5"/>
+    <rect x="970" y="90" width="36" height="22" rx="3" fill="#e37400"/>
+    <text x="988" y="155" text-anchor="middle" font-size="30" font-weight="700" fill="#1a2332">Secrets</text>
+    <text x="988" y="195" text-anchor="middle" font-size="20" fill="#4a5568">Keys in repo and pipelines</text>
   </g>
 
   <g filter="url(#shadow)">
@@ -50,28 +43,24 @@
     <text x="192" y="463" text-anchor="middle" font-size="20" fill="#4a5568">Cloud and K8s misconfig</text>
   </g>
 
-  <line x1="382" y1="390" x2="408" y2="390" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
-
   <g filter="url(#shadow)">
-    <rect x="420" y="280" width="360" height="220" rx="14" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
-    <circle cx="600" cy="348" r="34" fill="#fce8e6"/>
-    <rect x="580" y="330" width="40" height="28" rx="3" fill="none" stroke="#ea4335" stroke-width="3"/>
-    <path d="M588,358 h24" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
-    <circle cx="616" cy="338" r="8" fill="none" stroke="#ea4335" stroke-width="2.5"/>
-    <text x="600" y="423" text-anchor="middle" font-size="28" font-weight="700" fill="#1a2332">DAST / IAST</text>
-    <text x="600" y="463" text-anchor="middle" font-size="20" fill="#4a5568">Running app and APIs</text>
+    <rect x="410" y="280" width="360" height="220" rx="14" fill="#ffffff" stroke="#00897b" stroke-width="2.5"/>
+    <circle cx="590" cy="348" r="34" fill="#e0f2f1"/>
+    <rect x="572" y="332" width="36" height="28" rx="3" fill="none" stroke="#00897b" stroke-width="3"/>
+    <path d="M578,340 h24 M578,348 h16" stroke="#00897b" stroke-width="2.5"/>
+    <circle cx="606" cy="356" r="8" fill="#e0f2f1" stroke="#00897b" stroke-width="2.5"/>
+    <path d="M602,356 l3,3 l6,-7" fill="none" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
+    <text x="590" y="423" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2332">Image / Supply Chain</text>
+    <text x="590" y="463" text-anchor="middle" font-size="20" fill="#4a5568">Image scanning, signing, and SBOM</text>
   </g>
 
-  <line x1="790" y1="390" x2="816" y2="390" stroke="#6b7c8f" stroke-width="3" marker-end="url(#arr)"/>
-
   <g filter="url(#shadow)">
-    <rect x="828" y="280" width="340" height="220" rx="14" fill="#ffffff" stroke="#00897b" stroke-width="2.5"/>
-    <circle cx="998" cy="348" r="34" fill="#e0f2f1"/>
-    <rect x="980" y="332" width="36" height="28" rx="3" fill="none" stroke="#00897b" stroke-width="3"/>
-    <path d="M986,340 h24 M986,348 h16" stroke="#00897b" stroke-width="2.5"/>
-    <circle cx="1014" cy="356" r="8" fill="#e0f2f1" stroke="#00897b" stroke-width="2.5"/>
-    <path d="M1010,356 l3,3 l6,-7" fill="none" stroke="#00897b" stroke-width="2" stroke-linecap="round"/>
-    <text x="998" y="423" text-anchor="middle" font-size="24" font-weight="700" fill="#1a2332">Image / Supply Chain</text>
-    <text x="998" y="463" text-anchor="middle" font-size="20" fill="#4a5568">Container signing and SBOM</text>
+    <rect x="808" y="280" width="360" height="220" rx="14" fill="#ffffff" stroke="#ea4335" stroke-width="2.5"/>
+    <circle cx="988" cy="348" r="34" fill="#fce8e6"/>
+    <rect x="968" y="330" width="40" height="28" rx="3" fill="none" stroke="#ea4335" stroke-width="3"/>
+    <path d="M976,358 h24" stroke="#ea4335" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="1004" cy="338" r="8" fill="none" stroke="#ea4335" stroke-width="2.5"/>
+    <text x="988" y="423" text-anchor="middle" font-size="28" font-weight="700" fill="#1a2332">DAST / IAST</text>
+    <text x="988" y="463" text-anchor="middle" font-size="20" fill="#4a5568">Running app and APIs</text>
   </g>
 </svg>

@@ -32,7 +32,7 @@
     <path d="M618,86 L606,106 h24 z" fill="none" stroke="#34a853" stroke-width="2.5"/>
     <circle cx="591" cy="78" r="5" fill="#34a853"/>
     <text x="591" y="200" text-anchor="middle" font-size="34" font-weight="700" fill="#1a2332">Prioritize</text>
-    <text x="591" y="250" text-anchor="middle" font-size="20" fill="#4a5568">Risk x effort, quick wins</text>
+    <text x="591" y="250" text-anchor="middle" font-size="20" fill="#4a5568">Risk reduced vs. effort, quick wins</text>
   </g>
 
   <g filter="url(#shadow)">
