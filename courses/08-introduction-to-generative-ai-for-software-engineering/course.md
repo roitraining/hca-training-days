@@ -29,7 +29,7 @@
 - Apply generative AI across the software engineering workflow while keeping quality and security intact
 - Describe how generative AI applies to the software development workflow
 - Use prompt techniques to generate, document, and test code
-- Compare leading AI coding assistants (Copilot, Gemini Code Assist) and IDE integration
+- Compare leading AI coding assistants (Copilot, Google Antigravity) and IDE integration
 - Recognize responsible-use and security considerations for AI-assisted coding
 ---
 <!-- layout: panel-left -->
@@ -207,9 +207,9 @@ Now write get_order(id: str) -> Order the same way.
 - **Tools and Responsible Use**
 ---
 <!-- layout: title-image -->
-# Copilot and Gemini Code Assist
+# Copilot and Google Antigravity
 
-![Copilot vs Gemini Code Assist](images/copilot-vs-gemini-code-assist.png)
+![Copilot vs Google Antigravity](images/copilot-vs-antigravity.svg)
 ---
 <!-- layout: 3-column -->
 # IDE Integration Capabilities
@@ -290,7 +290,7 @@ Now write get_order(id: str) -> Order the same way.
 
 - Described how generative AI applies across the software development workflow
 - Used prompt techniques to generate, document, and test code
-- Compared Copilot and Gemini Code Assist style IDE integrations
+- Compared Copilot and Google Antigravity style IDE integrations
 - Recognized responsible-use and security considerations for AI-assisted coding
 ---
 # Quiz 1 of 3

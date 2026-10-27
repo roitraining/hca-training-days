@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 500" width="1180" height="500" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1a2332" flood-opacity="0.12"/>
+    </filter>
+    <!-- Microsoft Copilot Gradient (Cyan -> Blue -> Purple -> Pink/Orange) -->
+    <linearGradient id="copilotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00b7c3"/>
+      <stop offset="35%" stop-color="#0078d4"/>
+      <stop offset="70%" stop-color="#7b61ff"/>
+      <stop offset="100%" stop-color="#e3008c"/>
+    </linearGradient>
+    <linearGradient id="copilotSoftBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ebf8ff"/>
+      <stop offset="100%" stop-color="#f3ebff"/>
+    </linearGradient>
+    <!-- Google Brand 4-Color Gradient (Blue -> Red -> Yellow -> Green) -->
+    <linearGradient id="googleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285f4"/>
+      <stop offset="33%" stop-color="#ea4335"/>
+      <stop offset="66%" stop-color="#fbbc04"/>
+      <stop offset="100%" stop-color="#34a853"/>
+    </linearGradient>
+    <linearGradient id="googleTopBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285f4"/>
+      <stop offset="25%" stop-color="#4285f4"/>
+      <stop offset="25%" stop-color="#ea4335"/>
+      <stop offset="50%" stop-color="#ea4335"/>
+      <stop offset="50%" stop-color="#fbbc04"/>
+      <stop offset="75%" stop-color="#fbbc04"/>
+      <stop offset="75%" stop-color="#34a853"/>
+      <stop offset="100%" stop-color="#34a853"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Card: Copilot (Microsoft Copilot Colors) -->
+  <g filter="url(#shadow)">
+    <rect x="28" y="24" width="490" height="452" rx="20" fill="#ffffff" stroke="url(#copilotGrad)" stroke-width="3.5"/>
+    <path d="M48,24 h450 a20,20 0 0 1 20,20 v6 h-490 v-6 a20,20 0 0 1 20,-20 z" fill="url(#copilotGrad)"/>
+
+    <!-- Corner Accent Nodes -->
+    <circle cx="502" cy="44" r="5" fill="#7b61ff"/>
+    <circle cx="44" cy="456" r="5" fill="#00b7c3"/>
+
+    <!-- Icon Badge -->
+    <circle cx="273" cy="112" r="50" fill="url(#copilotSoftBg)" stroke="url(#copilotGrad)" stroke-width="2"/>
+    <!-- Browser/IDE Window + Copilot Visor & Code Icon -->
+    <rect x="241" y="86" width="64" height="50" rx="8" fill="#ffffff" stroke="#0078d4" stroke-width="2.5"/>
+    <line x1="241" y1="100" x2="305" y2="100" stroke="#0078d4" stroke-width="2"/>
+    <circle cx="250" cy="93" r="2.2" fill="#00b7c3"/>
+    <circle cx="258" cy="93" r="2.2" fill="#0078d4"/>
+    <circle cx="266" cy="93" r="2.2" fill="#7b61ff"/>
+    <!-- Stylized Copilot Ribbon / Visor + Code Brackets -->
+    <path d="M255,118 L249,123 L255,128 M291,118 L297,123 L291,128" fill="none" stroke="#7b61ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="261" y="110" width="24" height="16" rx="8" fill="url(#copilotGrad)"/>
+    <circle cx="268" cy="118" r="2.3" fill="#ffffff"/>
+    <circle cx="278" cy="118" r="2.3" fill="#ffffff"/>
+
+    <!-- Heading & Ecosystem Pill -->
+    <text x="273" y="202" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">Copilot</text>
+    <rect x="148" y="218" width="250" height="32" rx="16" fill="#f0ebff" stroke="#7b61ff" stroke-width="1.2"/>
+    <text x="273" y="239" text-anchor="middle" font-size="15" font-weight="600" fill="#5b21b6">Microsoft and GitHub Ecosystem</text>
+
+    <!-- Feature Rows -->
+    <g transform="translate(68, 280)">
+      <rect x="0" y="0" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="23" r="7" fill="#0078d4"/>
+      <text x="44" y="29" font-size="20" font-weight="600" fill="#1e293b">Inline completions and next-edit hints</text>
+
+      <rect x="0" y="60" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="83" r="7" fill="#7b61ff"/>
+      <text x="44" y="89" font-size="20" font-weight="600" fill="#1e293b">IDE chat and PR assistance</text>
+
+      <rect x="0" y="120" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="143" r="7" fill="#e3008c"/>
+      <text x="44" y="149" font-size="20" font-weight="600" fill="#1e293b">Deep GitHub repo and workflow fit</text>
+    </g>
+  </g>
+
+  <!-- Center Comparison Connector -->
+  <g>
+    <line x1="530" y1="250" x2="650" y2="250" stroke="#cbd5e1" stroke-width="2.5" stroke-dasharray="5,5"/>
+    <circle cx="556" cy="250" r="6" fill="#0078d4"/>
+    <circle cx="578" cy="250" r="6" fill="#7b61ff"/>
+    <circle cx="602" cy="250" r="6" fill="#ea4335"/>
+    <circle cx="624" cy="250" r="6" fill="#34a853"/>
+    <polygon points="528,250 540,243 540,257" fill="#0078d4"/>
+    <polygon points="652,250 640,243 640,257" fill="#34a853"/>
+  </g>
+
+  <!-- Right Card: Google Antigravity (Google 4-Color Palette) -->
+  <g filter="url(#shadow)">
+    <rect x="662" y="24" width="490" height="452" rx="20" fill="#ffffff" stroke="url(#googleGrad)" stroke-width="3.5"/>
+    <path d="M682,24 h450 a20,20 0 0 1 20,20 v6 h-490 v-6 a20,20 0 0 1 20,-20 z" fill="url(#googleTopBar)"/>
+
+    <!-- Corner Accent Nodes -->
+    <circle cx="1136" cy="44" r="5" fill="#fbbc04"/>
+    <circle cx="678" cy="456" r="5" fill="#34a853"/>
+
+    <!-- Icon Badge -->
+    <circle cx="907" cy="112" r="50" fill="#f8fafc" stroke="url(#googleGrad)" stroke-width="2"/>
+    <!-- Agentic IDE Window + Google 4-Color Sparkle / Lift-off Icon -->
+    <rect x="875" y="86" width="64" height="50" rx="8" fill="#ffffff" stroke="#4285f4" stroke-width="2.5"/>
+    <line x1="875" y1="100" x2="939" y2="100" stroke="#4285f4" stroke-width="2"/>
+    <circle cx="884" cy="93" r="2.2" fill="#ea4335"/>
+    <circle cx="892" cy="93" r="2.2" fill="#fbbc04"/>
+    <circle cx="900" cy="93" r="2.2" fill="#34a853"/>
+    <!-- Google 4-Point AI Sparkle & Agentic Upward Trajectory -->
+    <path d="M907,104 C909,113 913,117 922,119 C913,121 909,125 907,134 C905,125 901,121 892,119 C901,117 905,113 907,104 Z" fill="url(#googleGrad)"/>
+    <circle cx="925" cy="107" r="3" fill="#fbbc04"/>
+
+    <!-- Heading & Ecosystem Pill -->
+    <text x="907" y="202" text-anchor="middle" font-size="32" font-weight="700" fill="#0f172a">Google Antigravity</text>
+    <rect x="772" y="218" width="270" height="32" rx="16" fill="#e8f0fe" stroke="#4285f4" stroke-width="1.2"/>
+    <text x="907" y="239" text-anchor="middle" font-size="15" font-weight="600" fill="#1a73e8">Google Agentic Coding Platform</text>
+
+    <!-- Feature Rows (with Google Blue, Red, Yellow, Green accents) -->
+    <g transform="translate(702, 280)">
+      <rect x="0" y="0" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="23" r="7" fill="#4285f4"/>
+      <text x="44" y="29" font-size="20" font-weight="600" fill="#1e293b">Agent-first IDE and inline completions</text>
+
+      <rect x="0" y="60" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="83" r="7" fill="#ea4335"/>
+      <circle cx="34" cy="83" r="4.5" fill="#fbbc04"/>
+      <text x="48" y="89" font-size="20" font-weight="600" fill="#1e293b">Autonomous coding agents</text>
+
+      <rect x="0" y="120" width="410" height="46" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.2"/>
+      <circle cx="24" cy="143" r="7" fill="#34a853"/>
+      <text x="44" y="149" font-size="20" font-weight="600" fill="#1e293b">Deep Gemini and Google Cloud fit</text>
+    </g>
+  </g>
+</svg>
