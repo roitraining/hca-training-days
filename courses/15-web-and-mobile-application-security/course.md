@@ -37,7 +37,7 @@
 
 - Segment 1: Security Fundamentals
 - Segment 2: The OWASP Top 10, web and mobile
-- Segment 3: Defenses and Testing, with demo
+- Segment 3: Defenses and Testing
 - Questions and Answers
 
 ![Agenda](images/agenda.png)
@@ -78,25 +78,18 @@
 
 ![The CIA triad: Confidentiality, Integrity, and Availability](images/ch15-cia-triad.png)
 ---
-# Confidentiality, Integrity, Availability
-
-- Confidentiality: only authorized users and systems can read the data
-- Integrity: data and code aren’t altered without detection
-- Availability: the app stays usable under normal load and under attack
-- Most vulnerabilities you’ll see today map back to breaking one of these three properties
----
 <!-- layout: 2-column -->
-# Secure Code vs. Secure Users
+# Hardening the System vs. Protecting the User
 
-### Secure Code
-- Validate and sanitize all input
-- Fail closed, not open
-- Least privilege by default
+### Technical Controls (The Code)
+- **Treat all input as untrusted:** Validate, sanitize, and encode data at every layer
+- **Default to denial:** Ensure systems fail securely (lock down, don’t open up) on errors
+- **Enforce least privilege:** Grant only the permissions strictly required to function
 
-### Secure Users
-- Clear security prompts, not dark patterns
-- Sensible defaults for risky settings
-- Educate without blaming
+### Human-Centric Controls (The Interface)
+- **Transparent consent:** Use plain-language security prompts instead of deceptive UI
+- **Safe by default:** Ship features with the most secure configuration pre-selected
+- **Resilient design:** Build guardrails that forgive human error instead of blaming the user
 ---
 # Where Security Fits in the Lifecycle
 
@@ -134,54 +127,32 @@
 
 ![OWASP Top 10](images/owasp-image.png)
 ---
-<!-- layout: title-image -->
+<!-- layout: 2-column -->
 # OWASP Top 10: Web vs. Mobile
 
-![OWASP Top 10 highlights for web applications (injection, broken access control, XSS) versus mobile applications (insecure storage, communication, authentication)](images/ch15-web-vs-mobile-top10.png)
----
-# Injection
+### Web (2025)
+- **A01:2025** - Broken Access Control
+- **A02:2025** - Security Misconfiguration
+- **A03:2025** - Software Supply Chain Failures
+- **A04:2025** - Cryptographic Failures
+- **A05:2025** - Injection
+- **A06:2025** - Insecure Design
+- **A07:2025** - Authentication Failures
+- **A08:2025** - Software or Data Integrity Failures
+- **A09:2025** - Security Logging and Alerting Failures
+- **A10:2025** - Mishandling of Exceptional Conditions
 
-- Untrusted input reaches an interpreter (SQL, OS command, LDAP, etc.) as code, not data
-- Classic example: string-concatenated SQL queries built from user input
-- Defense: parameterized queries and prepared statements, strict input validation
-- Still one of the most damaging, and most preventable, vulnerability classes
-
-```java
-String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
-```
----
-# Cross-Site Scripting (XSS)
-
-- Untrusted input is rendered back into a page without proper escaping
-- Lets an attacker run JavaScript in another user’s browser session
-- Three types: stored, reflected, and DOM-based
-- Defense: output encoding, Content Security Policy, framework auto-escaping
-
-```html
-<div>Welcome, <%= request.getParameter("name") %></div>
-```
----
-<!-- layout: 2-column -->
-# Broken Access Control and Authentication
-
-### Broken Access Control
-- Users can act outside their intended permissions
-- Common cause: trusting client-side checks alone
-
-### Broken Authentication
-- Weak session handling, credential stuffing, missing MFA
-- Common cause: rolling your own auth instead of a vetted library
----
-# More Web Categories to Know
-
-| Category | Risk pattern |
-| :--- | :--- |
-| Security Misconfiguration | Default credentials, verbose errors, open cloud storage |
-| Vulnerable and Outdated Components | Unpatched libraries with known CVEs |
-| Software and Data Integrity Failures | Unsigned updates, insecure CI/CD pipelines |
-
-> [!NOTE]
-> The exact ranking and names shift with each OWASP Top 10 refresh: know the patterns, not just the current list.
+### Mobile
+- **M1:** Improper Credential Usage
+- **M2:** Inadequate Supply Chain Security
+- **M3:** Insecure Authentication/Authorization
+- **M4:** Insufficient Input/Output Validation
+- **M5:** Insecure Communication
+- **M6:** Inadequate Privacy Controls
+- **M7:** Insufficient Binary Protections
+- **M8:** Security Misconfiguration
+- **M9:** Insecure Data Storage
+- **M10:** Insufficient Cryptography
 ---
 # Mobile Apps: Same Principles, Different Surface
 
@@ -191,27 +162,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - The OWASP Mobile Top 10 reflects these differences
 
 ![Mobile Phone Security](images/criminal.png)
----
-<!-- layout: 2-column -->
-# Mobile Top Risks: Storage and Communication
-
-### Insecure Data Storage
-- Sensitive data cached in plaintext: local databases, logs, temp files
-- Defense: platform secure storage (Keychain/Keystore); avoid caching secrets
-
-### Insecure Communication
-- Data sent over HTTP, or TLS misconfigured or unvalidated
-- Defense: enforce TLS everywhere; certificate pinning for high-risk apps
----
-# Insecure Authentication (Mobile)
-
-- Weak or missing device-level authentication (PIN, biometrics)
-- Client-side-only checks that a jailbroken or rooted device can bypass
-- Hardcoded API keys or tokens embedded in the app binary
-- Defense: enforce authorization on the server for every sensitive action—never trust the client
-
-
-![Mobile Phone Security](images/pin.png)
 ---
 <!-- layout: 2-column -->
 # Web and Mobile: Shared Lessons
@@ -225,6 +175,11 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Mobile adds on-device data and app-store review cycles
 - Web adds session and cookie-specific risks
 - Both need server-side enforcement as the real control
+
+<!-- below-columns -->
+
+> [!NOTE]
+> The exact ranking and names shift with each OWASP Top 10 refresh: know the patterns, not just the current list.
 ---
 <!-- layout: navigation -->
 # Course Roadmap
@@ -238,7 +193,6 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 - Segments 1 and 2 covered what breaks; this segment covers what to build and test
 - Two complementary layers: protect data and traffic, then verify with testing
 - No single control is sufficient: defense in depth applies to applications too
-- We’ll close with a demo of a real testing tool
 ---
 # Encryption: Confidentiality and Integrity in Practice
 
@@ -250,12 +204,11 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 <!-- layout: title-image -->
 # TLS Handshake at a Glance
 
-![TLS handshake flow: ClientHello, ServerHello and certificate, key exchange, then an encrypted session](images/ch15-tls-handshake.png)
+![TLS 1.3 handshake flow: Client Hello, Server Hello and Key Agreement, Encrypted Authentication, and Application Data](images/ch15-tls-handshake.svg)
 ---
 # Securing the Server: TLS Configuration
 
-- Terminate TLS with current protocol versions; disable deprecated ones (SSLv3, TLS 1.0/1.1)
-- Use valid certificates from a trusted CA and automate renewal
+- Terminate TLS with current protocol versions; disable deprecated ones (TLS 1.0/1.1/1.2)
 - Redirect all HTTP traffic to HTTPS; use HSTS to enforce it
 - Rotate and protect private keys: treat them as secrets
 ---
@@ -316,26 +269,26 @@ String query = "SELECT * FROM users WHERE name = '" + userInput + "'";
 ---
 # Quiz 1 of 3
 
-**Which defense best prevents classic SQL injection when building queries from user input?**
+**When hardening an application, which practice best combines technical controls in the code with human-centric controls in the interface?**
 
-A. Trusting client-side JavaScript validation alone
+A. Relying on client-side UI validation alone and enabling risky features by default for convenience
 
-B. Disabling HTTPS so payloads are easier to inspect
+B. Failing open on server errors so users are never interrupted, and hiding security settings in complex menus
 
-C. Storing passwords with reversible encryption instead of hashing
+C. Validating and sanitizing all input on the server, failing securely (default to denial), and shipping safe-by-default configurations with plain-language consent
 
-D. Parameterized queries/prepared statements plus server-side validation
+D. Storing user passwords with reversible encryption and blaming users when they click deceptive prompts
 ---
 # Quiz 1: Answer
 
-**Which defense best prevents classic SQL injection when building queries from user input?**
+**When hardening an application, which practice best combines technical controls in the code with human-centric controls in the interface?**
 
-**Correct: D.** Parameterized queries/prepared statements plus server-side validation
+**Correct: C.** Validating and sanitizing all input on the server, failing securely (default to denial), and shipping safe-by-default configurations with plain-language consent
 
-- Injection happens when untrusted input reaches an interpreter as code
-- Parameterized queries keep input as data, not executable SQL
-- Client-side checks are bypassable; enforce controls on the server
-- HTTPS protects transit - it does not stop injection in query construction
+- Technical controls treat all input as untrusted, enforce least privilege, and default to denial (fail closed) on errors
+- Human-centric controls use transparent consent, safe defaults, and resilient guardrails that forgive human error
+- Client-side-only checks (A) are easily bypassed; server-side enforcement is mandatory
+- Passwords must be hashed, never stored with reversible encryption (D)
 ---
 # Quiz 2 of 3
 
