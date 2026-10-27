@@ -58,7 +58,7 @@
 - Basic software development experience
 - Comfortable reading and editing code in an IDE
 - Helpful: Git/PR workflow familiarity
-- Helpful: access to an org-approved AI code assistant for the demo
+- Helpful: access to an org-approved AI code assistant
 
 ![Prerequisites](images/prerequisites.png)
 ---
@@ -90,19 +90,19 @@
 
 
 > [!NOTE]
-> DORA-style efficiency measures refer to standard software delivery and operational performance metrics established by the DevOps Research and Assessment (DORA) program (now part of Google Cloud).
+> DORA-style measures are the software delivery metrics from the DevOps Research and Assessment (DORA) program, now part of Google Cloud. The original four keys are shown here. Since 2024, DORA also tracks a fifth, deployment rework rate.
 ---
 # Connecting AI Assist to DORA Outcomes
 
 | DORA-style measure | How AI assist can help |
 | :--- | :--- |
 | **Deployment frequency** | Faster small changes; less boilerplate |
-| **Lead time for changes** | Quicker drafts, tests, and explanations |
+| **Change lead time** | Quicker drafts, tests, and explanations |
 | **Change fail rate** | Better tests and review prompts, if humans verify |
-| **Time to restore** | Faster log/error diagnosis and fix drafts |
+| **Failed deployment recovery time** | Faster log/error diagnosis and fix drafts |
 
 > [!IMPORTANT]
-> AI is a lever on flow metrics—not a substitute for CI quality, ownership, and review.
+> AI is a lever on flow metrics - not a substitute for CI quality, ownership, and review.
 ---
 <!-- layout: default -->
 # Where Gen AI Improves Efficiency
@@ -164,7 +164,7 @@
 - Paste or reference existing patterns (“match `UserService` style”)
 - Require tests, error handling, and logging norms
 - Ban secrets: never paste credentials or PHI into prompts
-- Ask for a diff-sized change—not a rewrite of the module
+- Ask for a diff-sized change - not a rewrite of the module
 
 ```text
 Context: Python 3.12 service using our repository pattern in services/
