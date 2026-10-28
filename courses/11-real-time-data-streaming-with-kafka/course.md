@@ -1,4 +1,4 @@
-<!-- course-title: Real-Time Data Streaming with Kafka -->
+<!-- course-title: Live Streaming Platforms and Low-Latency Architecture -->
 
 <!-- layout: full-bleed -->
 # Welcome Slide
@@ -7,10 +7,9 @@
 <!-- layout: title -->
 ![ROI Logo](images/roi-logo-with-name.png)
 
-# Real-Time Data Streaming
-# with Kafka
+# Live Streaming Platforms and Low-Latency Architecture
 
-## How events move from sources to applications
+## Real-Time Data Streaming with Kafka
 ---
 <!-- layout: panel-right -->
 # Welcome!
