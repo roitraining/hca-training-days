@@ -206,6 +206,8 @@
 - Google-managed keys: zero setup, Google controls rotation
 - CMEK (Customer-Managed Encryption Keys): you control the key in Cloud KMS
 - CSEK (Customer-Supplied Encryption Keys): you hold and supply the key material yourself
+    - Will be deprecated, ensure your workloads have been migrated to CMEK
+
 ---
 <!-- layout: 2-column -->
 # Cloud KMS at a Glance

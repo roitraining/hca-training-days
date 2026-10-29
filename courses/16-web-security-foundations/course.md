@@ -178,6 +178,7 @@ print(hashlib.sha256(b"hello").hexdigest())
 - Firewalls should default-deny and allow only required ports (typically 443, sometimes 80 for redirect)
 - Use a DMZ, or equivalent boundary, between the internet and internal networks
 - Monitor with an IDS/IPS for known attack signatures
+- Web Application Firewalls (WAF) inspect HTTP-layer traffic for known attack patterns
 ---
 <!-- layout: title-image -->
 # Network Segmentation for a Web Server
