@@ -72,9 +72,9 @@
 ---
 # Why Real-Time Matters
 
-- Businesses increasingly need seconds, not overnight batches
-- Detect fraud, outages, and user issues while they are happening
-- Power live dashboards, personalization, and operational alerts
+- Hospitals and businesses increasingly need seconds, not overnight batches
+- Detect ER boarding bottlenecks, ICU capacity spikes, and delayed bed turnovers while they are happening
+- Power live bed-command dashboards, automated EVS (housekeeping) dispatch, and diversion alerts
 - Continuous data is already flowing: batch is a delayed snapshot
 
 > [!NOTE]
@@ -90,8 +90,8 @@
 
 ### Latency
 - Time from event → useful result
-- Fraud: milliseconds–seconds
-- Daily report: hours is fine
+- Bed assignment / ICU transfer: seconds-minutes
+- Monthly census report: hours is fine
 
 ### Throughput
 - Events processed per second
@@ -146,22 +146,22 @@
 # Streams
 
 - A stream is an unbounded sequence of events
-- Events often carry a key (user_id, device_id, account_id)
+- Events often carry a key (unit_id, bed_id, patient_id, facility_id)
 - Operators transform streams: map, filter, keyBy, join, window
-- Jobs run until cancelled—there is no natural “end of file”
+- Jobs run until cancelled - there is no natural “end of file”
 
 ```text
-clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
+adt_events  →  filter(valid?)  →  keyBy(unit_id)  →  window(15m)  →  bed_demand_counts
 ```
 ---
 <!-- layout: 2-column -->
 # State: Memory Across Events
 
 ### Why State Exists
-- Count per user so far
-- Last seen transaction
-- Session in progress
-- Model features online
+- Available vs. occupied beds per unit so far
+- Current bed status (OCCUPIED → DIRTY → CLEANING → READY)
+- Patient placement request in progress
+- Predicted unit turnaround time
 
 ### Flink Responsibilities
 - Local keyed state
@@ -178,9 +178,9 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 
 | Window | Idea | Example |
 | :--- | :--- | :--- |
-| Tumbling | Fixed, non-overlapping | Count orders every 1 minute |
-| Sliding | Fixed, overlapping | 5-minute fraud score every 1 minute |
-| Session | Gap-based | User browse session until idle |
+| Tumbling | Fixed, non-overlapping | Count admissions and discharges per unit every 15 minutes |
+| Sliding | Fixed, overlapping | Rolling 30-minute ER-to-inpatient bed wait score every 5 minutes |
+| Session | Gap-based | Track a patient’s bed-hold / transfer workflow until placement completes |
 ---
 <!-- layout: image-only -->
 # Event Time vs. Processing Time
@@ -198,23 +198,23 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 > For correctness under delay and reordering, prefer **event time** + watermarks over processing time.
 ---
 <!-- layout: 2-column -->
-# Story: The Late Click
+# Story: The Delayed Discharge Event
 
 ### What Happened
-- User clicks at 10:00:50 (event time)
-- Mobile network delays delivery
-- Event arrives at the job at 10:01:05
-- You need “clicks per minute” for 10:00
+- Nurse discharges a patient at 10:00:50 (event time) on a bedside tablet
+- Tablet Wi-Fi drops in a dead zone and syncs late
+- Event arrives at the Flink job at 10:01:05
+- You need accurate “10:00 net bed availability” for the command center
 
 ### Processing Time vs Event Time
-- Processing time: lands in the 10:01 bucket → undercount 10:00, inflate 10:01
+- Processing time: lands in the 10:01 bucket → 10:00 looks full (false diversion alert), 10:01 shows a phantom surge
 - Event time + watermark: still attributed to 10:00; window closes when watermark passes 10:01
-- Same bug shows up in fraud scores, billing, and SLO burn rates
+- Same bug shows up in ER boarding metrics, EVS turnaround SLAs, and staffing ratios
 
 <!-- below-columns -->
 
 > [!TIP]
-> If your chart “looks wrong under load or mobile traffic,” check time semantics before tuning parallelism.
+> If your chart “looks wrong during clinical tablet Wi-Fi delays or HL7/FHIR interface bursts,” check time semantics before tuning parallelism.
 ---
 <!-- layout: 2-column -->
 # Mental Model: A Flink Job
@@ -249,43 +249,43 @@ clicks  →  filter(bot?)  →  keyBy(user)  →  window(5m)  →  counts
 > [!NOTE]
 > Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine, and the concepts, are the same.
 ---
-# Example: A Simple Flink Stream Job
+# Example: Real-Time Unit Bed Demand Job
 
-- Read a stream of purchase events (amount + event-time timestamp)
-- `keyBy` customer so each user’s state is processed independently
-- Tumbling event-time windows (1 minute) sum spend per customer
-- Print results: same shape as writing to Kafka, a DB, or a lake sink
+- Read a stream of `BedRequest` events (unit, acuity, and event-time timestamp)
+- `keyBy` hospital unit (`ICU`, `MED_SURG`, `TELE`) so each unit’s state is tracked independently
+- Tumbling event-time windows (15 minutes) count pending bed requests per unit
+- Print results: same shape as writing to Kafka, a bed-board DB, or an alerting sink
 
 ```java
-public class SimplePurchaseSumJob {
+public class BedDemandJob {
     public static void main(String[] args) throws Exception {
         // Local env for demos; on a cluster you'd use getExecutionEnvironment()
         StreamExecutionEnvironment env =
             StreamExecutionEnvironment.createLocalEnvironment();
 
-        DataStream<Purchase> purchases = env
-            .addSource(new PurchaseSource()) // Kafka/Pub/Sub in production
+        DataStream<BedRequest> requests = env
+            .addSource(new BedRequestSource()) // HL7/FHIR events via Kafka in prod
             // Event time + watermarks: Flink advances "time" from the data,
-            // not the wall clock—so late events are handled correctly
+            // not the wall clock - so delayed events are handled correctly
             .assignTimestampsAndWatermarks(
                 WatermarkStrategy
-                    .<Purchase>forBoundedOutOfOrderness(Duration.ofSeconds(5))
+                    .<BedRequest>forBoundedOutOfOrderness(Duration.ofSeconds(10))
                     .withTimestampAssigner((event, ts) -> event.getEventTimeMillis())
             );
 
-        purchases
-            .keyBy(Purchase::getCustomerId)           // partition state by customer
-            .window(TumblingEventTimeWindows.of(Time.minutes(1)))
-            .aggregate(new SumAmounts())              // stateful window aggregation
+        requests
+            .keyBy(BedRequest::getUnitId)             // partition state by unit (e.g., ICU)
+            .window(TumblingEventTimeWindows.of(Time.minutes(15)))
+            .aggregate(new CountPendingRequests())    // stateful window aggregation
             .map(result -> String.format(
-                "customer=%s windowEnd=%s total=%.2f",
-                result.getCustomerId(),
+                "unit=%s windowEnd=%s pendingBeds=%d",
+                result.getUnitId(),
                 result.getWindowEnd(),
-                result.getTotal()
+                result.getPendingCount()
             ))
             .print();                                 // replace with a real sink later
 
-        env.execute("simple-purchase-sum");
+        env.execute("unit-bed-demand");
     }
 }
 ```
@@ -304,7 +304,7 @@ resultStream.sinkTo(
         .setBootstrapServers("kafka:9092")
         .setRecordSerializer(
             KafkaRecordSerializationSchema.builder()
-                .setTopic("customer-minute-spend")
+                .setTopic("unit-bed-demand-alerts")
                 .setValueSerializationSchema(new SimpleStringSchema())
                 .build()
         )
@@ -331,20 +331,20 @@ resultStream.sinkTo(
 <!-- layout: 3-column -->
 # Pattern Snapshots
 
-### Fraud/Risk
-- Score each event live
-- Enrich with recent history
-- Route high-risk to review
+### Bed Scheduling
+- Match admissions with clean beds
+- Enrich with isolation and acuity rules
+- Route holds to bed command
 
-### Telemetry
-- Roll up metrics
-- Detect anomalies
-- Feed SLO/ops views
+### Patient Telemetry
+- Roll up vitals and bed-sensor metrics
+- Detect deterioration early
+- Feed nurse station views
 
-### Alerting
-- Threshold and composite rules
-- Deduplicate noise
-- Trigger tickets / pages
+### Capacity Alerting
+- Detect ER boarding thresholds
+- Deduplicate delayed turn alerts
+- Page charge nurses and EVS
 ---
 # Integration: Messaging In, Sinks Out
 
@@ -388,21 +388,21 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 # Would You Use Flink?
 
 ### Yes
-**Card authorizations**
-- Every swipe scored with recent spend history
-- Sub-second enrich + route to review
-- Stateful per-card logic is the product
+**Live hospital bed scheduling**
+- Every ADT and housekeeping event updates unit availability live
+- Sub-minute matching of ER boarders to clean, appropriate beds
+- Stateful per-unit and per-bed lifecycle logic is the product
 
 ### No
-**Nightly sales workbook**
-- Finance needs yesterday’s totals by 7 a.m.
+**Monthly inpatient utilization workbook**
+- Operations needs last month’s occupancy totals by the 5th business day
 - Batch/warehouse job is enough
 - No continuous consumer waiting on the stream
 
 ### Maybe
-**Clickstream → lake + alerts**
-- Flink (or SQL) for live anomaly windows
-- Micro-batch OK for lake-only analytics
+**ADT stream → warehouse + diversion alerts**
+- Flink (or SQL) for live ER boarding and bed-turn anomaly windows
+- Micro-batch OK for historical length-of-stay analytics
 - Split: speed path vs history path
 
 <!-- below-columns -->
@@ -421,44 +421,38 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 ---
 # Quiz 1 of 3
 
-**A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
+**A patient discharge is recorded at 10:00:50 on a bedside tablet, but due to Wi-Fi delay the event arrives at the Flink job at 10:01:05. For accurate “10:00 bed availability,” which approach attributes it to the 10:00 bucket?**
 
-A. Processing time only (wall-clock arrival)
-
-B. Dropping any event that arrives after the minute ends
-
-C. Ignoring timestamps and counting in arrival order
-
-D. Event time with watermarks (and configured lateness)
+- A. Processing time only (wall-clock arrival)
+- B. Dropping any event that arrives after the minute ends
+- C. Ignoring timestamps and counting in arrival order
+- D. Event time with watermarks (and configured lateness)
 ---
 # Quiz 1: Answer
 
-**A click happens at 10:00:50 but arrives at the Flink job at 10:01:05. For correct “clicks per minute,” which approach attributes it to the 10:00 bucket?**
+**A patient discharge is recorded at 10:00:50 on a bedside tablet, but due to Wi-Fi delay the event arrives at the Flink job at 10:01:05. For accurate “10:00 bed availability,” which approach attributes it to the 10:00 bucket?**
 
 **Correct: D.** Event time with watermarks (and configured lateness)
 
 - Event time uses the time in the event, not when the job saw it
 - Watermarks let windows close despite out-of-order arrival
-- Processing time would put the click in the 10:01 bucket
-- Wrong time semantics break dashboards, fraud scores, and billing
+- Processing time would put the discharge in the 10:01 bucket
+- Wrong time semantics break bed availability dashboards, EVS turnaround SLAs, and diversion alerts
 ---
 # Quiz 2 of 3
 
 **Which workload is the clearest fit for Apache Flink?**
 
-A. A nightly sales workbook Finance needs by 7 a.m.
-
-B. Scoring each card authorization with recent spend history in sub-seconds
-
-C. A one-off SQL pull for a quarterly board slide
-
-D. A simple broker-side filter with no state or windows
+- A. A nightly hospital census workbook leadership reviews at 7 a.m.
+- B. Matching incoming ER admissions to available, clean inpatient beds in real time as ADT and housekeeping events arrive
+- C. A one-off SQL pull for a quarterly board slide
+- D. A simple broker-side filter with no state or windows
 ---
 # Quiz 2: Answer
 
 **Which workload is the clearest fit for Apache Flink?**
 
-**Correct: B.** Scoring each card authorization with recent spend history in sub-seconds
+**Correct: B.** Matching incoming ER admissions to available, clean inpatient beds in real time as ADT and housekeeping events arrive
 
 - Flink shines on continuous, stateful, low-latency event paths
 - Nightly batch and one-off analytics usually belong in the warehouse
@@ -469,7 +463,7 @@ D. A simple broker-side filter with no state or windows
 # Quiz 3 of 3: Discussion
 
 ### Prompt
-Describe a real-time use case on your team (fraud, telemetry, alerting, or clickstream).
+Describe a real-time use case on your team (bed scheduling, patient telemetry, capacity alerting, or operational streams).
 
 ### Discuss
 - Where do messaging, Flink, and storage each sit in the pipeline?
@@ -479,7 +473,7 @@ Describe a real-time use case on your team (fraud, telemetry, alerting, or click
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
 
-**Describe a real-time use case on your team (fraud, telemetry, alerting, or clickstream).**
+**Describe a real-time use case on your team (bed scheduling, patient telemetry, capacity alerting, or operational streams).**
 
 ### Strong Answers Mention
 - Messaging = transport; Flink = stateful compute; storage = history/BI
