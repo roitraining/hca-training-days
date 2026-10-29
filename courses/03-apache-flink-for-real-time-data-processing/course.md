@@ -131,6 +131,26 @@
 - Durable history
 - Serving and analytics
 ---
+<!-- layout: 2-column -->
+# Apache Flink and Confluent Cloud
+
+### Open-Source Apache Flink
+- Compute engine for stateful streams
+- Historically paired with self-managed Kafka
+- Teams ran separate clusters, security, and schemas
+- Full control over custom Java/Scala and SQL jobs
+
+### Confluent Cloud for Apache Flink
+- Serverless, fully managed Flink alongside Kafka
+- Kafka topics appear directly as Flink SQL tables
+- Unified Schema Registry, governance, and RBAC
+- Zero cluster sizing, checkpoint tuning, or patching
+
+<!-- below-columns -->
+
+> [!NOTE]
+> Kafka moves the events; Flink processes them. Confluent Cloud unifies both so you can query live hospital streams without managing Flink infrastructure.
+---
 <!-- layout: navigation -->
 # Course Roadmap
 
@@ -241,13 +261,13 @@ adt_events  →  filter(valid?)  →  keyBy(unit_id)  →  window(15m)  →  bed
 ### SQL/Table API
 - Declarative queries over streams and tables
 - Windows, joins, aggregations in SQL
-- Often faster for analytics-style jobs
+- Primary interface in Confluent Cloud for Flink
 - Same runtime: state, checkpoints, event time
 
 <!-- below-columns -->
 
 > [!NOTE]
-> Many production teams use **Flink SQL** day to day and drop to DataStream only when SQL is not enough. The engine, and the concepts, are the same.
+> Many production teams use **Flink SQL** day to day (especially in Confluent Cloud, where Kafka topics map automatically to SQL tables) and drop to DataStream only when SQL is not enough.
 ---
 # Example: Real-Time Unit Bed Demand Job
 
@@ -316,6 +336,40 @@ resultStream.sinkTo(
 > [!TIP]
 > Source → stateful operators → sink is the whole job. Changing Kafka topic names or sink guarantees should not require rewriting your window math.
 ---
+<!-- layout: 2-column -->
+# Same Job in Confluent Cloud (Flink SQL)
+
+### How It Works in Confluent Cloud
+- Kafka topics (`bed_requests`, `unit_bed_demand_alerts`) auto-register as SQL tables
+- Schema Registry supplies column types and event-time watermarks
+- `INSERT INTO` launches a continuous, stateful Flink job
+- No Java boilerplate, serializer code, or cluster setup
+
+### Flink SQL Query
+```sql
+INSERT INTO unit_bed_demand_alerts
+SELECT
+  unit_id,
+  window_end,
+  COUNT(*) AS pending_beds
+FROM TABLE(
+  TUMBLE(
+    TABLE bed_requests,
+    DESCRIPTOR(event_time),
+    INTERVAL '15' MINUTES
+  )
+)
+GROUP BY
+  unit_id,
+  window_start,
+  window_end;
+```
+
+<!-- below-columns -->
+
+> [!NOTE]
+> Under the hood, Flink compiles this SQL into the exact same stateful `keyBy` + tumbling event-time window execution graph as the Java DataStream job.
+---
 <!-- layout: navigation -->
 # Course Roadmap
 
@@ -348,10 +402,10 @@ resultStream.sinkTo(
 ---
 # Integration: Messaging In, Sinks Out
 
-- Ingress: Kafka, Google Pub/Sub, Kinesis, Pulsar
+- Ingress: Kafka (Confluent Cloud), Google Pub/Sub, Kinesis, Pulsar
 - Egress: warehouses, lakes, OLTP, search, notification topics
+- Managed platforms like Confluent Cloud handle checkpoints, scaling, and Schema Registry integration automatically
 - Design for replay: keep source offsets and idempotent sinks
-- Separate “speed layer” results from long-term analytical storage when needed
 
 > [!WARNING]
 > A Flink job is only as reliable as its checkpoint storage, restart strategy, and sink semantics.
