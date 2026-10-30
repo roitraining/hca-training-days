@@ -89,7 +89,7 @@
 
 ### Latency
 - Time from event → useful result
-- Bed assignment / ICU transfer: seconds-minutes
+- Bed assignment/ICU transfer: seconds-minutes
 - Monthly census report: hours is fine
 
 ### Throughput
@@ -167,7 +167,7 @@
 - A stream is an unbounded sequence of events
 - Events often carry a key (unit_id, bed_id, patient_id, facility_id)
 - Operators transform streams: map, filter, keyBy, join, window
-- Jobs run until cancelled - there is no natural “end of file”
+- Jobs run until cancelled—there is no natural “end of file”
 
 ```text
 adt_events  →  filter(valid?)  →  keyBy(unit_id)  →  window(15m)  →  bed_demand_counts
@@ -199,7 +199,7 @@ adt_events  →  filter(valid?)  →  keyBy(unit_id)  →  window(15m)  →  bed
 | :--- | :--- | :--- |
 | Tumbling | Fixed, non-overlapping | Count admissions and discharges per unit every 15 minutes |
 | Sliding | Fixed, overlapping | Rolling 30-minute ER-to-inpatient bed wait score every 5 minutes |
-| Session | Gap-based | Track a patient’s bed-hold / transfer workflow until placement completes |
+| Session | Gap-based | Track a patient’s bed-hold/transfer workflow until placement completes |
 ---
 <!-- layout: image-only -->
 # Event Time vs. Processing Time
@@ -476,10 +476,13 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 **A patient discharge is recorded at 10:00:50 on a bedside tablet, but due to Wi-Fi delay the event arrives at the Flink job at 10:01:05. For accurate “10:00 bed availability,” which approach attributes it to the 10:00 bucket?**
 
-- A. Processing time only (wall-clock arrival)
-- B. Dropping any event that arrives after the minute ends
-- C. Ignoring timestamps and counting in arrival order
-- D. Event time with watermarks (and configured lateness)
+A. Processing time only (wall-clock arrival)
+
+B. Dropping any event that arrives after the minute ends
+
+C. Ignoring timestamps and counting in arrival order
+
+D. Event time with watermarks (and configured lateness)
 ---
 # Quiz 1: Answer
 
@@ -496,10 +499,13 @@ Producers → Kafka/Pub/Sub → Flink (stateful jobs)
 
 **Which workload is the clearest fit for Apache Flink?**
 
-- A. A nightly hospital census workbook leadership reviews at 7 a.m.
-- B. Matching incoming ER admissions to available, clean inpatient beds in real time as ADT and housekeeping events arrive
-- C. A one-off SQL pull for a quarterly board slide
-- D. A simple broker-side filter with no state or windows
+A. A nightly hospital census workbook leadership reviews at 7 a.m.
+
+B. Matching incoming ER admissions to available, clean inpatient beds in real time as ADT and housekeeping events arrive
+
+C. A one-off SQL pull for a quarterly board slide
+
+D. A simple broker-side filter with no state or windows
 ---
 # Quiz 2: Answer
 
@@ -520,7 +526,7 @@ Describe a real-time use case on your team (bed scheduling, patient telemetry, c
 
 ### Discuss
 - Where do messaging, Flink, and storage each sit in the pipeline?
-- Would you use tumbling, sliding, or session windows - and why?
+- Would you use tumbling, sliding, or session windows, and why?
 - When would DataStream be worth it instead of Flink SQL?
 ---
 <!-- layout: 2-column -->
