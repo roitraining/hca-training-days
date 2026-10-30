@@ -51,7 +51,7 @@
 ---
 <!-- layout: panel-left -->
 # Prerequisites
-
+For this training
 - No prior Webex experience required
 
 <!-- below-columns -->
