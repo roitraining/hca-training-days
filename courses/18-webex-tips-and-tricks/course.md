@@ -117,11 +117,11 @@ For this session:
 - Lock the meeting once everyone expected to attend has joined, for sensitive discussions
 ---
 <!-- layout: 2-column -->
-# Recordings and Transcripts
+# Recordings and AI-generated Transcripts
 
 ### Recordings
 - Set recording to start automatically for scheduled and recurring meetings that need one
-- Automatic sharing of Webex recordings and transcripts is not enabled
+- Automatic sharing of Webex recordings and transcripts is not enabled within HCA Healthcare
 - Meeting hosts must review all recordings and read all transcripts for accuracy before distributing them
 
 ### AI-generated Transcripts
