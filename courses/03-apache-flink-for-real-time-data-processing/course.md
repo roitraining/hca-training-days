@@ -17,9 +17,8 @@
 
 - ROI leads the industry in designing and delivering customized technology and management training solutions
 - Meet your instructor
-  - Name
-  - Background
-  - Contact info
+  - Grant Moyle
+  - Master Trainer at ROI Training
 - Let’s get started!
 
 ![Welcome](images/welcome.png)
