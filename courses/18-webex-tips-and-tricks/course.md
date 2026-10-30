@@ -100,12 +100,13 @@ For this session:
 
 ![Joining with a pre-meeting audio and video check](images/ch18-joining-like-a-pro.png)
 ---
-<!-- layout: title-image -->
+<!-- layout: stacked -->
 # In-Meeting Controls at a Glance
+
+- If you experience recurring Webex issues, report the problem and create a Service Desk ticket 
 
 ![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/meeting-controls.png)
 
-- If you experience recurring Webex issues, report the problem and create a Service Desk ticket with details of the issue
 ---
 # In-Meeting Controls Worth Knowing
 
