@@ -106,7 +106,6 @@ For this session:
 - If you experience recurring Webex issues, report the problem and create a Service Desk ticket 
 
 ![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/meeting-controls.png)
-
 ---
 # In-Meeting Controls Worth Knowing
 
