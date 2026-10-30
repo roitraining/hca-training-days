@@ -39,7 +39,7 @@
     <circle cx="468" cy="178" r="10" fill="none" stroke="#34a853" stroke-width="3"/>
     <text x="456" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Mic/speaker selection</text>
     <text x="456" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- OS privacy permissions</text>
-    <text x="456" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Network vs device</text>
+    <text x="456" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Open apps and CPU load</text>
     <text x="456" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Mute at OS or in-app</text>
     <rect x="354" y="400" width="204" height="40" rx="10" fill="#e6f4ea"/>
     <text x="456" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Cause</text>
@@ -51,10 +51,10 @@
     <text x="744" y="92" text-anchor="middle" font-size="22" font-weight="700" fill="#ffffff">3. Fix</text>
     <circle cx="744" cy="178" r="34" fill="#fef7e0"/>
     <path d="M728,178 h20 M748,168 v20" stroke="#e37400" stroke-width="4" stroke-linecap="round"/>
-    <text x="744" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Switch device or audio</text>
-    <text x="744" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Lower bandwidth mode</text>
-    <text x="744" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Restart app or web fallback</text>
-    <text x="744" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Dial-in / Call Me option</text>
+    <text x="744" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Close unneeded apps/tabs</text>
+    <text x="744" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Switch device or audio</text>
+    <text x="744" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Browser fallback</text>
+    <text x="744" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Service Desk if persistent</text>
     <rect x="642" y="400" width="204" height="40" rx="10" fill="#fef7e0"/>
     <text x="744" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#e37400">Action</text>
   </g>

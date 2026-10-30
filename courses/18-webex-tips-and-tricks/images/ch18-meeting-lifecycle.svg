@@ -23,9 +23,9 @@
     <circle cx="168" cy="178" r="34" fill="#e8f0fe"/>
     <rect x="152" y="162" width="32" height="32" rx="4" fill="none" stroke="#1a73e8" stroke-width="3"/>
     <path d="M160,174 h16 M160,182 h10" stroke="#1a73e8" stroke-width="2.5" stroke-linecap="round"/>
-    <text x="168" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Templates for recurring</text>
-    <text x="168" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Lobby for external guests</text>
-    <text x="168" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Calendar one-click invite</text>
+    <text x="168" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Verify HCA site access</text>
+    <text x="168" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Webex or Outlook</text>
+    <text x="168" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Lobby for external guests</text>
     <text x="168" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Shorter default duration</text>
     <rect x="66" y="400" width="204" height="40" rx="10" fill="#e8f0fe"/>
     <text x="168" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#1a73e8">Before</text>
@@ -38,10 +38,10 @@
     <circle cx="456" cy="178" r="34" fill="#e6f4ea"/>
     <circle cx="456" cy="178" r="14" fill="none" stroke="#34a853" stroke-width="3"/>
     <path d="M448,178 L454,184 L466,170" fill="none" stroke="#34a853" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="456" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- One-click from calendar</text>
+    <text x="456" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Join from Webex app</text>
     <text x="456" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Test audio and video</text>
-    <text x="456" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Prefer desktop or mobile</text>
-    <text x="456" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Preview camera first</text>
+    <text x="456" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Browser as fallback</text>
+    <text x="456" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Keep camera turned on</text>
     <rect x="354" y="400" width="204" height="40" rx="10" fill="#e6f4ea"/>
     <text x="456" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#34a853">Entry</text>
   </g>
@@ -71,7 +71,7 @@
     <circle cx="1032" cy="178" r="12" fill="#ea4335"/>
     <text x="1032" y="250" text-anchor="middle" font-size="15" fill="#1a2332">- Cloud recording</text>
     <text x="1032" y="278" text-anchor="middle" font-size="15" fill="#1a2332">- Transcript and summary</text>
-    <text x="1032" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Share links and actions</text>
+    <text x="1032" y="306" text-anchor="middle" font-size="15" fill="#1a2332">- Host review before sharing</text>
     <text x="1032" y="334" text-anchor="middle" font-size="15" fill="#1a2332">- Continue in a Space</text>
     <rect x="930" y="400" width="204" height="40" rx="10" fill="#fce8e6"/>
     <text x="1032" y="426" text-anchor="middle" font-size="14" font-weight="700" fill="#ea4335">After</text>

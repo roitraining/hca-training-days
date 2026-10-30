@@ -75,7 +75,7 @@
 - Confluent Cloud is the managed Kafka platform those teams share
 
 > [!NOTE]
-> “Near real time” means a consumer can act in seconds, while the situation is still true. It is not a video latency target and it is not high-frequency trading.
+> “Near real time” means a consumer can act in seconds, while the situation is still true. It is not a video or network latency target which are often measured in fractions of a second or milliseconds.
 ---
 <!-- layout: 2-column -->
 # Apache Kafka and Confluent Cloud
@@ -144,7 +144,7 @@
 - A patient discharges (`BedDirty`) or a monitor crosses a threshold
 - The fact is stale within minutes
 - A producer or gateway publishes the event
-- EVS (housekeeping), bed command, or clinical staff get paged immediately
+- Environmental Services (EVS), bed command, or clinical staff get paged immediately
 
 ### Explain it next week
 - Leadership wants last week’s bed occupancy volumes
@@ -532,7 +532,7 @@ consumer.commit(msg)
 ---
 # Quiz 2 of 3
 
-**Bed management, EVS (housekeeping), and nutrition all must react to every patient transfer. How should they read the topic?**
+**Bed management, Environmental Services (EVS), and nutrition all must react to every patient transfer. How should they read the topic?**
 
 - A. Share one consumer group so Kafka splits events between the three applications
 - B. Use separate consumer groups so each application gets the full stream and its own offsets
@@ -541,7 +541,7 @@ consumer.commit(msg)
 ---
 # Quiz 2: Answer
 
-**Bed management, EVS (housekeeping), and nutrition all must react to every patient transfer. How should they read the topic?**
+**Bed management, Environmental Services (EVS), and nutrition all must react to every patient transfer. How should they read the topic?**
 
 **Correct: B.** Use separate consumer groups so each application gets the full stream and its own offsets
 

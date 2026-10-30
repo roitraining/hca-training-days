@@ -54,6 +54,11 @@
 
 - No prior Webex experience required
 
+<!-- below-columns -->
+
+> [!NOTE]
+> HCA Healthcare maintains multiple Webex sites. Employees must request Webex Meetings and Messaging access through HCA’s Access Central tool to receive the appropriate site access and permissions.
+
 ![Prerequisites](images/prerequisites.png)
 ---
 <!-- layout: navigation -->
@@ -77,7 +82,7 @@
 ---
 # Scheduling Smarter
 
-- Schedule directly from Webex, Outlook, or Google Calendar: pick whichever fits your workflow
+- Schedule directly from Webex or Outlook: pick whichever fits your workflow
 - Use meeting templates to standardize recurring formats (standups, 1:1s, all-hands)
 - Set a default meeting duration shorter than 60 or 30 minutes: most meetings expand to fill the time given
 - Enable the lobby/waiting room for anything with external guests
@@ -89,7 +94,7 @@
 
 - One-click join from your calendar invite: avoid hunting for meeting numbers
 - Test audio and video before an important meeting, not during it
-- Join from the desktop or mobile app for full features; the web app is a solid fallback
+- Join meetings directly from the Webex desktop or mobile app for the full experience; use the browser as a fallback when needed.
 - Preview your camera and background before joining, not after
 
 
@@ -103,20 +108,24 @@
 # In-Meeting Controls Worth Knowing
 
 - Reactions and raise hand keep large meetings orderly without interrupting the speaker
-- Virtual backgrounds and background noise removal reduce distractions for everyone
+- Employees are expected to keep their cameras on during all Webex meetings and should not use virtual backgrounds
+- Use background noise removal to minimize audio distractions
 - Screen share with “share sound” when presenting video or audio content
 - Lock the meeting once everyone expected to attend has joined, for sensitive discussions
+- If you experience recurring Webex issues, report the problem and create a Service Desk ticket with details of the issue
 ---
 <!-- layout: 2-column -->
 # Recordings and Transcripts
 
 ### Recordings
-- Cloud recordings are shareable and searchable
-- Set recording to start automatically for recurring meetings that need one
+- Set recording to start automatically for scheduled and recurring meetings that need one
+- Automatic sharing of Webex recordings and transcripts is not enabled
+- Meeting hosts must review all recordings and read all transcripts for accuracy before distributing them
 
-### Transcripts
-- Auto-generated transcripts save note-taking time
+### AI-generated Transcripts
+- Save note-taking time
 - Searchable after the meeting: jump straight to the part you need
+- May contain mistakes and must be checked carefully
 ---
 # Breakout Sessions
 
@@ -196,7 +205,7 @@
 # Meeting Etiquette Basics
 
 - Join a minute early, muted by default
-- Use video when you can—it builds engagement
+- Employees are expected to keep their cameras on during Webex meetings and should not use virtual backgrounds
 - Mute when not speaking, especially in larger groups
 - Say who you are before speaking in large or new groups
 - Stop sharing your screen when you’re done, not mid-transition
@@ -233,7 +242,9 @@
 - No video? Confirm Webex has camera permission at the OS level, not just in-app
 - Choppy video or audio? Switch to “optimize for low bandwidth” or turn off your own video
 - Can’t join at all? Try the web app as a fallback if the desktop app won’t connect
-- Persistent issues? Restart the app before restarting the whole machine
+- Too many open applications or browser tabs can consume CPU and system resources, affecting Webex meeting performance
+- Before and during meetings, close applications and browser tabs that are not needed
+- Persistent issues? Create a Service Desk ticket.
 
 ![Diagnosing video and connection issues](images/ch18-fixing-video.png)
 ---
