@@ -383,7 +383,7 @@ consumer.commit(msg)
 - Topics store and fan out raw facts to every consumer group
 - Great for moving events, not for multi-stream window math
 
-### Confluent Cloud for Apache Flink (Stream Compute)
+### Confluent Cloud for Apache Flink (Stream)
 - Reads Confluent Cloud topics directly as Flink SQL tables
 - Joins ADT + EVS streams to track live bed state per unit
 - Computes 15-minute ER boarding and bed-demand windows using event time
