@@ -70,12 +70,32 @@
 # Streaming Means Events
 
 - This session is data and event streaming on Kafka, not audio or video
-- A stream is an unbounded sequence of facts: a transfer, a vital sign, an order, an alarm
+- A stream is an unbounded sequence of facts: a transfer, a bed cleaning, a vital sign, an alarm
 - A producer appends each fact to a topic; consumers read that log and act
 - Confluent Cloud is the managed Kafka platform those teams share
 
 > [!NOTE]
 > “Near real time” means a consumer can act in seconds, while the situation is still true. It is not a video latency target and it is not high-frequency trading.
+---
+<!-- layout: 2-column -->
+# Apache Kafka and Confluent Cloud
+
+### Apache Kafka (Open Source)
+- Distributed event log (`producers → topics → consumer groups`)
+- Standard protocol for real-time event streaming
+- Self-managed requires running brokers, storage, and upgrades
+- Core engine for durable, replayable partitions
+
+### Confluent Cloud (Managed Platform)
+- Serverless, elastic Kafka clusters without broker ops
+- **Schema Registry** enforces payload contracts across teams
+- **Managed Connectors** bridge databases, EHR feeds, and warehouses
+- **Confluent Cloud for Apache Flink** runs stateful SQL/stream compute directly on topics
+
+<!-- below-columns -->
+
+> [!TIP]
+> Think of Kafka as the event log and Confluent Cloud as the complete enterprise platform (storage, governance, connectors, and Flink stream processing) around it.
 ---
 <!-- layout: title-image -->
 # Batch and Stream Side by Side
@@ -121,13 +141,13 @@
 # Two Questions, Two Designs
 
 ### Page someone now
-- A pump or monitor crosses a threshold
+- A patient discharges (`BedDirty`) or a monitor crosses a threshold
 - The fact is stale within minutes
-- A gateway publishes an alarm event
-- A consumer pages the responding team
+- A producer or gateway publishes the event
+- EVS (housekeeping), bed command, or clinical staff get paged immediately
 
 ### Explain it next week
-- Leadership wants last week’s volumes
+- Leadership wants last week’s bed occupancy volumes
 - The dataset is bounded and complete
 - A warehouse job is the right shape
 - A topic would add cost and no waiting consumer
@@ -136,7 +156,7 @@
 # Where the Work Belongs
 
 ### Choose a stream
-**Live alarm**
+**Live alarm or bed turn**
 - Someone must act now
 - A morning file is already late
 - Publish the event as it happens
@@ -182,18 +202,18 @@
 - The service knows the business moment
 - It chooses the key and the event type
 - Use this for facts your system owns
-- Example: the app emits OrderPlaced
+- Example: the bed-management app emits `BedAssigned` or EVS emits `BedCleaned`
 
 ### A connector produces
 - Managed Connect writes for a system that should not embed a Kafka client
 - Typical for databases, SaaS, or a gateway feed
 - The connector still lands records on a topic
-- Example: device readings bridged onto a topic
+- Example: bedside monitor readings bridged onto a topic
 
 <!-- below-columns -->
 
 > [!NOTE]
-> Clinical systems often reach Kafka through an interface engine. That engine is the producer, even when the EHR remains the system of record.
+> Clinical systems often reach Confluent Cloud through an HL7/FHIR interface engine. That engine is the producer, even when the EHR remains the system of record.
 ---
 <!-- layout: 2-column -->
 # Anatomy of a Transfer Event
@@ -201,8 +221,8 @@
 ### Why each field is there
 - `event_type` tells consumers what happened
 - `event_time` is when the transfer happened
-- `patient_id` is the ordering key
-- The units are the fact other systems need
+- `patient_id` (or `unit_id`) is the ordering key
+- `bed_id` and `prior_bed_status` drive live bed scheduling and EVS
 
 ### Illustrative payload
 ```json
@@ -210,8 +230,10 @@
   "event_type": "PatientTransferred",
   "event_time": "2026-09-25T14:03:11Z",
   "patient_id": "p-18422",
-  "from_unit": "4E",
-  "to_unit": "ICU"
+  "from_unit": "ER",
+  "to_unit": "ICU",
+  "bed_id": "ICU-12",
+  "prior_bed_status": "DIRTY"
 }
 ```
 
@@ -222,16 +244,16 @@
 ---
 # A Producer Writes a Record
 
-- A successful producer appends the record and returns an acknowledgment
-- The key keeps one patient, device, or order on a single partition
-- The value is the fact, described by a schema consumers can rely on
+- A successful producer appends the record to Confluent Cloud and returns an acknowledgment
+- The key keeps one patient, bed, or unit ordered on a single partition
+- The value is the fact, validated against Confluent Schema Registry so consumers can rely on it
 - Until the acknowledgment returns, downstream systems have not seen the event
 
 ```python
 producer.produce(
     topic="adt.patient-events",
     key=patient_id,
-    value=event_json,
+    value=event_json,  # validated via Confluent Schema Registry
 )
 producer.flush()
 ```
@@ -266,7 +288,7 @@ producer.flush()
 
 - Poll, handle, then commit: that is the consumer’s contract with the group
 - Two instances of one application share a group id and split the partitions
-- Two applications that both need every event use two group ids
+- Separate applications (bed board, EVS dispatch, nutrition) use separate group ids to get every event
 - Extra consumers beyond the partition count sit idle; they do not add throughput
 
 ```python
@@ -351,19 +373,39 @@ consumer.commit(msg)
 | Consume and act | The group handles it | Lag, rare polling, a slow database write |
 
 > [!TIP]
-> When an alarm is late, check consumer lag and the gateway interval before you blame the cluster.
+> When an alarm or bed update is late, check consumer lag and the gateway interval before you blame the cluster.
+---
+<!-- layout: 2-column -->
+# When Consumers Need Stateful Compute: Confluent Cloud for Flink
+
+### Kafka Topics (Event Transport)
+- `adt.patient-events` carries admissions, discharges, and transfers
+- `evs.bed-status` carries `DIRTY`, `CLEANING`, and `READY` updates
+- Topics store and fan out raw facts to every consumer group
+- Great for moving events, not for multi-stream window math
+
+### Confluent Cloud for Apache Flink (Stream Compute)
+- Reads Confluent Cloud topics directly as Flink SQL tables
+- Joins ADT + EVS streams to track live bed state per unit
+- Computes 15-minute ER boarding and bed-demand windows using event time
+- Publishes actionable alerts back to `unit-bed-demand-alerts`
+
+<!-- below-columns -->
+
+> [!NOTE]
+> Kafka moves the facts; Flink computes stateful answers across them. On Confluent Cloud, both share the same Schema Registry, security, and environment.
 ---
 <!-- layout: 2-column -->
 # Device Data and Application Data
 
 ### Device and sensor data
-- Monitors, pumps, fridges, location badges
+- Monitors, pumps, fridges, RTLS location badges
 - The device usually does not speak Kafka
 - A gateway or integration service produces
 - Often high rate: thresholds, or the latest value
 
 ### Application and system data
-- EHR, scheduling, orders, internal applications
+- EHR, bed scheduling, EVS housekeeping, orders
 - The system of record emits a business fact
 - Lower rate, richer payload, clearer event types
 - Example: admit, discharge, and transfer (ADT)
@@ -386,13 +428,13 @@ consumer.commit(msg)
 **Patient transfer**
 - Interface engine produces
 - Key is the patient or encounter
-- Bed board and nutrition each have a group
+- Bed board, EVS, and nutrition each have a group
 
-### System event
-**Order or app fact**
-- The owning application produces
-- Other systems subscribe instead of polling
-- Schema Registry holds the contract
+### Operational workflow
+**Bed turnover and scheduling**
+- EVS app emits `BedCleaned`; bed command emits `BedAssigned`
+- Flink or microservices match waiting ER patients to ready beds
+- Schema Registry holds the contract across teams
 ---
 <!-- layout: 2-column -->
 # Who Owns What
@@ -472,13 +514,10 @@ consumer.commit(msg)
 
 **A unit needs the current bed assignment within a minute of a transfer. Today that fact arrives in a nightly file. What is the better fit?**
 
-A. Keep the nightly file and ask the unit to wait until morning
-
-B. Publish a transfer event as it happens so consumers can update while the assignment is current
-
-C. Replace the EHR database with a Kafka topic
-
-D. Have every downstream system poll the EHR on its own nightly schedule
+- A. Keep the nightly file and ask the unit to wait until morning
+- B. Publish a transfer event as it happens so consumers can update while the assignment is current
+- C. Replace the EHR database with a Kafka topic
+- D. Have every downstream system poll the EHR on its own nightly schedule
 ---
 # Quiz 1: Answer
 
@@ -493,56 +532,53 @@ D. Have every downstream system poll the EHR on its own nightly schedule
 ---
 # Quiz 2 of 3
 
-**Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
+**Bed management, EVS (housekeeping), and nutrition all must react to every patient transfer. How should they read the topic?**
 
-A. Share one consumer group so Kafka splits events between the two applications
-
-B. Use two consumer groups so each application gets the full stream and its own offsets
-
-C. Let one application consume and email the other a spreadsheet
-
-D. Use the same group id and expect each application to see every partition
+- A. Share one consumer group so Kafka splits events between the three applications
+- B. Use separate consumer groups so each application gets the full stream and its own offsets
+- C. Let one application consume and email the others a spreadsheet
+- D. Use the same group id and expect each application to see every partition
 ---
 # Quiz 2: Answer
 
-**Bed management and nutrition both must react to every patient transfer. How should they read the topic?**
+**Bed management, EVS (housekeeping), and nutrition all must react to every patient transfer. How should they read the topic?**
 
-**Correct: B.** Use two consumer groups so each application gets the full stream and its own offsets
+**Correct: B.** Use separate consumer groups so each application gets the full stream and its own offsets
 
 - Inside one group, each record is delivered to only one member
-- A second group is how a second application gets its own copy and its own place in the log
-- Sharing a group id is how you scale one application, not how you integrate two
-- One group can lag or fail without stopping the other group’s offsets
+- Separate consumer groups give each application its own copy and its own place in the log
+- Sharing a group id is how you scale one application, not how you integrate multiple teams
+- One group can lag or fail without stopping the other groups’ offsets
 ---
 <!-- layout: 2-column -->
 # Quiz 3 of 3: Discussion
 
 ### Prompt
-A device gateway can publish fridge temperatures. The EHR can publish admission events. Clinical engineering wants live alarms. Compliance still needs 90 days of history in the warehouse.
+A device gateway can publish fridge temperatures. The EHR and EVS apps can publish admission, discharge, and bed-cleaning events. Bed Command and Clinical Engineering want live alerts. Compliance still needs 90 days of history in the warehouse.
 
 ### Discuss
 - Which facts should be events, and which can stay on a batch path?
-- Who produces, and which consumer groups do you create?
-- What must be true before either team goes live on the shared platform?
+- Who produces, and which consumer groups (or Flink jobs) do you create?
+- What must be true on Confluent Cloud before either team goes live?
 ---
 <!-- layout: 2-column -->
 # Quiz 3: Discussion Points
 
-**A device gateway can publish fridge temperatures. The EHR can publish admission events. Clinical engineering wants live alarms. Compliance still needs 90 days of history in the warehouse.**
+**A device gateway can publish fridge temperatures. The EHR and EVS apps can publish admission, discharge, and bed-cleaning events. Bed Command and Clinical Engineering want live alerts. Compliance still needs 90 days of history in the warehouse.**
 
 ### Strong Answers Mention
-- Alarms are a stream; the 90-day report is a sink into the warehouse
-- The gateway produces device events; the EHR or interface engine produces admissions
-- Separate topics, and separate groups for alarming and for the warehouse
-- A key so one fridge or one patient stays ordered
-- Schema, access, retention, and PHI handling agreed before go-live
-- An owner for consumer lag on the alarm path
+- Live alarms and bed scheduling are streams; the 90-day report is a sink into the warehouse
+- The gateway produces device events; the interface engine and EVS app produce bed lifecycle events
+- Separate topics, and separate consumer groups (or Flink jobs) for bed command, alarming, and the warehouse sink
+- A key (`patient_id`, `bed_id`, or `fridge_id`) so events for one entity stay ordered
+- Confluent Schema Registry contracts, RBAC access, retention, and PHI governance agreed before go-live
+- An owner for consumer lag on any path that pages staff or updates bed boards
 
 ### Watch For
-- One shared consumer group for unrelated applications
+- One shared consumer group for unrelated applications (e.g., bed management and nutrition)
 - Treating Kafka as a system of record that replaces the EHR
 - Putting broad PHI on a widely readable topic because it is internal
-- Assuming broker latency is the end-to-end latency the nurse will feel
+- Assuming broker latency is the end-to-end latency the nurse or bed coordinator will feel
 ---
 <!-- layout: stacked -->
 # Questions and Answers
