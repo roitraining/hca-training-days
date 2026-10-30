@@ -51,7 +51,7 @@
 ---
 <!-- layout: panel-left -->
 # Prerequisites
-For this training
+For this session:
 - No prior Webex experience required
 
 <!-- below-columns -->
@@ -83,8 +83,9 @@ For this training
 # Scheduling Smarter
 
 - Schedule directly from Webex or Outlook: pick whichever fits your workflow
+- Confirm that you have access to the appropriate HCA Webex site before scheduling
 - Use meeting templates to standardize recurring formats (standups, 1:1s, all-hands)
-- Set a default meeting duration shorter than 60 or 30 minutes: most meetings expand to fill the time given
+- Set a default meeting duration shorter than 30 or 60 minutes: most meetings expand to fill the time given
 - Enable the lobby/waiting room for anything with external guests
 
 
@@ -93,8 +94,8 @@ For this training
 # Joining Like a Pro
 
 - One-click join from your calendar invite: avoid hunting for meeting numbers
-- Test audio and video before an important meeting, not during it
 - Join meetings directly from the Webex desktop or mobile app for the full experience; use the browser as a fallback when needed.
+- Test audio and video before an important meeting, not during it
 - Preview your camera and background before joining, not after
 
 
@@ -104,6 +105,8 @@ For this training
 # In-Meeting Controls at a Glance
 
 ![Webex in-meeting controls: mute, video, react, share, record, and breakout on the toolbar](images/meeting-controls.png)
+
+- If you experience recurring Webex issues, report the problem and create a Service Desk ticket with details of the issue
 ---
 # In-Meeting Controls Worth Knowing
 
@@ -112,7 +115,6 @@ For this training
 - Use background noise removal to minimize audio distractions
 - Screen share with “share sound” when presenting video or audio content
 - Lock the meeting once everyone expected to attend has joined, for sensitive discussions
-- If you experience recurring Webex issues, report the problem and create a Service Desk ticket with details of the issue
 ---
 <!-- layout: 2-column -->
 # Recordings and Transcripts
